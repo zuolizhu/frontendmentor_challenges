@@ -172,7 +172,7 @@ section.logo img {
 .hero {
   height: 250px;
   width: 100%;
-  background-image: url(/images/hero-mobile.jpg);
+  background-image: url(./images/hero-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -226,14 +226,14 @@ p.error-msg {
 @media screen and (min-width: 1440px) {
   body {
     background-color: var(--PureWhite);
-    background-image: url(/images/bg-body.svg);
+    background-image: url(./images/bg-body.svg);
     background-repeat: no-repeat;
     background-size: contain;
   }
   main {
     min-width: 1440px;
     min-height: 800px;
-    background-image: url(/images/bg-pattern-desktop.svg);
+    background-image: url(./images/bg-pattern-desktop.svg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -255,7 +255,7 @@ p.error-msg {
     grid-row: 1/3;
   }
   .hero {
-    background-image: url(/images/hero-desktop.jpg);
+    background-image: url(./images/hero-desktop.jpg);
     height: auto;
   }
   /* logo section */
