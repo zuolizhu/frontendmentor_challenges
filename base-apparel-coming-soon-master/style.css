@@ -1,0 +1,314 @@
+/* styles come with the file */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* variables */
+:root {
+  /* color palette */
+  --DesaturatedRed: hsl(0, 36%, 70%);
+  --SoftRed: hsl(0, 93%, 68%);
+  --DarkGrayishRed: hsl(0, 6%, 24%);
+  --PureWhite: hsl(0, 0%, 100%);
+  --LightPink: rgb(255, 244, 244);
+  --DropShadowRed: rgba(198, 110, 110, 0.3);
+  --DropShadowRedHover: rgba(198, 110, 110, 0.5);
+}
+
+/* reset */
+body, p, a, ul, li, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+}
+
+/* base styles */
+/* styles that won't be changed by the size of the devices */
+/* fonts */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  position: relative;
+}
+
+main {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: -5px 10px 30px rgba(50, 50, 50, 0.2);
+}
+
+/* form section */
+.comingsoon h1 {
+  text-transform: uppercase;
+}
+
+.comingsoon h1:nth-child(1) {
+  color: var(--DesaturatedRed);
+}
+
+.comingsoon h1:nth-child(2) {
+  color: var(--DarkGrayishRed);
+}
+
+.comingsoon h2 {
+  color: var(--DesaturatedRed);
+}
+
+form.promotion {
+  border-radius: 28px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: inset 0px 0px 0px 1px var(--DesaturatedRed);
+}
+
+form.promotion.error {
+  box-shadow: inset 0px 0px 0px 2px var(--SoftRed);
+}
+
+input[type=text] {
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  background-color: transparent;
+  color: var(--DarkGrayishRed);
+}
+
+input[type=text]::placeholder {
+  color: var(--DesaturatedRed);
+  opacity: 1; /* Firefox */
+}
+
+/* submit button */
+.btn.submit {
+  border: none;
+  border-radius: 28px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 10px 15px var(--DropShadowRed);
+  transform: translate(2px, 0);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.btn.submit:hover {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%) 50%, hsl(0, 74%, 74%) 150%);
+  box-shadow: 0 10px 15px var(--DropShadowRedHover);
+  transform: scale(1.05);
+}
+
+/* center the arrow image */
+.btn.submit img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.error {
+  align-self: center;
+  display: none;
+}
+
+.error.show {
+  display: flex;
+}
+
+p.error-msg {
+  color: var(--SoftRed);
+  display: none;
+}
+
+p.error-msg.show {
+  display: block;
+}
+
+/* utilities */
+.text-bold {
+  font-weight: 600;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* mobile styles */
+
+/* background */
+body {
+  height: 100vh;
+  background: var(--LightPink);
+}
+
+main {
+  background: var(--PureWhite);
+  background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 60%);
+  background-repeat: no-repeat;
+  max-width: 375px;
+  min-width: 375px;
+  min-height: 800px;
+  margin: 0 auto;
+}
+
+/* logo section */
+section.logo {
+  padding: 32px;
+}
+
+section.logo img {
+  max-width: 100px;
+}
+
+/* hero section */
+.hero {
+  height: 250px;
+  width: 100%;
+  background-image: url(/images/hero-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* comingsoon section */
+.comingsoon {
+  padding: 0 32px;
+  margin-top: 64px;
+}
+
+.comingsoon h1, h2 {
+  text-align: center;
+}
+
+.comingsoon h1 {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 11px;
+}
+
+.comingsoon h2 {
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 16px;
+}
+
+input[type=text] {
+  font-size: 14px;
+  margin-left: 24px;
+  width: 55%;
+}
+
+form.promotion {
+  margin-top: 32px;
+}
+
+.btn.submit {
+  width: 64px;
+  height: 48px;
+}
+
+p.error-msg {
+  padding-left: 24px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+
+
+/* desktop styles */
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: var(--PureWhite);
+    background-image: url(/images/bg-body.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  main {
+    min-width: 1440px;
+    min-height: 800px;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: auto 610px;
+    grid-template-rows: max-content;
+  }
+  section.logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  section.comingsoon {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  section.hero {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .hero {
+    background-image: url(/images/hero-desktop.jpg);
+    height: auto;
+  }
+  /* logo section */
+  section.logo {
+    padding: 75px 0px 0px 165px;
+  }
+  section.logo img {
+    max-width: 158px;
+  }
+  /* comingsoon section */
+  .comingsoon {
+    padding-left: 165px;
+    max-width: 445px;
+    margin-top: 136px;
+  }
+  .comingsoon h1, h2 {
+    text-align: left;
+  }
+
+  .comingsoon h1 {
+    letter-spacing: 17px;
+    font-size: 64px;
+    line-height: 1.1;
+  }
+
+  .comingsoon h1:nth-child(2) {
+    line-height: 1.2;
+  }
+
+  .comingsoon h2 {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-top: 32px;
+  }
+
+  form.promotion {
+    margin-top: 40px;
+    max-width: 445px;
+  }
+
+  .btn.submit {
+    width: 100px;
+    height: 56px;
+  }
+
+  input[type=text] {
+    font-size: 16px;
+    margin-left: 32px;
+    width: 55%;
+  }
+
+  p.error-msg {
+    padding-left: 32px;
+    line-height: 2.15;
+  }
+}
