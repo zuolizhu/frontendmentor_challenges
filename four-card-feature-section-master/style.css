@@ -1,0 +1,213 @@
+/* styles come with the file */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* variables */
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --BlueShadow: rgba(131, 166, 210, 90%);
+  --Blue: hsl(212, 86%, 64%);
+  --DarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --LightGray: hsl(0, 0%, 98%);
+}
+
+/* reset */
+body, p, a, ul, li, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* utilities */
+.text-bold {
+  font-weight: 600;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-light {
+  font-weight: 200;
+}
+
+/* base styles */
+/* styles that won't change by the size of the devices */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--LightGray);
+  color: var(--DarkBlue);
+}
+
+footer {
+  margin-top: 100px;
+}
+
+.welcome h1 {
+  line-height: 1.6;
+}
+
+/* welcome section */
+.welcome h2 {
+  opacity: 50%;
+  margin-top: 16px;
+}
+
+/* cards section */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* the little colored bar on the top of each card */
+.card:before {
+  content: "\0020";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 0;
+  left: 0;
+  box-shadow: var(--BlueShadow) 0 10px 20px;
+}
+
+.card h1 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.card h2 {
+  font-size: 13px;
+  opacity: 50%;
+  line-height: 1.8;
+}
+
+.card-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-img img {
+  width: 57px;
+}
+
+/* colored borders */
+.card.cyan:before {
+  background-color: var( --Cyan);
+}
+.card.red:before {
+  background-color: var(--Red);
+}
+.card.orange:before {
+  background-color: var(--Orange);
+}
+.card.blue:before {
+  background-color: var(--Blue);
+}
+
+/* mobile styles */
+main {
+  padding: 0 32px;
+  max-width: 375px;
+  margin: 0 auto;
+  margin-top: 85px;
+}
+
+/* welcome section */
+.welcome {
+  text-align: center;
+}
+
+.welcome h1 {
+  font-size: 24px;
+}
+
+.welcome h2 {
+  font-size: 15px;
+  padding: 0 30px;
+}
+
+/* cards section */
+.cards {
+  margin-top: 76px;
+}
+
+.card {
+  padding: 28px;
+  margin: 25px auto;
+  max-width: 312px;
+}
+
+.card h2 {
+  letter-spacing: 1px;
+}
+
+.card-img {
+  margin-top: 33px;
+}
+
+/* desktop styles */
+@media screen and (min-width: 1440px) {
+  main {
+    max-width: 1110px;
+    margin-top: 80px;
+  }
+
+  /* welcome section */
+  .welcome h1 {
+    font-size: 36px;
+  }
+  
+  .welcome h2 {
+    padding: 0;
+    width: 50%;
+    letter-spacing: 0.5px;
+    margin: 16px auto;
+  }
+
+  /* cards section */
+  .cards {
+    margin-top: 64px;
+  }
+  /* grid layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1f);
+    gap: 30px;
+  }
+  .card.cyan {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+  .card.red {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .card.orange {
+    grid-column: 2/3;
+    grid-row: 3/5;
+  }
+  .card.blue {
+    grid-column: 3/4;
+    grid-row: 2/4;
+  }
+  /* card detail */
+  .card {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+  .card h2 {
+    letter-spacing: 0.6;
+  }
+}
