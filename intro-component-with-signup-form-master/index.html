@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- loading font and style sheet -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,500i,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <main>
+    <section class="promotion">
+      <h1 class="text-bold">
+        Learn to code by<br> watching others
+      </h1>
+      <h2 class="text-medium text-default lh-default">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </h2>
+    </section>
+    <section class="signup">
+      <h1 class="pricing text-regular">
+        <span class="text-bold">Try it free 7 days</span> then $20/mo. thereafter
+      </h1>
+      <form onsubmit="event.preventDefault(); validateForm();">
+        <div class="input-field">
+          <input type="text" id="fname" placeholder="First Name">
+          <p class="error-msg text-medium">First Name cannot be empty</p>
+        </div>
+        <div class="input-field">
+          <input type="text" id="lname" placeholder="Last Name">
+          <p class="error-msg text-medium">Last Name cannot be empty</p>
+        </div>
+        <div class="input-field">
+          <input type="text" id="email" placeholder="Email Address">
+          <p class="error-msg text-medium">Looks like this is not an email</p>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" placeholder="Password">
+          <p class="error-msg text-medium">Password cannot be empty</p>
+        </div>
+        <button class="btn cta submit">
+          Claim your free trial 
+        </button>
+        <p class="policy text-medium">
+          By clicking the button, you are agreeing to our <span class="terms text-bold">Terms and Services</span>
+        </p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/zuolizhu">Connor Zhu</a>.
+    </p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

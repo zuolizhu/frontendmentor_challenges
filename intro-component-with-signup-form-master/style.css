@@ -1,0 +1,308 @@
+/* styles come with the file */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* variables */
+/* font, root font size */
+:root {
+  /* color palette */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+  --DarkGray: #3D3B48;
+  --LightGray: #DEDEDE;
+  --DarkGreen: #33B97E;
+  /* root font size */
+  font-size: 16px;
+  /* font family */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* reset */
+body, p, a, ul, li, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+}
+
+li {
+  list-style-type: none;
+}
+/* utilities */
+.text-bold {
+  font-weight: 700;
+}
+
+.text-semi-bold {
+  font-weight: 600;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-regular { 
+  font-weight: 400;
+}
+
+.text-default {
+  font-size: 1rem;
+}
+
+.lh-default {
+  line-height: 1.625;
+}
+
+/* base styles */
+/* styles that won't change by the size of the devices */
+body {
+  background-color: var(--Red);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  width: 87%;
+  max-width: 550px;
+  align-self: center;
+  min-width: 327px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* promotion section */
+.promotion {
+  color: white;
+}
+
+/* signup section */
+.signup {
+  margin-top: 4rem;
+}
+
+h1.pricing {
+  font-size: 0.9375rem;
+  color: white;
+  background-color: var(--Blue);
+  text-align: center;
+  border-radius: 10px;
+  line-height: 1.73;
+  letter-spacing: 1.27px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.signup form {
+  margin-top: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.signup form input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid var(--LightGray);
+  border-radius: 5px;
+  line-height: 1.85;
+  color: var(--DarkGray);
+  font-size: 0.875rem;
+  font-weight: 600;
+  caret-color: var(--Blue);
+}
+
+input::placeholder {
+  color: var(--DarkGray);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.signup form input:focus {
+  border: 1px solid var(--Blue);
+}
+
+.signup form input.error {
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  border: 2px solid var(--Red);
+  color: var(--Red);
+  caret-color: var(--Red);
+}
+
+p.error-msg {
+  color: var(--Red);
+  font-size: 0.6875rem;
+  font-style: italic;
+  margin-top: 0.375rem;
+  display: none;
+}
+
+p.error-msg.show {
+  display: block;
+}
+
+.btn.cta {
+  background-color: var(--Green);
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.73;
+  color: white;
+  text-align: center;
+  width: 100%;
+  box-shadow: inset 0px -6px 0px var(--DarkGreen);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn.cta:hover {
+  transform: translate(0, -2px);
+  opacity: 75%;
+}
+
+.btn.cta:active {
+  transform: translate(0, 1px);
+  box-shadow: inset 0px -2px 0px var(--DarkGreen);
+}
+
+p.policy {
+  font-size: 0.6875rem;
+  color: var(--GrayishBlue);
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.9;
+}
+
+span.terms {
+  color: var(--Red);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+span.terms:hover {
+  opacity: 80%;
+  text-decoration: underline;
+}
+
+/* mobile styles */
+body {
+  background-image: url(./images/bg-intro-mobile.png);
+}
+
+/* promotion section */
+.promotion {
+  text-align: center;
+}
+
+.promotion h1 {
+  font-size: 1.75rem;
+  line-height: 1.285;
+  letter-spacing: -0.29px;
+}
+
+.promotion h2 {
+  margin-top: 1rem;
+}
+
+/* signup section */
+h1.pricing {
+  padding: 1.125rem 4.125rem;
+}
+.signup form {
+  padding: 1.5rem;
+}
+
+.signup form .input-field {
+  margin-bottom: 1rem;
+}
+
+.signup form .input-field p.error-msg {
+  text-align: right;
+}
+
+.signup form input {
+  padding: 0.9375rem 1.25rem;
+}
+
+.signup form input.error {
+  background-position: right 0.9375rem center;
+}
+
+.btn.cta {
+  padding: 0.9375rem 2.6875rem;
+}
+
+p.policy {
+  width: 76%pricing;
+}
+
+/* desktop styles */
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url(./images/bg-intro-desktop.png);
+  }
+
+  main {
+    width: 77%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+  }
+
+  .promotion {
+    text-align: left;
+    width: 47%;
+  }
+
+  .promotion h1 {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    letter-spacing: -0.52px;
+  }
+
+  .promotion h2 {
+    margin-top: 2rem;
+  }  
+  
+  .signup {
+    margin-top: 0;
+    width: 48.65%;
+  }
+
+  .signup form {
+    padding: 2.5rem;
+  }
+
+  .signup form input {
+    padding: 0.9375rem 2rem;
+  }
+
+  .signup form .input-field {
+    margin-bottom: 1.25rem;
+  }
+
+  .signup form input.error {
+    background-position: right 1.6875rem center;
+  }
+
+  p.policy {
+    width: 80%;
+  }
+}
