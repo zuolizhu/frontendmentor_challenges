@@ -1,0 +1,307 @@
+/* variables */
+:root {
+  /* color palette */
+  --Blue: hsl(223, 87%, 63%);
+  --BlueShadow: rgba(76, 123, 243, 30%);
+  --PaleBlue: hsl(223, 100%, 88%);
+  --LightRed: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --DeepDarkBlue: hsl(209, 33%, 12%);
+  /* root font size: 1rem = 10px */
+  font-size: 62.5%;
+  /* font family */
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+/* reset */
+body, p, a, ul, li, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* utilities */
+.text-light {
+  font-weight: 300;
+}
+
+.text-semi-bold {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-gray {
+  color: var(--Gray);
+}
+
+.text-deepdarkblue {
+  color: var(--DeepDarkBlue);
+}
+
+/* base styles */
+/* styles that won't change by the size of the devices */
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 2.8rem;
+  border: 1px solid var(--PaleBlue);
+  font-weight: 300;
+}
+
+input.error {
+  border: 1px solid var(--LightRed);
+}
+
+input::placeholder {
+  color: var(--PaleBlue);
+}
+
+.btn.submit {
+  color: white;
+  background-color: var(--Blue);
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px var(--BlueShadow);
+  transition: all 0.3s ease;
+}
+
+.btn.submit:hover {
+  opacity: 0.8;
+  box-shadow: 0px 7px 20px var(--BlueShadow);
+  transform: translate(0, -2px);
+}
+
+.btn.submit:active {
+  transform: translate(0, 0);
+  box-shadow: 0px 5px 10px var(--BlueShadow);
+}
+
+.dashboard img {
+  width: 100%;
+}
+
+p.error {
+  color: var(--LightRed);
+  font-style: italic;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.7rem;
+}
+
+footer .social .icon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--PaleBlue);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 0.6rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+footer .social .icon:hover {
+  border: none;
+  background-color: var(--Blue);
+}
+
+footer .social .icon i {
+  font-size: 16px;
+  color: var(--Blue);
+}
+
+footer .social .icon:hover > i {
+  color: white;
+}
+
+footer p {
+  margin: 1rem 0;
+}
+
+footer a {
+  color: var(--Blue);
+}
+
+/* mobile styles */
+main {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 12rem;
+  max-width: 560px;
+}
+
+.logo img {
+  width: 56px;
+}
+
+header {
+  margin-bottom: 3.2rem;
+}
+
+.launchingsoon h1 {
+  font-size: 2.2rem;
+  line-height: 1.45;
+}
+
+.launchingsoon {
+  margin-bottom: 1.5rem;
+}
+
+/* form section */
+
+.subform {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.subform h1 {
+  font-size: 1.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 1.25rem 3.2rem;
+}
+
+input::placeholder {
+  font-size: 1.2rem;
+}
+
+.btn.submit {
+  padding: 1.5rem 0;
+  margin-top: 1rem;
+  line-height: 1;
+}
+
+
+.subform {
+  margin-bottom: 7.2rem;
+}
+
+p.error {
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.13px;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  display: none;
+}
+
+p.error.show {
+  display: block;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  .logo img {
+    width: 90px;
+  }
+
+  .launchingsoon h1 {
+    font-size: 3rem;
+  }
+
+  .subform h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* large tablet styles */
+@media screen and (min-width: 960px) {
+
+  main {
+    max-width: 720px;
+    margin-bottom: 7.2rem;
+  }
+
+  .launchingsoon h1 {
+    font-size: 4.8rem;
+    line-height: 1.25;
+  }
+
+  .subform {
+    width: 88.8%;
+    margin-bottom: 9.4rem;
+  }
+
+  .subform h1 {
+    font-size: 2rem;
+  }
+
+  input {
+    padding: 1.8rem 3rem;
+    font-size: 1.6rem;
+  }
+  
+  input::placeholder {
+    font-size: 1.6rem;
+  }
+
+  .btn.submit {
+    font-size: 1.6rem;
+    padding: 2rem 0;
+    line-height: 1;
+  }
+
+  .form {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .form .input-field {
+    width: 66%;
+  }
+
+  .form .btn.submit {
+    width: 31.25%;
+    margin: 0;
+  }
+  
+  p.error {
+    text-align: left;
+    padding-left: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.67;
+  }
+
+  .dashboard img {
+    width: 88%;
+  }
+  
+  footer p {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* desktop styles */
+@media screen and (min-width: 1440px) {
+
+}
