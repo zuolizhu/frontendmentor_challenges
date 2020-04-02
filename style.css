@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+:root {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  color: #094067;
+  font-size: 2rem;
+}
+
+li {
+  list-style-type: none;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+}
+
+li a {
+  text-decoration: none;
+  color: #3da9fc;
+  transition: all 0.3s ease;
+}
+
+li:hover a {
+  color: #ef4565;
+}
+
+li:hover {
+  transform: translate(2px, 0);
+}
