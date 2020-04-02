@@ -4,7 +4,7 @@
 }
 
 h1 {
-  color: #094067;
+  color: #1A697F;
   font-size: 2rem;
 }
 
@@ -16,12 +16,12 @@ li {
 
 li a {
   text-decoration: none;
-  color: #3da9fc;
+  color: #62c890;
   transition: all 0.3s ease;
 }
 
 li:hover a {
-  color: #ef4565;
+  color: #D7F08C;
 }
 
 li:hover {
