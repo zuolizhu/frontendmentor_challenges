@@ -467,7 +467,6 @@ footer {
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
   }
 
   footer .footer-logo {
@@ -491,5 +490,6 @@ footer {
   footer .copyright, footer .attribution {
     text-align: right;
     max-width: 1440px;
+    margin: 0 auto;
   }
 }
