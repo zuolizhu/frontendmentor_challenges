@@ -1,0 +1,420 @@
+/* fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Inter:400,700&display=swap');
+
+
+/* Themes */
+
+/* define color palette */
+:root {
+  --White: hsl(0, 0%, 100%);
+  --VeryPaleBlue: hsl(225, 100%, 98%);
+  --LightGrayishBlue: hsl(227, 47%, 96%);
+  --DarkGrayishBlue: hsl(228, 12%, 44%);
+  --VeryDarkBlue: hsl(230, 17%, 14%);
+  --ALittleDarkBlue: hsl(232, 19%, 15%);
+  --DarkDesaturatedBlue: hsl(228, 28%, 20%);
+  --DesaturatedBlue:hsl(228, 34%, 66%);
+}
+
+.light {
+  --body-bg: var(--White);
+  --top-bg-pattern: var(--VeryPaleBlue);
+  --card-bg: var(--LightGrayishBlue);
+  --text-default: var(--VeryDarkBlue);
+  --text-light: var(--DarkGrayishBlue);
+}
+
+.dark {
+  --body-bg: var(--VeryDarkBlue);
+  --top-bg-pattern: var(--ALittleDarkBlue);
+  --card-bg: var(--DarkDesaturatedBlue);
+  --text-default: var(--White);
+  --text-light: var(--DesaturatedBlue);
+  --switch-btn: var(--);
+}
+
+/* coloring elements */
+body {
+  background-color: var(--body-bg);
+}
+header {
+  background-color: var(--top-bg-pattern);
+}
+header h1,
+p.overall-number,
+.overview-stats p {
+  color: var(--text-default);
+}
+header p, 
+.profile p, 
+p.overall-unit,
+.overview h3,
+.overview-title {
+  color: var(--text-light);
+}
+.overall-card,
+.overview-card {
+  background-color: var(--card-bg);
+}
+
+/* elements that need adjust manually */
+.dark .overview h3 {
+  color: var(--White);
+}
+
+/* base styles */
+/* styles that won't change by the size of the devices or theme */
+
+/* reset */
+body, p, a, ul, li, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* font family and base font size */
+body {
+  font-family: 'Inter', sans-serif;
+  /* most of the fonts are bold */
+  font-weight: 700;
+  /* add little transition to bg */
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+:root {
+  /* font size: 1rem = 10px */
+  font-size: 62.5%;
+}
+.overall-card {
+  text-align: center;
+  overflow: hidden;
+}
+.bar {
+  width: 100%;
+  height: 4px;
+}
+.bar-facebook {
+  background-color: hsl(195, 100%, 50%);
+}
+.bar-twitter {
+  background-color: hsl(203, 89%, 53%);
+}
+.bar-instagram {
+  background: linear-gradient(45deg, hsl(37, 97%, 70%) ,hsl(329, 70%, 58%));
+}
+.bar-youtube {
+  background-color: hsl(348, 97%, 39%);
+}
+
+p.overall-up, .overview-up p {
+  color: hsl(163, 72%, 41%);
+}
+p.overall-down, .overview-down p {
+  color: hsl(356, 69%, 56%);
+}
+
+.profile, .overall-today, 
+.overview-up, .overview-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overview-title, .overview-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.overall-card, .overview-card {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.overall-card:hover,
+.overview-card:hover {
+  background-color: #E1E4F0;
+}
+
+.dark .overall-card:hover,
+.dark .overview-card:hover {
+  background-color: #333A55;
+}
+
+
+.overview-up .icon img,
+.overview-down .icon img,
+.overall-today .icon img {
+  transform: translateY(-50%);
+}
+
+.attribution {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.attribution a {
+  color: hsl(163, 72%, 41%);
+}
+
+.dark .attribution {
+  color: var(--White); 
+}
+
+.dark .attribution a {
+  color: hsl(163, 72%, 41%);
+}
+
+/* spacing */
+.profile, p.overall-number {
+  margin-top: 2.8rem;
+}
+.profile p {
+  margin-left: 0.8rem;
+}
+p.overall-number {
+  margin-bottom: 0.9rem;
+}
+.overall-today {
+  margin-top: 2.5rem;
+  margin-bottom: 2.4rem;
+}
+.overall-up, .overall-down {
+  margin-left: 0.4rem;
+}
+/* overview section */
+.overview-card {
+  padding: 2.6rem 2.4rem;
+}
+.overview-title {
+  margin-bottom: 2.3rem;
+}
+.overview-up p,
+.overview-down p {
+  margin-left: 0.3rem;
+}
+
+.switch p {
+  margin-right: 1.3rem;
+}
+
+.switch-btn {
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(35deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.switch-btn.off {
+  justify-content: flex-end;
+  background: #AEB3CB;
+}
+
+.switch-btn.off .circle-btn {
+  background-color: #F1F3FA;
+}
+
+.switch-btn:hover {
+  background: linear-gradient(35deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.circle-btn {
+  width: 18px;
+  height: 18px;
+  background-color: #252B42;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+/* utilities */
+.text-regular {
+  font-weight: 400;
+}
+
+/* mobile styles */
+.container {
+  box-sizing: border-box;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+}
+
+hr {
+  display: block; 
+  height: 1px;
+  border: 0; 
+  border-top: 1px solid #848BAB;
+  margin: 0; 
+  padding: 0;
+}
+
+.dark hr {
+  border-top: 1px solid #333A55;
+}
+
+.flex-header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* font sizes */
+/* header */
+header {
+  min-height: 200px;
+  border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+}
+header p {
+  font-size: 1.4rem;
+}
+
+main {
+  transform: translateY(-4.6rem);
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dark .switch:hover p {
+  color: var(--White);
+}
+
+/* overall section */
+.profile p, .overall-today p {
+  font-size: 1.2rem;
+}
+p.overall-number {
+  font-size: 5.6rem;
+  letter-spacing: -2px;
+  line-height: 0.857;
+}
+p.overall-unit {
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+section.overall {
+  margin-bottom: 4.6rem;
+}
+
+/* overview section */
+.overview h3 {
+  font-size: 2.4rem;
+}
+.overview-title p {
+  font-size: 1.4rem;
+}
+.overview-stats p {
+  font-size: 3.2rem;
+}
+.overview-stats .overview-up p,
+.overview-stats .overview-down p {
+  font-size: 1.2rem;
+}
+
+/* spacing */
+header {
+  padding-top: 3.6rem;
+}
+header h1 {
+  margin-bottom: 0.4rem;
+}
+header .content {
+  margin-bottom: 2.4rem;
+}
+header .switch {
+  margin-top: 1.6rem;
+}
+/* overall section */
+.overall-card:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+/* overview section */
+.overview h3 {
+  margin-bottom: 2.7rem;
+}
+
+.overview-card:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  .flex-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  hr { display: none; }
+  header .switch {
+    margin-top: 0;
+  }
+  main {
+    transform: translateY(-9.6rem);
+  }
+
+  .switch {
+    justify-content: start;
+  }
+  .overall-cards, .overview-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .overall-cards {
+    gap: 30px;
+  }
+  .overview-cards {
+    gap: 30px 24px;
+  }
+  .overall-card:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .overview-card:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
+  /* font sizes */
+  /* header */
+  header {
+    min-width: 208px;
+  }
+  header h1 {
+    font-size: 2.8rem;
+  }
+
+  main {
+    transform: translateY(-10.8rem);
+  }
+  .container {
+    padding: 0 10rem;
+  }
+
+  .overall-cards, .overview-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 16.5rem;
+  }
+}
