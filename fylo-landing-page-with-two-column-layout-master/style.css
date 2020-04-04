@@ -1,0 +1,825 @@
+/* fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap');
+
+/* variables */
+:root {
+  /* color palette */
+  --VeryDarkBlue: hsl(243, 87%, 12%);
+  --DesaturatedBlue: hsl(238, 22%, 44%);
+  --BrightBlue: hsl(224, 93%, 58%);
+  --ModerateCyan: hsl(170, 45%, 43%);
+  --LightGrayishBlue: hsl(240, 75%, 98%);
+  --LightGray: hsl(0, 0%, 75%);
+  /* root font size: 1rem = 10px */
+  font-size: 62.5%;
+}
+
+/* reset */
+body, p, a, ul, li, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* utilities */
+.text-bold {
+  font-weight: 700;
+}
+
+.text-Raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.text-Open-Sans {
+  font-family: 'Open Sans', sans-serif;
+}
+/* used to limit the max width of the content */
+/* as well as the flex of the content flow */
+.container {
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+nav .logo {
+  max-width: 80px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav a {
+  color: var(--VeryDarkBlue);
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--BrightBlue);
+}
+
+/* base styles */
+/* styles that won't change by the size of the devices */
+
+body {
+  /* default font weight */
+  font-weight: 400;
+  /* default font color */
+  color: var(--VeryDarkBlue);
+}
+
+nav .logo {
+  margin-right: auto;
+}
+
+input::placeholder {
+  font-family: 'Raleway', sans-serif;
+  color: var(--LightGray);
+}
+
+input {
+  border: 1px solid var(--VeryDarkBlue);
+  border-radius: 3.13px;
+  color: var(--VeryDarkBlue);
+}
+
+.btn {
+  border: none;
+  border-radius: 3.13px;
+  background-color: var(--BrightBlue);
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translate(0, -2px);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translate(0, -1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-icon {
+  display: flex;
+  align-items: center;
+}
+
+section.productive > .container {
+  background-color: #F8F8FE;
+}
+
+section.productive p.copy {
+  color: var(--DesaturatedBlue);
+}
+
+.card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translate(0, -2px) rotate(1deg);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.07);
+}
+
+section.cta {
+  color: #fff;
+}
+
+section.cta > .container {
+  background-color: var(--DesaturatedBlue);
+}
+
+footer {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+footer .contact p {
+  margin-left: 1.6rem;
+}
+
+footer .contact .phone,
+footer .contact .email {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  margin-bottom: 1.6rem;
+}
+
+footer > .footer-logo {
+  background-color: var(--VeryDarkBlue);
+}
+
+footer > .container {
+  background-color: var(--VeryDarkBlue);
+}
+
+footer .social-icons {
+  display: flex;
+}
+
+footer .social-icons .icon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer .social-icons .icon:hover {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+footer .social-icons .icon:hover i {
+  color: var(--VeryDarkBlue);
+}
+
+footer .social-icons .icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer .social-icons .icon {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+/* mobile styles */
+.container {
+  flex-direction: column;
+  padding: 0 2.4rem;
+}
+
+header {
+  margin-top: 2.4rem;
+}
+
+nav a {
+  margin-left: 2.4rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* hero section */
+section.hero,
+section.productive,
+section.cta {
+  text-align: center;
+}
+
+section.hero {
+  margin-top: 9.8rem;
+  margin-bottom: 9rem;
+}
+
+section.hero h1 {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  margin-top: 4rem;
+  margin-bottom: 2.4rem;
+}
+
+section.hero p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  width: 93%;
+  margin: 0 auto;
+  margin-bottom: 3.2rem;
+}
+
+section.hero .input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+section.hero .input-field input {
+  padding: 1.3rem 2.1rem;
+  margin-bottom: 1.6rem;
+}
+section.hero .input-field input::placeholder {
+  font-size: 1.2rem;
+}
+
+section.hero .btn {
+  padding: 1.2rem 0;
+}
+
+.divider-curve {
+  background-image: url(./images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 3.2rem;
+  margin: 0 auto;
+}
+
+/* productive section */
+section.productive .section-img {
+  margin-top: 6rem;
+  margin-bottom: 8.7rem;
+}
+
+section.productive h1,
+section.productive p {
+  line-height: 1.5;
+}
+
+section.productive h1 {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+section.productive p.copy {
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
+}
+
+section.productive div.seehow {
+  display: flex;
+  justify-content: space-between;
+  max-width: 130px;
+  border-bottom: 1px solid var(--ModerateCyan);
+  margin: 0 auto;
+  margin-top: 3.6rem;
+  padding-bottom: 0.3rem;
+  align-items: center;
+}
+
+section.productive a.seehow {
+  font-size: 1.2rem;
+  color: var(--ModerateCyan);
+}
+
+section.productive .card {
+  background-color: #fff;
+  padding: 1.8rem 2.6rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 8.1rem;
+}
+
+section.productive .card .icon-quotes {
+  width: 1rem;
+}
+
+section.productive .card > p {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.38px;
+  margin-top: 0.7rem;
+}
+
+section.productive .card .user {
+  display: flex;
+  margin-top: 1.2rem;
+  align-items: center;
+}
+
+.card .user .avatar {
+  max-width: 24px;
+  margin-right: 0.75rem;
+}
+
+.card .user .avatar img {
+  border-radius: 50%;
+}
+
+.card .user .profile {
+  text-align: left;
+}
+
+.card .user .profile p.name {
+  font-size: 0.9rem;
+  letter-spacing: 0.45px;
+}
+
+.card .user .profile p.title {
+  font-size: 0.6rem;
+  line-height: 2;
+  letter-spacing: 0.3px;
+}
+
+/* cta section */
+section.cta h1 {
+  margin-top: 5.4rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+section.cta p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  width: 86%;
+  margin: 0 auto;
+  margin-bottom: 2.4rem;
+}
+
+section.cta .input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7.1rem;
+  padding: 0 4.35rem;
+}
+
+section.cta .input-field input {
+  border: none;
+  padding: 1rem 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+section.cta .input-field input::placeholder {
+  font-size: 1rem;
+}
+
+section.cta .btn {
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+/* footer */
+footer > .footer-logo {
+  box-sizing: border-box;
+}
+
+footer > .footer-logo img {
+  max-width: 176px;
+  margin-top: 6.4rem;
+  margin-bottom: 4rem;
+  padding-left: 4rem;
+}
+
+footer > .container {
+  padding: 0 4rem;
+}
+
+footer .contact {
+  margin-bottom: 5.6rem;
+}
+
+footer ul li {
+  margin-bottom: 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer ul li:hover {
+  color: var(--BrightBlue);
+}
+
+footer .footer-nav {
+  margin-bottom: 4.8rem;
+}
+
+footer .social-icons .icon {
+  width: 28px;
+  height: 28px;
+  margin: 0 5px;
+}
+
+footer .social-icons {
+  justify-content: center;
+  margin-bottom: 4.7rem;
+}
+
+
+footer .attribution {
+  background-color: var(--VeryDarkBlue);
+  padding: 0 4rem;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  :root {
+    font-size: 75%;
+  }
+
+  .divider-curve {
+    background-image: url(./images/bg-curve-desktop.svg);
+    
+  }
+
+  section.productive div.seehow {
+    max-width:155px;
+  }
+
+  section.productive .card {
+    max-width: 75%;
+  }
+}
+
+/* large tablets styles */
+@media screen and (min-width: 960px) {
+  header > .container {
+    flex-direction: column;
+  }
+  .container {
+    flex-direction: row;
+    padding: 0 6rem;
+  }
+  
+  header {
+    margin-top: 4rem;
+  }
+
+  section.hero > .container,
+  section.productive > .container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  section.hero {
+    text-align: left;
+    margin-top: 5rem;
+  }
+
+  section.hero .section-img {
+    display: flex;
+    align-items: center;
+    width: 48%;
+  }
+
+  section.hero .text-content {
+    width: 50%;
+  }
+
+  section.hero h1 {
+    text-align: left;
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+  }
+  
+  section.hero p {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: 2.6rem;
+  }
+
+  section.hero .input-field input {
+    margin-bottom: 1rem;
+  }
+
+  /* productive section */
+  section.productive {
+    text-align: left;
+  }
+
+  section.productive .section-img {
+    display: flex;
+    align-items: center;
+  }
+
+  section.productive > .container {
+    padding-top: 5rem;
+  }
+
+  section.productive .section-img {
+    margin: 0 auto;
+    width: 45%;
+  }
+
+  section.productive .text-content {
+    width: 50%;
+  }
+
+  section.productive h1 {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  section.productive p.copy {
+    font-size: 1.2rem;
+  }
+
+  section.productive div.seehow {
+    margin: 0;
+  }
+
+  section.productive .card {
+    max-width: 85%;
+    margin: 0;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  /* cta section */
+  section.cta {
+    text-align: left;
+  }
+
+  section.cta > .container {
+    justify-content: space-between;
+  }
+
+  section.cta .text-content,
+  section.cta .input-field {
+    margin-top: 6rem;
+  }
+
+  section.cta .text-content {
+    width: 55%;
+  }
+
+  section.cta .input-field {
+    width: 40%;
+    padding: 0;
+  }
+
+  section.cta h1,
+  section.cta p {
+    margin: 0;
+  }
+
+  section.cta h1 {
+    margin-bottom: 1.2rem;
+  }
+
+  section.cta p {
+    font-size: 1.2rem;
+  }
+
+  section.cta .btn {
+    width: 60%;
+  }
+
+  /* footer */
+  footer {
+    font-size: 1.2rem;
+  }
+
+  footer > .footer-logo img {
+    max-width: 140px;
+    padding-left: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  footer > .container {
+    justify-content: space-between;
+    padding: 0 6rem;
+  }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1440px) {
+  :root {
+    font-size: 100%;
+  }
+
+  .container {
+    max-width: 1440px;
+    padding: 0 5rem;
+  }
+
+  header {
+    margin-top: 4rem;
+    margin-bottom: 5.375rem;
+  }
+
+  nav .logo {
+    max-width: 166px;
+  }
+  nav a {
+    font-size: 1rem;
+    margin-left: 3.625rem;
+  }
+
+  /* section hero */
+  section.hero {
+    margin-bottom: 10rem;
+  }
+
+  section.hero h1 {
+    font-size: 2.5rem;
+  }
+
+  section.hero p {
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 0.53px;
+    width: 90%;
+    margin: 0;
+    margin-bottom: 1.56rem;
+  }
+
+  section.hero .input-field {
+    flex-direction: row;
+  }
+
+  section.hero .input-field input {
+    padding: 0.875rem 1.3rem;
+    font-size: 0.875rem;
+    min-width: 320px;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1rem;
+  }
+
+  section.hero .btn {
+    padding: 0.9375rem 3.75rem;
+    font-size: 0.875rem;
+  }
+
+  section.hero .input-field input::placeholder {
+    font-size: 0.875rem;
+  }
+
+  .divider-curve {
+    min-height: 4.37rem;
+  }
+
+  /* productive section */
+  section.productive {
+    background-color: #F8F8FE;
+  }
+
+  section.productive > .container {
+    padding-top: 6.625rem;
+  }
+
+  section.productive h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.3rem;
+  }
+
+  section.productive .text-content {
+    width: 51%;
+  }
+
+  section.productive p.copy {
+    font-size: 1rem;
+    width: 82%;
+    margin-bottom: 1rem;
+  }
+
+  section.productive div.seehow {
+    max-width: 11rem;
+  }
+
+  section.productive a.seehow {
+    font-size: 1rem;
+  }
+
+  section.productive .card {
+    padding: 1.875rem 2rem;
+    border: 5px;
+    max-width: 56%;
+  }
+  
+  section.productive .card > p {
+    font-size: 0.8125rem;
+  }
+
+  .card .user .profile p.name {
+    font-size: 0.6875rem;
+  }
+
+  .card .user .profile p.title {
+    font-size: 0.5rem;
+  }
+
+  .card .user .avatar {
+    max-width: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  /* cta section */
+  section.cta {
+    background-color: var(--DesaturatedBlue);
+  }
+
+  section.cta > .container {
+    align-items: center;
+  }
+
+  section.cta h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  section.cta p {
+    font-size: 1rem;
+    width: 70%;
+  }
+
+  section.cta .text-content {
+    margin-top: 6.25rem;
+    margin-bottom: 5.375rem;
+  }
+
+  section.cta .input-field {
+    margin: 0;
+  }
+
+  section.cta .input-field input {
+    font-size: 0.75rem;
+    padding: 1.1rem 1.375rem;
+    margin-bottom: 1rem;
+  }
+
+  section.cta .btn {
+    max-width: 210px;
+  }
+
+  section.cta .input-field input::placeholder {
+    font-size: 0.75rem;
+  }
+
+  footer {
+    background-color: var(--VeryDarkBlue);
+    font-size: 1rem;
+  }
+  footer > .footer-logo {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  footer > .footer-logo img {
+    max-width: 176px;
+    padding-left: 5rem;
+    margin-top: 6.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  footer > .container {
+    padding: 0 5rem;
+  }
+
+  footer .contact .phone, 
+  footer .contact .email {
+    margin-bottom: 1rem;
+  }
+
+  footer .social-icons {
+    margin: 0;
+  }
+
+}
