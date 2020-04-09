@@ -1,0 +1,299 @@
+/* fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+:root {
+	/* fonts */
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	/* font size: 1rem = 10px */
+  font-size: 62.5%;
+	/* color palette */
+	--VeryLightGrayishBlue: hsl(240, 78%, 98%);
+	--LightGrayishBlue: hsl(234, 14%, 74%);
+	--LightPurple: #6D72DE;
+	--GrayishBlue: hsl(233, 13%, 49%);
+	--DarkGrayishBlue: hsl(232, 13%, 33%);
+	--PureWhite: #fff;
+	--bg-purple: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	--border-gray: rgba(110, 114, 142, 25%);
+	--border-white: rgba(255, 255, 255, 25%);
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+/* utilities */
+/* font size and color */
+.text-xxxl {
+	font-size:7.2rem;
+}
+.text-xxl {
+	font-size:4rem;
+}
+.text-xl {
+	font-size:3.2rem;
+}
+.text-l {
+	font-size:1.8rem;
+}
+.text-default {
+	font-size:1.5rem;
+}
+.text-small {
+	font-size:1.3rem;
+}
+.text-black {
+	color: var(--DarkGrayishBlue);
+}
+.text-white {
+	color: var(--PureWhite);
+}
+.text-gray {
+	color: var(--GrayishBlue);
+}
+.text-lightgray {
+	color: var(--LightGrayishBlue);
+}
+.btn {
+	cursor: pointer;
+	padding: 1.4rem 0;
+	text-transform: uppercase;
+	border-radius: 6px;
+	transition: all 0.3s ease;
+}
+.btn:hover {
+	transform: translateY(-2px);
+}
+.btn p {
+	letter-spacing: 1.39px;
+}
+.btn-purple {
+	background: var(--bg-purple);
+	color: var(--PureWhite);
+}
+.btn-purple:hover {
+	background: transparent;
+	color: var(--LightPurple);
+	box-shadow:inset 0px 0px 0px 1px var(--LightPurple);
+}
+.btn-white {
+	background-color: var(--PureWhite);
+	color: var(--LightPurple);
+}
+.btn-white:hover {
+	background: transparent;
+	box-shadow:inset 0px 0px 0px 1px var(--PureWhite);
+	color: var(--PureWhite);
+}
+
+/* base styles */
+/* styles that won't change by the size of the devices or theme */
+/* reset */
+body {
+	text-align: center;
+	background-color: var(--VeryLightGrayishBlue);
+}
+body, p, a, ul, li, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.container {
+	margin: auto;
+	box-sizing: border-box;
+}
+.price {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.price-toggler {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card {
+	border-radius: 1rem;
+}
+.card-white-bg {
+	background-color: var(--PureWhite);
+}
+.card-purple-bg {
+	background: var(--bg-purple);
+}
+footer {
+	margin: 5rem 0;
+	color: var(--LightGrayishBlue);
+}
+
+footer a{
+	color: var(--LightPurple);
+	text-decoration: underline;
+}
+
+#switch {
+	width: 56px;
+	height: 32px;
+	border-radius: 16px;
+	background: var(--bg-purple);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin: 0 2.4rem;
+}
+#switch.monthly {
+	justify-content: flex-end;
+}
+#switch:hover {
+	opacity: 50%;
+}
+#switch .switch-button {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 4px;
+}
+
+/* mobile styles */
+body {
+	background-image: url(./images/bg-top.svg);
+	background-repeat: no-repeat;
+	/* this position needs a lot of adjustments */
+	background-position: 191px -35px;
+}
+.container {
+	box-sizing: border-box;
+	min-width: 375px;
+	padding: 0 2.4rem;
+}
+.card {
+	box-shadow: 0px 20px 40px rgba(212, 210, 244, 50%);
+}
+/* mobile spacing */
+header {
+	margin-top: 6.4rem;
+}
+.price-toggler {
+	margin-top: 4.2rem;
+}
+main {
+	margin-top: 8rem;
+}
+.card {
+	padding: 3.1rem 2.9rem;
+	box-sizing: border-box;
+	max-width: 327px;
+	margin: 0 auto;
+}
+.card:not(:last-child) {
+	margin-bottom: 3.2rem;
+}
+/* content within card */
+p.plan {
+	line-height: 1.55;
+	margin-bottom: 2.4rem;
+}
+.price {
+	margin-bottom: 3.2rem;
+}
+p.unit {
+	letter-spacing: -1.2px;
+	margin-right: 0.746rem;
+}
+p.price-number {
+	line-height: 0.986;
+	letter-spacing: -2.16px;
+}
+ul {
+	margin-bottom: 3.2rem;
+}
+ul li {
+	padding: 1.2rem 0;
+	line-height: 1.87;
+}
+.card-white-bg ul li {
+	border-top: 1px solid var(--border-gray);
+}
+.card-white-bg ul li:last-child {
+	border-bottom: 1px solid var(--border-gray);
+}
+.card-purple-bg ul li {
+	border-top: 1px solid var(--border-white);
+}
+.card-purple-bg ul li:last-child {
+	border-bottom: 1px solid var(--border-white);
+}
+
+/* break point for background pattern */
+@media screen and (min-width: 560px) {
+	body {
+		background-position: top right;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	:root {
+		font-size: 55%;
+	}
+	body {
+		height: 100vh;
+		background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+		background-position: top right, bottom left;
+	}
+	main {
+		margin-top: 6.4rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	.container {
+		padding: 0 2rem;
+	}
+	.card:not(:last-child) {
+    margin-bottom: 0;
+	}
+	.card {
+		margin: initial;
+	}
+
+	.card:nth-child(2) {
+		padding: 5rem 3.1rem;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	:root {
+		font-size: 62.5%;
+	}
+	.container {
+		padding: 0 19.5rem;
+	}
+	header {
+		margin-top: 7.1rem;
+	}
+	.price-toggler {
+		margin-top: 4rem;
+	}
+	.card {
+		min-width: 350px;
+	}
+	.card:not(:nth-child(2)) {
+		padding: 3.1rem;
+	}
+	.card:nth-child(2) {
+		padding: 5.5rem 3.1rem;
+	}
+}
