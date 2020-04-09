@@ -267,6 +267,7 @@ ul li {
 	}
 	.card {
 		margin: initial;
+		min-width: 327px;
 	}
 
 	.card:nth-child(2) {
