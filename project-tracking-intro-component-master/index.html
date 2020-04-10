@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Project tracking intro component</title>
+
+  <!-- loading style sheets, favicon and javascript -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo"><img src="./images/logo.svg" alt="site logo"></div>
+        <div id="dropdown"><img id="dropdown-icon" src="./images/icon-hamburger.svg" alt="dropdown icon"></div>
+        <ul id="nav-items-mobile" class="text-Barlow-Condensed text-bold text-uppercase">
+          <li class="nav-item">Product</li>
+          <li class="nav-item">Features</li>
+          <li class="nav-item">Pricing</li>
+          <li class="nav-item divider"></li>
+          <li class="nav-item">Login</li>
+        </ul>
+        <ul id="nav-items-desktop" class="text-Barlow-Condensed text-bold text-uppercase">
+          <li class="nav-item">Product</li>
+          <li class="nav-item">Features</li>
+          <li class="nav-item">Pricing</li>
+          <li class="nav-item nav-dot"><div class="dot"></div>
+          </li>
+          <li class="nav-item">Login</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="bg-shape"></div>
+  <div class="hero-image"><img src="./images/illustration-devices.svg" alt="svg image devices"></div>
+  <main>
+      <section class="intro">
+        <div class="container">
+          <div class="text-uppercase text-Barlow-Condensed text-regular">
+            <p class="text-bold hightlight">New</p>
+            <p class="intro-heading text-half-opacity">Monograph Dashboard</p>
+          </div>
+          <h1 class="text-Barlow-Condensed text-bold text-uppercase">Powerful insights<br>into your team</h1>
+          <h2 class="text-Barlow text-regular">Project planning and time tracking<br>for agile teams</h2>
+          <div class="text-Barlow-Condensed text-uppercase bottom-cta">
+            <a href="#" class="btn btn-cta text-bold">Schedule a demo</a>
+            <p class="cta text-half-opacity text-regular">to see a preview</p>
+          </div>
+        </div>
+      </section>
+  </main>
+  <footer>
+    <p class="attribution text-Barlow">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/zuolizhu">Connor Zhu</a>.
+    </p>
+  </footer>
+</body>
+</html>

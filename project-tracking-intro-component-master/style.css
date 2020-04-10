@@ -1,0 +1,365 @@
+/* fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:400,700&display=swap');
+
+/* variables */
+:root {
+  /* font size: 1rem = 10px */
+  font-size: 62.5%;
+  /* color palette */
+  --Red: hsl(0, 100%, 68%);
+  --VeryDarkBlue: hsl(230, 29%, 20%);
+  --DarkGrayishBlue: hsl(230, 11%, 40%);
+  --GrayishBlue: hsl(231, 7%, 65%);
+  --LightGrayishBlue: hsl(207, 33%, 95%);
+}
+/* reset */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+body, p, a, ul, li, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: var(--VeryDarkBlue);
+}
+li {
+  list-style-type: none;
+}
+/* utilities */
+.text-bold {
+  font-weight: 700;
+}
+.text-regular {
+  font-weight: 400;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-Barlow {
+  font-family: 'Barlow', sans-serif;
+}
+.text-Barlow-Condensed {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.text-half-opacity {
+  opacity: 0.5;
+}
+.btn {
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-cta {
+  background-color: var(--Red);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.btn-cta:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--VeryDarkBlue);
+  opacity: 0.15;
+  border-radius: 50%;
+}
+li.nav-dot {
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+li.nav-dot:hover {
+  text-decoration: none;
+}
+/* base styles */
+/* styles that won't change by the size of the devices or theme */
+ul li {
+  cursor: pointer;
+}
+ul li:hover {
+  text-decoration: underline;
+}
+.hero-image {
+  position: absolute;
+  display: flex;
+  overflow-x: hidden;
+  right: 0;
+}
+main {
+  margin-top: 104vw;
+}
+p.hightlight {
+  color: #fff;
+  background-color: var(--VeryDarkBlue);
+  border-radius: 12.5px;
+  opacity: 1;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 0.35rem 1.02rem;
+  line-height: 1.2;
+}
+p.hightlight, p.intro-heading {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+p.intro-heading {
+  letter-spacing: 5px;
+  margin-left: 1.6rem;
+}
+p.cta {
+  display: inline-block;
+}
+.bottom-cta {
+  display: flex;
+  align-items: center;
+}
+footer {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+footer a {
+  color: var(--Red);
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/* mobile styles */
+header {
+  margin-top: 3.8rem;
+  margin-bottom: 6.4rem;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#dropdown {
+  cursor: pointer;
+}
+.logo img {
+  max-width: 24px;
+}
+.bg-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  min-width: 187px;
+  min-height: 425px;
+  background-color: var(--LightGrayishBlue);
+  border-radius: 0 0 0 60px;
+  z-index: -1;
+}
+.hero-image img {
+  max-width: 131.87%;
+  transform: translateX(10px);
+}
+.container {
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+#nav-items-mobile,
+#nav-items-desktop {
+  display: none;
+}
+#nav-items-mobile.show {
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  margin-top: 10rem;
+  z-index: 1;
+  transform: translate(-50%, 24%);
+  padding: 2.4rem;
+  min-width: 311px;
+  width: 82.9%;
+}
+#nav-items-mobile li {
+  font-size: 1.8rem;
+  letter-spacing: 1.2px;
+  line-height: 1.22;
+}
+li.divider {
+  height: 1px;
+  background-color: var(--VeryDarkBlue);
+  opacity: 0.15;
+  width: 100%;
+}
+#nav-items-mobile li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+#nav-items-mobile li:last-child {
+  opacity: 0.5;
+}
+section.intro h1 {
+  font-size: 4rem;
+  line-height: 1;
+}
+section.intro h2 {
+  opacity: 0.75;
+  line-height: 1.44;
+  font-size: 1.8rem;
+  margin-bottom: 2.7rem;
+}
+section.intro h1, 
+section.intro h2 {
+  margin-top: 1.6rem;
+  letter-spacing: 0px;
+}
+.btn-cta {
+  padding: 1.15rem 2.2rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.93px;
+  border-radius: 5px;
+}
+p.cta {
+  font-size: 1.4rem;
+  line-height: 1.21;
+  letter-spacing: 2.5px;
+  margin-left: 2rem;
+}
+
+@media screen and (min-width: 480px) {
+  main {
+    margin-top: 92vw;
+  }
+  section.intro {
+    text-align: center;
+  }
+  .bottom-cta {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 660px) {
+  main {
+    margin-top: 85vw;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .hero-image {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  main {
+    margin-top: 9rem;
+  }
+  section.intro {
+    text-align: left;
+  }
+  .bottom-cta {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 960px) {
+  :root{
+    font-size: 70%;
+  }
+  #dropdown {
+    display: none;
+  }
+  #nav-items-desktop {
+    display: flex;
+  }
+  #nav-items-desktop li {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  #nav-items-desktop li:not(:last-child) {
+    margin-right: 4.2rem;
+  }
+  #nav-items-desktop li:last-child {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  :root{
+    font-size: 75%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root{
+    font-size: 80%;
+  }
+  .container {
+    padding: 0 4rem;
+  }
+}
+/* desktop styles */
+@media screen and (min-width: 1440px) {
+  :root{
+    font-size: 62.5%;
+  }
+  header {
+    margin-top: 6.4rem;
+    margin-bottom: 12.4rem;
+  }
+  .bg-shape {
+    width: 48.96vw;
+    min-height: 427px;
+  }
+  .logo img {
+    max-width: 32px;
+  }
+  .container {
+    padding: 0 16.5rem;
+    max-width: 1440px;
+  }
+  section.intro {
+    align-items: flex-start;
+  }
+  .hero-image img {
+    max-width: 130.75%;
+    transform: translateX(40px);
+  }
+  .hero-content {
+    margin-top: 3.8rem;
+  }
+  section.intro h1 {
+    font-size: 6.4rem;
+    margin-top: 2rem;
+  }
+  section.intro h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 6.4rem;
+  }
+  .btn-cta {
+    font-size: 1.6rem;
+    line-height: 1.1875;
+    padding: 1.45rem 3.3375rem;
+  }
+  p.cta {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    margin-left: 2.4rem;
+    line-height: 1.2;
+  }
+}
+/* extra large screen */
+@media screen and (min-width: 1800px) {
+  .hero-image {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 2200px) {
+  .hero-image {
+    width: 30%;
+  }
+}
