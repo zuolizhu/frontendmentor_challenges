@@ -2,6 +2,7 @@
 .attribution {
   font-size: 11px; 
   text-align: center;
+  margin-bottom: 1rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -34,6 +35,11 @@ li {
 body {
   font-size: 14px;
   font-family: 'Karla', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* utilities */
@@ -188,7 +194,7 @@ main {
 }
 
 /* desktop styles */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 980px) {
   body {
     font-size: 16px;
   }
