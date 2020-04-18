@@ -51,6 +51,10 @@ a {
   text-decoration: none;
 }
 
+.hidden-text {
+  display: none;
+}
+
 /* Type Specs */
 .t-hero {
   font-weight: var(--weight-semi-bold);
