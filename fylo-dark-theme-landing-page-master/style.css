@@ -352,6 +352,8 @@ body {
 @media (min-width: 960px) {
   .header {
     padding: 7.3rem 8rem 0;
+    max-width: 128rem;
+    margin: 0 auto;
   }
 }
 
@@ -483,6 +485,7 @@ body {
   }
   .divider {
     margin-top: 72.3rem;
+    max-height: 44.9rem;
   }
 }
 .divider__image {
