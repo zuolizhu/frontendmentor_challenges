@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
+
+  <!-- loading style sheet and favicon 👍 -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="/">
+      <span class="hidden-text">Fylo</span>
+      <img class="brand__logo__image" src="./images/logo.svg" alt="site logo">
+    </a>
+    <nav class="menu">
+      <ul class="menu__items">
+        <li class="menu__item">
+          <a class="t-header-nav" href="/">Features</a>
+        </li>
+        <li class="menu__item">
+          <a class="t-header-nav" href="/">Team</a>
+        </li>
+        <li class="menu__item">
+          <a class="t-header-nav" href="/">Sign In</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="intro">
+    <div class="intro__image__container">
+      <img class="intro__image" src="./images/illustration-intro.png" alt="image of accessing from anywhere">
+    </div>
+    <h1 class="t-intro-heading intro-heading">All your files in one secure location, accessible anywhere.</h1>
+    <p class="t-intro-body intro-body">Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
+    <button class="button button--intro">Get Started</button>
+  </div>
+
+
+  <main class="main">
+    <section class="divider">
+      <h2 class="hidden-text">divider section</h2>
+      <img class="divider__image divider__image--mobile" src="./images/bg-curvy-mobile.svg" alt="divider image">
+      <img class="divider__image divider__image--desktop" src="./images/bg-curvy-desktop.svg" alt="divider image">
+    </section>
+    <section class="features">
+      <div class="feature-cards-container">
+        <div class="feature__card feature_card--upper">
+          <div class="feature__card__image__container">
+            <img class="feature__card__image" src="./images/icon-access-anywhere.svg" alt="svg icon for accessing any where">
+          </div>
+          <h2 class="t-feature-heading feature-heading">Access your files, anywhere</h2>
+          <p class="t-feature-body">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+        </div>
+        <div class="feature__card feature_card--upper">
+          <div class="feature__card__image__container">
+            <img class="feature__card__image" src="./images/icon-security.svg" alt="svg icon for security">
+          </div>
+          <h2 class="t-feature-heading feature-heading">Security you can trust</h2>
+          <p class="t-feature-body">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+        </div>
+        <div class="feature__card">
+          <div class="feature__card__image__container">
+            <img class="feature__card__image" src="./images/icon-collaboration.svg" alt="svg icon for real-time collaboration">
+          </div>
+          <h2 class="t-feature-heading feature-heading">Real-time collaboration</h2>
+          <p class="t-feature-body">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+        </div>
+        <div class="feature__card">
+          <div class="feature__card__image__container">
+            <img class="feature__card__image" src="./images/icon-any-file.svg" alt="svg icon for file types">
+          </div>
+          <h2 class="t-feature-heading feature-heading">Store any type of file</h2>
+          <p class="t-feature-body">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
+        </div>
+      </div>
+    </section>
+    <section class="productive">
+      <div class="productive__container">
+        <div class="productive__image__container">
+          <img class="productive__image" src="./images/illustration-stay-productive.png" alt="image for productive">
+        </div>
+        <div class="productive__copy">
+          <h2 class="t-productive-heading">Stay productive, wherever you are</h2>
+          <p class="t-productive-body">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+          <p class="t-productive-body">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+          <a class="t-productive-link productive-link" href="/">See how Fylo works</a>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="testimonials__container">
+        <div class="testimonial_card">
+          <p class="t-testimonial-body">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="profile">
+            <div class="profile__avatar">
+              <img class="profile__avatar__image" src="./images/profile-1.jpg" alt="user avatar 1">
+            </div>
+            <div class="profile__content">
+              <h3 class="t-profile-name profile-name">Satish Patel</h3>
+              <h4 class="t-profile-title">Founder & CEO, Huddle</h4>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial_card">
+          <p class="t-testimonial-body">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="profile">
+            <div class="profile__avatar">
+              <img class="profile__avatar__image" src="./images/profile-2.jpg" alt="user avatar 2">
+            </div>
+            <div class="profile__content">
+              <h3 class="t-profile-name profile-name">Bruce McKenzie</h3>
+              <h4 class="t-profile-title">Founder & CEO, Huddle</h4>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial_card">
+          <p class="t-testimonial-body">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="profile">
+            <div class="profile__avatar">
+              <img class="profile__avatar__image" src="./images/profile-3.jpg" alt="user avatar 3">
+            </div>
+            <div class="profile__content">
+              <h3 class="t-profile-name profile-name">Iva Boyd</h3>
+              <h4 class="t-profile-title">Founder & CEO, Huddle</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="call-to-action">
+      <div class="call-to-action__container">
+        <h2 class="t-cta-heading cta-heading">Get early access today</h2>
+        <p class="t-cta-body">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+        <div class="input-group">
+          <input class="email-input" type="text" placeholder="email@example.com">
+          <button class="button button--cta">Get Started For Free</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="./images/logo.svg" alt="site logo">
+      </div>
+      <div class="footer-content">
+        <div class="address">
+          <div class="vector-icon">
+            <img src="./images/icon-location.svg" alt="location icon">
+          </div>
+          <p class="t-footer-address">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+        <div class="contact">
+          <div class="phone">
+            <div class="vector-icon">
+              <img src="./images/icon-phone.svg" alt="phone icon">
+            </div>
+            <p class="t-footer-contact">+1-543-123-4567</p>
+          </div>
+          <div class="email">
+            <div class="vector-icon">
+              <img src="./images/icon-email.svg" alt="email icon">
+            </div>
+            <p class="t-footer-contact">example@fylo.com</p>
+          </div>
+        </div>
+        <ul class="footer-nav">
+          <li><a class="t-footer-nav-item" href="/">About Us</a></li>
+          <li><a class="t-footer-nav-item" href="/">Jobs</a></li>
+          <li><a class="t-footer-nav-item" href="/">Press</a></li>
+          <li><a class="t-footer-nav-item" href="/">Blog</a></li>
+        </ul>
+        <ul class="footer-nav">
+          <li><a class="t-footer-nav-item" href="/">Contact Us</a></li>
+          <li><a class="t-footer-nav-item" href="/">Terms</a></li>
+          <li><a class="t-footer-nav-item" href="/">Privacy</a></li>
+        </ul>
+        <div class="socials">
+          <div class="social">
+            <svg class="social__icon" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+          </div>
+          <div class="social">
+            <svg class="social__icon" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+          </div>
+          <div class="social">
+            <svg class="social__icon" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+          </div>
+        </div>
+      </div>
+     
+    </footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/zuolizhu">Connor Zhu</a>.
+    </p>
+    </div>
+</body>
+</html>
