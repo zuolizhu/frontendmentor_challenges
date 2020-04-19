@@ -590,6 +590,8 @@ body {
   display: flex;
   margin: 0 auto;
   max-width: 61.4rem;
+  align-items: center;
+  justify-content: center;
 }
 .productive__image {
   width: 100%;
