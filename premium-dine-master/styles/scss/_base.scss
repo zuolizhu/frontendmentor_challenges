@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+  // colors
+  --color-beaver: #9e7f66;
+  --color-cod-gray: #111111;
+  --color-mirage: #17192b;
+  --color-ebony-clay: #242b37;
+  --color-shuttle-gray: #5c6779;
+  --color-dark-gray: #4c4c4c;
+  --color-white: #fff;
+  --color-dark-blue-shaodw: rgba(56, 66, 85, 0.5);
+
+  // font weights
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+
+  // Design elements
+  --transition: 300ms ease-in-out;
+  --card-shadow: 0 7.5rem 10rem -5rem var(--color-dark-blue-shaodw);
+}
+
+$bp-desktop: 1200px;
+$bp-tablet-end: 1199px;
+$bp-tablet-start: 768px;
+$bp-mobile: 767px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  min-height: 100vh;
+}
+
+/* Type Specs */
+// headings
+.t-heading-1 {
+  font-weight: var(--weight-light);
+  color: var(--color-white);
+  @media (max-width: $bp-mobile) {
+    font-size: 3.2rem;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+  }
+  @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    font-size: 4.8rem;
+    line-height: 1.333;
+    letter-spacing: -0.6px;
+  }
+  @media (min-width: $bp-desktop) {
+    font-size: 6.4rem;
+    line-height: 1.125;
+    letter-spacing: -0.8px;
+  }
+}
+
+.t-heading-2 {
+  font-weight: var(--weight-bold);
+  color: var(--color-ebony-clay);
+  @media (max-width: $bp-mobile) {
+    font-size: 3.2rem;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+  }
+  @media (min-width: $bp-tablet-start) {
+    font-size: 4rem;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+  }
+  // screen size above keeps the same
+}
+
+.t-heading-3-l {
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  color: var(--color-white);
+  font-weight: var(--weight-bold);
+}
+
+.t-heading-3-s {
+  font-size: 1.4rem;
+  line-height: 2;
+  letter-spacing: 2px;
+  color: var(--color-dark-gray);
+  font-weight: var(--weight-semi-bold);
+}
+
+// bodys
+.t-body-1 {
+  line-height: 1.667;
+  font-weight: var(--weight-regular);
+  @media (max-width: $bp-mobile) {
+    font-size: 1.5rem;
+    letter-spacing: -0.19px;
+  }
+  @media (min-width: $bp-tablet-start) {
+    font-size: 1.8rem;
+    letter-spacing: -0.22px;
+  }
+  // screen size above keeps the same
+  &--white {
+    color: var(--color-white);
+  }
+  &--black {
+    color: var(--color-ebony-clay);
+  }
+}
+
+.t-body-2 {
+  font-weight: var(--weight-regular);
+  font-size: 1.5rem;
+  line-height: 1.867;
+  letter-spacing: -0.19px;
+  color: var(--color-white);
+}
