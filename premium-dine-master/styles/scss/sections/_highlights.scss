@@ -9,7 +9,16 @@
   @media (min-width: $bp-desktop) {
     padding-top: 20rem;
     padding-bottom: 12rem;
+
+    &__container {
+      max-width: 111rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
   }
+  
 
   &__copy {
     @media (max-width: $bp-mobile) {
@@ -22,6 +31,10 @@
       margin-right: auto;
       margin-bottom: 5.6rem;
       margin-left: auto;
+    }
+    @media (min-width: $bp-desktop) {
+      max-width: 44.5rem;
+      transform: translateY(-5.5rem);
     }
   }
 
@@ -37,13 +50,17 @@
       max-width: 57.3rem;
       margin: 0 auto;
     }
+    @media (min-width: $bp-desktop) {
+      margin: 0;
+      max-width: 54rem;
+    }
   }
 
   &__item {
     @media (max-width: $bp-mobile) {
       text-align: center;
     }
-    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    @media (min-width: $bp-tablet-start) {
       display: flex;
       align-items: center;
     }
@@ -78,7 +95,7 @@
           background-color: var(--color-beaver);
           position: absolute;
           right: 0;
-          top: 1.8rem;
+          top: 1.6rem;
           transform: translateX(3.2rem);
         }
       }

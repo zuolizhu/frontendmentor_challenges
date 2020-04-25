@@ -13,7 +13,22 @@
   }
   @media (min-width: $bp-desktop) {
     padding: 16rem 0;
+    background-repeat: no-repeat;
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg);
+    background-position-x: -35rem;
   }
+
+  &__container {
+    @media (min-width: $bp-desktop) {
+      max-width: 111rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
   &__slider {
     @media (max-width: $bp-mobile) {
       max-width: 32.6rem;
@@ -34,6 +49,15 @@
         transform: translate(-5.8rem, -3.8rem);
       }
     }
+    @media (min-width: $bp-desktop) {
+      position: relative;
+      &__floating-pattern {
+        display: block;
+        position: absolute;
+        transform: translate(-4rem, -3.8rem);
+      }
+    }
+    
 
     &__image {
       background-repeat: no-repeat;
@@ -49,6 +73,7 @@
       }
       @media (min-width: $bp-desktop) {
         height: 60rem;
+        width: 54rem;
         background-image: url(../../images/homepage/family-gathering-desktop@2x.jpg);
       }
     }
@@ -62,6 +87,9 @@
       justify-content: space-around;
       margin: 0 auto;
     }
+    @media (min-width: $bp-desktop) {
+      margin-top: 7.8rem;
+    }
   }
   &__event {
     cursor: pointer;
@@ -71,14 +99,31 @@
     &:hover {
       opacity: 1;
     }
-    &__underline {
-      width: 4.8rem;
-      margin: 0 auto;
-      border: 1px solid transparent;
-      transition: var(--transition) border-color;
+    @media (max-width: $bp-tablet-end) {
+      &__underline {
+        width: 4.8rem;
+        margin: 0 auto;
+        border: 1px solid transparent;
+        transition: var(--transition) border-color;
+      }
+      &:hover &__underline {
+        border-color: var(--color-beaver);
+      }
     }
-    &:hover &__underline {
-      border-color: var(--color-beaver);
+    @media (min-width: $bp-desktop) {
+      position: relative;
+      &__underline {
+        top: 50%;
+        height: 1px;
+        width: 9.5rem;
+        position: absolute;
+        transform: translate(-12.5rem, -0.2rem);
+        background-color: transparent;
+        transition: var(--transition) background-color;
+      }
+      &:hover &__underline {
+        background-color: var(--color-beaver);
+      }
     }
 
     &:not(:last-child) {
@@ -92,6 +137,11 @@
     }
     @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
       margin-top: 5.6rem;
+    }
+    @media (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: column-reverse;
+      max-width: 44.5rem;
     }
   }
 

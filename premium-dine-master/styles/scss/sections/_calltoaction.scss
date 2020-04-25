@@ -12,11 +12,20 @@
     background-image: url(../../../images/homepage/ready-bg-tablet@2x.jpg);
   }
   @media (min-width: $bp-desktop) {
-
+    background-image: url(../../../images/homepage/ready-bg-desktop@2x.jpg);
+    padding: 8.8rem 0;
+    &__container {
+      max-width: 111rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
   
-  
   &__heading {
-    margin-bottom: 2.4rem;
+    @media (max-width: $bp-tablet-end) {
+      margin-bottom: 2.4rem;
+    }
   }
 }

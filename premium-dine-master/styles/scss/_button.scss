@@ -4,8 +4,14 @@
   font-size: 1.4rem;
   line-height: 1.143;
   letter-spacing: 2px;
-  padding: 2.4rem 5.4rem;
+  padding: 2.3rem 5.3rem;
   cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+  }
   
   &--dark {
     color: var(--color-white);

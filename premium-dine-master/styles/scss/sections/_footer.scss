@@ -6,7 +6,9 @@
   }
   @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
     padding: 6.4rem 4rem;
-
+  }
+  @media (min-width: $bp-desktop) {
+    padding: 7.8rem 0;
   }
   &__information {
     @media (min-width: $bp-tablet-start) {
@@ -20,8 +22,13 @@
   }
 
   &__container {
-    @media (min-width: $bp-tablet-start) {
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
       max-width: 94rem;
+      margin: 0 auto;
+      display: flex;
+    }
+    @media (min-width: $bp-desktop) {
+      max-width: 111rem;
       margin: 0 auto;
       display: flex;
     }
