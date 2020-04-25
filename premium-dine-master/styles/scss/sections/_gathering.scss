@@ -1,0 +1,89 @@
+.gathering {
+  @media (max-width: $bp-tablet-end) {
+    text-align: center;
+  }
+  @media (max-width: $bp-mobile) {
+    padding: 8rem 2.4rem 12.4rem;
+  }
+  @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    padding: 12rem 0;
+  }
+  @media (min-width: $bp-desktop) {
+    padding: 16rem 0;
+  }
+  &__slider {
+    @media (max-width: $bp-mobile) {
+      max-width: 32.6rem;
+      margin: 0 auto;
+    }
+  }
+  &__slide {
+    
+    &__image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: var(--card-shadow);
+      @media (max-width: $bp-mobile) {
+        height: 40rem;
+        background-image: url(../../images/homepage/family-gathering-mobile@2x.jpg);
+      }
+      @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+        height: 36rem;
+        background-image: url(../../images/homepage/family-gathering-tablet@2x.jpg);
+      }
+      @media (min-width: $bp-desktop) {
+        height: 60rem;
+        background-image: url(../../images/homepage/family-gathering-desktop@2x.jpg);
+      }
+    }
+  }
+
+  &__events {
+    list-style-type: none;
+  }
+  &__event {
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: 0.5;
+    transition: var(--transition) opacity;
+    &:hover {
+      opacity: 1;
+    }
+    &__underline {
+      width: 4.8rem;
+      margin: 0 auto;
+      border: 1px solid transparent;
+      transition: var(--transition) border-color;
+    }
+    &:hover &__underline {
+      border-color: var(--color-beaver);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__content {
+    @media (max-width: $bp-mobile) {
+      margin-top: 4.8rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      margin-top: 5.6rem;
+    }
+  }
+
+  &__text {
+    @media (max-width: $bp-mobile) {
+      margin-top: 2.4rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      margin-top: 4rem;
+    }
+
+    &__body {
+      margin-top: 1.6rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+}

@@ -5,11 +5,29 @@
   line-height: 1.143;
   letter-spacing: 2px;
   padding: 2.4rem 5.4rem;
-
+  cursor: pointer;
+  
   &--dark {
     color: var(--color-white);
     background-color: transparent;
     border: 1px solid var(--color-white);
+    transition: var(--transition) background-color, var(--transition) color;
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-cod-gray);
+    }
+  }
+
+  &--light {
+    background-color: var(--color-cod-gray);
+    color: var(--color-white);
+    border: 1px solid transparent;
+    transition: var(--transition) background-color, var(--transition) color, var(--transition) border-color;
+    &:hover {
+      background-color: transparent;
+      color: var(--color-cod-gray);
+      border-color: var(--color-cod-gray);
+    }
   }
 
   &--hero {

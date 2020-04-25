@@ -1,0 +1,14 @@
+.footer {
+  @media (max-width: $bp-mobile) {
+    padding: 8rem 2.4rem;
+    text-align: center;
+  }
+  background-color: var(--color-cod-gray);
+}
+
+.contact {
+  @media (max-width: $bp-mobile) {
+    margin-top: 4rem;
+    margin-bottom: 3.2rem;
+  }
+}

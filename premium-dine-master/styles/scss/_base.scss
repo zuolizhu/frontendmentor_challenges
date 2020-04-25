@@ -9,6 +9,7 @@
   --color-shuttle-gray: #5c6779;
   --color-dark-gray: #4c4c4c;
   --color-white: #fff;
+  --color-border: rgba(151, 151, 151, 0.15);
   --color-dark-blue-shaodw: rgba(56, 66, 85, 0.5);
 
   // font weights
@@ -72,7 +73,12 @@ body {
 
 .t-heading-2 {
   font-weight: var(--weight-bold);
-  color: var(--color-ebony-clay);
+  &--black {
+    color: var(--color-ebony-clay);
+  }
+  &--white {
+    color: var(--color-white);
+  }
   @media (max-width: $bp-mobile) {
     font-size: 3.2rem;
     line-height: 1.25;
@@ -129,4 +135,13 @@ body {
   line-height: 1.867;
   letter-spacing: -0.19px;
   color: var(--color-white);
+}
+
+.t-footer {
+  font-weight: var(--weight-regular);
+  font-size: 1.4rem;
+  line-height: 2;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  text-transform: uppercase;
 }

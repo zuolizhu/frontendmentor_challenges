@@ -1,0 +1,83 @@
+.highlights {
+  background-color: var(--color-cod-gray);
+  @media (max-width: $bp-mobile) {
+    padding: 7.2rem 2.4rem;
+  }
+  @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    padding: 9.6rem 0;
+  }
+  @media (min-width: $bp-desktop) {
+    padding-top: 20rem;
+    padding-bottom: 12rem;
+  }
+
+  &__copy {
+    @media (max-width: $bp-tablet-end) {
+      text-align: center;
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  &__heading {
+    margin-top: 3.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+
+  &__item {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 2.4rem;
+    }
+    &__image {
+      &__container {
+        margin: 0 auto;
+        max-width: 32.7rem;
+      }
+
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width: $bp-mobile) {
+        width: 100%;
+        height: 24.5rem;
+      }
+      @media (min-width: $bp-tablet-start) {
+        width: 12.8rem;
+        height: 9.6rem;
+      }
+      &--salmon {
+        @media (max-width: $bp-mobile) {
+          background-image: url(../../images/homepage/salmon-mobile@2x.jpg);
+        }
+        @media (min-width:$bp-tablet-start) {
+          background-image: url(../../images/homepage/salmon-desktop-tablet@2x.jpg);
+        }
+      }
+      &--mignon {
+        @media (max-width: $bp-mobile) {
+          background-image: url(../../images/homepage/beef-mobile@2x.jpg);
+        }
+        @media (min-width:$bp-tablet-start) {
+          background-image: url(../../images/homepage/beef-desktop-tablet@2x.jpg);
+        }
+      }
+      &--mousse {
+        @media (max-width: $bp-mobile) {
+          background-image: url(../../images/homepage/chocolate-mobile@2x.jpg);
+        }
+        @media (min-width:$bp-tablet-start) {
+          background-image: url(../../images/homepage/chocolate-desktop-tablet@2x.jpg);
+        }
+      }
+    }
+
+    &__text {
+      @media (max-width: $bp-mobile) {
+        margin-top: 3.2rem;
+      }
+    }
+  }
+}
