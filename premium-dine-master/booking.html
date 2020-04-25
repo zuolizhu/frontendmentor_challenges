@@ -22,13 +22,25 @@
             <p class="t-body-1 t-body-1--white reservations__body">We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.</p>
             <a href="#reserve-place" class="btn btn--dark btn--reserve">Reserve Place</a>
           </div>
-          <div class="reservations__content__form">
-            Name
-            Email
-            Pick a date
-            Pick a time
+          <div class="form reservations__content__form">
+            <div class="form__input-field form__input-field--text">
+              <label class="screen-reader-only" for="name">Name</label>
+              <input class="input-box" type="text" name="name" id="name" placeholder="Name" required>
+              <p class="error">This field is required</p>
+            </div>
+            <div class="form__input-field form__input-field--text">
+              <label class="screen-reader-only" for="email">Email</label>
+              <input class="input-box" type="email" name="email" id="email" placeholder="Email" required>
+              <p class="error">This field is required</p>
+            </div>
+            <div class="form__datatime-field">
+              Pick a date
+            </div>
+            <div class="form__datatime-field">
+              Pick a time
+            </div>
           
-            Make Reservation
+            <button class="btn btn--light btn--make-reservation">Make Reservation</button>
           </div>
         </div>
       </div>

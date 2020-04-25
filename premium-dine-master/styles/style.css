@@ -160,6 +160,18 @@ body {
   text-transform: uppercase;
 }
 
+.screen-reader-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+          clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
 .btn {
   background: none;
   text-transform: uppercase;
@@ -227,6 +239,109 @@ body {
   }
 }
 
+.btn--make-reservation {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .form {
+    padding: 3.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    padding: 4.8rem;
+  }
+}
+
+.form__input-field--text {
+  margin-bottom: 2rem;
+}
+
+.input-box {
+  caret-color: var(--color-beaver);
+  width: 100%;
+  font-weight: var(--weight-light);
+  opacity: 0.5;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  color: var(--color-cod-gray);
+  padding-left: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #8E8E8E;
+  -webkit-transition: var(--transition) border-color;
+  transition: var(--transition) border-color;
+  cursor: pointer;
+}
+
+.input-box:focus {
+  border-bottom: 1px solid var(--color-cod-gray);
+  outline: none;
+}
+
+.input-box:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.input-box:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.input-box:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.input-box:focus::placeholder {
+  opacity: 1;
+}
+
+.input-box::-webkit-input-placeholder {
+  font-family: 'Spartan', sans-serif;
+  color: var(--color-cod-gray);
+  opacity: 0.5;
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  -webkit-transition: var(--transition) opacity;
+  transition: var(--transition) opacity;
+}
+
+.input-box:-ms-input-placeholder {
+  font-family: 'Spartan', sans-serif;
+  color: var(--color-cod-gray);
+  opacity: 0.5;
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  -webkit-transition: var(--transition) opacity;
+  transition: var(--transition) opacity;
+}
+
+.input-box::-ms-input-placeholder {
+  font-family: 'Spartan', sans-serif;
+  color: var(--color-cod-gray);
+  opacity: 0.5;
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  -webkit-transition: var(--transition) opacity;
+  transition: var(--transition) opacity;
+}
+
+.input-box::placeholder {
+  font-family: 'Spartan', sans-serif;
+  color: var(--color-cod-gray);
+  opacity: 0.5;
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  -webkit-transition: var(--transition) opacity;
+  transition: var(--transition) opacity;
+}
+
 .hero {
   background-repeat: no-repeat;
   background-size: cover;
@@ -287,7 +402,7 @@ body {
     padding-top: 23.2rem;
     padding-right: 2.4rem;
     padding-left: 2.4rem;
-    background-image: url(../images/homepage/hero-bg-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/hero-bg-mobile@2x.jpg);
   }
 }
 
@@ -296,7 +411,7 @@ body {
     height: 99.2rem;
     text-align: center;
     padding-top: 37.4rem;
-    background-image: url(../images/homepage/hero-bg-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/hero-bg-tablet@2x.jpg);
   }
 }
 
@@ -306,7 +421,7 @@ body {
     padding-top: 6.5rem;
     padding-left: 16.5rem;
     text-align: left;
-    background-image: url(../images/homepage/hero-bg-desktop@2x.jpg);
+    background-image: url(../../../images/homepage/hero-bg-desktop@2x.jpg);
   }
 }
 
@@ -325,13 +440,13 @@ body {
   .middle {
     background-position-y: 10rem, bottom;
     background-position-x: -67vw, 52vw;
-    background-image: url(../images/patterns/pattern-curve-top-right.svg), url(../images/patterns/pattern-curve-top-left.svg);
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
   }
 }
 
 @media (min-width: 1200px) {
   .middle {
-    background-image: url(../images/patterns/pattern-curve-top-right.svg), url(../images/patterns/pattern-curve-top-left.svg);
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
     background-position-y: 24.2rem, bottom;
     background-position-x: left, right;
   }
@@ -535,37 +650,37 @@ body {
 
 @media (max-width: 767px) {
   .middle__section-card__image--first {
-    background-image: url(../images/homepage/enjoyable-place-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/enjoyable-place-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .middle__section-card__image--first {
-    background-image: url(../images/homepage/enjoyable-place-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/enjoyable-place-tablet@2x.jpg);
   }
 }
 
 @media (min-width: 1200px) {
   .middle__section-card__image--first {
-    background-image: url(../images/homepage/enjoyable-place-desktop@2x.jpg);
+    background-image: url(../../../images/homepage/enjoyable-place-desktop@2x.jpg);
   }
 }
 
 @media (max-width: 767px) {
   .middle__section-card__image--second {
-    background-image: url(../images/homepage/locally-sourced-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/locally-sourced-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .middle__section-card__image--second {
-    background-image: url(../images/homepage/locally-sourced-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/locally-sourced-tablet@2x.jpg);
   }
 }
 
 @media (min-width: 1200px) {
   .middle__section-card__image--second {
-    background-image: url(../images/homepage/locally-sourced-desktop@2x.jpg);
+    background-image: url(../../../images/homepage/locally-sourced-desktop@2x.jpg);
   }
 }
 
@@ -752,37 +867,37 @@ body {
 
 @media (max-width: 767px) {
   .highlights__item__image--salmon {
-    background-image: url(../images/homepage/salmon-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/salmon-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) {
   .highlights__item__image--salmon {
-    background-image: url(../images/homepage/salmon-desktop-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/salmon-desktop-tablet@2x.jpg);
   }
 }
 
 @media (max-width: 767px) {
   .highlights__item__image--mignon {
-    background-image: url(../images/homepage/beef-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/beef-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) {
   .highlights__item__image--mignon {
-    background-image: url(../images/homepage/beef-desktop-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/beef-desktop-tablet@2x.jpg);
   }
 }
 
 @media (max-width: 767px) {
   .highlights__item__image--mousse {
-    background-image: url(../images/homepage/chocolate-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/chocolate-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) {
   .highlights__item__image--mousse {
-    background-image: url(../images/homepage/chocolate-desktop-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/chocolate-desktop-tablet@2x.jpg);
   }
 }
 
@@ -821,7 +936,7 @@ body {
 @media (min-width: 768px) and (max-width: 1199px) {
   .gathering {
     padding: 12rem 0;
-    background-image: url(../images/patterns/pattern-curve-top-right.svg);
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg);
     background-repeat: no-repeat;
     background-position-x: -69vw;
   }
@@ -831,7 +946,7 @@ body {
   .gathering {
     padding: 16rem 0;
     background-repeat: no-repeat;
-    background-image: url(../images/patterns/pattern-curve-top-right.svg);
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg);
     background-position-x: -35rem;
   }
 }
@@ -903,14 +1018,14 @@ body {
 @media (max-width: 767px) {
   .gathering__slide__image {
     height: 40rem;
-    background-image: url(../images/homepage/family-gathering-mobile@2x.jpg);
+    background-image: url(../../images/homepage/family-gathering-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .gathering__slide__image {
     height: 36rem;
-    background-image: url(../images/homepage/family-gathering-tablet@2x.jpg);
+    background-image: url(../../images/homepage/family-gathering-tablet@2x.jpg);
   }
 }
 
@@ -918,7 +1033,7 @@ body {
   .gathering__slide__image {
     height: 60rem;
     width: 54rem;
-    background-image: url(../images/homepage/family-gathering-desktop@2x.jpg);
+    background-image: url(../../images/homepage/family-gathering-desktop@2x.jpg);
   }
 }
 
@@ -1052,20 +1167,20 @@ body {
 @media (max-width: 767px) {
   .calltoaction {
     padding: 8rem 2.4rem;
-    background-image: url(../images/homepage/ready-bg-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/ready-bg-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .calltoaction {
     padding: 6.5rem 0;
-    background-image: url(../images/homepage/ready-bg-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/ready-bg-tablet@2x.jpg);
   }
 }
 
 @media (min-width: 1200px) {
   .calltoaction {
-    background-image: url(../images/homepage/ready-bg-desktop@2x.jpg);
+    background-image: url(../../../images/homepage/ready-bg-desktop@2x.jpg);
     padding: 8.8rem 0;
   }
   .calltoaction__container {
@@ -1105,7 +1220,7 @@ body {
 @media (max-width: 767px) {
   .reservations__bg-1 {
     height: 60rem;
-    background-image: url(../images/booking/hero-bg-mobile@2x.jpg);
+    background-image: url(../../../images/booking/hero-bg-mobile@2x.jpg);
   }
   .reservations__bg-2 {
     height: 53.4rem;
@@ -1115,7 +1230,7 @@ body {
 @media (min-width: 768px) and (max-width: 1199px) {
   .reservations__bg-1 {
     height: 60rem;
-    background-image: url(../images/booking/hero-bg-tablet@2x.jpg);
+    background-image: url(../../../images/booking/hero-bg-tablet@2x.jpg);
   }
   .reservations__bg-2 {
     height: 43.5rem;
@@ -1125,12 +1240,12 @@ body {
 @media (min-width: 1200px) {
   .reservations__bg-1 {
     height: 60rem;
-    background-image: url(../images/booking/hero-bg-desktop@2x.jpg);
+    background-image: url(../../../images/booking/hero-bg-desktop@2x.jpg);
   }
   .reservations__bg-2 {
     height: 32rem;
     background-repeat: no-repeat;
-    background-image: url(../images/patterns/pattern-curve-bottom-right.svg);
+    background-image: url(../../../images/patterns/pattern-curve-bottom-right.svg);
   }
 }
 
@@ -1183,7 +1298,7 @@ body {
     position: absolute;
     -webkit-transform: translate(-8rem, 3.8rem);
             transform: translate(-8rem, 3.8rem);
-    background-image: url(../images/patterns/pattern-lines.svg);
+    background-image: url(../../../images/patterns/pattern-lines.svg);
   }
 }
 
