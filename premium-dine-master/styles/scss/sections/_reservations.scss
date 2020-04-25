@@ -1,0 +1,137 @@
+.reservations {
+  position: relative;
+  &__bg-1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__bg-2 {
+    background-color: var(--color-white);
+  }
+
+  @media (max-width: $bp-mobile) {
+    &__bg-1 {
+      height: 60rem;
+      background-image: url(../../../images/booking/hero-bg-mobile@2x.jpg);
+    }
+    &__bg-2 {
+      height: 53.4rem;
+    }
+  }
+  @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    &__bg-1 {
+      height: 60rem;
+      background-image: url(../../../images/booking/hero-bg-tablet@2x.jpg);
+    }
+    &__bg-2 {
+      height: 43.5rem;
+    }
+  }
+  @media (min-width: $bp-desktop) {
+    &__bg-1 {
+      height: 60rem;
+      background-image: url(../../../images/booking/hero-bg-desktop@2x.jpg);
+    }
+    &__bg-2 {
+      height: 32rem;
+      background-repeat: no-repeat;
+      background-image: url(../../../images/patterns/pattern-curve-bottom-right.svg);
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media (max-width: $bp-mobile) {
+      text-align: center;
+      padding-top: 5.6rem;
+      padding-right: 2.4rem;
+      padding-left: 2.4rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      padding: 5.6rem 4rem 0;
+    }
+    @media (min-width: $bp-desktop) {
+      padding-top: 6.5rem;
+      width: 111rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__content {
+    &__form {
+      background-color: var(--color-white);
+      box-shadow: var(--card-shadow);
+      position: relative;
+      @media (min-width: $bp-desktop) {
+        &::after{
+          content: ' ';
+          left: 0;
+          bottom: 0;
+          z-index: -1;
+          width: 16rem;
+          height: 7.6rem;
+          position: absolute;
+          transform: translate(-8rem, 3.8rem);
+          background-image: url(../../../images/patterns/pattern-lines.svg);
+        }
+      }
+    }
+
+    @media (max-width: $bp-mobile) {
+      margin-top: 4rem;
+      &__text {
+        margin-bottom: 9.1rem;
+      }
+      &__form {
+        height: 58.5rem;
+      }
+    }
+
+    @media (min-width: $bp-tablet-start) {
+      &__form {
+        height: 54.5rem;
+        width: 54rem;
+      }
+    }
+
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      text-align: center;
+      margin-top: 6.4rem;
+      display: flex;
+      flex-direction: column;
+      &__text {
+        margin-bottom: 4rem;
+      }
+      &__form {
+        margin: 0 auto;
+      }
+    }
+    @media (min-width: $bp-desktop) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15.3rem;
+      &__text {
+        max-width: 44.5rem;
+      }
+    }
+    
+  }
+  &__body {
+    @media (max-width: $bp-mobile) {
+      margin-top: 1.6rem;
+      margin-bottom: 2.4rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      max-width: 57.3rem;
+      margin-top: 1.6rem;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media (min-width: $bp-desktop) {
+      margin-top: 2.4rem;
+    }
+  }
+}

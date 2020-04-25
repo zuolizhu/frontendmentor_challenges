@@ -47,4 +47,10 @@
       margin-top: 4.2rem;
     }
   }
+
+  &--reserve {
+    @media (min-width: $bp-tablet-start) {
+      display: none;
+    }
+  }
 }
