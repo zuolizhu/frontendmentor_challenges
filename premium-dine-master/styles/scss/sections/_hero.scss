@@ -41,19 +41,19 @@
     padding-top: 23.2rem;
     padding-right: 2.4rem;
     padding-left: 2.4rem;
-    background-image: url(../../images/homepage/hero-bg-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/hero-bg-mobile@2x.jpg);
   }
   @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
     height: 99.2rem;
     text-align: center;
     padding-top: 37.4rem;
-    background-image: url(../../images/homepage/hero-bg-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/hero-bg-tablet@2x.jpg);
   }
   @media (min-width: $bp-desktop) {
     height: 82rem;
     padding-top: 6.5rem;
     padding-left: 16.5rem;
     text-align: left;
-    background-image: url(../../images/homepage/hero-bg-desktop@2x.jpg);
+    background-image: url(../../../images/homepage/hero-bg-desktop@2x.jpg);
   }
 }

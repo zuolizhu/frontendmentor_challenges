@@ -139,24 +139,24 @@
       background-size: cover;
       &--first {
         @media (max-width: $bp-mobile) {
-          background-image: url(../../images/homepage/enjoyable-place-mobile@2x.jpg);
+          background-image: url(../../../images/homepage/enjoyable-place-mobile@2x.jpg);
         }
         @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
-          background-image: url(../../images/homepage/enjoyable-place-tablet@2x.jpg);
+          background-image: url(../../../images/homepage/enjoyable-place-tablet@2x.jpg);
         }
         @media (min-width: $bp-desktop) {
-          background-image: url(../../images/homepage/enjoyable-place-desktop@2x.jpg);
+          background-image: url(../../../images/homepage/enjoyable-place-desktop@2x.jpg);
         }
       }
       &--second {
         @media (max-width: $bp-mobile) {
-          background-image: url(../../images/homepage/locally-sourced-mobile@2x.jpg);
+          background-image: url(../../../images/homepage/locally-sourced-mobile@2x.jpg);
         }
         @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
-          background-image: url(../../images/homepage/locally-sourced-tablet@2x.jpg);
+          background-image: url(../../../images/homepage/locally-sourced-tablet@2x.jpg);
         }
         @media (min-width: $bp-desktop) {
-          background-image: url(../../images/homepage/locally-sourced-desktop@2x.jpg);
+          background-image: url(../../../images/homepage/locally-sourced-desktop@2x.jpg);
         }
       }
 
