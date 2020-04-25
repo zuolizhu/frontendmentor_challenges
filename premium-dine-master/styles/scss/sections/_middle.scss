@@ -1,4 +1,6 @@
 .middle {
+  background-color: var(--color-white);
+
   @media (max-width: $bp-tablet-end) {
     text-align: center;
   }

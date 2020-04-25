@@ -45,8 +45,10 @@ html {
 }
 
 body {
+  background-color: var(--color-cod-gray);
   font-family: 'Spartan', sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Type Specs */

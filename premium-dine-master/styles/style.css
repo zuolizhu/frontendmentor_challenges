@@ -36,8 +36,10 @@ html {
 }
 
 body {
+  background-color: var(--color-cod-gray);
   font-family: 'Spartan', sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Type Specs */
@@ -309,6 +311,7 @@ body {
 }
 
 .middle {
+  background-color: var(--color-white);
   background-repeat: no-repeat;
 }
 
@@ -797,6 +800,10 @@ body {
   .highlights__item__text {
     margin-left: 6.2rem;
   }
+}
+
+.gathering {
+  background-color: var(--color-white);
 }
 
 @media (max-width: 1199px) {
