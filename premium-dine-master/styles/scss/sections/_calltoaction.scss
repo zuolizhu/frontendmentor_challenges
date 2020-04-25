@@ -1,9 +1,21 @@
 .calltoaction {
   text-align: center;
-  padding: 8rem 2.4rem;
   background-repeat: no-repeat;
-  background-image: url(../../../images/homepage/ready-bg-mobile@2x.jpg);
   background-size: cover;
+
+  @media (max-width: $bp-mobile) {
+    padding: 8rem 2.4rem;
+    background-image: url(../../../images/homepage/ready-bg-mobile@2x.jpg);
+  }
+  @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    padding: 6.5rem 0;
+    background-image: url(../../../images/homepage/ready-bg-tablet@2x.jpg);
+  }
+  @media (min-width: $bp-desktop) {
+
+  }
+  
+  
   &__heading {
     margin-bottom: 2.4rem;
   }

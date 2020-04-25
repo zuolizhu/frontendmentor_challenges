@@ -23,7 +23,7 @@
     &__floating-pattern {
       display: none;
       @media (min-width: $bp-tablet-start) {
-        display: flex;
+        display: block;
         position: absolute;
         right: 0;
         top: 22.8rem;

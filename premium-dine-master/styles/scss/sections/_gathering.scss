@@ -7,6 +7,9 @@
   }
   @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
     padding: 12rem 0;
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg);
+    background-repeat: no-repeat;
+    background-position-x: -69vw;
   }
   @media (min-width: $bp-desktop) {
     padding: 16rem 0;
@@ -18,7 +21,20 @@
     }
   }
   &__slide {
-    
+    &__floating-pattern {
+      display: none;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      width: 74.609%;
+      margin: 0 auto;
+      position: relative;
+      &__floating-pattern {
+        display: block;
+        position: absolute;
+        transform: translate(-5.8rem, -3.8rem);
+      }
+    }
+
     &__image {
       background-repeat: no-repeat;
       background-size: cover;
@@ -40,6 +56,12 @@
 
   &__events {
     list-style-type: none;
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      display: flex;
+      max-width: 68.9rem;
+      justify-content: space-around;
+      margin: 0 auto;
+    }
   }
   &__event {
     cursor: pointer;
@@ -84,6 +106,11 @@
     &__body {
       margin-top: 1.6rem;
       margin-bottom: 3.2rem;
+      @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+        max-width: 47.5rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }

@@ -1,9 +1,31 @@
 .footer {
+  background-color: var(--color-cod-gray);
   @media (max-width: $bp-mobile) {
     padding: 8rem 2.4rem;
     text-align: center;
   }
-  background-color: var(--color-cod-gray);
+  @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    padding: 6.4rem 4rem;
+
+  }
+  &__information {
+    @media (min-width: $bp-tablet-start) {
+      margin-left: 13rem;
+      display: flex;
+      flex-flow: row wrap;
+    }
+    @media (min-width: $bp-desktop) {
+      margin-left: 19.258rem;
+    }
+  }
+
+  &__container {
+    @media (min-width: $bp-tablet-start) {
+      max-width: 94rem;
+      margin: 0 auto;
+      display: flex;
+    }
+  }
 }
 
 .contact {
@@ -11,4 +33,13 @@
     margin-top: 4rem;
     margin-bottom: 3.2rem;
   }
+
+  @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+    margin-bottom: 3.2rem;
+    margin-right: 6.2rem;
+  }
+  @media (min-width: $bp-desktop) {
+    margin-right: 12.4rem;
+  }
+  
 }

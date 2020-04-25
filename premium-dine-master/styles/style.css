@@ -336,9 +336,7 @@ body {
 
 @media (min-width: 768px) {
   .middle__locally__floating-pattern {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     position: absolute;
     right: 0;
     top: 22.8rem;
@@ -517,10 +515,20 @@ body {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .highlights__copy {
     text-align: center;
     margin-bottom: 6.4rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .highlights__copy {
+    text-align: center;
+    max-width: 44.5rem;
+    margin-right: auto;
+    margin-bottom: 5.6rem;
+    margin-left: auto;
   }
 }
 
@@ -529,8 +537,35 @@ body {
   margin-bottom: 1.6rem;
 }
 
-.highlights__item {
-  text-align: center;
+@media (min-width: 768px) {
+  .highlights__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 57.3rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .highlights__item {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .highlights__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .highlights__item:not(:last-child) {
@@ -542,6 +577,7 @@ body {
 .highlights__item__image {
   background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
 }
 
 .highlights__item__image__container {
@@ -561,47 +597,68 @@ body {
     width: 12.8rem;
     height: 9.6rem;
   }
+  .highlights__item__image::after {
+    content: ' ';
+    width: 3.2rem;
+    height: 1px;
+    background-color: var(--color-beaver);
+    position: absolute;
+    right: 0;
+    top: 1.8rem;
+    -webkit-transform: translateX(3.2rem);
+            transform: translateX(3.2rem);
+  }
 }
 
 @media (max-width: 767px) {
   .highlights__item__image--salmon {
-    background-image: url(../../images/homepage/salmon-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/salmon-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) {
   .highlights__item__image--salmon {
-    background-image: url(../../images/homepage/salmon-desktop-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/salmon-desktop-tablet@2x.jpg);
   }
 }
 
 @media (max-width: 767px) {
   .highlights__item__image--mignon {
-    background-image: url(../../images/homepage/beef-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/beef-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) {
   .highlights__item__image--mignon {
-    background-image: url(../../images/homepage/beef-desktop-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/beef-desktop-tablet@2x.jpg);
   }
 }
 
 @media (max-width: 767px) {
   .highlights__item__image--mousse {
-    background-image: url(../../images/homepage/chocolate-mobile@2x.jpg);
+    background-image: url(../../../images/homepage/chocolate-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) {
   .highlights__item__image--mousse {
-    background-image: url(../../images/homepage/chocolate-desktop-tablet@2x.jpg);
+    background-image: url(../../../images/homepage/chocolate-desktop-tablet@2x.jpg);
   }
+}
+
+.highlights__item__text__heading {
+  margin-bottom: 0.4rem;
 }
 
 @media (max-width: 767px) {
   .highlights__item__text {
     margin-top: 3.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .highlights__item__text {
+    margin-left: 6.2rem;
   }
 }
 
@@ -620,6 +677,9 @@ body {
 @media (min-width: 768px) and (max-width: 1199px) {
   .gathering {
     padding: 12rem 0;
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg);
+    background-repeat: no-repeat;
+    background-position-x: -69vw;
   }
 }
 
@@ -633,6 +693,24 @@ body {
   .gathering__slider {
     max-width: 32.6rem;
     margin: 0 auto;
+  }
+}
+
+.gathering__slide__floating-pattern {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gathering__slide {
+    width: 74.609%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .gathering__slide__floating-pattern {
+    display: block;
+    position: absolute;
+    -webkit-transform: translate(-5.8rem, -3.8rem);
+            transform: translate(-5.8rem, -3.8rem);
   }
 }
 
@@ -666,6 +744,18 @@ body {
 
 .gathering__events {
   list-style-type: none;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gathering__events {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 68.9rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0 auto;
+  }
 }
 
 .gathering__event {
@@ -725,12 +815,32 @@ body {
   margin-bottom: 3.2rem;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gathering__text__body {
+    max-width: 47.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .calltoaction {
   text-align: center;
-  padding: 8rem 2.4rem;
   background-repeat: no-repeat;
-  background-image: url(../../../images/homepage/ready-bg-mobile@2x.jpg);
   background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .calltoaction {
+    padding: 8rem 2.4rem;
+    background-image: url(../../../images/homepage/ready-bg-mobile@2x.jpg);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .calltoaction {
+    padding: 6.5rem 0;
+    background-image: url(../../../images/homepage/ready-bg-tablet@2x.jpg);
+  }
 }
 
 .calltoaction__heading {
@@ -748,10 +858,58 @@ body {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    padding: 6.4rem 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__information {
+    margin-left: 13rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__information {
+    margin-left: 19.258rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__container {
+    max-width: 94rem;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 @media (max-width: 767px) {
   .contact {
     margin-top: 4rem;
     margin-bottom: 3.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .contact {
+    margin-bottom: 3.2rem;
+    margin-right: 6.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    margin-right: 12.4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

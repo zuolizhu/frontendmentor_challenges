@@ -12,9 +12,16 @@
   }
 
   &__copy {
-    @media (max-width: $bp-tablet-end) {
+    @media (max-width: $bp-mobile) {
       text-align: center;
       margin-bottom: 6.4rem;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      text-align: center;
+      max-width: 44.5rem;
+      margin-right: auto;
+      margin-bottom: 5.6rem;
+      margin-left: auto;
     }
   }
 
@@ -23,9 +30,25 @@
     margin-bottom: 1.6rem;
   }
 
+  &__items {
+    @media (min-width: $bp-tablet-start) {
+      display: flex;
+      flex-direction: column;
+      max-width: 57.3rem;
+      margin: 0 auto;
+    }
+  }
 
   &__item {
-    text-align: center;
+    @media (max-width: $bp-mobile) {
+      text-align: center;
+    }
+    @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
+      display: flex;
+      align-items: center;
+    }
+
+
     &:not(:last-child) {
       margin-bottom: 2.4rem;
       border-bottom: 1px solid var(--color-border);
@@ -39,6 +62,7 @@
 
       background-repeat: no-repeat;
       background-size: contain;
+      position: relative;
 
       @media (max-width: $bp-mobile) {
         width: 100%;
@@ -47,36 +71,53 @@
       @media (min-width: $bp-tablet-start) {
         width: 12.8rem;
         height: 9.6rem;
+        &::after {
+          content: ' ';
+          width: 3.2rem;
+          height: 1px;
+          background-color: var(--color-beaver);
+          position: absolute;
+          right: 0;
+          top: 1.8rem;
+          transform: translateX(3.2rem);
+        }
       }
+      
       &--salmon {
         @media (max-width: $bp-mobile) {
-          background-image: url(../../images/homepage/salmon-mobile@2x.jpg);
+          background-image: url(../../../images/homepage/salmon-mobile@2x.jpg);
         }
         @media (min-width:$bp-tablet-start) {
-          background-image: url(../../images/homepage/salmon-desktop-tablet@2x.jpg);
+          background-image: url(../../../images/homepage/salmon-desktop-tablet@2x.jpg);
         }
       }
       &--mignon {
         @media (max-width: $bp-mobile) {
-          background-image: url(../../images/homepage/beef-mobile@2x.jpg);
+          background-image: url(../../../images/homepage/beef-mobile@2x.jpg);
         }
         @media (min-width:$bp-tablet-start) {
-          background-image: url(../../images/homepage/beef-desktop-tablet@2x.jpg);
+          background-image: url(../../../images/homepage/beef-desktop-tablet@2x.jpg);
         }
       }
       &--mousse {
         @media (max-width: $bp-mobile) {
-          background-image: url(../../images/homepage/chocolate-mobile@2x.jpg);
+          background-image: url(../../../images/homepage/chocolate-mobile@2x.jpg);
         }
         @media (min-width:$bp-tablet-start) {
-          background-image: url(../../images/homepage/chocolate-desktop-tablet@2x.jpg);
+          background-image: url(../../../images/homepage/chocolate-desktop-tablet@2x.jpg);
         }
       }
     }
 
     &__text {
+      &__heading {
+        margin-bottom: 0.4rem;
+      }
       @media (max-width: $bp-mobile) {
         margin-top: 3.2rem;
+      }
+      @media (min-width: $bp-tablet-start) {
+        margin-left: 6.2rem;
       }
     }
   }
