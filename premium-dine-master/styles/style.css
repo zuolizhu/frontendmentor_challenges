@@ -9,6 +9,7 @@
   --color-white: #fff;
   --color-border: rgba(151, 151, 151, 0.15);
   --color-dark-blue-shaodw: rgba(56, 66, 85, 0.5);
+  --color-error: #B54949;
   --weight-light: 300;
   --weight-regular: 400;
   --weight-semi-bold: 600;
@@ -266,6 +267,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: var(--transition) transform;
+  transition: var(--transition) transform;
+}
+
+.number-picker__button:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .number-picker__button:focus {
@@ -287,8 +295,22 @@ body {
   font-weight: var(--weight-bold);
 }
 
-.error {
-  opacity: 0;
+.errormsg {
+  line-height: 1.2;
+  margin-top: 1rem;
+  padding-left: 1.6rem;
+  letter-spacing: -0.12px;
+  color: var(--color-error);
+  display: none;
+}
+
+.errormsg--corner {
+  padding-left: 0;
+  margin-top: 0.1rem;
+}
+
+.errormsg.show {
+  display: block;
 }
 
 .form {
@@ -355,6 +377,10 @@ body {
   padding-bottom: 1.6rem;
   border-bottom: 1px solid var(--color-cod-gray);
   margin-bottom: 3.2rem;
+}
+
+.datetime-field-name.error {
+  color: var(--color-error);
 }
 
 .input-containers {
@@ -479,6 +505,27 @@ body {
   .input-box--large {
     width: 9.7rem;
   }
+}
+
+.input-box.error {
+  opacity: 1;
+  border-bottom: 1px solid var(--color-error);
+}
+
+.input-box.error::-webkit-input-placeholder {
+  color: var(--color-error);
+}
+
+.input-box.error:-ms-input-placeholder {
+  color: var(--color-error);
+}
+
+.input-box.error::-ms-input-placeholder {
+  color: var(--color-error);
+}
+
+.input-box.error::placeholder {
+  color: var(--color-error);
 }
 
 @media (max-width: 767px) {

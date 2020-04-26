@@ -27,17 +27,17 @@
             <div class="form__input-field form__input-field--text">
               <label class="screen-reader-only" for="name">Name</label>
               <input class="input-box" type="text" name="name" id="name" placeholder="Name">
-              <p class="error">This field is required</p>
+              <p class="errormsg">This field is required</p>
             </div>
             <div class="form__input-field form__input-field--text">
               <label class="screen-reader-only" for="email">Email</label>
               <input class="input-box" type="email" name="email" id="email" placeholder="Email">
-              <p class="error">This field is required</p>
+              <p class="errormsg">This field is required</p>
             </div>
             <div class="form__datetime-field">
-              <div class="datetime-field-name">
-                <p class="t-form t-form--regular">Pick a date</p>
-                <p class="error">This field is incomplete</p>
+              <div class="datetime-field-name-container">
+                <p class="t-form t-form--regular datetime-field-name">Pick a date</p>
+                <p class="errormsg errormsg--corner">This field is incomplete</p>
               </div>
               <div class="input-containers">
                 <div class="input-container">
@@ -55,9 +55,9 @@
               </div>
             </div>
             <div class="form__datetime-field">
-              <div class="datetime-field-name">
-                <p class="t-form t-form--regular">Pick a time</p>
-                <p class="error">This field is incomplete</p>
+              <div class="datetime-field-name-container">
+                <p class="t-form t-form--regular datetime-field-name">Pick a time</p>
+                <p class="errormsg errormsg--corner">This field is incomplete</p>
               </div>
               <div class="input-containers">
                 <div class="input-container">
@@ -97,7 +97,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11"><path fill="#9E7F66" d="M6.227 10.156V6.727h3.429V4.342H6.227V.913H3.842v3.429H.413v2.385h3.429v3.429z"/></svg>
               </button>
             </div>       
-            <button class="btn btn--light btn--make-reservation">Make Reservation</button>
+            <button class="btn btn--light btn--make-reservation" id="btn-reservation">Make Reservation</button>
           </div>
         </div>
       </div>

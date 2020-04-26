@@ -11,8 +11,21 @@
   }
 }
 
-.error {
-  opacity: 0;
+.errormsg {
+  line-height: 1.2;
+  margin-top: 1rem;
+  padding-left: 1.6rem;
+  letter-spacing: -0.12px;
+  color: var(--color-error);
+  display: none;
+  &--corner {
+    padding-left: 0;
+    margin-top: 0.1rem;
+  }
+}
+
+.errormsg.show {
+  display: block;
 }
 
 .form {
@@ -54,6 +67,9 @@
   }
 }
 
+.datetime-field-name.error {
+  color: var(--color-error);
+}
 
 .input-containers {
   display: flex;
@@ -111,6 +127,14 @@
     }
     @media (min-width: $bp-tablet-start) {
       width: 9.7rem;
+    }
+  }
+
+  &.error {
+    opacity: 1;
+    border-bottom: 1px solid var(--color-error);
+    &::placeholder {
+      color: var(--color-error);
     }
   }
 }

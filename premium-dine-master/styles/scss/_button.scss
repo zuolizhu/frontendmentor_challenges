@@ -72,6 +72,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition) transform;
+  &:hover {
+    transform: scale(1.5);
+  }
   &:focus {
     outline: none;
   }
