@@ -14,9 +14,15 @@ dropdownTrigger.onclick = () => {
   dropdownArrow.classList.toggle('open');
 }
 
-dropdownItems.forEach(item => {
+dropdownItems.forEach(item => {  
   item.onclick = () => {
     selectedMeridiem.textContent = item.children[1].textContent;
+    // remove the old checked class
+    dropdownItems.forEach(oldItem => {
+      oldItem.children[0].classList.remove('checked');
+    });
+    // add the checked class to current clicked item
+    item.children[0].classList.add('checked');
   }
 });
 

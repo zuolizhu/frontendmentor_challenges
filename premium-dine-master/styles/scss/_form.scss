@@ -67,6 +67,7 @@
   width: 100%;
   caret-color: var(--color-beaver);
   font-weight: var(--weight-light);
+  font-family: 'Spartan', sans-serif;
   opacity: 0.5;
   border: none;
   font-size: 1.8rem;
@@ -76,9 +77,10 @@
   padding-left: 1.6rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #8E8E8E;
-  transition: var(--transition) border-color;
+  transition: var(--transition) border-color, var(--transition) opacity;
   cursor: pointer;
   &:focus {
+    opacity: 1;
     border-bottom: 1px solid var(--color-cod-gray);
     outline: none;
     &::placeholder {
