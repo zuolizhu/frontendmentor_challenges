@@ -55,5 +55,24 @@
   }
   &--make-reservation {
     width: 100%;
+    @media (max-width: $bp-mobile) {
+      padding: 1.7rem 3.5rem;
+      line-height: 2;
+      margin-top: 3.2rem;
+    }
+  }
+}
+
+.number-picker__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:focus {
+    outline: none;
   }
 }

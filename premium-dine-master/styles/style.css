@@ -244,6 +244,58 @@ body {
 }
 
 @media (max-width: 767px) {
+  .btn--make-reservation {
+    padding: 1.7rem 3.5rem;
+    line-height: 2;
+    margin-top: 3.2rem;
+  }
+}
+
+.number-picker__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.number-picker__button:focus {
+  outline: none;
+}
+
+.t-form {
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  color: var(--color-cod-gray);
+}
+
+.t-form--regular {
+  font-weight: var(--weight-light);
+}
+
+.t-form--bold {
+  font-weight: var(--weight-bold);
+}
+
+.error {
+  opacity: 0;
+}
+
+.form {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
   .form {
     padding: 3.2rem;
   }
@@ -259,9 +311,70 @@ body {
   margin-bottom: 2rem;
 }
 
+.form__datetime-field {
+  margin-bottom: 3.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .form__datetime-field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .form__datetime-field {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.form__number-picker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--color-cod-gray);
+  margin-bottom: 3.2rem;
+}
+
+.input-containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .input-containers {
+    width: 28.9rem;
+  }
+}
+
 .input-box {
-  caret-color: var(--color-beaver);
   width: 100%;
+  caret-color: var(--color-beaver);
   font-weight: var(--weight-light);
   opacity: 0.5;
   border: none;
@@ -340,6 +453,129 @@ body {
   letter-spacing: -0.22px;
   -webkit-transition: var(--transition) opacity;
   transition: var(--transition) opacity;
+}
+
+@media (max-width: 767px) {
+  .input-box--small {
+    width: 7.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .input-box--small {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .input-box--large {
+    width: 8.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .input-box--large {
+    width: 9.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown-container {
+    width: 8.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdown-container {
+    width: 9.7rem;
+  }
+}
+
+.dropdown {
+  padding-left: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--color-cod-gray);
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropdown__selected {
+  font-weight: var(--weight-light);
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  color: var(--color-cod-gray);
+}
+
+.dropdown__arrow {
+  -webkit-transition: var(--transition) transform;
+  transition: var(--transition) transform;
+}
+
+@media (max-width: 767px) {
+  .dropdown__arrow {
+    margin-left: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdown__arrow {
+    margin-left: 1.5rem;
+  }
+}
+
+.dropdown:hover .dropdown__arrow {
+  -webkit-transform: scaleY(-1) translateY(0.4rem);
+          transform: scaleY(-1) translateY(0.4rem);
+}
+
+.dropdown__items {
+  position: absolute;
+  background-color: var(--color-white);
+  padding: 1.6rem;
+  -webkit-box-shadow: 0 1.5rem 2.5rem rgba(56, 66, 85, 0.25);
+          box-shadow: 0 1.5rem 2.5rem rgba(56, 66, 85, 0.25);
+  -webkit-transform: translate(-1.6rem, 9rem);
+          transform: translate(-1.6rem, 9rem);
+}
+
+.dropdown__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.5;
+  -webkit-transition: var(--transition) opacity;
+  transition: var(--transition) opacity;
+}
+
+.dropdown__item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.dropdown__item__checkmark {
+  margin-right: 1.557rem;
+  opacity: 0;
+}
+
+.dropdown__item__checkmark.checked {
+  opacity: 1;
+}
+
+.dropdown__item:hover {
+  opacity: 1;
 }
 
 .hero {
@@ -1314,6 +1550,13 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .reservations__content__form {
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 768px) {
   .reservations__content__form {
     height: 54.5rem;
@@ -1359,7 +1602,10 @@ body {
 @media (max-width: 767px) {
   .reservations__body {
     margin-top: 1.6rem;
+    margin-right: auto;
     margin-bottom: 2.4rem;
+    margin-left: auto;
+    max-width: 50rem;
   }
 }
 

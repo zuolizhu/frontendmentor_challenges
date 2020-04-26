@@ -90,6 +90,12 @@
       }
     }
 
+    @media (max-width: $bp-mobile) {
+      &__form {
+        max-width: 40rem;
+        margin: 0 auto;
+      }
+    }
     @media (min-width: $bp-tablet-start) {
       &__form {
         height: 54.5rem;
@@ -122,7 +128,10 @@
   &__body {
     @media (max-width: $bp-mobile) {
       margin-top: 1.6rem;
+      margin-right: auto;
       margin-bottom: 2.4rem;
+      margin-left: auto;
+      max-width: 50rem;
     }
     @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
       max-width: 57.3rem;

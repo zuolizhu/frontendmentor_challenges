@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/style.css">
   <title>Frontend Mentor | Dine Website Challenge</title>
+  <script defer src="./booking.js"></script>
 </head>
 <body>
   <main>
@@ -25,21 +26,77 @@
           <div class="form reservations__content__form">
             <div class="form__input-field form__input-field--text">
               <label class="screen-reader-only" for="name">Name</label>
-              <input class="input-box" type="text" name="name" id="name" placeholder="Name" required>
+              <input class="input-box" type="text" name="name" id="name" placeholder="Name">
               <p class="error">This field is required</p>
             </div>
             <div class="form__input-field form__input-field--text">
               <label class="screen-reader-only" for="email">Email</label>
-              <input class="input-box" type="email" name="email" id="email" placeholder="Email" required>
+              <input class="input-box" type="email" name="email" id="email" placeholder="Email">
               <p class="error">This field is required</p>
             </div>
-            <div class="form__datatime-field">
-              Pick a date
+            <div class="form__datetime-field">
+              <div class="datetime-field-name">
+                <p class="t-form t-form--regular">Pick a date</p>
+                <p class="error">This field is incomplete</p>
+              </div>
+              <div class="input-containers">
+                <div class="input-container">
+                  <label class="screen-reader-only" for="month">Month</label>
+                  <input class="input-box input-box--small" type="text" name="month" id="month" placeholder="MM">
+                </div>
+                <div class="input-container">
+                  <label class="screen-reader-only" for="day">Day</label>
+                  <input class="input-box input-box--small" type="text" name="day" id="day" placeholder="DD">
+                </div>
+                <div class="input-container">
+                  <label class="screen-reader-only" for="year">Year</label>
+                  <input class="input-box input-box--large" type="text" name="year" id="year" placeholder="YYYY">
+                </div>
+              </div>
             </div>
-            <div class="form__datatime-field">
-              Pick a time
+            <div class="form__datetime-field">
+              <div class="datetime-field-name">
+                <p class="t-form t-form--regular">Pick a time</p>
+                <p class="error">This field is incomplete</p>
+              </div>
+              <div class="input-containers">
+                <div class="input-container">
+                  <label class="screen-reader-only" for="hour">Hour</label>
+                  <input class="input-box input-box--small" type="text" name="hour" id="hour" placeholder="09">
+                </div>
+                <div class="input-container">
+                  <label class="screen-reader-only" for="minute">Minute</label>
+                  <input class="input-box input-box--small" type="text" name="minute" id="minute" placeholder="00">
+                </div>
+                <div class="dropdown-container">
+                  <div class="dropdown dropdown--meridiem">
+                    <div id="selected-meridiem" class="dropdown__selected">AM</div>
+                    <div class="dropdown__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="11"><path fill="none" stroke="#9E7F66" stroke-width="2" d="M1 1l8 8 8-8"/></svg></div>
+                    <div class="dropdown__items">
+                      <div class="dropdown__item">
+                        <svg class="dropdown__item__checkmark checked" xmlns="http://www.w3.org/2000/svg" width="13" height="11"><path fill="none" stroke="#9E7F66" stroke-width="2" d="M1 5.897l2.767 2.767L11.432 1"/></svg>
+                        <p class="t-form t-form--regular">AM</p>
+                      </div>
+                      <div class="dropdown__item">
+                        <svg class="dropdown__item__checkmark" xmlns="http://www.w3.org/2000/svg" width="13" height="11"><path fill="none" stroke="#9E7F66" stroke-width="2" d="M1 5.897l2.767 2.767L11.432 1"/></svg>
+                        <p class="t-form t-form--regular">PM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          
+            <div class="form__number-picker">
+              <button class="number-picker__button" id="minus">
+                <span class="screen-reader-only">minus</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3"><path fill="#9E7F66" d="M6.425 2.977V.601H.629v2.376z"/></svg>
+              </button>
+              <p class="t-form t-form--bold"><span id="number-of-people">4</span> people</p>
+              <button class="number-picker__button" id="plus">
+                <span class="screen-reader-only">plus</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11"><path fill="#9E7F66" d="M6.227 10.156V6.727h3.429V4.342H6.227V.913H3.842v3.429H.413v2.385h3.429v3.429z"/></svg>
+              </button>
+            </div>       
             <button class="btn btn--light btn--make-reservation">Make Reservation</button>
           </div>
         </div>
