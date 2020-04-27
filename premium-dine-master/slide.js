@@ -58,6 +58,7 @@ function generateImageComponent(slide, suffix) {
   let newImage = document.createElement("img");
   newImage.setAttribute("class", "gathering__slide__image-container__image");
   newImage.setAttribute("src", slides[slide].image.concat(imageUrlSuffixes[suffix]));
+  newImage.setAttribute("alt", "slider image");
   return newImage;
 }
 
