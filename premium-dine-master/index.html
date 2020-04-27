@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/style.css">
   <title>Frontend Mentor | Dine Website Challenge</title>
+  <script defer src="./slide.js"></script>
 </head>
 <body>
   <main>
@@ -89,7 +90,9 @@
         <div class="gathering__slider">
           <div class="gathering__slide">
             <div class="gathering__slide__floating-pattern"><img src="./images/patterns/pattern-lines.svg" alt="float lines pattern"></div>
-            <div class="gathering__slide__image"></div>
+            <div class="gathering__slide__image-container" id="slide-image">
+              <img class="gathering__slide__image-container__image"  src="" alt="">
+            </div>
           </div>
         </div>
         <div class="gathering__content">
@@ -108,8 +111,8 @@
             </li>
           </ul>
           <div class="gathering__text">
-            <h2 class="t-heading-2">Family Gathering</h2>
-            <p class="t-body-1 gathering__text__body">We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.</p>
+            <h2 class="t-heading-2" id="slide-title">Family Gathering</h2>
+            <p class="t-body-1 gathering__text__body" id="slide-body">We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.</p>
             <a class="btn btn--light" href="./booking.html">Book a table</a>
           </div>
         </div>

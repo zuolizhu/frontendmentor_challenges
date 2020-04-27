@@ -40,6 +40,7 @@
   &__slide {
     &__floating-pattern {
       display: none;
+      z-index: 1;
     }
     @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
       width: 74.609%;
@@ -61,22 +62,23 @@
     }
     
 
-    &__image {
+    &__image-container {
+      &__image {
+        width: 100%;
+        animation: FadeIn ease-in-out 0.5s;
+      }
       background-repeat: no-repeat;
       background-size: cover;
       box-shadow: var(--card-shadow);
       @media (max-width: $bp-mobile) {
         height: 40rem;
-        background-image: url(../../images/homepage/family-gathering-mobile@2x.jpg);
       }
       @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
         height: 36rem;
-        background-image: url(../../images/homepage/family-gathering-tablet@2x.jpg);
       }
       @media (min-width: $bp-desktop) {
         height: 60rem;
         width: 54rem;
-        background-image: url(../../images/homepage/family-gathering-desktop@2x.jpg);
       }
     }
   }
@@ -164,5 +166,14 @@
         margin-right: auto;
       }
     }
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

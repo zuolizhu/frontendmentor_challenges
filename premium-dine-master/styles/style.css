@@ -1290,6 +1290,7 @@ body {
 
 .gathering__slide__floating-pattern {
   display: none;
+  z-index: 1;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -1318,32 +1319,35 @@ body {
   }
 }
 
-.gathering__slide__image {
+.gathering__slide__image-container {
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-box-shadow: var(--card-shadow);
           box-shadow: var(--card-shadow);
 }
 
+.gathering__slide__image-container__image {
+  width: 100%;
+  -webkit-animation: FadeIn ease-in-out 0.5s;
+          animation: FadeIn ease-in-out 0.5s;
+}
+
 @media (max-width: 767px) {
-  .gathering__slide__image {
+  .gathering__slide__image-container {
     height: 40rem;
-    background-image: url(../../images/homepage/family-gathering-mobile@2x.jpg);
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  .gathering__slide__image {
+  .gathering__slide__image-container {
     height: 36rem;
-    background-image: url(../../images/homepage/family-gathering-tablet@2x.jpg);
   }
 }
 
 @media (min-width: 1200px) {
-  .gathering__slide__image {
+  .gathering__slide__image-container {
     height: 60rem;
     width: 54rem;
-    background-image: url(../../images/homepage/family-gathering-desktop@2x.jpg);
   }
 }
 
@@ -1465,6 +1469,24 @@ body {
     max-width: 47.5rem;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
