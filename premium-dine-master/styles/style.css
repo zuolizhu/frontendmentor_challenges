@@ -330,7 +330,7 @@ body {
 }
 
 .form__input-field--text {
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
 }
 
 .form__datetime-field {
@@ -377,6 +377,26 @@ body {
   padding-bottom: 1.6rem;
   border-bottom: 1px solid var(--color-cod-gray);
   margin-bottom: 3.2rem;
+}
+
+@media (max-width: 767px) {
+  .form__number-picker {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .form__number-picker {
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .datetime-field-name {
+    margin-bottom: 0.8rem;
+  }
 }
 
 .datetime-field-name.error {
@@ -1599,9 +1619,6 @@ body {
   .reservations__content__text {
     margin-bottom: 9.1rem;
   }
-  .reservations__content__form {
-    height: 58.5rem;
-  }
 }
 
 @media (max-width: 767px) {
@@ -1613,7 +1630,6 @@ body {
 
 @media (min-width: 768px) {
   .reservations__content__form {
-    height: 54.5rem;
     width: 54rem;
   }
 }

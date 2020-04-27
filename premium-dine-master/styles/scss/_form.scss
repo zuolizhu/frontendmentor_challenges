@@ -40,7 +40,7 @@
 
   &__input-field {
     &--text {
-      margin-bottom: 2rem;
+      margin-bottom: 3.2rem;
     }
   }
 
@@ -64,6 +64,20 @@
     padding-bottom: 1.6rem;
     border-bottom: 1px solid var(--color-cod-gray);
     margin-bottom: 3.2rem;
+    @media (max-width: $bp-mobile) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    @media (min-width: $bp-tablet-start) {
+      padding-left: 2.2rem;
+      padding-right: 2.2rem;
+    }
+  }
+}
+
+.datetime-field-name {
+  @media (max-width: $bp-mobile) {
+    margin-bottom: 0.8rem;
   }
 }
 

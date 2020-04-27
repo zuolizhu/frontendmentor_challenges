@@ -85,9 +85,6 @@
       &__text {
         margin-bottom: 9.1rem;
       }
-      &__form {
-        height: 58.5rem;
-      }
     }
 
     @media (max-width: $bp-mobile) {
@@ -98,7 +95,6 @@
     }
     @media (min-width: $bp-tablet-start) {
       &__form {
-        height: 54.5rem;
         width: 54rem;
       }
     }
