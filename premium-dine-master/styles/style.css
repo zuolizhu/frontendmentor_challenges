@@ -655,6 +655,12 @@ body {
 .hero {
   background-repeat: no-repeat;
   background-size: cover;
+  height: 74.8rem;
+  text-align: center;
+  padding-top: 23.2rem;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+  background-image: url(../../../images/homepage/hero-bg-mobile@2x.jpg);
 }
 
 @media (min-width: 1200px) {
@@ -705,23 +711,53 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 435px) {
   .hero {
-    height: 74.8rem;
-    text-align: center;
-    padding-top: 23.2rem;
-    padding-right: 2.4rem;
-    padding-left: 2.4rem;
-    background-image: url(../../../images/homepage/hero-bg-mobile@2x.jpg);
+    padding-top: 28.2rem;
+    height: 80rem;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 555px) {
+  .hero {
+    padding-top: 33.2rem;
+    height: 85rem;
+  }
+}
+
+@media (min-width: 655px) {
+  .hero {
+    padding-top: 38.2rem;
+    height: 90rem;
+  }
+}
+
+@media (min-width: 755px) {
+  .hero {
+    padding-top: 43.2rem;
+    height: 95rem;
+  }
+}
+
+@media (min-width: 768px) {
   .hero {
     height: 99.2rem;
-    text-align: center;
     padding-top: 37.4rem;
     background-image: url(../../../images/homepage/hero-bg-tablet@2x.jpg);
+  }
+}
+
+@media (min-width: 890px) {
+  .hero {
+    height: 106.2rem;
+    padding-top: 44.4rem;
+  }
+}
+
+@media (min-width: 1060px) {
+  .hero {
+    height: 113.2rem;
+    padding-top: 51.4rem;
   }
 }
 
@@ -1217,7 +1253,10 @@ body {
 
 @media (max-width: 767px) {
   .highlights__item__text {
+    max-width: 40rem;
     margin-top: 3.2rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -1341,6 +1380,8 @@ body {
 @media (min-width: 768px) and (max-width: 1199px) {
   .gathering__slide__image-container {
     height: 36rem;
+    width: 57.3rem;
+    margin: 0 auto;
   }
 }
 
@@ -1381,6 +1422,10 @@ body {
   transition: var(--transition) opacity;
 }
 
+.gathering__event.active {
+  opacity: 1;
+}
+
 .gathering__event:hover {
   opacity: 1;
 }
@@ -1392,6 +1437,9 @@ body {
     border: 1px solid transparent;
     -webkit-transition: var(--transition) border-color;
     transition: var(--transition) border-color;
+  }
+  .gathering__event__underline.active {
+    border-color: var(--color-beaver);
   }
   .gathering__event:hover .gathering__event__underline {
     border-color: var(--color-beaver);
@@ -1412,6 +1460,9 @@ body {
     background-color: transparent;
     -webkit-transition: var(--transition) background-color;
     transition: var(--transition) background-color;
+  }
+  .gathering__event__underline.active {
+    background-color: var(--color-beaver);
   }
   .gathering__event:hover .gathering__event__underline {
     background-color: var(--color-beaver);

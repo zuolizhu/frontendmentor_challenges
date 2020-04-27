@@ -130,8 +130,12 @@
       &__heading {
         margin-bottom: 0.4rem;
       }
+
       @media (max-width: $bp-mobile) {
+        max-width: 40rem;
         margin-top: 3.2rem;
+        margin-right: auto;
+        margin-left: auto;
       }
       @media (min-width: $bp-tablet-start) {
         margin-left: 6.2rem;

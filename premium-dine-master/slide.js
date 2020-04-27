@@ -1,6 +1,9 @@
 const slideImage = document.getElementById('slide-image');
 const slideTitle = document.getElementById('slide-title');
-const slideBody = document.getElementById('slide-body');
+const slideContent = document.getElementById('slide-content');
+const events = document.querySelectorAll('li.gathering__event');
+const underlines = document.querySelectorAll('div.gathering__event__underline');
+
 const breakPoints = [768, 1200];
 const windowSize = window.innerWidth;
 
@@ -23,20 +26,40 @@ const slides = [
 ];
 const imageUrlSuffixes = ['mobile@2x.jpg', 'tablet@2x.jpg', 'desktop@2x.jpg'];
 
-let slide = 1;
+let suffix = 0;
+if (windowSize > breakPoints[0] && windowSize < breakPoints[1]) {
+  suffix = 1;
+}
+else if (windowSize > breakPoints[1]) {
+  suffix = 2;
+}
 
+slideImage.innerHTML = "";
+slideImage.appendChild(generateImageComponent(0, suffix));
+events[0].classList.add('active');
+underlines[0].classList.add('active');
+
+let slide = 1;
 // changing image url
 setInterval(() => {
   slideImage.innerHTML = "";
-  slideImage.appendChild(generateImageComponent(slide));
-  slideTitle.textContent = slides[slide].name;
-  slideBody.textContent = slides[slide].content;
+  slideImage.appendChild(generateImageComponent(slide, suffix));
+  changeInnerText(slide);
+  events[slide].classList.add('active');
+  underlines[slide].classList.add('active');
+  events.forEach((event, i) => { if (i != slide) event.classList.remove('active'); })
+  underlines.forEach((underline, i) => { if (i != slide) underline.classList.remove('active'); })
   if (slide == (slides.length - 1)) slide = 0; else slide++; // reset slide number
-}, 3000);
+}, 5000);
 
-function generateImageComponent(slide) {
+function generateImageComponent(slide, suffix) {
   let newImage = document.createElement("img");
   newImage.setAttribute("class", "gathering__slide__image-container__image");
-  newImage.setAttribute("src", slides[slide].image.concat(imageUrlSuffixes[slide]));
+  newImage.setAttribute("src", slides[slide].image.concat(imageUrlSuffixes[suffix]));
   return newImage;
+}
+
+function changeInnerText(slide) {
+  slideTitle.textContent = slides[slide].name;
+	slideContent.textContent = slides[slide].content;
 }

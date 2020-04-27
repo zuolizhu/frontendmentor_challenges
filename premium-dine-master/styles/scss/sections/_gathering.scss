@@ -75,6 +75,8 @@
       }
       @media (min-width: $bp-tablet-start) and (max-width: $bp-tablet-end) {
         height: 36rem;
+        width: 57.3rem;
+        margin: 0 auto;
       }
       @media (min-width: $bp-desktop) {
         height: 60rem;
@@ -100,6 +102,9 @@
     text-transform: uppercase;
     opacity: 0.5;
     transition: var(--transition) opacity;
+    &.active {
+      opacity: 1;
+    }
     &:hover {
       opacity: 1;
     }
@@ -109,6 +114,9 @@
         margin: 0 auto;
         border: 1px solid transparent;
         transition: var(--transition) border-color;
+        &.active {
+          border-color: var(--color-beaver);
+        }
       }
       &:hover &__underline {
         border-color: var(--color-beaver);
@@ -124,6 +132,9 @@
         transform: translate(-12.5rem, -0.2rem);
         background-color: transparent;
         transition: var(--transition) background-color;
+        &.active {
+          background-color: var(--color-beaver);
+        }
       }
       &:hover &__underline {
         background-color: var(--color-beaver);
