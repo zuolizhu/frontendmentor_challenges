@@ -1,0 +1,136 @@
+// font CDN: Lexend Deca, Space Mono
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Space+Mono:400,700&display=swap');
+
+// variables
+:root {
+  // colors
+  --color-yellow: #FCB72B;
+  --color-dark-navy: #495567;
+  --color-dim-grey: #939CAA;
+  --color-light-grey: #E5ECF4;
+  --color-snow: #F2F5F9;
+  --color-light-yellow: #FFF4DF;
+  --color-white: #fff;
+
+  // Typography
+  --font-family-sans: 'Lexend Deca', sans-serif;
+  --font-family-mono: 'Space Mono', monospace;
+
+  // Font Weights
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  // Design elements
+  --transition: 300ms ease-in-out;
+}
+
+// Reset
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  font-size: 1.5rem;
+  background-color: var(--color-white);
+  color: var(--color-dim-grey);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+// Type Specs
+.t-h1 {
+  font-family: var(--font-family-mono);
+  font-weight: var(--weight-bold);
+  font-size: 5.6rem;
+  letter-spacing: -2.5px;
+  line-height: 1;
+}
+
+.t-h2 {
+  font-family: var(--font-family-mono);
+  font-weight: var(--weight-bold);
+  font-size: 4.8rem;
+  letter-spacing: -2.14px;
+  line-height: 1;
+  &--yellow-regular {
+    font-weight: var(--weight-regular);
+    color: var(--color-yellow);
+  }
+}
+
+.t-h3 {
+  font-family: var(--font-family-mono);
+  font-weight: var(--weight-bold);
+  font-size: 4rem;
+  letter-spacing: -1.79px;
+  line-height: 1.2;
+}
+
+.t-h4 {
+  font-family: var(--font-family-mono);
+  font-weight: var(--weight-bold);
+  font-size: 2.4rem;
+  letter-spacing: -1.07px;
+  line-height: 1.167;
+}
+
+.t-body1 {
+  font-family: var(--font-family-sans);
+  font-weight: var(--weight-regular);
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  line-height: 1.167;
+}
+
+.t-white {
+  color: var(--color-white);
+}
+
+.t-navy {
+  color: var(--color-dark-navy);
+}
+
+// Button
+.btn {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: var(--weight-bold);
+  font-family: var(--font-family-mono);
+  font-size: 1.5rem;
+  line-height: 1.667;
+  &-regular {
+    height: 5.3rem;
+    width: 18rem;
+  }
+  &-l {
+    height: 5.3rem;
+    width: 19.5rem;
+  }
+}
+.btn-yellow {
+  background-color: var(--color-yellow);
+  border: 3px solid transparent;
+  color: var(--color-white);
+  transition: var(--transition) background-color, var(--transition) border-color, var(--transition) color;
+  &:hover, &:focus {
+    outline: none;
+    color: var(--color-yellow);
+    background-color: var(--color-white);
+    border-color: var(--color-yellow);
+  }
+}

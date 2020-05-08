@@ -1,0 +1,39 @@
+// headers
+// nav bar
+// page header
+.page-header {
+  height: 20rem;
+  position: relative;
+  &__container {
+    max-width: 111rem;
+    margin: 0 auto;
+  }
+  &__circles {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(31px);
+  }
+
+  &--design-system {
+    background-image: url(./assets/images/about-hero-desktop.jpg);
+    &__container {
+      padding-top: 6.4rem;
+      position: relative;
+      .content-holder {
+        position: absolute;
+        z-index: 1;
+      }
+    }
+    &__arrow {
+      position: absolute;
+      width: 447px;
+      height: 138px;
+      transform: translateX(-224px) translateY(30px);
+      z-index: 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.design-system {
+  max-width: 82.4rem;
+  margin: 0 auto;
+}
+
+.design-system .typography {
+  margin-top: 12rem;
+}
+
+.design-system .typography .divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-light-grey);
+  margin: 6.4rem 0;
+}
+/*# sourceMappingURL=layout.css.map */
