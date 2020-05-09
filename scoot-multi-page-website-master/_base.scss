@@ -1,24 +1,30 @@
 // font CDN: Lexend Deca, Space Mono
-@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Space+Mono:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca|Space+Mono:400,700&display=swap");
 
 // variables
 :root {
   // colors
-  --color-yellow: #FCB72B;
+  --color-yellow: #fcb72b;
   --color-dark-navy: #495567;
-  --color-dim-grey: #939CAA;
-  --color-light-grey: #E5ECF4;
-  --color-snow: #F2F5F9;
-  --color-light-yellow: #FFF4DF;
+  --color-dim-grey: #939caa;
+  --color-light-grey: #e5ecf4;
+  --color-snow: #f2f5f9;
+  --color-light-yellow: #fff4df;
   --color-white: #fff;
 
   // Typography
-  --font-family-sans: 'Lexend Deca', sans-serif;
-  --font-family-mono: 'Space Mono', monospace;
+  --font-family-sans: "Lexend Deca", sans-serif;
+  --font-family-mono: "Space Mono", monospace;
 
   // Font Weights
   --weight-regular: 400;
   --weight-bold: 700;
+
+  // Spacing
+  --space-12: 12rem;
+  --space-16: 16rem;
+  --space-20: 20rem;
+  --space-max-width: 111rem;
 
   // Design elements
   --transition: 300ms ease-in-out;
@@ -30,11 +36,14 @@ html {
   font-size: 62.5%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -47,17 +56,46 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, p {
+ul {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+// Breakpoints
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 
 // Type Specs
 .t-h1 {
   font-family: var(--font-family-mono);
   font-weight: var(--weight-bold);
-  font-size: 5.6rem;
-  letter-spacing: -2.5px;
   line-height: 1;
+  font-size: 4rem;
+  letter-spacing: -1.79px;
+  @media #{$mq-small} {
+    font-size: 5.6rem;
+    letter-spacing: -2.5px;
+  }
 }
 
 .t-h2 {
@@ -93,7 +131,7 @@ h1, h2, h3, h4, p {
   font-weight: var(--weight-regular);
   font-size: 1.5rem;
   letter-spacing: 0px;
-  line-height: 1.167;
+  line-height: 2.5rem;
 }
 
 .t-white {
@@ -102,6 +140,26 @@ h1, h2, h3, h4, p {
 
 .t-navy {
   color: var(--color-dark-navy);
+}
+
+.t-link {
+  font-family: var(--font-family-mono);
+  font-weight: var(--weight-bold);
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  line-height: 1.167;
+  text-decoration: none;
+  color: var(--color-dim-grey);
+  transition: var(--transition) color;
+  &--sidebar {
+    font-size: 1.8rem;
+    line-height: 1.389;
+    color: var(--color-light-grey);
+  }
+  &:hover, &:focus {
+    color: var(--color-yellow);
+    outline: none;
+  }
 }
 
 // Button
@@ -113,6 +171,9 @@ h1, h2, h3, h4, p {
   font-family: var(--font-family-mono);
   font-size: 1.5rem;
   line-height: 1.667;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &-regular {
     height: 5.3rem;
     width: 18rem;
@@ -127,10 +188,23 @@ h1, h2, h3, h4, p {
   border: 3px solid transparent;
   color: var(--color-white);
   transition: var(--transition) background-color, var(--transition) border-color, var(--transition) color;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     outline: none;
     color: var(--color-yellow);
-    background-color: var(--color-white);
+    background-color: transparent;
     border-color: var(--color-yellow);
   }
+}
+
+// screen reader only
+.screen-reader-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
 }

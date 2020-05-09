@@ -1,86 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Scoot</title>
-
   <link rel="stylesheet" href="./style.css">
-
+  <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+  <title>Frontend Mentor | Scoot</title>
 </head>
+
 <body>
-
-  About
-  Location
-  Careers
-
-  Get Scootin
-
-
-
-  Scooter sharing made simple
-
-  Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient 
-  locations in each of our cities. Use our app to locate the nearest bike, unlock 
-  it with a tap, and you’re away!
-
-  Get Scootin
-
-
-
-  Locate with app
-
-  Use the app to find the nearest scooter to you. We are continuously placing scooters 
-  in the areas with most demand, so one should never be too far away. 
-
-  Pick your scooter
-
-  We show the most important info for the scooters closest to you. So you know how much 
-  charge they have left and can see roughly how much it will cost.
-
-  Enjoy the ride
-
-  Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, 
-  and you’re off! Always lock bikes away from walkways and accessibility ramps.
-
-
-
-  Easy to use riding telemetry
-
-  The Scoot app is available with riding telemetry. This means it can show you your 
-  average speed, how long you've been using the scooter, your traveling distance, 
-  and many more things all in an easy to use app.
-
-  Learn More
-
-  Coming to a city near you
-
-  Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure 
-  to let us know if you want to see us in your hometown. We’re aiming to let our 
-  scooters loose on 23 cities over the coming year.
-
-  Learn More
-
-  Zero hassle payments
-
-  Our payment is as easy as one two three. We accept most credit cards and debit cards. 
-  You can also link your PayPal account inside the app. Need to pay later? No worries! 
-  You can defer payment for up to a month.
-
-  Learn More
-
-
-
-  Sign up and Scoot off today
-
-
-
-  About
-  Location
-  Careers
-
+  <header class="header">
+    <div class="container">
+      <button class="menu-trigger">
+        <svg class="menu-trigger__icon active" xmlns="http://www.w3.org/2000/svg" width="20" height="16"><g fill="#FCB72B" fill-rule="evenodd"><path d="M0 0h19.692v3.692H0zM0 6.154h19.692v3.692H0zM0 12.308h19.692V16H0z"/></g></svg>
+        <svg class="menu-trigger__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><g fill="#FCB72B" fill-rule="evenodd"><path d="M3.19.733l13.923 13.924-2.61 2.61L.579 3.343z"/><path d="M.579 14.657L14.503.733l2.61 2.61L3.19 17.267z"/></g></svg>
+      </button>
+      <div class="nav-container">
+        <a class="brand" href="/">
+          <div class="logo">
+            <img src="./assets/logo.svg" alt="logo svg">
+          </div>
+        </a>
+        <nav class="header__nav">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a class="t-link" href="/about.html">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="t-link" href="/locations.html">Location</a>
+            </li>
+            <li class="nav__item">
+              <a class="t-link" href="/careers.html">Careers</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <a class="btn btn-yellow btn-regular cta" href="">Get Scootin</a>
+      <nav class="side-menu">
+        <ul class="side-menu__items">
+          <li class="side-menu__item">
+            <a class="t-link t-link--sidebar" href="">About</a>
+          </li>
+          <li class="side-menu__item">
+            <a class="t-link t-link--sidebar" href="">Location</a>
+          </li>
+          <li class="side-menu__item">
+            <a class="t-link t-link--sidebar" href="">Careers</a>
+          </li>
+          <li class="side-menu__item">
+            <a class="btn btn-yellow btn-regular" href="">Get Scootin</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="home-hero">
+      <div class="container">
+        <h1 class="t-h1 t-white heading">Scooter sharing made simple</h1>
+        <div class="copy">
+          <p class="t-body1 t-white copy__text-content">Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!</p>
+          <a class="btn btn-yellow btn-regular btn--home-hero">Get Scootin</a>
+        </div>
+      </div>
+      <div class="circles">
+        <img src="./assets/patterns/white-circles.svg" alt="background circles patterns">
+      </div>
+      <div class="arrow">
+        <img src="./assets/patterns/right-arrow.svg" alt="background arrow pattern">
+      </div>
+    </section>
+  
+  
+  
+    Locate with app
+  
+    Use the app to find the nearest scooter to you. We are continuously placing scooters
+    in the areas with most demand, so one should never be too far away.
+  
+    Pick your scooter
+  
+    We show the most important info for the scooters closest to you. So you know how much
+    charge they have left and can see roughly how much it will cost.
+  
+    Enjoy the ride
+  
+    Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet,
+    and you’re off! Always lock bikes away from walkways and accessibility ramps.
+  
+  
+  
+    Easy to use riding telemetry
+  
+    The Scoot app is available with riding telemetry. This means it can show you your
+    average speed, how long you've been using the scooter, your traveling distance,
+    and many more things all in an easy to use app.
+  
+    Learn More
+  
+    Coming to a city near you
+  
+    Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure
+    to let us know if you want to see us in your hometown. We’re aiming to let our
+    scooters loose on 23 cities over the coming year.
+  
+    Learn More
+  
+    Zero hassle payments
+  
+    Our payment is as easy as one two three. We accept most credit cards and debit cards.
+    You can also link your PayPal account inside the app. Need to pay later? No worries!
+    You can defer payment for up to a month.
+  
+    Learn More
+  
+  
+  
+    Sign up and Scoot off today
+  
+  
+  
+    About
+    Location
+    Careers
+  </main>
+  <script src="./app.js"></script>
 </body>
+
 </html>

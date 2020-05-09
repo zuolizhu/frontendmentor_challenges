@@ -1,0 +1,86 @@
+.home-hero {
+  height: 65rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: url(./assets/images/home-hero-mobile.jpg);
+  overflow: hidden;
+  position: relative;
+  @media #{$mq-small} {
+    background-image: url(./assets/images/home-hero-tablet.jpg);
+  }
+  @media #{$mq-medium} {
+    text-align: left;
+    background-image: url(./assets/images/home-hero-desktop.jpg);
+  }
+
+  .container {
+    padding: 11.5rem 3.2rem 0;
+    max-width: 50rem;
+    margin: 0 auto;
+    @media #{$mq-small} {
+      padding: 13.7rem 0 0;
+      max-width: 57.3rem;
+    }
+    @media #{$mq-medium} {
+      max-width: var(--space-max-width);
+    }
+    @media #{$mq-medium} and (max-width: 1199px) {
+      padding: 15.3rem 0 0 6rem;
+    }
+    @media (min-width: 1200px) {
+      padding: 15.3rem 0 0;
+    }
+  }
+
+  .heading {
+    max-width: 50rem;
+    @media #{$mq-medium} {
+    }
+  }
+
+  .copy {
+    margin-top: 2.4rem;
+    &__text-content {
+      margin-bottom: 3.4rem;
+      @media #{$mq-small} {
+        margin-bottom: 3.2rem;
+      }
+      @media #{$mq-medium} {
+        margin-bottom: 4rem;
+      }
+    }
+    @media #{$mq-medium} {
+      max-width: 40.5rem;
+      margin-left: 9.5rem;
+      margin-top: 4rem;
+    }
+  }
+
+  // circles
+  .circles {
+    display: none;
+    img {
+      width: 100%;
+    }
+  }
+
+  // arrow
+  .arrow {
+    position: absolute;
+    width: 44.7rem;
+    height: 13.8rem;
+    left: -50%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.btn--home-hero {
+  margin: 0 auto;
+  @media #{$mq-medium} {
+    margin: 0;
+  }
+}

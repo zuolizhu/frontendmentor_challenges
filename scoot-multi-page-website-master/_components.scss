@@ -1,5 +1,140 @@
 // headers
 // nav bar
+.header {
+  position: fixed;
+  width: 100%;
+  height: 6.4rem;
+  background: #fff;
+  z-index: 3;
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 6.4rem;
+    @media #{$mq-small} {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  @media #{$mq-small} {
+    display: flex;
+    position: relative;
+    height: 9.6rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    .nav-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media #{$mq-medium} {
+    max-width: var(--space-max-width);
+    margin: 0 auto;
+  }
+
+  .cta {
+    display: none;
+    @media #{$mq-small} {
+      display: flex;
+    }
+  }
+
+  .menu-trigger {
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    left: 3.2rem;
+    &:focus {
+      outline: none;
+    }
+    &__icon {
+      display: none;
+    }
+    &__icon.active {
+      display: block;
+    }
+    @media #{$mq-small} {
+      display: none;
+    }
+  }
+  &__nav {
+    display: none;
+    @media #{$mq-small} {
+      display: block;
+      margin-left: 5.8rem;
+    }
+  }
+}
+
+.logo {
+  width: 7.55rem;
+  height: 2rem;
+  img { width: 100%; }
+  @media #{$mq-small} {
+    width: 10.8rem;
+    height: 2.9rem;
+  }
+}
+
+.nav__items {
+  display: flex;
+  align-items: center;
+  .nav__item {
+    &:nth-child(2) {
+      margin: 0 3.2rem;
+    }
+  }
+}
+
+// Side menu for mobile devices
+.side-menu {
+  display: none;
+  &__items {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 68.267%;
+    padding-top: 6.4rem;
+    padding-left: 3.2rem;
+    padding-bottom: 2.4rem;
+    background-color: #333A44;
+    @media (max-width: 340px) {
+      justify-content: center;
+      padding: 2rem 0;
+      align-items: center;
+    }
+  }
+  &__item {
+    &:nth-child(2) {
+      margin: 2.4rem 0;
+    }
+    &:last-child {
+      margin-top: auto;
+    }
+  }
+}
+.side-menu.open {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  display: block;
+  position: fixed;
+  overflow-y: auto;
+  height: calc(100% - 6.4rem);
+  transform: translateY(6.4rem);
+  background-color: rgba(0, 0, 0, .75);
+  @media #{$mq-small} {
+    display: none;
+  }
+}
+
 // page header
 .page-header {
   height: 20rem;
@@ -35,5 +170,13 @@
         width: 100%;
       }
     }
+  }
+}
+
+
+// Main component
+.main {
+  @media (max-width: 767px) {
+    padding-top: 6.4rem;
   }
 }
