@@ -60,6 +60,20 @@
   // circles
   .circles {
     display: none;
+    position: absolute;
+    @media #{$mq-small} {
+      display: block;
+      bottom: 4.5rem;
+      right: -3.1rem;
+    }
+    @media #{$mq-medium} {
+      bottom: 11rem;
+      right: -4.8rem;
+    }
+    @media (min-width: 1370px) {
+      bottom: 16.45rem;
+      right: -4.8rem;
+    }
     img {
       width: 100%;
     }
@@ -68,12 +82,39 @@
   // arrow
   .arrow {
     position: absolute;
-    width: 44.7rem;
-    height: 13.8rem;
-    left: -50%;
+    width: 45.2rem;
+    height: 15.1rem;
+    right: 62.667%;
+    @media #{$mq-small} {
+      right: 57.8125%;
+      margin-top: 3.2rem;
+    }
+    @media #{$mq-medium} {
+      right: 23%;
+      bottom: 11.3rem;
+      margin-top: 0;
+    }
+    @media (min-width: 1370px) {
+      right: 19.65%;
+      bottom: 15.2rem;
+    }
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  .line {
+    display: none;
+    @media #{$mq-medium} {
+      display: flex;
+      position: absolute;
+      bottom: 28.8rem;
+      left: -8%;
+    }
+    @media (min-width: 1370px) {
+      bottom: 28.8rem;
+      left: 0;
     }
   }
 }
@@ -82,5 +123,99 @@
   margin: 0 auto;
   @media #{$mq-medium} {
     margin: 0;
+  }
+}
+
+.steps {
+  .container {
+    padding: var(--space-s) 3.2rem 0;
+    max-width: 50rem;
+    margin: 0 auto;
+    @media #{$mq-small} {
+      position: relative;
+      padding: 12.2rem 0 0;
+      max-width: 57.3rem;
+    }
+    @media (min-width: 1200px) {
+      padding: var(--space-m) 0 0;
+      max-width: var(--space-max-width);
+      display: flex;
+      justify-content: space-between;
+    }
+    
+
+    .vertical-line {
+      display: none;
+      @media #{$mq-small} {
+        display: flex;
+        position: absolute;
+        left: 4.1rem;
+        top: 0;
+        z-index: -1;
+      }
+      @media (min-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .horizontal-line {
+      display: none;
+      @media (min-width: 1200px) {
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        top: 20.1rem;
+      }
+    }
+  }
+  .step {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$mq-small} {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+      justify-content: space-between;
+    }
+    @media (min-width: 1200px) {
+      flex-direction: column;
+    }
+    &:not(:last-child) {
+      margin-bottom: 4.8rem;
+      @media #{$mq-small} {
+        margin-bottom: 4rem;
+      }
+    }
+    &__icon {
+      display: flex;
+      width: 5.6rem;
+      margin-bottom: 2.4rem;
+      @media #{$mq-small} {
+        margin-bottom: 0;
+        width: 9.6rem;
+      }
+      @media (min-width: 1200px) {
+        margin-bottom: 4rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &__copy {
+      @media #{$mq-small} {
+        max-width: 39.8rem;
+      }
+      @media (min-width: 1200px) {
+        max-width: 35rem;
+      }
+      h4 {
+        margin-bottom: 2.4rem;
+        @media #{$mq-small} {
+          margin-bottom: 2.7rem;
+        }
+      }
+    }
   }
 }

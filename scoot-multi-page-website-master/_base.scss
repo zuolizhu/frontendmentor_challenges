@@ -21,9 +21,9 @@
   --weight-bold: 700;
 
   // Spacing
-  --space-12: 12rem;
-  --space-16: 16rem;
-  --space-20: 20rem;
+  --space-s: 12rem;
+  --space-m: 16rem;
+  --space-l: 20rem;
   --space-max-width: 111rem;
 
   // Design elements
@@ -121,9 +121,14 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 .t-h4 {
   font-family: var(--font-family-mono);
   font-weight: var(--weight-bold);
-  font-size: 2.4rem;
-  letter-spacing: -1.07px;
-  line-height: 1.167;
+  font-size: 2rem;
+  letter-spacing: -0.89px;
+  line-height: 1.4;
+  @media #{$mq-small} {
+    font-size: 2.4rem;
+    letter-spacing: -1.07px;
+    line-height: 1.167;
+  }
 }
 
 .t-body1 {
@@ -140,6 +145,10 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 
 .t-navy {
   color: var(--color-dark-navy);
+}
+
+.t-dim-grey {
+  color: var(--color-dim-grey);
 }
 
 .t-link {
