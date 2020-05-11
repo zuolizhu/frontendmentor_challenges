@@ -35,6 +35,9 @@
     max-width: var(--space-max-width);
     margin: 0 auto;
   }
+  @media (min-width: 1200px) {
+    padding: 0;
+  }
 
   .cta {
     display: none;
@@ -139,16 +142,57 @@
 .page-header {
   height: 20rem;
   position: relative;
-  &__container {
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .container {
     max-width: 111rem;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    @media #{$mq-small} {
+      justify-content: flex-start;
+      padding: 0 9.7rem;
+    }
+    @media #{$mq-medium} {
+      padding: 0 5rem;
+    }
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
   }
   &__circles {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%) translateX(31px);
+    display: none;
+    @media #{$mq-small} {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(3.1rem);
+      height: 6.3rem;
+      display: flex;
+    }
   }
+  &--about {
+    background-image: url(./assets/images/about-hero-mobile.jpg);
+    @media #{$mq-small} {
+      background-image: url(./assets/images/about-hero-tablet.jpg);
+    }
+    @media #{$mq-medium} {
+      background-image: url(./assets/images/about-hero-desktop.jpg);
+    }
+  }
+  &--careers-location {
+    background-image: url(./assets/images/careers-location-hero-mobile.jpg);
+    @media #{$mq-small} {
+      background-image: url(./assets/images/careers-locations-hero-tablet.jpg);
+    }
+    @media #{$mq-medium} {
+      background-image: url(./assets/images/careers-locations-hero-desktop.jpg);
+    }
+  }
+
 
   &--design-system {
     background-image: url(./assets/images/about-hero-desktop.jpg);

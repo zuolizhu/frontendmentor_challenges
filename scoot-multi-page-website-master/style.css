@@ -289,6 +289,12 @@ p {
   }
 }
 
+@media (min-width: 1200px) {
+  .header {
+    padding: 0;
+  }
+}
+
 .header .cta {
   display: none;
 }
@@ -431,19 +437,95 @@ p {
 .page-header {
   height: 20rem;
   position: relative;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.page-header__container {
+.page-header .container {
   max-width: 111rem;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 48em) {
+  .page-header .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0 9.7rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .page-header .container {
+    padding: 0 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header .container {
+    padding: 0;
+  }
 }
 
 .page-header__circles {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%) translateX(31px);
-          transform: translateY(-50%) translateX(31px);
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .page-header__circles {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(3.1rem);
+            transform: translateY(-50%) translateX(3.1rem);
+    height: 6.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.page-header--about {
+  background-image: url(./assets/images/about-hero-mobile.jpg);
+}
+
+@media (min-width: 48em) {
+  .page-header--about {
+    background-image: url(./assets/images/about-hero-tablet.jpg);
+  }
+}
+
+@media (min-width: 64em) {
+  .page-header--about {
+    background-image: url(./assets/images/about-hero-desktop.jpg);
+  }
+}
+
+.page-header--careers-location {
+  background-image: url(./assets/images/careers-location-hero-mobile.jpg);
+}
+
+@media (min-width: 48em) {
+  .page-header--careers-location {
+    background-image: url(./assets/images/careers-locations-hero-tablet.jpg);
+  }
+}
+
+@media (min-width: 64em) {
+  .page-header--careers-location {
+    background-image: url(./assets/images/careers-locations-hero-desktop.jpg);
+  }
 }
 
 .page-header--design-system {
