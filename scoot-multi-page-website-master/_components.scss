@@ -180,3 +180,54 @@
     padding-top: 6.4rem;
   }
 }
+
+
+footer {
+  background-color: #333A44;
+  .container {
+    max-width: var(--space-max-width);
+    margin: 0 auto;
+    padding: 6.4rem 0 8.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$mq-small} {
+      flex-direction: row;
+      padding: 3.6rem 4rem;
+    }
+    @media (min-width: 1200px) {
+      padding: 3.6rem 0;
+    }
+  }
+
+  .footer-logo {
+    display: flex;
+  }
+
+  .footer-nav {
+    text-align: center;
+    margin: 4.1rem auto 8.5rem;
+    @media #{$mq-small} {
+      margin: 0;
+      display: flex;
+      margin-left: 5.8rem;
+    }
+    .footer-nav__item:nth-child(2) {
+      margin: 1.6rem 0;
+      @media #{$mq-small} {
+        margin: 0 3.2rem;
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    @media #{$mq-small} {
+      margin-left: auto;
+    }
+    .social:nth-child(2) {
+      margin: 0 2.4rem;
+    }
+  }
+}

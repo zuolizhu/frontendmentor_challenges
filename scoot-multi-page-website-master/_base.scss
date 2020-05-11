@@ -101,12 +101,16 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 .t-h2 {
   font-family: var(--font-family-mono);
   font-weight: var(--weight-bold);
-  font-size: 4.8rem;
-  letter-spacing: -2.14px;
+  font-size: 3.2rem;
+  letter-spacing: -1.43px;
   line-height: 1;
   &--yellow-regular {
     font-weight: var(--weight-regular);
     color: var(--color-yellow);
+  }
+  @media #{$mq-small} {
+    font-size: 4.8rem;
+    letter-spacing: -2.14px;
   }
 }
 
@@ -164,6 +168,9 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
     font-size: 1.8rem;
     line-height: 1.389;
     color: var(--color-light-grey);
+  }
+  &--footer {
+    line-height: 25px;
   }
   &:hover, &:focus {
     color: var(--color-yellow);
