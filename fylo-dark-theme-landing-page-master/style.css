@@ -808,6 +808,7 @@ body {
 
 .email-input {
   border: none;
+  outline: none;
   font-family: var(--font-opensans);
   font-weight: var(--weight-regular);
   border-radius: var(--border-radius-default);

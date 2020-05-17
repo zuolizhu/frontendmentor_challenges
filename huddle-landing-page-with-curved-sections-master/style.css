@@ -885,6 +885,7 @@ body {
   font-size: 1.6rem;
   padding-left: 1.2rem;
   color: var(--color-very-dark-cyan);
+  outline: none;
 }
 @media (max-width: 374px) {
   .email__input {

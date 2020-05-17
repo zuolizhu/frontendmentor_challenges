@@ -157,7 +157,15 @@ main {
 @media screen and (min-width: 1440px) {
   main {
     max-width: 1110px;
-    margin-top: 80px;
+    margin-top: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
 
   /* welcome section */

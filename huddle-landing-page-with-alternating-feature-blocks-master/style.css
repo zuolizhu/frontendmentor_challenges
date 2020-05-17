@@ -75,6 +75,7 @@ button {
   background-color: var(--Pink);
   transition: all 0.3s ease;
   box-shadow: 0px 5px 10px var(--PinkShadow);
+  font-weight: 400;
 }
 
 .btn-pink:hover {

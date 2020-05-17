@@ -61,6 +61,7 @@ input {
   border-radius: 2.8rem;
   border: 1px solid var(--PaleBlue);
   font-weight: 300;
+  outline: none;
 }
 
 input.error {

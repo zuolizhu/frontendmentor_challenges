@@ -70,6 +70,8 @@ input[type=text] {
   border: none;
   background-color: transparent;
   color: var(--DarkGrayishRed);
+  outline: none;
+  caret-color: var(--DesaturatedRed);
 }
 
 input[type=text]::placeholder {

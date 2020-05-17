@@ -91,6 +91,7 @@ input {
   border: 1px solid var(--VeryDarkBlue);
   border-radius: 3.13px;
   color: var(--VeryDarkBlue);
+  outline: none;
 }
 
 .btn {
