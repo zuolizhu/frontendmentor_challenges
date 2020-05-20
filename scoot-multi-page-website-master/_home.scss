@@ -259,8 +259,9 @@
       @media #{$mq-medium} { margin-bottom: var(--space-m); }
     }
     &__picture {
-      width: 31.1rem;
+      width: 100%;
       height: 31.1rem;
+      max-width: 31.1rem;
       margin: 0 auto 5.6rem;
       @media #{$mq-small} {
         width: 44.5rem;
@@ -307,7 +308,7 @@
     max-width: 37.5rem;
     @media #{$mq-small} { 
       padding: 6.2rem 0;
-      max-width: 47.5rem;
+      max-width: 45.5rem;
      }
     @media #{$mq-medium} {
       display: flex;
@@ -346,6 +347,27 @@
       img {
         width: auto;
         height: 100%;
+      }
+    }
+  }
+  &__bg-pattern {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100rem;
+    height:18.1rem;
+    @media #{$mq-small} {
+      height:15.7rem;
+    }
+    img {
+      position: absolute;
+      right: 0;
+      transform: translateX(17.1rem);
+      @media #{$mq-small} {
+        transform: translateX(16.3rem);
       }
     }
   }
