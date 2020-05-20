@@ -185,3 +185,101 @@
     }
   }
 }
+
+.values {
+  margin-top: var(--space-s);
+  text-align: center;
+  .container {
+    padding: 6.4rem 3.2rem 0;
+    max-width: 45.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    @media #{$mq-small} {
+      padding: 10.5rem 0 0;
+    }
+    @media (min-width: 1150px) {
+      max-width: var(--space-max-width);
+      padding: 10.3rem 0 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  .value {
+    &:not(:last-child) {
+      margin-bottom: 5.6rem;
+      @media (min-width: 1150px) {
+        margin-bottom: 0;
+      }
+    }
+
+    .picture {
+      height: 24rem;
+      position: relative;
+      img { border-radius: 50%; }
+      .number {
+        background-color: var(--color-yellow);
+        width: 9.6rem;
+        height: 9.6rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+    .copy {
+      margin-top: 6.4rem;
+      @media #{$mq-small} {
+        margin-top: 8.7rem;
+      }
+      @media (min-width: 1150px) {
+        max-width: 35rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h4 {
+        margin-bottom: 2.7rem;
+      }
+    }
+  }
+}
+
+.faqs {
+  margin-top: 14.5rem;
+  .heading {
+    text-align: center;
+  }
+  @media #{$mq-small} {
+    margin-top: var(--space-s);
+  }
+}
+
+
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
