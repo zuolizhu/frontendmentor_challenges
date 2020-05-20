@@ -435,11 +435,25 @@ p {
 }
 
 .page-header {
-  height: 20rem;
+  height: 16rem;
+  margin-bottom: 7.2rem;
   position: relative;
   overflow-x: hidden;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (min-width: 48em) {
+  .page-header {
+    height: 20rem;
+    margin-bottom: 14.4rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .page-header {
+    margin-bottom: var(--space-s);
+  }
 }
 
 .page-header .container {
@@ -1447,6 +1461,325 @@ footer .socials .social:nth-child(2) {
   .call-to-action__bg-pattern img {
     -webkit-transform: translateX(16.3rem);
             transform: translateX(16.3rem);
+  }
+}
+
+.about-mobility {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-mobility .container {
+  padding: 0 3.2rem;
+}
+
+@media (min-width: 64em) {
+  .about-mobility .container {
+    padding: 0 5rem;
+    max-width: var(--space-max-width);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-mobility .container {
+    padding: 0;
+  }
+}
+
+.about-mobility .picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 31.1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 48em) {
+  .about-mobility .picture {
+    max-width: 44.5rem;
+    width: 44.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .about-mobility .picture {
+    margin: 0;
+  }
+}
+
+.about-mobility .picture img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.about-mobility .copy {
+  margin-top: 5.6rem;
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .about-mobility .copy {
+    max-width: 57.3rem;
+    margin: 5.6rem auto 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .about-mobility .copy {
+    max-width: 44.5rem;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.about-mobility .copy h2 {
+  margin-bottom: 3.2rem;
+}
+
+@media (min-width: 48em) {
+  .about-mobility .copy h2 {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .about-mobility .copy h2 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.about-mobility .pattern {
+  position: absolute;
+}
+
+.about-mobility .pattern--arrow {
+  top: 13.3rem;
+  left: 3rem;
+}
+
+@media (min-width: 48em) {
+  .about-mobility .pattern--arrow {
+    top: 26.8rem;
+    left: auto;
+    right: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .about-mobility .pattern--arrow {
+    right: auto;
+    left: 50%;
+  }
+}
+
+@media (min-width: 1380px) {
+  .about-mobility .pattern--arrow {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 48em) {
+  .about-mobility .pattern--arrow img {
+    width: 73.4rem;
+  }
+}
+
+.about-mobility .pattern--circle {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .about-mobility .pattern--circle {
+    display: block;
+    top: 0;
+    right: -35rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .about-mobility .pattern--circle {
+    right: -42rem;
+  }
+}
+
+@media (min-width: 1370px) {
+  .about-mobility .pattern--circle {
+    right: -35rem;
+  }
+}
+
+.about-urban-living {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--space-s);
+}
+
+.about-urban-living .container {
+  padding: 0 3.2rem;
+}
+
+@media (min-width: 64em) {
+  .about-urban-living .container {
+    padding: 0 5rem;
+    max-width: var(--space-max-width);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-urban-living .container {
+    padding: 0;
+  }
+}
+
+.about-urban-living .picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 31.1rem;
+  margin: 0.8rem auto 0;
+}
+
+@media (min-width: 48em) {
+  .about-urban-living .picture {
+    margin: 0 auto;
+    max-width: 44.5rem;
+    width: 44.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .about-urban-living .picture {
+    margin: 0;
+  }
+}
+
+.about-urban-living .picture img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.about-urban-living .copy {
+  margin-top: 5.6rem;
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .about-urban-living .copy {
+    max-width: 57.3rem;
+    margin: 5.6rem auto 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .about-urban-living .copy {
+    max-width: 44.5rem;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.about-urban-living .copy h2 {
+  margin-bottom: 3.2rem;
+}
+
+@media (min-width: 48em) {
+  .about-urban-living .copy h2 {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .about-urban-living .copy h2 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.about-urban-living .pattern {
+  position: absolute;
+}
+
+.about-urban-living .pattern--arrow {
+  top: 0;
+  right: 2.7rem;
+}
+
+@media (min-width: 478px) {
+  .about-urban-living .pattern--arrow {
+    right: auto;
+    left: 0;
+  }
+}
+
+@media (min-width: 48em) {
+  .about-urban-living .pattern--arrow {
+    left: -9.8rem;
+  }
+}
+
+@media (min-width: 1540px) {
+  .about-urban-living .pattern--arrow {
+    left: 0;
+  }
+}
+
+@media (min-width: 48em) {
+  .about-urban-living .pattern--arrow img {
+    height: 15.1rem;
+  }
+}
+
+.about-urban-living .pattern--circle {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .about-urban-living .pattern--circle {
+    display: block;
+    top: 0;
+    left: -35rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .about-urban-living .pattern--circle {
+    left: -42rem;
+  }
+}
+
+@media (min-width: 1370px) {
+  .about-urban-living .pattern--circle {
+    left: -35rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

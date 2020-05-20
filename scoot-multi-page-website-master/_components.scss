@@ -140,11 +140,18 @@
 
 // page header
 .page-header {
-  height: 20rem;
+  height: 16rem;
+  margin-bottom: 7.2rem;
+  @media #{$mq-small} {
+    height: 20rem;
+    margin-bottom: 14.4rem;
+  }
+  @media #{$mq-medium} { margin-bottom: var(--space-s); }
   position: relative;
   overflow-x: hidden;
   background-repeat: no-repeat;
   background-size: cover;
+
   .container {
     max-width: 111rem;
     margin: 0 auto;

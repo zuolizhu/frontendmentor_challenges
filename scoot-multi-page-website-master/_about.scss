@@ -1,0 +1,187 @@
+.about-mobility {
+  position: relative;
+  overflow: hidden;
+  .container {
+    padding: 0 3.2rem;
+    @media #{$mq-medium} {
+      padding: 0 5rem;
+      max-width: var(--space-max-width);
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
+  }
+  .picture {
+    display: flex;
+    width: 100%;
+    max-width: 31.1rem;
+    margin: 0 auto;
+    @media #{$mq-small} {
+      max-width: 44.5rem;
+      width: 44.5rem;
+    }
+    @media #{$mq-medium} {
+      margin: 0;
+    }
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+  .copy {
+    margin-top: 5.6rem;
+    text-align: center;
+    @media #{$mq-small} {
+      max-width: 57.3rem;
+      margin: 5.6rem auto 0;
+    }
+    @media #{$mq-medium} {
+      max-width: 44.5rem;
+      text-align: left;
+      margin: 0;
+    }
+    h2 {
+      margin-bottom: 3.2rem;
+      @media #{$mq-small} { margin-bottom: 4rem; }
+      @media #{$mq-medium} { margin-bottom: 2.4rem; }
+      
+    }
+  }
+  .pattern {
+    position: absolute;
+    &--arrow {
+      top: 13.3rem;
+      left: 3rem;
+      @media #{$mq-small} {
+        top: 26.8rem;
+        left: auto;
+        right: 0;
+      }
+      @media #{$mq-medium} {
+        right: auto;
+        left: 50%;
+      }
+      @media (min-width: 1380px) {
+        right: 0;
+        left: auto;
+      }
+      img {
+        @media #{$mq-small} {
+          width: 73.4rem;
+        }
+      }
+    }
+    &--circle {
+      display: none;
+      @media #{$mq-small} {
+        display: block;
+        top: 0;
+        right: -35rem;
+      }
+      @media #{$mq-medium} {
+        right: -42rem;
+      }
+      @media (min-width: 1370px) {
+        right: -35rem;
+      }
+    }
+  }
+}
+.about-urban-living {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--space-s);
+  .container {
+    padding: 0 3.2rem;
+    @media #{$mq-medium} {
+      padding: 0 5rem;
+      max-width: var(--space-max-width);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
+  }
+  .picture {
+    display: flex;
+    width: 100%;
+    max-width: 31.1rem;
+    margin: 0.8rem auto 0;
+    @media #{$mq-small} {
+      margin: 0 auto;
+      max-width: 44.5rem;
+      width: 44.5rem;
+    }
+    @media #{$mq-medium} {
+      margin: 0;
+    }
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+  .copy {
+    margin-top: 5.6rem;
+    text-align: center;
+    @media #{$mq-small} {
+      max-width: 57.3rem;
+      margin: 5.6rem auto 0;
+    }
+    @media #{$mq-medium} {
+      max-width: 44.5rem;
+      text-align: left;
+      margin: 0;
+    }
+    h2 {
+      margin-bottom: 3.2rem;
+      @media #{$mq-small} { margin-bottom: 4rem; }
+      @media #{$mq-medium} { margin-bottom: 2.4rem; }
+      
+    }
+  }
+  .pattern {
+    position: absolute;
+    &--arrow {
+      top: 0;
+      right: 2.7rem;
+      @media (min-width: 478px) {
+        right: auto;
+        left: 0;
+      }
+      @media #{$mq-small} {
+        left: -9.8rem;
+      }
+      @media (min-width: 1540px) {
+        left: 0;
+      }
+      img {
+        @media #{$mq-small} {
+          height: 15.1rem;
+        }
+      }
+    }
+    &--circle {
+      display: none;
+      @media #{$mq-small} {
+        display: block;
+        top: 0;
+        left: -35rem;
+      }
+      @media #{$mq-medium} {
+        left: -42rem;
+      }
+      @media (min-width: 1370px) {
+        left: -35rem;
+      }
+    }
+  }
+}
