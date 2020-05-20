@@ -685,6 +685,10 @@ footer .socials .social:nth-child(2) {
   margin: 9.6rem 0;
 }
 
+.main--home {
+  overflow-x: hidden;
+}
+
 .home-hero {
   height: 65rem;
   background-size: cover;
@@ -1030,6 +1034,10 @@ footer .socials .social:nth-child(2) {
   }
 }
 
+.features {
+  position: relative;
+}
+
 .features .container {
   padding: var(--space-s) 3.2rem;
 }
@@ -1072,9 +1080,9 @@ footer .socials .social:nth-child(2) {
   .features .feature {
     text-align: left;
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1084,9 +1092,9 @@ footer .socials .social:nth-child(2) {
   }
   .features .feature:nth-child(2) {
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1109,6 +1117,7 @@ footer .socials .social:nth-child(2) {
 
 @media (min-width: 48em) {
   .features .feature__picture {
+    max-width: 44.5rem;
     width: 44.5rem;
     height: 44.5rem;
   }
@@ -1120,7 +1129,7 @@ footer .socials .social:nth-child(2) {
   }
 }
 
-.features .feature__picture img {
+.features .feature__picture__img {
   width: 100%;
   border-radius: 50%;
 }
@@ -1156,6 +1165,155 @@ footer .socials .social:nth-child(2) {
 @media (min-width: 64em) {
   .features .feature__copy p {
     margin: 2.4rem 0 4rem;
+  }
+}
+
+.features .pattern {
+  position: absolute;
+}
+
+.features .pattern--circle {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .features .pattern--circle {
+    display: block;
+    height: 44.5rem;
+  }
+}
+
+.features .pattern--circle--group-1 {
+  top: 12rem;
+  right: 0;
+  -webkit-transform: translateX(350px);
+          transform: translateX(350px);
+}
+
+@media (min-width: 64em) {
+  .features .pattern--circle--group-1 {
+    top: 20rem;
+    -webkit-transform: translateX(412px);
+            transform: translateX(412px);
+  }
+}
+
+@media (min-width: 1350px) {
+  .features .pattern--circle--group-1 {
+    -webkit-transform: translateX(345px);
+            transform: translateX(345px);
+  }
+}
+
+.features .pattern--circle--group-2 {
+  top: 104.5rem;
+  left: -34.5rem;
+}
+
+@media (min-width: 64em) {
+  .features .pattern--circle--group-2 {
+    top: 80.5rem;
+    left: -42rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  .features .pattern--circle--group-2 {
+    left: -34.5rem;
+  }
+}
+
+.features .pattern--circle--group-3 {
+  top: 197rem;
+  right: 0;
+  -webkit-transform: translateX(350px);
+          transform: translateX(350px);
+}
+
+@media (min-width: 64em) {
+  .features .pattern--circle--group-3 {
+    top: 141rem;
+    -webkit-transform: translateX(412px);
+            transform: translateX(412px);
+  }
+}
+
+@media (min-width: 1350px) {
+  .features .pattern--circle--group-3 {
+    -webkit-transform: translateX(345px);
+            transform: translateX(345px);
+  }
+}
+
+.features .pattern--arrow--group-1 {
+  top: 29rem;
+  left: 7.2%;
+}
+
+@media (min-width: 700px) {
+  .features .pattern--arrow--group-1 {
+    left: 10%;
+  }
+}
+
+@media (min-width: 48em) {
+  .features .pattern--arrow--group-1 {
+    left: auto;
+    right: 0;
+    top: 41.7rem;
+  }
+  .features .pattern--arrow--group-1 img {
+    width: 734px;
+  }
+}
+
+@media (min-width: 64em) {
+  .features .pattern--arrow--group-1 {
+    top: 50rem;
+  }
+}
+
+.features .pattern--arrow--group-2 {
+  top: 93rem;
+  right: 10.8rem;
+}
+
+@media (min-width: 500px) {
+  .features .pattern--arrow--group-2 {
+    right: auto;
+    left: 0;
+  }
+}
+
+@media (min-width: 48em) {
+  .features .pattern--arrow--group-2 {
+    top: 104.5rem;
+    left: -10rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .features .pattern--arrow--group-2 {
+    top: 80.5rem;
+  }
+}
+
+.features .pattern--arrow--group-3 {
+  top: 175.5rem;
+  left: 15.7rem;
+}
+
+@media (min-width: 48em) {
+  .features .pattern--arrow--group-3 {
+    top: 207.1rem;
+    left: 53.906%;
+  }
+}
+
+@media (min-width: 64em) {
+  .features .pattern--arrow--group-3 {
+    top: 149.5rem;
+    left: 75%;
   }
 }
 
