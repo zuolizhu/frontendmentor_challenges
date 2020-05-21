@@ -1,37 +1,50 @@
 .world-map {
   .container {
     padding: 0 3.2rem;
+    @media #{$mq-small} { padding: 0 4rem; }
+    @media (min-width: 1200px) { padding: 0; }
   }
   .map-container {
-    height: 15.2rem;
-    background-image: url(./assets/images/world-map-mobile.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    pointer-events: none;
+    max-width: 42rem;
+    margin: 0 auto;
     @media #{$mq-small} {
-      height: 33.7rem;
-      background-image: url(./assets/images/world-map-tablet.png);
+      max-width: 100rem;
+      position: relative;
     }
     @media (min-width: 1100px) {
-      height: 54.3rem;
-      background-image: url(./assets/images/world-map-desktop.png);
+      max-width: var(--space-max-width);
+    }
+    .map-picture {
+      width: 100%;
+      display: flex;
+      &--tablet,
+      &--desktop {
+        display: none;
+      }
+      @media #{$mq-small} {
+        &--mobile { display: none; }
+        &--tablet { display: block; }
+      }
+      @media (min-width: 1100px) {
+        &--tablet { display: none; }
+        &--desktop { display: block; }
+      }
     }
   }
 
-  .locations {
-    &--mobile {
-      max-width: 32rem;
-      margin: 4rem auto 0;
-      @media #{$mq-small} {
-        display: none;
-      }
-      .location {
-        background-color: rgba(252, 183, 43, 0.15);
-        text-align: center;
-        padding: 2.2rem 0;
-        &:not(:last-of-type) {
-          margin-bottom: 1.6rem;
-        }
+  .locations-list {
+    max-width: 32rem;
+    margin: 4rem auto 0;
+    @media #{$mq-small} {
+      display: none;
+    }
+    .location {
+      background-color: rgba(252, 183, 43, 0.15);
+      text-align: center;
+      padding: 2.2rem 0;
+      &:not(:last-of-type) {
+        margin-bottom: 1.6rem;
       }
     }
   }
