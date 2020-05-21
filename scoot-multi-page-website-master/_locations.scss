@@ -1,0 +1,89 @@
+.world-map {
+  .container {
+    padding: 0 3.2rem;
+  }
+  .map-container {
+    height: 15.2rem;
+    background-image: url(./assets/images/world-map-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media #{$mq-small} {
+      height: 33.7rem;
+      background-image: url(./assets/images/world-map-tablet.png);
+    }
+    @media (min-width: 1100px) {
+      height: 54.3rem;
+      background-image: url(./assets/images/world-map-desktop.png);
+    }
+  }
+
+  .locations {
+    &--mobile {
+      max-width: 32rem;
+      margin: 4rem auto 0;
+      @media #{$mq-small} {
+        display: none;
+      }
+      .location {
+        background-color: rgba(252, 183, 43, 0.15);
+        text-align: center;
+        padding: 2.2rem 0;
+        &:not(:last-of-type) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+.message-us {
+  margin: 7.2rem 0;
+  text-align: center;
+  @media #{$mq-small} {
+    margin-top: 6.4rem;
+    margin-bottom: var(--space-s);
+  }
+  @media (min-width: 1100px) {
+    text-align: left;
+    margin-top: var(--space-s);
+  }
+
+  .container {
+    padding: 0 3.2rem;
+    @media (min-width: 1100px) {
+      display: flex;
+      align-items: center;
+      
+      max-width: var(--space-max-width);
+      margin: 0 auto;
+    }
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
+  }
+  &__heading {
+    @media (min-width: 1100px) {
+      max-width: 35rem;
+      margin-right: 3rem;
+    }
+  }
+  &__body {
+    margin: 3.2rem auto;
+    max-width: 57.3rem;
+    @media #{$mq-small} {
+      margin: 4rem auto;
+    }
+    @media (min-width: 1100px) {
+      margin: 0; max-width: 44.5rem;
+    }
+  }
+
+  .btn--message-us {
+    margin: 0 auto;
+    @media (min-width: 1100px) {
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+}
