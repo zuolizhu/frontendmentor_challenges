@@ -126,6 +126,20 @@ p {
   }
 }
 
+.t-h4--faq {
+  font-size: 1.8rem;
+  line-height: 24px;
+  letter-spacing: -0.8px;
+}
+
+@media (min-width: 48em) {
+  .t-h4 {
+    font-size: 2.4rem;
+    letter-spacing: -1.07px;
+    line-height: 1.167;
+  }
+}
+
 .t-body1 {
   font-family: var(--font-family-sans);
   font-weight: var(--weight-regular);
@@ -1886,10 +1900,7 @@ footer .socials .social:nth-child(2) {
 
 .faqs {
   margin-top: 14.5rem;
-}
-
-.faqs .heading {
-  text-align: center;
+  margin-bottom: var(--space-s);
 }
 
 @media (min-width: 48em) {
@@ -1898,65 +1909,143 @@ footer .socials .social:nth-child(2) {
   }
 }
 
-@-webkit-keyframes flipdown {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: top center;
-            transform-origin: top center;
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-  }
-  5% {
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: rotateX(8deg);
-            transform: rotateX(8deg);
-  }
-  83% {
-    -webkit-transform: rotateX(6deg);
-            transform: rotateX(6deg);
-  }
-  92% {
-    -webkit-transform: rotateX(-3deg);
-            transform: rotateX(-3deg);
-  }
-  100% {
-    -webkit-transform-origin: top center;
-            transform-origin: top center;
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+.faqs__heading {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+@media (min-width: 48em) {
+  .faqs__heading {
+    margin-bottom: 6.4rem;
   }
 }
 
-@keyframes flipdown {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: top center;
-            transform-origin: top center;
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
+@media (min-width: 1150px) {
+  .faqs .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  5% {
-    opacity: 1;
+}
+
+.faqs .article__heading {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+@media (min-width: 1150px) {
+  .faqs .article__heading {
+    margin: 0;
+    text-align: left;
   }
-  80% {
-    -webkit-transform: rotateX(8deg);
-            transform: rotateX(8deg);
+}
+
+.faqs .article:not(:last-of-type) {
+  margin-bottom: 4.8rem;
+}
+
+@media (min-width: 1150px) {
+  .faqs .article:not(:last-of-type) {
+    margin-bottom: 6.4rem;
   }
-  83% {
-    -webkit-transform: rotateX(6deg);
-            transform: rotateX(6deg);
+}
+
+.faqs .container {
+  padding: 0 3.2rem;
+  max-width: 45.7rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 48em) {
+  .faqs .container {
+    max-width: 68.9rem;
+    padding: 0;
   }
-  92% {
-    -webkit-transform: rotateX(-3deg);
-            transform: rotateX(-3deg);
+}
+
+@media (min-width: 1150px) {
+  .faqs .container {
+    max-width: var(--space-max-width);
   }
-  100% {
-    -webkit-transform-origin: top center;
-            transform-origin: top center;
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+}
+
+@media (min-width: 1150px) {
+  .faqs .accordions {
+    max-width: 73rem;
   }
+}
+
+.faqs .accordions .accordion {
+  background-color: var(--color-snow);
+  padding: 3.2rem 2.8rem 3.2rem 3.2rem;
+}
+
+@media (min-width: 48em) {
+  .faqs .accordions .accordion {
+    padding: 3.2rem 3.2rem 3.2rem 4rem;
+  }
+}
+
+@media (min-width: 1150px) {
+  .faqs .accordions .accordion {
+    padding: 3.2rem 4rem;
+  }
+}
+
+.faqs .accordions .accordion .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.faqs .accordions .accordion .question__heading {
+  margin-right: 2rem;
+}
+
+@media (min-width: 48em) {
+  .faqs .accordions .accordion .question__heading {
+    margin-right: 0;
+  }
+}
+
+.faqs .accordions .accordion .question .arrow-down {
+  display: block;
+}
+
+.faqs .accordions .accordion .question .arrow-up {
+  display: none;
+}
+
+.faqs .accordions .accordion .question.active .arrow-down {
+  display: none;
+}
+
+.faqs .accordions .accordion .question.active .arrow-up {
+  display: block;
+}
+
+.faqs .accordions .accordion .answer {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out;
+}
+
+.faqs .accordions .accordion .answer .faq-body {
+  margin-top: 2.4rem;
+}
+
+.faqs .accordions .accordion:not(:last-of-type) {
+  margin-bottom: 1.6rem;
 }
 /*# sourceMappingURL=style.css.map */
