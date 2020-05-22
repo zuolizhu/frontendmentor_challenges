@@ -69,7 +69,10 @@
     display: none;
     @media #{$mq-small} {
       display: block;
-      margin-left: 5.8rem;
+      margin-left: 5.7rem;
+    }
+    @media #{$mq-medium} {
+      margin-left: 6.15rem;
     }
   }
 }
@@ -263,6 +266,9 @@ footer {
       display: flex;
       margin-left: 5.8rem;
     }
+    @media #{$mq-medium} {
+      margin-left: 6.15rem;
+    }
     .footer-nav__item:nth-child(2) {
       margin: 1.6rem 0;
       @media #{$mq-small} {
@@ -279,6 +285,14 @@ footer {
     }
     .social:nth-child(2) {
       margin: 0 2.4rem;
+    }
+    .social path {
+      transition: var(--transition) fill;
+    }
+    .social:hover {
+      path {
+        fill: var(--color-light-grey);
+      }
     }
   }
 }

@@ -39,8 +39,7 @@
 
   .heading {
     max-width: 50rem;
-    @media #{$mq-medium} {
-    }
+    margin: 0 auto;
   }
 
   .copy {
@@ -67,7 +66,7 @@
     position: absolute;
     @media #{$mq-small} {
       display: block;
-      bottom: 4.5rem;
+      bottom: 4.2rem;
       right: -3.1rem;
     }
     @media #{$mq-medium} {
@@ -75,7 +74,7 @@
       right: -4.8rem;
     }
     @media (min-width: 1370px) {
-      bottom: 16.45rem;
+      bottom: 16.2rem;
       right: -4.8rem;
     }
     img {
@@ -193,6 +192,9 @@
       @media #{$mq-small} {
         margin-bottom: 4rem;
       }
+      @media (min-width: 1200px) {
+        margin-bottom: 0;
+      }
     }
     &__icon {
       display: flex;
@@ -211,7 +213,7 @@
     }
     &__copy {
       @media #{$mq-small} {
-        max-width: 39.8rem;
+        max-width: 39.6rem;
       }
       @media (min-width: 1200px) {
         max-width: 35rem;
@@ -230,7 +232,7 @@
 .features {
   position: relative;
   .container {
-    padding: var(--space-s) 3.2rem;
+    padding: var(--space-s) 3.23rem;
     @media #{$mq-small} {
       padding: var(--space-s) 0 10.4rem;
     }
