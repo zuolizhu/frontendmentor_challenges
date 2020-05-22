@@ -8,7 +8,7 @@
   }
 
   .container {
-    padding: 0 3.2rem;
+    padding: 0 3.24rem;
     @media #{$mq-medium} {
       display: flex;
       flex-direction: row-reverse;
@@ -47,7 +47,7 @@
     margin-left: auto;
     margin-right: auto;
     @media #{$mq-small} {
-      margin-top: 6.4rem;
+      margin-top: 5.4rem;
       max-width: 57.3rem;
     }
     @media #{$mq-medium} {
@@ -76,7 +76,7 @@
       }
     }
     &--arrow {
-      top: 23.68%;
+      top: 19.68%;
       left: 3.2rem;
       @media (min-width: 516px) {
         top: 30.5rem;

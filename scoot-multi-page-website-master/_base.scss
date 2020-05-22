@@ -133,6 +133,13 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
   font-size: 2rem;
   letter-spacing: -0.89px;
   line-height: 1.4;
+  &--title {
+    @media (max-width: 767px) {
+      font-size: 1.8rem;
+      letter-spacing: -0.8px;
+      line-height: 24px;
+    }
+  }
   &--value {
     font-size: 2.4rem;
     letter-spacing: -1.07px;

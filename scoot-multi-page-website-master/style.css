@@ -118,6 +118,14 @@ p {
   line-height: 1.4;
 }
 
+@media (max-width: 767px) {
+  .t-h4--title {
+    font-size: 1.8rem;
+    letter-spacing: -0.8px;
+    line-height: 24px;
+  }
+}
+
 .t-h4--value {
   font-size: 2.4rem;
   letter-spacing: -1.07px;
@@ -2127,7 +2135,7 @@ footer .socials .social:hover path {
 }
 
 .join-us .container {
-  padding: 0 3.2rem;
+  padding: 0 3.24rem;
 }
 
 @media (min-width: 64em) {
@@ -2192,7 +2200,7 @@ footer .socials .social:hover path {
 
 @media (min-width: 48em) {
   .join-us .copy {
-    margin-top: 6.4rem;
+    margin-top: 5.4rem;
     max-width: 57.3rem;
   }
 }
@@ -2243,7 +2251,7 @@ footer .socials .social:hover path {
 }
 
 .join-us .pattern--arrow {
-  top: 23.68%;
+  top: 19.68%;
   left: 3.2rem;
 }
 
