@@ -40,6 +40,9 @@
   .heading {
     max-width: 50rem;
     margin: 0 auto;
+    @media #{$mq-medium} {
+      margin: 0;
+    }
   }
 
   .copy {

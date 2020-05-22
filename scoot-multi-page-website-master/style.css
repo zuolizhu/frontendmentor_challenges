@@ -834,6 +834,12 @@ footer .socials .social:hover path {
   margin: 0 auto;
 }
 
+@media (min-width: 64em) {
+  .home-hero .heading {
+    margin: 0;
+  }
+}
+
 .home-hero .copy {
   margin-top: 2.4rem;
 }
