@@ -41,7 +41,7 @@
       margin: 5.6rem auto 0;
     }
     @media #{$mq-medium} {
-      max-width: 44.5rem;
+      max-width: 44.3rem;
       text-align: left;
       margin: 0;
     }
@@ -136,7 +136,7 @@
     margin-top: 5.6rem;
     text-align: center;
     @media #{$mq-small} {
-      max-width: 57.3rem;
+      max-width: 57.2rem;
       margin: 5.6rem auto 0;
     }
     @media #{$mq-medium} {
@@ -236,7 +236,7 @@
         position: absolute;
         bottom: 0;
         left: 50%;
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, 59%);
       }
     }
     .copy {
@@ -262,6 +262,9 @@
   @media #{$mq-small} {
     margin-top: var(--space-s);
   }
+  @media #{$mq-medium} {
+    margin-bottom: var(--space-m);
+  }
   &__heading {
     text-align: center;
     margin-bottom: 4.8rem;
@@ -284,6 +287,9 @@
   }
   .article:not(:last-of-type) {
     margin-bottom: 4.8rem;
+    @media #{$mq-small} {
+      margin-bottom: 6.4rem;
+    }
     @media (min-width: 1150px) {
       margin-bottom: 6.4rem;
     }
@@ -309,6 +315,11 @@
     .accordion {
       background-color: var(--color-snow);
       padding: 3.2rem 2.8rem 3.2rem 3.2rem;
+      transition: var(--transition) background-color;
+      &:hover {
+        background-color: var(--color-light-yellow);
+      }
+
       @media #{$mq-small} {
         padding: 3.2rem 3.2rem 3.2rem 4rem;
       }
@@ -353,6 +364,12 @@
     }
     .accordion:not(:last-of-type) {
       margin-bottom: 1.6rem;
+      @media #{$mq-medium} {
+        margin-bottom: 2.4rem;
+      }
+      @media #{$mq-medium} {
+        margin-bottom: 1.6rem;
+      }
     }
   }
 }

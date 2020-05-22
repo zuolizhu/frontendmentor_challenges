@@ -118,6 +118,12 @@ p {
   line-height: 1.4;
 }
 
+.t-h4--value {
+  font-size: 2.4rem;
+  letter-spacing: -1.07px;
+  line-height: 1.167;
+}
+
 @media (min-width: 48em) {
   .t-h4 {
     font-size: 2.4rem;
@@ -1591,7 +1597,7 @@ footer .socials .social:hover path {
 
 @media (min-width: 64em) {
   .about-mobility .copy {
-    max-width: 44.5rem;
+    max-width: 44.3rem;
     text-align: left;
     margin: 0;
   }
@@ -1746,7 +1752,7 @@ footer .socials .social:hover path {
 
 @media (min-width: 48em) {
   .about-urban-living .copy {
-    max-width: 57.3rem;
+    max-width: 57.2rem;
     margin: 5.6rem auto 0;
   }
 }
@@ -1900,8 +1906,8 @@ footer .socials .social:hover path {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 59%);
+          transform: translate(-50%, 59%);
 }
 
 .values .value .copy {
@@ -1934,6 +1940,12 @@ footer .socials .social:hover path {
 @media (min-width: 48em) {
   .faqs {
     margin-top: var(--space-s);
+  }
+}
+
+@media (min-width: 64em) {
+  .faqs {
+    margin-bottom: var(--space-m);
   }
 }
 
@@ -1975,6 +1987,12 @@ footer .socials .social:hover path {
   margin-bottom: 4.8rem;
 }
 
+@media (min-width: 48em) {
+  .faqs .article:not(:last-of-type) {
+    margin-bottom: 6.4rem;
+  }
+}
+
 @media (min-width: 1150px) {
   .faqs .article:not(:last-of-type) {
     margin-bottom: 6.4rem;
@@ -2009,6 +2027,12 @@ footer .socials .social:hover path {
 .faqs .accordions .accordion {
   background-color: var(--color-snow);
   padding: 3.2rem 2.8rem 3.2rem 3.2rem;
+  -webkit-transition: var(--transition) background-color;
+  transition: var(--transition) background-color;
+}
+
+.faqs .accordions .accordion:hover {
+  background-color: var(--color-light-yellow);
 }
 
 @media (min-width: 48em) {
@@ -2075,6 +2099,18 @@ footer .socials .social:hover path {
 
 .faqs .accordions .accordion:not(:last-of-type) {
   margin-bottom: 1.6rem;
+}
+
+@media (min-width: 64em) {
+  .faqs .accordions .accordion:not(:last-of-type) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .faqs .accordions .accordion:not(:last-of-type) {
+    margin-bottom: 1.6rem;
+  }
 }
 
 .join-us {
