@@ -70,6 +70,11 @@ p {
   margin: 0;
 }
 
+// smooth scroll
+html {
+  scroll-behavior: smooth;
+}
+
 // Breakpoints
 $bp-small: 48em; // 768px
 $bp-medium: 64em; // 1024px

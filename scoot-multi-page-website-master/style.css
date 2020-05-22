@@ -59,6 +59,10 @@ p {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .t-h1 {
   font-family: var(--font-family-mono);
   font-weight: var(--weight-bold);
