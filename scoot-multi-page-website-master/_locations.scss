@@ -63,7 +63,7 @@
   }
 
   .container {
-    padding: 0 3.2rem;
+    padding: 0 3.21rem;
     @media (min-width: 1100px) {
       display: flex;
       align-items: center;
@@ -76,6 +76,12 @@
     }
   }
   &__heading {
+    
+    @media (max-width: 1109px) {
+      max-width: 45.7rem;
+      margin: 0 auto;
+      text-transform: capitalize;
+    }
     @media (min-width: 1100px) {
       max-width: 35rem;
       margin-right: 3rem;

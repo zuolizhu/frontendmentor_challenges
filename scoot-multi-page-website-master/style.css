@@ -118,6 +118,12 @@ p {
   line-height: 1.4;
 }
 
+.t-h4--location {
+  font-size: 2.4rem;
+  letter-spacing: -1.07px;
+  line-height: 28px;
+}
+
 @media (max-width: 767px) {
   .t-h4--title {
     font-size: 1.8rem;
@@ -223,6 +229,11 @@ p {
 .btn-regular {
   height: 5.3rem;
   width: 18rem;
+}
+
+.btn-m {
+  height: 5.3rem;
+  width: 19.2rem;
 }
 
 .btn-l {
@@ -2490,7 +2501,7 @@ footer .socials .social:hover path {
 }
 
 .message-us .container {
-  padding: 0 3.2rem;
+  padding: 0 3.21rem;
 }
 
 @media (min-width: 1100px) {
@@ -2509,6 +2520,14 @@ footer .socials .social:hover path {
 @media (min-width: 1200px) {
   .message-us .container {
     padding: 0;
+  }
+}
+
+@media (max-width: 1109px) {
+  .message-us__heading {
+    max-width: 45.7rem;
+    margin: 0 auto;
+    text-transform: capitalize;
   }
 }
 
