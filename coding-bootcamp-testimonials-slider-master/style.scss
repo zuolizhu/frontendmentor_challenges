@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+  // colors
+  --color-dark-blue: hsl(240, 38%, 20%);
+  --color-grayish-blue: hsl(240, 18%, 77%);
+  
+  // space
+  --space-max-width: 111rem;
+  
+  // font weights
+  --weight-light: 300;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  // design elements
+  --transition: 300ms ease-in-out;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 667px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter';
+  background-color: var(--color-white);
+  overflow-x: hidden;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.t-quote {
+  font-size: 1.8rem;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-weight: 300;
+  @media (min-width: 1200px) {
+    font-size: 3.2rem;
+    line-height: 44px;
+  }
+}
+
+
+.t-name {
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 20px;
+  @media (min-width: 1200px) {
+    font-size: 2rem;
+    line-height: 38px;
+  }
+}
+
+.t-title {
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 20px;
+  @media (min-width: 1200px) {
+    font-size: 2rem;
+    line-height: 38px;
+  }
+}
+
+.t-light {
+  font-weight: var(--weight-light);
+}
+
+.t-medium {
+  font-weight: var(--weight-medium);
+}
+
+.t-bold {
+  font-weight: var(--weight-bold);
+}
+
+.t-dark-blue {
+  color: var(--color-dark-blue);
+}
+
+.t-light-blue {
+  color: var(--color-grayish-blue);
+}
+
+.main {
+  height: 100%;
+}
+
+
+.slide {
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url(./images/pattern-bg-mobile.svg), url(./images/pattern-curve-mobile.svg);
+  background-position: top 2.4rem left 50%, bottom left;
+  background-size: 87.2%, auto;
+  @media (min-width: 550px) {
+    background-size: auto 50%, auto;
+  }
+  @media (min-width: 1200px) {
+    background-size: auto, auto;
+    background-image: url(./images/pattern-bg.svg), url(./images/pattern-curve.svg);
+    background-position: top 5rem right 7.3rem, bottom left;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 3.2rem;
+    max-width: 55rem;
+    margin: 0 auto;
+    @media (min-width: 1200px) {
+      padding: 0;
+      padding-top: 11.3rem;
+      flex-direction: row;
+      align-items: center;
+      max-width: var(--space-max-width);
+    }
+  }
+
+  &__text-content {
+    background-image: url(./images/pattern-quotes.svg);
+    background-position: top left 50%;
+    background-repeat: no-repeat;
+    background-size: 60px 50px;
+    padding-top: 2.5rem;
+    max-width: 63.5rem;
+    flex-shrink: 0;
+    z-index: 1;
+    text-align: center;
+    @media (min-width: 1200px) {
+      text-align: left;
+      background-size: auto;
+      background-position: top left 9.5rem;
+      padding-top: 6.4rem;
+    }
+
+    .profile {
+      display: flex;
+      margin-top: 1.9rem;
+      flex-direction: column;
+      @media (min-width: 1200px) {
+        flex-direction: row;
+        margin-top: 3.2rem;
+        .name {
+          margin-right: .8rem;
+        }
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 81.672%;
+    position: relative;
+    margin: 5.4rem auto 5.7rem;
+    @media (min-width: 1200px) {
+      margin: 0;
+      max-width: 54rem;
+      margin-left: -6.5rem;
+    }
+    &__img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 4rem 5rem -3rem rgba(36, 36, 113, .5);
+    }
+    &__buttons {
+      position: absolute;
+      bottom: 0;
+      background-color: #fff;
+      border-radius: 2.8rem;
+      box-shadow: 0 1.5rem 2rem -1rem rgba(36, 36, 113, .1);
+      transform: translate(-50%, 50%);
+      left: 50%;
+      width: 8rem;
+      height: 4rem;
+      @media (min-width: 1200px) {
+        width: 11.2rem;
+        height: 5.6rem;
+        transform: translate(0, 50%);
+        left: 6.2rem;
+      }
+    }
+  }
+
+
+  .attribution {
+    text-align: right;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    font-size: 1rem;
+    @media (min-width: 1200px) {
+      font-size: 1.6rem;
+      bottom: 2rem;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
