@@ -173,8 +173,8 @@ p {
   .slide__text-content {
     text-align: left;
     background-size: auto;
-    background-position: top left 9.5rem;
-    padding-top: 6.4rem;
+    background-position: top 1.6rem left 9.5rem;
+    padding-top: 8rem;
   }
 }
 
