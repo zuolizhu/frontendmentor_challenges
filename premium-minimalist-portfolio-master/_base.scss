@@ -1,0 +1,103 @@
+/* Google Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+
+:root {
+  // Colors
+  --color-cyan: #5FB4A2;
+  --color-red: #F43030;
+  --color-dark-blue: #203A4C;
+  --color-grayish-dark-blue: #33323D;
+  --color-very-light-gray: #FAFAFA;
+  --color-light-gray: #EAEAEB;
+  
+  // Typography
+  --font-family-sans: 'Public Sans', sans-serif;
+  --font-family-serif: 'Ibarra Real Nova', serif;
+
+  // Font Weights
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  // Design elements
+  --transition: 300ms ease-in-out;
+
+}
+
+// Reset
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  font-size: 1.6rem;
+  color: var(--color-grayish-dark-blue);
+  background-color: var(--color-very-light-gray);
+}
+
+// Type Specs
+.t-h1 {
+  font-weight: var(--weight-bold);
+  font-family: var(--font-family-serif);
+  @media (max-width: 1199px) {
+    font-size: 4rem;
+    line-height: 4.2rem;
+    letter-spacing: -0.36px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -0.45px;
+  }
+}
+
+.t-h2 {
+  font-size: 4rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.36px;
+  font-weight: var(--weight-bold);
+  font-family: var(--font-family-serif);
+}
+
+.t-h3 {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.29px;
+  font-weight: var(--weight-bold);
+  font-family: var(--font-family-serif);
+}
+
+.t-body1 {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  letter-spacing: 0;
+  font-weight: var(--weight-regular);
+  font-family: var(--font-family-sans);
+}
+
+.t-body2 {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  letter-spacing: 0;
+  font-weight: var(--weight-regular);
+  font-family: var(--font-family-sans);
+}
+
+/* Screen Reader Only */
+.screen-reader-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
