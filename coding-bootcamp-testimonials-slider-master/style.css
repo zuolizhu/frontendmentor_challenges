@@ -7,6 +7,7 @@
   --weight-medium: 500;
   --weight-bold: 700;
   --transition: 300ms ease-in-out;
+  --animate-duration: 600ms;
 }
 
 html {
@@ -243,6 +244,19 @@ p {
   left: 50%;
   width: 8rem;
   height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (min-width: 1200px) {
@@ -253,6 +267,29 @@ p {
             transform: translate(0, 50%);
     left: 6.2rem;
   }
+}
+
+.slide__image__buttons__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transition: var(--transition) opacity, var(--transition) transform;
+  transition: var(--transition) opacity, var(--transition) transform;
+}
+
+.slide__image__buttons__button:hover {
+  opacity: .5;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .slide .attribution {

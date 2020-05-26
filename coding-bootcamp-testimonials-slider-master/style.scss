@@ -15,6 +15,8 @@
 
   // design elements
   --transition: 300ms ease-in-out;
+
+  --animate-duration: 600ms;
 }
 
 html {
@@ -194,12 +196,31 @@ p {
       left: 50%;
       width: 8rem;
       height: 4rem;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       @media (min-width: 1200px) {
         width: 11.2rem;
         height: 5.6rem;
         transform: translate(0, 50%);
         left: 6.2rem;
       }
+
+      &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        cursor: pointer;
+        transition: var(--transition) opacity, var(--transition) transform;
+        &:hover {
+          opacity: .5;
+          transform: scale(1.2);
+        }
+       }
     }
   }
 

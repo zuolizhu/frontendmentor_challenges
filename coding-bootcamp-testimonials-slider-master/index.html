@@ -5,27 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" integrity="sha256-6hqHMqXTVEds1R8HgKisLm3l/doneQs+rS1a5NLmwwo=" crossorigin="anonymous" />
   <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
   <main class="main">
     <section class="slide">
       <div class="container">
         <div class="slide__text-content">
-          <p class="quote t-quote t-light t-dark-blue">
+          <p class="quote t-quote t-light t-dark-blue" id="quote">
             “ I’ve been interested in coding for a while but never taken the jump, until now. 
             I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
             excited about the future. ”
           </p>
           <div class="profile">
-            <h2 class="name t-name t-bold t-dark-blue">Tanya Sinclair</h2>
-            <h2 class="title t-title t-medium t-light-blue">UX Engineer</h2>
+            <h2 class="name t-name t-bold t-dark-blue" id="name">Tanya Sinclair</h2>
+            <h2 class="title t-title t-medium t-light-blue" id="title">UX Engineer</h2>
           </div>
         </div>
         <div class="slide__image">
-          <img class="slide__image__img" src="./images/image-tanya.jpg" alt="image Tanya">
-          <div class="slide__image__buttons"></div>
+          <img id="slide-image" class="slide__image__img" src="./images/image-tanya.jpg" alt="image holder">
+          <div class="slide__image__buttons">
+            <div id="btn-prev" class="slide__image__buttons__button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18"><path fill="none" stroke="#8585AC" stroke-width="3" d="M11 1L3 9l8 8"/></svg>
+            </div>
+            <div id="btn-next" class="slide__image__buttons__button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18"><path fill="none" stroke="#8585AC" stroke-width="3" d="M2 1l8 8-8 8"/></svg>
+            </div>
+          </div>
         </div>
       </div>
       <!-- attribution -->
@@ -46,6 +53,6 @@
   Junior Front-end Developer
 
   -->
-  
+  <script src="./app.js"></script>
 </body>
 </html>
