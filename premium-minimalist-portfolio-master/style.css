@@ -403,6 +403,10 @@ h1, h2, h3, p {
   margin-bottom: 2.8rem;
 }
 
+.home-about__introduction {
+  opacity: .8;
+}
+
 .home-about__button {
   margin-top: 2.4rem;
 }
