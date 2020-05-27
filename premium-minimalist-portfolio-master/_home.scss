@@ -1,0 +1,36 @@
+// section home-intro
+.home-intro {
+  &__image {
+    height: 27.1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./images/homepage/mobile/image-homepage-hero@2x.jpg);
+  }
+  &__content {
+    margin-top: 2.4rem;
+  }
+  &__button {
+    margin-top: 3.2rem;
+  }
+}
+
+.home-about {
+  margin-top: 9.6rem;
+  &__image {
+    height: 34.6rem;
+    background-image: url(./images/homepage/mobile/image-homepage-profile@2x.jpg);
+    background-size: cover;
+    margin-bottom: 3.2rem;
+  }
+  &__content {
+    border-top: 1px solid #DCDCDE;
+    border-bottom: 1px solid #DCDCDE;
+    padding: 3.2rem 0 5.1rem;
+    &__heading {
+      margin-bottom: 2.8rem;
+    }
+  }
+  &__button {
+    margin-top: 2.4rem;
+  }
+}

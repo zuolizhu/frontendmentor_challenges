@@ -9,6 +9,7 @@
   --color-grayish-dark-blue: #33323D;
   --color-very-light-gray: #FAFAFA;
   --color-light-gray: #EAEAEB;
+  --color-white: #FFFFFF;
   
   // Typography
   --font-family-sans: 'Public Sans', sans-serif;
@@ -40,6 +41,16 @@ body {
   font-size: 1.6rem;
   color: var(--color-grayish-dark-blue);
   background-color: var(--color-very-light-gray);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3, p {
+  margin: 0;
 }
 
 // Type Specs
@@ -88,6 +99,19 @@ body {
   letter-spacing: 0;
   font-weight: var(--weight-regular);
   font-family: var(--font-family-sans);
+}
+
+.t-nav-item {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  font-weight: var(--weight-light);
+  font-family: var(--font-family-sans);
+}
+
+.t-white {
+  color: var(--color-white);
 }
 
 /* Screen Reader Only */

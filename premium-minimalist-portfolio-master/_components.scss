@@ -1,4 +1,162 @@
 // header
 .header {
-  
+  margin-top: 3.2rem;
+  .container {
+    height: 3.2rem;
+    padding: 0 3.2rem;
+    .main-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__nav-items {
+        display: none;
+      }
+    }
+    .mobile-nav__nav-items.hide {
+      display: none;
+    }
+    .mobile-nav__nav-items {
+      display: block;
+      position: absolute;
+      background-color: var(--color-grayish-dark-blue);
+      width: 71.705%;
+      max-width: 30rem;
+      height: 18.6rem;
+      top: 5.6rem;
+      right: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 0;
+    }
+  }
+}
+
+// main
+.main {
+  margin-top: 4rem;
+  .container {
+    padding: 0 3.2rem;
+  }
+}
+
+// buttons
+.btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn--primary {
+  text-transform: uppercase;
+  height: 20rem;
+  height: 4.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 20rem;
+  &__icon {
+    background-color: #1C3444;
+    width: 4.8rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition) background-color;
+    svg {
+      transition: var(--transition) filter;
+    }
+  }
+  &__content {
+    width: 15.2rem;
+    background-color: #203A4C;
+    color: var(--color-white);
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition) background-color;
+  }
+  &:hover &__icon {
+     background-color: #55A191;
+  }
+  &:hover &__icon svg {
+    filter: brightness(1.5) saturate(0);
+  }
+  &:hover &__content {
+    background-color: var(--color-cyan);
+ }
+}
+
+.btn--secondary {
+  padding: 1.7rem 3.2rem;
+  border: 1px solid var(--color-grayish-dark-blue);
+  color: var(--color-grayish-dark-blue);
+  text-transform: uppercase;
+  transition: var(--transition) background-color, var(--transition) color;
+  &:hover {
+    background-color: var(--color-grayish-dark-blue);
+    color: var(--color-white);
+  }
+}
+
+// call to action section cross pages
+.call-to-action {
+  margin-top: 11.5rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  &__button {
+    margin-top: 4rem;
+  }
+  &__line {
+    display: none;
+  }
+}
+
+// footer 
+.footer {
+  background-color: var(--color-grayish-dark-blue);
+  .container {
+    padding: 5.6rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__logo {
+    svg path {
+      fill: var(--color-white);
+    }
+  }
+  &__nav-items {
+    margin: 4rem 0;
+    &__nav-item {
+      color: var(--color-white);
+      text-transform: uppercase;
+    }
+    &__nav-item:nth-child(2) {
+      margin: 3.2rem 0;
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 10.4rem;
+    &__social {
+      &__icon {
+        path { fill: var(--color-white) }
+      }
+    }
+  }
 }
