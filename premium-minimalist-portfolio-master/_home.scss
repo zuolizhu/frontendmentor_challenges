@@ -1,33 +1,109 @@
+.main--home {
+  @media (min-width: 576px) {
+    margin-top: 4.7rem;
+  }
+}
 // section home-intro
 .home-intro {
+  @media (min-width: 576px) {
+    position: relative;
+  }
   &__image {
     height: 27.1rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(./images/homepage/mobile/image-homepage-hero@2x.jpg);
+    @media (min-width: 576px) {
+      background-image: url(./images/homepage/tablet/image-homepage-hero@2x.jpg);
+      height: 60rem;
+    }
+    @media (min-width: 1024px) {
+      background-image: url(./images/homepage/desktop/image-homepage-hero@2x.jpg);
+    }
   }
   &__content {
     margin-top: 2.4rem;
+    @media (min-width: 576px) {
+      margin-top: 0;
+      position: absolute;
+      bottom: 0;
+      background-color: var(--color-very-light-gray);
+      width: 74.709%;
+      max-width: 51.4rem;
+      padding-top: 2.8rem;
+      padding-right: 2.8rem;
+    }
+    @media (min-width: 720px) {
+      padding-top: 5.6rem;
+      padding-right: 5.6rem;
+    }
+    @media (min-width: 1200px) {
+      max-width: 44.5rem;
+    }
   }
   &__button {
     margin-top: 3.2rem;
+    @media (min-width: 720px) {
+      margin-top: 4.8rem;
+    }
+    @media (min-width: 1200px) {
+      margin-top: 5.3rem;
+    }
   }
 }
 
 .home-about {
   margin-top: 9.6rem;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+  }
+  @media (min-width: 1200px) {
+    justify-content: flex-start;
+    margin-top: 15rem;
+  }
   &__image {
     height: 34.6rem;
     background-image: url(./images/homepage/mobile/image-homepage-profile@2x.jpg);
     background-size: cover;
     margin-bottom: 3.2rem;
+    background-position: center center;
+    @media (min-width: 768px) {
+      height: 60rem;
+      background-image: url(./images/homepage/tablet/image-homepage-profile@2x.jpg);
+      width: 40.784%;
+      margin-bottom: 0;
+    }
+    @media (min-width: 1200px) {
+      background-image: url(./images/homepage/desktop/image-homepage-profile@2x.jpg);
+      width: 54rem;
+      max-width: 54rem;
+    }
   }
   &__content {
     border-top: 1px solid #DCDCDE;
     border-bottom: 1px solid #DCDCDE;
     padding: 3.2rem 0 5.1rem;
+    @media (min-width: 768px) {
+      width: 49.202%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+    }
+    @media (min-width: 1200px) {
+      width: 35rem;
+      max-width: 35rem;
+      margin-left: 12.5rem;
+    }
     &__heading {
       margin-bottom: 2.8rem;
+      @media (min-width: 768px) {
+        margin-top: 5rem;
+      }
     }
   }
   &__introduction {
@@ -35,5 +111,8 @@
   }
   &__button {
     margin-top: 2.4rem;
+    @media (min-width: 768px) {
+      margin-bottom: 4.6rem;
+    }
   }
 }

@@ -1,9 +1,20 @@
 // header
 .header {
   margin-top: 3.2rem;
+  @media (min-width: 700px) {
+    margin-top: 6.4rem;
+  }
   .container {
     height: 3.2rem;
     padding: 0 3.2rem;
+    @media (min-width: 700px) {
+      padding: 0 4rem;
+    }
+    @media (min-width: 1200px) {
+      max-width: var(--space-max-width);
+      margin: 0 auto;
+      padding: 0;
+    }
     .main-nav {
       display: flex;
       flex-direction: row;
@@ -15,28 +26,52 @@
         align-items: center;
         justify-content: center;
       }
+      &__burger-menu {
+        @media (min-width: 576px) {
+          display: none;
+        }
+        #burger-icon.hide,
+        #close-icon.hide {
+          display: none;
+        }
+      }
       &__nav-items {
         display: none;
+        @media (min-width: 576px) {
+          display: block;
+          display: flex;
+        }
+      }
+      &__nav-item {
+        &:nth-child(2) {
+          margin-left: 4.1rem;
+          margin-right: 4rem;
+        }
       }
     }
     .mobile-nav__nav-items.hide {
       display: none;
     }
     .mobile-nav__nav-items {
-      display: block;
-      position: absolute;
-      background-color: var(--color-grayish-dark-blue);
-      width: 71.705%;
-      max-width: 30rem;
-      height: 18.6rem;
-      top: 5.6rem;
-      right: 0;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      padding: 4rem 0;
+      @media (max-width: 575px) {
+        display: block;
+        position: absolute;
+        background-color: var(--color-grayish-dark-blue);
+        width: 71.705%;
+        max-width: 30rem;
+        height: 18.6rem;
+        top: 5.6rem;
+        right: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 0;
+      }
+      @media (min-width: 576px) {
+        display: none;
+      }
     }
   }
 }
@@ -46,6 +81,14 @@
   margin-top: 4rem;
   .container {
     padding: 0 3.2rem;
+    @media (min-width: 700px) {
+      padding: 0 4rem;
+    }
+    @media (min-width: 1200px) {
+      padding: 0;
+      max-width: var(--space-max-width);
+      margin: 0 auto;
+    }
   }
 }
 
@@ -97,10 +140,11 @@
 }
 
 .btn--secondary {
+  font-size: 1.4rem;
   padding: 1.7rem 3.2rem;
-  border: 1px solid var(--color-grayish-dark-blue);
-  color: var(--color-grayish-dark-blue);
   text-transform: uppercase;
+  color: var(--color-grayish-dark-blue);
+  border: 1px solid var(--color-grayish-dark-blue);
   transition: var(--transition) background-color, var(--transition) color;
   &:hover {
     background-color: var(--color-grayish-dark-blue);
@@ -113,11 +157,37 @@
   margin-top: 11.5rem;
   margin-bottom: 8rem;
   text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (min-width: 1200px) {
+    margin: 15rem 0;
+  }
+  &__heading {
+    @media (min-width: 768px) {
+      max-width: 35rem;
+    }
+  }
   &__button {
     margin-top: 4rem;
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
   }
   &__line {
     display: none;
+    @media (min-width: 768px) {
+      display: block;
+      height: 1px;
+      width: 11.3rem;
+      background-color: var(--color-grayish-dark-blue);
+      opacity: .15;
+      margin: 0 3.2rem;
+    }
   }
 }
 
@@ -131,6 +201,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 2.4rem 4rem;
+    }
+    @media (min-width: 1200px) {
+      padding: 2.4rem 0;
+      max-width: var(--space-max-width);
+      margin: 0 auto;
+    }
   }
   &__logo {
     svg path {
@@ -139,12 +219,20 @@
   }
   &__nav-items {
     margin: 4rem 0;
+    @media (min-width: 768px) {
+      display: inline-flex;
+      margin: 0;
+      margin-left: 4.8rem;
+    }
     &__nav-item {
       color: var(--color-white);
       text-transform: uppercase;
     }
     &__nav-item:nth-child(2) {
       margin: 3.2rem 0;
+      @media (min-width: 768px) {
+        margin: 0 4rem;
+      }
     }
   }
   &__socials {
@@ -153,6 +241,9 @@
     align-items: center;
     justify-content: space-between;
     width: 10.4rem;
+    @media (min-width: 768px) {
+      margin-left: auto;
+    }
     &__social {
       &__icon {
         path { fill: var(--color-white) }
