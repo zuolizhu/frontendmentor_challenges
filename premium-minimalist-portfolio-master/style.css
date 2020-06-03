@@ -149,12 +149,22 @@ h1, h2, h3, p {
 
 /* Page transition animation */
 .transition-fade {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: opacity 0.4s ease-out,-webkit-transform .6s ease-out;
+  transition: opacity 0.4s ease-out,-webkit-transform .6s ease-out;
+  transition: opacity 0.4s ease-out,transform .6s ease-out;
+  transition: opacity 0.4s ease-out,transform .6s ease-out,-webkit-transform .6s ease-out;
   opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 html.is-animating .transition-fade {
+  opacity: 0;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+}
+
+html.is-leaving .transition-fade {
   opacity: 0;
 }
 

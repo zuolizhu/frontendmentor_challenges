@@ -151,10 +151,16 @@ h1, h2, h3, p {
 
 /* Page transition animation */
 .transition-fade {
-  transition: 0.4s;
+  transition: opacity 0.4s ease-out,transform .6s ease-out;
   opacity: 1;
+  transform: translateY(0);
 }
 
 html.is-animating .transition-fade {
+  opacity: 0;
+  transform: translateY(5%);
+}
+
+html.is-leaving .transition-fade {
   opacity: 0;
 }
