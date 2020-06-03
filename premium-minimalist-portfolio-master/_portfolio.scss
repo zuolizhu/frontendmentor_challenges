@@ -1,3 +1,9 @@
+.main--portfolio {
+  @media (min-width: 768px) {
+    margin-top: 9.4rem;
+  }
+}
+
 .project {
   display: flex;
   align-items: center;
@@ -18,8 +24,16 @@
     }
   }
   &__image {
-    width: 33.9rem;
-    height: 31.4rem;
+    height: 28.8rem;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+      margin: 0;
+      max-width: none;
+      width: 33.9rem;
+      height: 31.4rem;
+    }
     @media (min-width: 1024px) {
       width: 54rem;
       height: 50rem;
@@ -27,9 +41,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     &--manage {
-      background-position-x: right;
       background-image: url(./images/portfolio/mobile/image-portfolio-manage@2x.jpg);
       @media (min-width: 768px) {
+        background-position-x: right;
         background-image: url(./images/portfolio/tablet/image-portfolio-manage@2x.jpg);
       }
       @media (min-width: 1024px) {
@@ -37,9 +51,9 @@
       }
     }
     &--bookmark {
-      background-position-x: left;
       background-image: url(./images/portfolio/mobile/image-portfolio-bookmark@2x.jpg);
       @media (min-width: 768px) {
+        background-position-x: left;
         background-image: url(./images/portfolio/tablet/image-portfolio-bookmark@2x.jpg);
       }
       @media (min-width: 1024px) {
@@ -47,9 +61,9 @@
       }
     }
     &--insure {
-      background-position-x: right;
       background-image: url(./images/portfolio/mobile/image-portfolio-insure@2x.jpg);
       @media (min-width: 768px) {
+        background-position-x: right;
         background-image: url(./images/portfolio/tablet/image-portfolio-insure@2x.jpg);
       }
       @media (min-width: 1024px) {
@@ -57,9 +71,9 @@
       }
     }
     &--fylo {
-      background-position-x: left;
       background-image: url(./images/portfolio/mobile/image-portfolio-fylo@2x.jpg);
       @media (min-width: 768px) {
+        background-position-x: left;
         background-image: url(./images/portfolio/tablet/image-portfolio-fylo@2x.jpg);
       }
       @media (min-width: 1024px) {
@@ -70,9 +84,24 @@
   &__introduction {
     border-top: 1px solid var(--color-border-gray);
     border-bottom: 1px solid var(--color-border-gray);
-    max-width: 28.1rem;
+    
+    margin: 3.2rem auto 0;
+    max-width:50rem;
     min-height: 33.4rem;
-    padding: 3.2rem 0 5rem;
+    padding: 2.4rem 0;
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    
+    @media (min-width: 768px) {
+      max-width: 28.1rem;
+      min-height: 33.4rem;
+      padding: 3.2rem 0 5rem;
+      margin: 0;
+    }
     @media (min-width: 1024px) {
       padding: 10.4rem 0;
       max-width: 35rem;
@@ -80,8 +109,12 @@
     }
     &__body {
       opacity: .8;
-      margin-top: 2.9rem;
-      margin-bottom: 3.5rem;
+      margin-top: 2.4rem;
+      margin-bottom: 2.4rem;
+      @media (min-width: 768px) {
+        margin-top: 2.9rem;
+        margin-bottom: 3.5rem;
+      }
       @media (min-width: 1024px) {
         margin-top: 2.8rem;
         margin-bottom: 2.4rem;
@@ -92,7 +125,7 @@
 
 /* Utilities for project spacing */
 .intro-ml {
-  margin-left: 0;
+  margin-left: auto;
   @media (min-width: 768px) {
     margin-left: 6.9rem;
   }
@@ -101,7 +134,7 @@
   }
 }
 .intro-mr {
-  margin-right: 0;
+  margin-right: auto;
   @media (min-width: 768px) {
     margin-right: 6.9rem;
   }
@@ -110,5 +143,8 @@
   }
 }
 .project-mb {
-  margin-bottom: 8rem;
+  margin-bottom: 7.2rem;
+  @media (min-width: 768px) {
+    margin-bottom: 8rem;
+  }
 }
