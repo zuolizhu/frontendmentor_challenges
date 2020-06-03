@@ -6,6 +6,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Minimalist Portfolio</title>
+  <script defer src="./swup.min.js"></script>
+  <script defer src="./app.js"></script>
 </head>
 <body>
   <header class="header">
@@ -20,7 +22,7 @@
         </div>
         <ul class="main-nav__nav-items">
           <li class="main-nav__nav-item">
-            <a class="t-nav-link t-dark-gray t-nav-link--active" href="/">Home</a>
+            <a class="t-nav-link t-dark-gray t-nav-link--active" href="./index.html">Home</a>
           </li>
           <li class="main-nav__nav-item">
             <a class="t-nav-link t-dark-gray" href="./portfolio.html">Portfolio</a>
@@ -31,7 +33,7 @@
         </ul>
         <ul class="mobile-nav__nav-items hide" id="mobile-nav">
           <li class="mobile-nav__nav-item">
-            <a class="t-nav-link t-white" href="/">Home</a>
+            <a class="t-nav-link t-white" href="./index.html">Home</a>
           </li>
           <li class="mobile-nav__nav-item">
             <a class="t-nav-link t-white" href="./portfolio.html">Portfolio</a>
@@ -43,7 +45,7 @@
       </nav>
     </div>
   </header>
-  <main class="main main--home">
+  <main id="swup" class="main main--home transition-fade">
     <div class="container">
       <section class="home-intro">
         <div class="home-intro__image"></div>
@@ -69,7 +71,7 @@
             and have experience in remote teams. When I’m not coding, you’ll find me outdoors. 
             I love being out in nature whether that’s going for a walk, run or cycling. I’d love 
             you to check out my work.</p>
-          <a class="btn btn--secondary home-about__button" href="./portfolio.html">Go to Portfolio</a>
+          <a class="btn btn--secondary home-about__button" href="/portfolio.html">Go to Portfolio</a>
         </div>
       </section>
       <section class="call-to-action">
@@ -86,7 +88,7 @@
       </div>
       <ul class="footer__nav-items">
         <li class="footer__nav-items__nav-item">
-          <a class="t-nav-link t-white" href="">Home</a>
+          <a class="t-nav-link t-white" href="./index.html">Home</a>
         </li>
         <li class="footer__nav-items__nav-item">
           <a class="t-nav-link t-white" href="./portfolio.html">Portfolio</a>
@@ -117,6 +119,5 @@
       </ul>
     </div>
   </footer>
-  <script src="./app.js"></script>
 </body>
 </html>

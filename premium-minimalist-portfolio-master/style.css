@@ -147,6 +147,17 @@ h1, h2, h3, p {
   border: 0;
 }
 
+/* Page transition animation */
+.transition-fade {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
 .header {
   margin-top: 3.2rem;
 }

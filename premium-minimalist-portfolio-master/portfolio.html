@@ -6,6 +6,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">  
   <title>Frontend Mentor | My Projects</title>
+  <script defer src="./swup.min.js"></script>
+  <script defer src="./app.js"></script>
 </head>
 <body>
   <header class="header">
@@ -20,7 +22,7 @@
         </div>
         <ul class="main-nav__nav-items">
           <li class="main-nav__nav-item">
-            <a class="t-nav-link t-dark-gray" href="/">Home</a>
+            <a class="t-nav-link t-dark-gray" href="./index.html">Home</a>
           </li>
           <li class="main-nav__nav-item">
             <a class="t-nav-link t-dark-gray t-nav-link--active" href="./portfolio.html">Portfolio</a>
@@ -31,7 +33,7 @@
         </ul>
         <ul class="mobile-nav__nav-items hide" id="mobile-nav">
           <li class="mobile-nav__nav-item">
-            <a class="t-nav-link t-white" href="/">Home</a>
+            <a class="t-nav-link t-white" href="./index.html">Home</a>
           </li>
           <li class="mobile-nav__nav-item">
             <a class="t-nav-link t-white" href="./portfolio.html">Portfolio</a>
@@ -43,7 +45,7 @@
       </nav>
     </div>
   </header>
-  <main class="main main--portfolio">
+  <main id="swup" class="main main--portfolio transition-fade">
     <div class="container">
       <section class="project project--left project-mb">
         <div class="project__image project__image--manage">
@@ -54,7 +56,7 @@
             I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, 
             such as the testimonial slider.
           </p>
-          <a class="btn btn--secondary" href="./portfolio.html">View Project</a>
+          <a class="btn btn--secondary" href="/portfolio.html">View Project</a>
         </div>
       </section>
       <section class="project project--right project-mb">
@@ -66,7 +68,7 @@
             used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such 
             as the features section.
           </p>
-          <a class="btn btn--secondary" href="./portfolio.html">View Project</a>
+          <a class="btn btn--secondary" href="/portfolio.html">View Project</a>
         </div>
       </section>
       <section class="project project--left project-mb">
@@ -78,7 +80,7 @@
             landing page. The only JavaScript this project required was to enable the toggling of the 
             mobile navigation.
           </p>
-          <a class="btn btn--secondary" href="./portfolio.html">View Project</a>
+          <a class="btn btn--secondary" href="/portfolio.html">View Project</a>
         </div>
       </section>
       <section class="project project--right project-mb">
@@ -90,7 +92,7 @@
             built it so that it was fully-responsive. I took a mobile-first approach and used modern 
             CSS like Flexbox and Grid for layout purposes.
           </p>
-          <a class="btn btn--secondary" href="./portfolio.html">View Project</a>
+          <a class="btn btn--secondary" href="/portfolio.html">View Project</a>
         </div>
       </section>
       <section class="call-to-action">
@@ -107,7 +109,7 @@
       </div>
       <ul class="footer__nav-items">
         <li class="footer__nav-items__nav-item">
-          <a class="t-nav-link t-white" href="">Home</a>
+          <a class="t-nav-link t-white" href="./index.html">Home</a>
         </li>
         <li class="footer__nav-items__nav-item">
           <a class="t-nav-link t-white" href="./portfolio.html">Portfolio</a>
@@ -138,6 +140,5 @@
       </ul>
     </div>
   </footer>
-  <script src="./app.js"></script>
 </body>
 </html>
