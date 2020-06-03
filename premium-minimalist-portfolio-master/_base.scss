@@ -104,17 +104,30 @@ h1, h2, h3, p {
   font-family: var(--font-family-sans);
 }
 
-.t-nav-item {
+.t-white {
+  color: var(--color-white);
+}
+
+.t-dark-gray {
+  color: var(--color-grayish-dark-blue);
+}
+
+.t-nav-link {
   font-size: 1.6rem;
   letter-spacing: 1px;
   line-height: 1.6rem;
   text-transform: uppercase;
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-regular);
   font-family: var(--font-family-sans);
+  text-decoration: none;
+  transition: var(--transition) color;
+  &:hover {
+    color: var(--color-cyan);
+  }
 }
 
-.t-white {
-  color: var(--color-white);
+.t-nav-link--active {
+  color: var(--color-cyan);
 }
 
 /* Screen Reader Only */

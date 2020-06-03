@@ -99,17 +99,32 @@ h1, h2, h3, p {
   font-family: var(--font-family-sans);
 }
 
-.t-nav-item {
+.t-white {
+  color: var(--color-white);
+}
+
+.t-dark-gray {
+  color: var(--color-grayish-dark-blue);
+}
+
+.t-nav-link {
   font-size: 1.6rem;
   letter-spacing: 1px;
   line-height: 1.6rem;
   text-transform: uppercase;
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-regular);
   font-family: var(--font-family-sans);
+  text-decoration: none;
+  -webkit-transition: var(--transition) color;
+  transition: var(--transition) color;
 }
 
-.t-white {
-  color: var(--color-white);
+.t-nav-link:hover {
+  color: var(--color-cyan);
+}
+
+.t-nav-link--active {
+  color: var(--color-cyan);
 }
 
 /* Screen Reader Only */
@@ -181,6 +196,10 @@ h1, h2, h3, p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.header .container .main-nav__burger-menu {
+  cursor: pointer;
 }
 
 @media (min-width: 576px) {
@@ -528,6 +547,14 @@ h1, h2, h3, p {
 
 .footer__socials__social__icon path {
   fill: var(--color-white);
+  -webkit-transition: var(--transition) fill, var(--transition) box-shadow;
+  transition: var(--transition) fill, var(--transition) box-shadow;
+}
+
+.footer__socials__social:hover .footer__socials__social__icon path {
+  fill: #76e2cb;
+  -webkit-box-shadow: 0 0 3.5rem #76e2cb;
+          box-shadow: 0 0 3.5rem #76e2cb;
 }
 
 @media (min-width: 576px) {
