@@ -10,6 +10,7 @@
   --color-very-light-gray: #FAFAFA;
   --color-light-gray: #EAEAEB;
   --color-white: #FFFFFF;
+  --color-border-gray: #DCDCDE;
   
   // Typography
   --font-family-sans: 'Public Sans', sans-serif;
@@ -94,6 +95,12 @@ h1, h2, h3, p {
   letter-spacing: 0;
   font-weight: var(--weight-regular);
   font-family: var(--font-family-sans);
+}
+
+.t-body1--project-intro {
+  @media (max-width: 1023px) {
+    font-size: 1.5rem;
+  }
 }
 
 .t-body2 {

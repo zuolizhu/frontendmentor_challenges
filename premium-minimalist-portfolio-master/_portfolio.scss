@@ -1,0 +1,114 @@
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @media (min-width: 1024px) {
+    justify-content: normal;
+  }
+  &--left {
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+  &--right {
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row-reverse;
+    }
+  }
+  &__image {
+    width: 33.9rem;
+    height: 31.4rem;
+    @media (min-width: 1024px) {
+      width: 54rem;
+      height: 50rem;
+    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    &--manage {
+      background-position-x: right;
+      background-image: url(./images/portfolio/mobile/image-portfolio-manage@2x.jpg);
+      @media (min-width: 768px) {
+        background-image: url(./images/portfolio/tablet/image-portfolio-manage@2x.jpg);
+      }
+      @media (min-width: 1024px) {
+        background-image: url(./images/portfolio/desktop/image-portfolio-manage@2x.jpg);
+      }
+    }
+    &--bookmark {
+      background-position-x: left;
+      background-image: url(./images/portfolio/mobile/image-portfolio-bookmark@2x.jpg);
+      @media (min-width: 768px) {
+        background-image: url(./images/portfolio/tablet/image-portfolio-bookmark@2x.jpg);
+      }
+      @media (min-width: 1024px) {
+        background-image: url(./images/portfolio/desktop/image-portfolio-bookmark@2x.jpg);
+      }
+    }
+    &--insure {
+      background-position-x: right;
+      background-image: url(./images/portfolio/mobile/image-portfolio-insure@2x.jpg);
+      @media (min-width: 768px) {
+        background-image: url(./images/portfolio/tablet/image-portfolio-insure@2x.jpg);
+      }
+      @media (min-width: 1024px) {
+        background-image: url(./images/portfolio/desktop/image-portfolio-insure@2x.jpg);
+      }
+    }
+    &--fylo {
+      background-position-x: left;
+      background-image: url(./images/portfolio/mobile/image-portfolio-fylo@2x.jpg);
+      @media (min-width: 768px) {
+        background-image: url(./images/portfolio/tablet/image-portfolio-fylo@2x.jpg);
+      }
+      @media (min-width: 1024px) {
+        background-image: url(./images/portfolio/desktop/image-portfolio-fylo@2x.jpg);
+      }
+    }
+  }
+  &__introduction {
+    border-top: 1px solid var(--color-border-gray);
+    border-bottom: 1px solid var(--color-border-gray);
+    max-width: 28.1rem;
+    min-height: 33.4rem;
+    padding: 3.2rem 0 5rem;
+    @media (min-width: 1024px) {
+      padding: 10.4rem 0;
+      max-width: 35rem;
+      max-height: 50rem;
+    }
+    &__body {
+      opacity: .8;
+      margin-top: 2.9rem;
+      margin-bottom: 3.5rem;
+      @media (min-width: 1024px) {
+        margin-top: 2.8rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+}
+
+/* Utilities for project spacing */
+.intro-ml {
+  margin-left: 0;
+  @media (min-width: 768px) {
+    margin-left: 6.9rem;
+  }
+  @media (min-width: 1024px) {
+    margin-left: 12.5rem;
+  }
+}
+.intro-mr {
+  margin-right: 0;
+  @media (min-width: 768px) {
+    margin-right: 6.9rem;
+  }
+  @media (min-width: 1024px) {
+    margin-right: 12.5rem;
+  }
+}
+.project-mb {
+  margin-bottom: 8rem;
+}
