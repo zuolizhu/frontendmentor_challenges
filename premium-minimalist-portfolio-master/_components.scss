@@ -96,6 +96,7 @@
 .btn {
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btn--primary {
@@ -169,10 +170,12 @@
   }
   &__heading {
     @media (min-width: 768px) {
+      min-width: 35rem;
       max-width: 35rem;
     }
   }
   &__button {
+    min-width: 16.2rem;
     margin-top: 4rem;
     @media (min-width: 768px) {
       margin-top: 0;
@@ -183,7 +186,7 @@
     @media (min-width: 768px) {
       display: block;
       height: 1px;
-      width: 11.3rem;
+      width: 100%;
       background-color: var(--color-grayish-dark-blue);
       opacity: .15;
       margin: 0 3.2rem;

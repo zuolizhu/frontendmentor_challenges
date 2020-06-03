@@ -275,6 +275,7 @@ h1, h2, h3, p {
 .btn {
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btn--primary {
@@ -395,11 +396,13 @@ h1, h2, h3, p {
 
 @media (min-width: 768px) {
   .call-to-action__heading {
+    min-width: 35rem;
     max-width: 35rem;
   }
 }
 
 .call-to-action__button {
+  min-width: 16.2rem;
   margin-top: 4rem;
 }
 
@@ -417,7 +420,7 @@ h1, h2, h3, p {
   .call-to-action__line {
     display: block;
     height: 1px;
-    width: 11.3rem;
+    width: 100%;
     background-color: var(--color-grayish-dark-blue);
     opacity: .15;
     margin: 0 3.2rem;
