@@ -1,12 +1,23 @@
-// page transition
+// page transition config
 const options = {
-  cache: false,
   linkSelector:
     'a[href^="' +
     window.location.origin +
     '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="./"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])'
 };
 const swup = new Swup(options);
+
+// update top nav active state
+const pages =['index.html', 'portfolio.html', 'contact.html'];
+const TopNavLinks = document.querySelectorAll('.main-nav__nav-item a');
+swup.on('contentReplaced', () => {
+  const pathname = window.location.pathname;
+  TopNavLinks.forEach((topNavLink, i) => {
+    if (pathname.includes(pages[i])) topNavLink.classList.add('t-nav-link--active');
+    else topNavLink.classList.remove('t-nav-link--active');
+  });
+});
+
 
 // burger menu
 const burgerButton = document.getElementById('burger');
