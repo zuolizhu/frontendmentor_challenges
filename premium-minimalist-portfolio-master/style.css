@@ -1286,6 +1286,18 @@ html.is-leaving .transition-fade {
   margin-top: 6.4rem;
 }
 
+@media (min-width: 768px) {
+  .project-nav {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-nav {
+    margin-top: 6.4rem;
+  }
+}
+
 .project-nav .project-nav-container {
   border-top: 1px solid var(--color-border-gray);
   border-bottom: 1px solid var(--color-border-gray);

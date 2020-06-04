@@ -163,6 +163,12 @@
 
 .project-nav {
   margin-top: 6.4rem;
+  @media (min-width: 768px) {
+    margin-top: 8rem;
+  }
+  @media (min-width: 1110px) {
+    margin-top: 6.4rem;
+  }
   .project-nav-container {
     border-top: 1px solid var(--color-border-gray);
     border-bottom: 1px solid var(--color-border-gray);
