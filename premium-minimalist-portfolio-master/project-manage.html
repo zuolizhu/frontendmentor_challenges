@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./style.css">  
-  <title>Frontend Mentor | My Projects</title>
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Manage Project</title>
   <script defer src="./swup.min.js"></script>
   <script defer src="./app.js"></script>
 </head>
@@ -45,55 +45,46 @@
       </nav>
     </div>
   </header>
-  <main id="swup" class="main main--portfolio transition-fade">
+  <main id="swup" class="main main--prject-detail transition-fade">
     <div class="container">
-      <section class="project project--left project-mb">
-        <div class="project__image project__image--manage">
-        </div>
-        <div class="project__introduction intro-ml">
+      <section class="project-detail-hero">
+        <div class="project-detail-hero__image project-detail-hero__image--manage"></div>
+      </section>
+      <section class="project-detail-content">
+        <div class="project-detail-intro">
           <h2 class="t-h2">Manage</h2>
-          <p class="t-body1 t-body1--project-intro project__introduction__body">This project required me to build a fully responsive landing page to the designs provided. 
-            I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, 
-            such as the testimonial slider.
-          </p>
-          <a class="btn btn--secondary" href="./project-manage.html">View Project</a>
+          <p class="t-body2 project-detail-intro__body">This project required me to build a fully responsive landing page to the designs 
+            provided. I used HTML5, along with CSS Grid and JavaScript for the areas that 
+            required interactivity, such as the testimonial slider.</p>
+          <div class="features">
+            <p class="t-feature feature">Interaction Design / Front End Development</p>
+            <p class="t-feature feature">HTML / CSS / JS</p>
+          </div>
+          <a href="" class="btn btn--secondary project-detail-intro__button">Visit Website</a>
+        </div>
+        <div class="project-detail-body">
+          <div class="project-background">
+            <h3 class="t-h3">Project Background</h3>
+            <p class="t-body2 project-background__body">This project was a front-end  challenge from Frontend Mentor. It’s a platform that 
+              enables you to practice building websites to a design and project brief. Each challenge 
+              includes mobile and desktop designs to show how the website should look at different 
+              screen sizes. Creating these projects has helped me refine my workflow and solve 
+              real-world coding problems. I’ve learned something new with each project, helping 
+              me to improve and adapt my style.</p>
+          </div>
+          <div class="project-detail-previews">
+            <h3 class="t-h3 project-detail-previews__heading">Static Previews</h3>
+            <div class="project-detail-preview-1 project-detail-preview-1--manage"></div>
+            <div class="project-detail-preview-2 project-detail-preview-2--manage"></div>
+          </div>
         </div>
       </section>
-      <section class="project project--right project-mb">
-        <div class="project__image project__image--bookmark">
-        </div>
-        <div class="project__introduction intro-mr">
-          <h2 class="t-h2">Bookmark</h2>
-          <p class="t-body1 t-body1--project-intro project__introduction__body">This project required me to build a fully responsive landing page to the designs provided. I 
-            used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such 
-            as the features section.
-          </p>
-          <a class="btn btn--secondary" href="/portfolio.html">View Project</a>
-        </div>
-      </section>
-      <section class="project project--left project-mb">
-        <div class="project__image project__image--insure">
-        </div>
-        <div class="project__introduction intro-ml">
-          <h2 class="t-h2">Insure</h2>
-          <p class="t-body1 t-body1--project-intro project__introduction__body">This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive 
-            landing page. The only JavaScript this project required was to enable the toggling of the 
-            mobile navigation.
-          </p>
-          <a class="btn btn--secondary" href="/portfolio.html">View Project</a>
-        </div>
-      </section>
-      <section class="project project--right project-mb">
-        <div class="project__image project__image--fylo">
-        </div>
-        <div class="project__introduction intro-mr">
-          <h2 class="t-h2">Fylo</h2>
-          <p class="t-body1 t-body1--project-intro project__introduction__body">This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and 
-            built it so that it was fully-responsive. I took a mobile-first approach and used modern 
-            CSS like Flexbox and Grid for layout purposes.
-          </p>
-          <a class="btn btn--secondary" href="/portfolio.html">View Project</a>
-        </div>
+      <section class="project-nav">
+        Fylo
+        Previous Project
+      
+        Bookmark
+        Next Project
       </section>
       <section class="call-to-action">
         <h2 class="t-h2 call-to-action__heading">Interested in doing a project together?</h2>
@@ -102,6 +93,7 @@
       </section>
     </div>
   </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__logo">

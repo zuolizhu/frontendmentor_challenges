@@ -78,9 +78,9 @@ h1, h2, h3, p {
 
 .t-h3 {
   font-size: 3.2rem;
-  line-height: 3.6rem;
+  line-height: 4.2rem;
   letter-spacing: -0.29px;
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-regular);
   font-family: var(--font-family-serif);
 }
 
@@ -1031,6 +1031,271 @@ html.is-leaving .transition-fade {
 @media (min-width: 768px) {
   .project-mb {
     margin-bottom: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main--prject-detail {
+    margin-top: 9.4rem;
+  }
+}
+
+.project-detail-hero {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .project-detail-hero {
+    margin-bottom: 11.5rem;
+  }
+}
+
+.project-detail-hero__image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 14rem;
+}
+
+@media (min-width: 768px) {
+  .project-detail-hero__image {
+    height: 31rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-detail-hero__image {
+    height: 50rem;
+  }
+}
+
+.project-detail-hero__image--manage {
+  background-image: url(./images/detail/mobile/image-manage-hero@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-hero__image--manage {
+    background-image: url(./images/detail/tablet/image-manage-hero@2x.jpg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-detail-hero__image--manage {
+    background-image: url(./images/detail/desktop/image-manage-hero@2x.jpg);
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.project-detail-content .project-detail-intro {
+  border-top: 1px solid var(--color-border-gray);
+  border-bottom: 1px solid var(--color-border-gray);
+  padding: 2.4rem 0;
+}
+
+@media (min-width: 768px) and (max-width: 1109px) {
+  .project-detail-content .project-detail-intro {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 0 1.2rem;
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-intro {
+    max-width: 35rem;
+    padding: 4.8rem 0;
+  }
+}
+
+.project-detail-content .project-detail-intro__body {
+  opacity: .8;
+  margin: 2.4rem 0;
+}
+
+@media (min-width: 768px) and (max-width: 1109px) {
+  .project-detail-content .project-detail-intro__body {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-intro__body {
+    margin: 2.9rem 0 2.3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1109px) {
+  .project-detail-content .project-detail-intro__button {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+}
+
+.project-detail-content .project-detail-intro .features {
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 768px) and (max-width: 1109px) {
+  .project-detail-content .project-detail-intro .features {
+    margin-bottom: 1.6rem;
+    margin-top: 1.6rem;
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-intro .features {
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-intro .features .feature:not(:last-of-type) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.project-detail-content .project-detail-body {
+  margin-top: 4.8rem;
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body {
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body {
+    margin-top: 0;
+    max-width: 63.5rem;
+  }
+}
+
+.project-detail-content .project-detail-body .project-background__body {
+  margin-top: 2.8rem;
+  opacity: .8;
+}
+
+.project-detail-content .project-detail-body .project-detail-previews {
+  margin-top: 4rem;
+}
+
+.project-detail-content .project-detail-body .project-detail-previews__heading {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews__heading {
+    margin-bottom: 2.8rem;
+  }
+}
+
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1,
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2 {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  max-width: 50rem;
+  height: 19.7rem;
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1,
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2 {
+    max-width: 88rem;
+    height: 43.4rem;
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1,
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2 {
+    max-width: none;
+    height: 40rem;
+  }
+}
+
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1 {
+  margin-bottom: 3.2rem;
+}
+
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--manage {
+  background-image: url(./images/detail/mobile/image-manage-preview-1@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--manage {
+    background-image: url(./images/detail/tablet/image-manage-preview-1@2x.jpg);
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--manage {
+    background-image: url(./images/detail/desktop/image-manage-preview-1@2x.jpg);
+  }
+}
+
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--manage {
+  background-image: url(./images/detail/mobile/image-manage-preview-2@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--manage {
+    background-image: url(./images/detail/tablet/image-manage-preview-2@2x.jpg);
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--manage {
+    background-image: url(./images/detail/desktop/image-manage-preview-2@2x.jpg);
+  }
+}
+
+.project-nav {
+  margin-top: 6.4rem;
+}
+
+.t-feature {
+  line-height: 3rem;
+  font-family: var(--font-family-sans);
+  font-weight: var(--weight-bold);
+  color: var(--color-cyan);
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .t-feature {
+    font-size: 1.6rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

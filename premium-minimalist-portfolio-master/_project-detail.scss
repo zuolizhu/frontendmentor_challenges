@@ -1,0 +1,179 @@
+.main--prject-detail {
+  @media (min-width: 768px) {
+    margin-top: 9.4rem;
+  }
+}
+.project-detail-hero {
+  width: 100%;
+  margin-bottom: 4rem;
+  @media (min-width: 1024px) {
+    margin-bottom: 11.5rem;
+  }
+  &__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 14rem;
+    @media (min-width: 768px) {
+      height: 31rem;
+    }
+    @media (min-width: 1024px) {
+      height: 50rem;
+    }
+  }
+  &__image--manage {
+    background-image: url(./images/detail/mobile/image-manage-hero@2x.jpg);
+    @media (min-width: 768px) {
+      background-image: url(./images/detail/tablet/image-manage-hero@2x.jpg);
+    }
+    @media (min-width: 1024px) {
+      background-image: url(./images/detail/desktop/image-manage-hero@2x.jpg);
+    }
+  }
+}
+
+.project-detail-content {
+  @media (min-width: 1110px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+
+  .project-detail-intro {
+    border-top: 1px solid var(--color-border-gray);
+    border-bottom: 1px solid var(--color-border-gray);
+    padding: 2.4rem 0;
+
+    @media (min-width: 768px) and (max-width: 1109px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 1.2rem;
+    }
+
+    @media (min-width: 1110px) {
+      max-width: 35rem;
+      padding: 4.8rem 0;
+    }
+
+    &__body {
+      opacity: .8;
+      margin: 2.4rem 0;
+      @media (min-width: 768px) and (max-width: 1109px) {
+        grid-column: 2/3;
+        grid-row: 1/4;
+        margin: 0;
+      }
+      @media (min-width: 1110px) {
+        margin: 2.9rem 0 2.3rem;
+      }
+    }
+    &__button {
+      @media (min-width: 768px) and (max-width: 1109px) {
+        grid-column: 1/2;
+        justify-self: start;
+      }
+    }
+    
+
+
+    .features {
+      margin-bottom: 2.4rem;
+      @media (min-width: 768px) and (max-width: 1109px) {
+        margin-bottom: 1.6rem;
+        margin-top: 1.6rem;
+      }
+      @media (min-width: 1110px) {
+        margin-bottom: 3.2rem;
+      }
+      .feature:not(:last-of-type) {
+        @media (min-width: 1110px) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+  .project-detail-body {
+    margin-top: 4.8rem;
+    @media (min-width: 768px) {
+      margin-top: 4rem;
+    }
+    @media (min-width: 1110px) {
+      margin-top: 0;
+      max-width: 63.5rem;
+    }
+    .project-background {
+      &__body {
+        margin-top: 2.8rem;
+        opacity: .8;
+      }
+    }
+    .project-detail-previews {
+      margin-top: 4rem;
+      &__heading {
+        margin-bottom: 4rem;
+        @media (min-width: 1110px) {
+          margin-bottom: 2.8rem;
+        }
+      }
+
+      .project-detail-preview-1,
+      .project-detail-preview-2 {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        max-width: 50rem;
+        height: 19.7rem;
+        @media (min-width: 768px) {
+          max-width: 88rem;
+          height: 43.4rem;
+        }
+        @media (min-width: 1110px) {
+          max-width: none;
+          height: 40rem;
+        }
+      }
+      .project-detail-preview-1 {
+        margin-bottom: 3.2rem;
+        &--manage {
+          background-image: url(./images/detail/mobile/image-manage-preview-1@2x.jpg);
+          @media (min-width: 768px) {
+            background-image: url(./images/detail/tablet/image-manage-preview-1@2x.jpg);
+          }
+          @media (min-width: 1110px) {
+            background-image: url(./images/detail/desktop/image-manage-preview-1@2x.jpg);
+          }
+        }
+      }
+      .project-detail-preview-2 {
+        &--manage {
+          background-image: url(./images/detail/mobile/image-manage-preview-2@2x.jpg);
+          @media (min-width: 768px) {
+            background-image: url(./images/detail/tablet/image-manage-preview-2@2x.jpg);
+          }
+          @media (min-width: 1110px) {
+            background-image: url(./images/detail/desktop/image-manage-preview-2@2x.jpg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.project-nav {
+  margin-top: 6.4rem;
+}
+
+// text style only used within this page
+.t-feature {
+  line-height: 3rem;
+  font-family: var(--font-family-sans);
+  font-weight: var(--weight-bold);
+  color: var(--color-cyan);
+  font-size: 1.3rem;
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
