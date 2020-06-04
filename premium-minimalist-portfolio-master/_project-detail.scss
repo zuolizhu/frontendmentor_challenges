@@ -50,6 +50,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0 1.2rem;
+      padding: 3.2rem 0;
     }
 
     @media (min-width: 1110px) {
@@ -75,8 +76,6 @@
         justify-self: start;
       }
     }
-    
-
 
     .features {
       margin-bottom: 2.4rem;
@@ -164,6 +163,67 @@
 
 .project-nav {
   margin-top: 6.4rem;
+  .project-nav-container {
+    border-top: 1px solid var(--color-border-gray);
+    border-bottom: 1px solid var(--color-border-gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-divider {
+      min-height: 100%;
+      min-width: .1rem;
+      max-width: .1rem;
+      background-color: var(--color-border-gray);
+      align-self: stretch;
+    }
+  }
+
+  .previous-project,
+  .next-project {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-grayish-dark-blue);
+    display: flex;
+    padding: 2.4rem 0;
+    width: 100%;
+    @media (min-width: 768px) {
+      align-items: center;
+      padding: 3.2rem 0;
+    }
+
+    .project-nav-text {
+      margin-top: 1.6rem;
+      @media (min-width: 768px) {
+        margin-top: 0;
+      }
+      &__direction {
+        opacity: .5;
+      }
+    }
+  }
+
+  .previous-project {
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      .project-nav-text {
+        margin-left: 3.2rem;
+      }
+    }
+  }
+  .next-project {
+    text-align: right;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row-reverse;
+      .project-nav-text {
+        margin-right: 3.2rem;
+      }
+    }
+  }
 }
 
 // text style only used within this page
@@ -173,7 +233,11 @@
   font-weight: var(--weight-bold);
   color: var(--color-cyan);
   font-size: 1.3rem;
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     font-size: 1.6rem;
   }
+}
+
+.t-h3--nav-name {
+  line-height: 3.6rem;
 }
