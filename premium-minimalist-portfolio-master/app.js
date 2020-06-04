@@ -10,8 +10,17 @@ const swup = new Swup(options);
 // update top nav active state
 const pages =['index.html', 'portfolio.html', 'contact.html'];
 const TopNavLinks = document.querySelectorAll('.main-nav__nav-item a');
+const projectUrlPrefix = 'project-';
 swup.on('contentReplaced', () => {
   const pathname = window.location.pathname;
+
+  if (pathname.includes(projectUrlPrefix)) {
+    TopNavLinks[1].classList.add('t-nav-link--active');
+    TopNavLinks[0].classList.remove('t-nav-link--active');
+    TopNavLinks[2].classList.remove('t-nav-link--active');
+    return;
+  }
+  
   TopNavLinks.forEach((topNavLink, i) => {
     if (pathname.includes(pages[i])) topNavLink.classList.add('t-nav-link--active');
     else topNavLink.classList.remove('t-nav-link--active');
