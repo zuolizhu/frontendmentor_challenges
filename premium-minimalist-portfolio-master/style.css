@@ -1086,6 +1086,54 @@ html.is-leaving .transition-fade {
   }
 }
 
+.project-detail-hero__image--fylo {
+  background-image: url(./images/detail/mobile/image-fylo-hero@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-hero__image--fylo {
+    background-image: url(./images/detail/tablet/image-fylo-hero@2x.jpg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-detail-hero__image--fylo {
+    background-image: url(./images/detail/desktop/image-fylo-hero@2x.jpg);
+  }
+}
+
+.project-detail-hero__image--bookmark {
+  background-image: url(./images/detail/mobile/image-bookmark-hero@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-hero__image--bookmark {
+    background-image: url(./images/detail/tablet/image-bookmark-hero@2x.jpg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-detail-hero__image--bookmark {
+    background-image: url(./images/detail/desktop/image-bookmark-hero@2x.jpg);
+  }
+}
+
+.project-detail-hero__image--insure {
+  background-image: url(./images/detail/mobile/image-insure-hero@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-hero__image--insure {
+    background-image: url(./images/detail/tablet/image-insure-hero@2x.jpg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-detail-hero__image--insure {
+    background-image: url(./images/detail/desktop/image-insure-hero@2x.jpg);
+  }
+}
+
 @media (min-width: 1110px) {
   .project-detail-content {
     display: -webkit-box;
@@ -1266,6 +1314,54 @@ html.is-leaving .transition-fade {
   }
 }
 
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--fylo {
+  background-image: url(./images/detail/mobile/image-fylo-preview-1@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--fylo {
+    background-image: url(./images/detail/tablet/image-fylo-preview-1@2x.jpg);
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--fylo {
+    background-image: url(./images/detail/desktop/image-fylo-preview-1@2x.jpg);
+  }
+}
+
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--bookmark {
+  background-image: url(./images/detail/mobile/image-bookmark-preview-1@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--bookmark {
+    background-image: url(./images/detail/tablet/image-bookmark-preview-1@2x.jpg);
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--bookmark {
+    background-image: url(./images/detail/desktop/image-bookmark-preview-1@2x.jpg);
+  }
+}
+
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--insure {
+  background-image: url(./images/detail/mobile/image-insure-preview-1@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--insure {
+    background-image: url(./images/detail/tablet/image-insure-preview-1@2x.jpg);
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-1--insure {
+    background-image: url(./images/detail/desktop/image-insure-preview-1@2x.jpg);
+  }
+}
+
 .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--manage {
   background-image: url(./images/detail/mobile/image-manage-preview-2@2x.jpg);
 }
@@ -1279,6 +1375,54 @@ html.is-leaving .transition-fade {
 @media (min-width: 1110px) {
   .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--manage {
     background-image: url(./images/detail/desktop/image-manage-preview-2@2x.jpg);
+  }
+}
+
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--fylo {
+  background-image: url(./images/detail/mobile/image-fylo-preview-2@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--fylo {
+    background-image: url(./images/detail/tablet/image-fylo-preview-2@2x.jpg);
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--fylo {
+    background-image: url(./images/detail/desktop/image-fylo-preview-2@2x.jpg);
+  }
+}
+
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--bookmark {
+  background-image: url(./images/detail/mobile/image-bookmark-preview-2@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--bookmark {
+    background-image: url(./images/detail/tablet/image-bookmark-preview-2@2x.jpg);
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--bookmark {
+    background-image: url(./images/detail/desktop/image-bookmark-preview-2@2x.jpg);
+  }
+}
+
+.project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--insure {
+  background-image: url(./images/detail/mobile/image-insure-preview-2@2x.jpg);
+}
+
+@media (min-width: 768px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--insure {
+    background-image: url(./images/detail/tablet/image-insure-preview-2@2x.jpg);
+  }
+}
+
+@media (min-width: 1110px) {
+  .project-detail-content .project-detail-body .project-detail-previews .project-detail-preview-2--insure {
+    background-image: url(./images/detail/desktop/image-insure-preview-2@2x.jpg);
   }
 }
 
@@ -1349,9 +1493,17 @@ html.is-leaving .transition-fade {
   }
 }
 
+.project-nav .previous-project .project-nav-icon svg path,
+.project-nav .next-project .project-nav-icon svg path {
+  -webkit-transition: var(--transition) stroke;
+  transition: var(--transition) stroke;
+}
+
 .project-nav .previous-project .project-nav-text,
 .project-nav .next-project .project-nav-text {
   margin-top: 1.6rem;
+  -webkit-transition: var(--transition) color;
+  transition: var(--transition) color;
 }
 
 @media (min-width: 768px) {
@@ -1403,6 +1555,16 @@ html.is-leaving .transition-fade {
   .project-nav .next-project .project-nav-text {
     margin-right: 3.2rem;
   }
+}
+
+.previous-project:hover .project-nav-icon svg path,
+.next-project:hover .project-nav-icon svg path {
+  stroke: var(--color-cyan);
+}
+
+.previous-project:hover .project-nav-text,
+.next-project:hover .project-nav-text {
+  color: var(--color-cyan);
 }
 
 .t-feature {
