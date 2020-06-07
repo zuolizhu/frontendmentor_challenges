@@ -154,6 +154,13 @@
   }
 }
 
+.btn--submit {
+  background-color: #203A4C;
+  color: var(--color-white);
+  text-transform: uppercase;
+  padding: 1.7rem 2.4rem;
+}
+
 // call to action section cross pages
 .call-to-action {
   margin: 11.5rem 0 8rem;
@@ -261,6 +268,32 @@
             fill: rgb(118, 226, 203);
             box-shadow: 0 0 3.5rem rgb(118, 226, 203);
           }
+        }
+      }
+    }
+  }
+}
+
+// social icons in page
+.page-socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 10.4rem;
+  margin-top: 2.4rem;
+  &__social {
+    &__icon {
+      path {
+        fill: var(--color-dark-blue);
+        transition: var(--transition) fill, var(--transition) box-shadow;
+      }
+    }
+    &:hover {
+      .page-socials__social__icon {
+        path {
+          fill: var(--color-cyan);
+          box-shadow: 0 0 3.5rem var(--color-cyan);
         }
       }
     }

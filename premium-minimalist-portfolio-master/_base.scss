@@ -10,7 +10,10 @@
   --color-very-light-gray: #FAFAFA;
   --color-light-gray: #EAEAEB;
   --color-white: #FFFFFF;
+  
   --color-border-gray: #DCDCDE;
+  --color-form-input-bg: #E5E5E6;
+  --color-form-input-place-holder: rgba(51, 50, 61, .4);
   
   // Typography
   --font-family-sans: 'Public Sans', sans-serif;
@@ -55,6 +58,22 @@ ul {
 
 h1, h2, h3, p {
   margin: 0;
+}
+
+input, textarea {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  display: block;
 }
 
 // Type Specs
@@ -115,8 +134,16 @@ h1, h2, h3, p {
   color: var(--color-white);
 }
 
+.t-bold {
+  font-weight: var(--weight-bold);
+}
+
 .t-dark-gray {
   color: var(--color-grayish-dark-blue);
+}
+
+.t-opacity8 {
+  opacity: .8;
 }
 
 .t-nav-link {
@@ -135,6 +162,12 @@ h1, h2, h3, p {
 
 .t-nav-link--active {
   color: var(--color-cyan);
+}
+
+.t-form-label {
+  font-size: 1.3rem;
+  line-height: 3rem;
+  font-family: var(--font-family-sans);
 }
 
 /* Screen Reader Only */
