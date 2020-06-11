@@ -159,8 +159,19 @@
 .btn--submit {
   background-color: #203A4C;
   color: var(--color-white);
+  border: 1px solid transparent;
   text-transform: uppercase;
+  transform: translateY(0);
   padding: 1.7rem 2.4rem;
+  transition: var(--transition) background-color, var(--transition) border-color, var(--transition) transform;
+}
+
+.btn--submit:hover {
+  color: #203A4C;
+  background-color: transparent;
+  border-color: #203A4C;
+  transform: translateY(-2px);
+
 }
 
 // call to action section cross pages

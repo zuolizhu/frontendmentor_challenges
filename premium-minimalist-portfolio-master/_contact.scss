@@ -31,6 +31,9 @@
   @media (min-width: 1024px) {
     margin-top: 4.7rem;
     margin-bottom: 10.9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .contact-form {
@@ -40,6 +43,8 @@
     }
     @media (min-width: 1024px) {
       margin-top: 0;
+      width: 63.5rem;
+      max-width: 63.5rem;
     }
 
     &__input-group {
