@@ -860,7 +860,7 @@ html.is-leaving .transition-fade {
 
 @media (min-width: 1200px) {
   .home-about__content {
-    width: 34.7rem;
+    width: 34.65rem;
     max-width: 35rem;
     margin-left: 12.5rem;
   }
