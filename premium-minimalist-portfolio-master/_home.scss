@@ -1,6 +1,10 @@
 .main--home {
+  margin-top: 4rem;
   @media (min-width: 576px) {
     margin-top: 4.7rem;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 5.4rem;
   }
 }
 // section home-intro
@@ -95,7 +99,7 @@
       align-items: flex-start;
     }
     @media (min-width: 1200px) {
-      width: 35rem;
+      width: 34.7rem;
       max-width: 35rem;
       margin-left: 12.5rem;
     }

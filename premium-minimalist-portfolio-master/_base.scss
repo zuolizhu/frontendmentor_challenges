@@ -1,5 +1,5 @@
 /* Google Fonts CDN */
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap');
 
 :root {
   // Colors
@@ -22,6 +22,7 @@
   // Font Weights
   --weight-light: 300;
   --weight-regular: 400;
+  --weight-semiBold: 600;
   --weight-bold: 700;
 
   // spacing
@@ -147,11 +148,11 @@ label {
 }
 
 .t-nav-link {
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-  line-height: 1.6rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  line-height: 1.4rem;
   text-transform: uppercase;
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-semiBold);
   font-family: var(--font-family-sans);
   text-decoration: none;
   transition: var(--transition) color;
