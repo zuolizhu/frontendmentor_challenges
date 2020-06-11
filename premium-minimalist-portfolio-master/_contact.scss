@@ -1,3 +1,9 @@
+.main--contact {
+  @media (min-width: 768px) {
+    margin-top: 9.4rem;
+  }
+}
+
 .get-in-touch {
   border-top: 1px solid var(--color-border-gray);
   border-bottom: 1px solid var(--color-border-gray);
@@ -49,6 +55,9 @@
 
     &__input-group {
       margin-bottom: 2.4rem;
+      .form-label {
+        margin-bottom: .8rem;
+      }
     }
 
     &__input-field {
@@ -91,7 +100,7 @@ p.error {
   font-weight: var(--weight-bold);
   font-style: italic;
   margin-top: .4rem;
-  position: relative;
+  position: absolute;
   z-index: -1;
   height: 0;
   transform: translateY(0);

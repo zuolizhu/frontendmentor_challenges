@@ -453,13 +453,17 @@ html.is-leaving .transition-fade {
 }
 
 .btn--submit {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  line-height: 1.4rem;
+  font-weight: var(--weight-semiBold);
   background-color: #203A4C;
   color: var(--color-white);
   border: 1px solid transparent;
   text-transform: uppercase;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  padding: 1.7rem 2.4rem;
+  padding: 1.6rem 3.866rem;
   -webkit-transition: var(--transition) background-color, var(--transition) border-color, var(--transition) transform;
   transition: var(--transition) background-color, var(--transition) border-color, var(--transition) transform;
 }
@@ -673,7 +677,7 @@ html.is-leaving .transition-fade {
 }
 
 .page-socials__social__icon path {
-  fill: var(--color-dark-blue);
+  fill: var(--color-grayish-dark-blue);
   -webkit-transition: var(--transition) fill, var(--transition) box-shadow;
   transition: var(--transition) fill, var(--transition) box-shadow;
 }
@@ -1694,6 +1698,12 @@ html.is-leaving .transition-fade {
   line-height: 3.6rem;
 }
 
+@media (min-width: 768px) {
+  .main--contact {
+    margin-top: 9.4rem;
+  }
+}
+
 .get-in-touch {
   border-top: 1px solid var(--color-border-gray);
   border-bottom: 1px solid var(--color-border-gray);
@@ -1787,6 +1797,10 @@ html.is-leaving .transition-fade {
   margin-bottom: 2.4rem;
 }
 
+.contact .contact-form__input-group .form-label {
+  margin-bottom: .8rem;
+}
+
 .contact .contact-form__input-field {
   background-color: var(--color-form-input-bg);
   height: 4.8rem;
@@ -1839,7 +1853,7 @@ p.error {
   font-weight: var(--weight-bold);
   font-style: italic;
   margin-top: .4rem;
-  position: relative;
+  position: absolute;
   z-index: -1;
   height: 0;
   -webkit-transform: translateY(0);

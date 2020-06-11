@@ -164,12 +164,16 @@
 }
 
 .btn--submit {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  line-height: 1.4rem;
+  font-weight: var(--weight-semiBold);
   background-color: #203A4C;
   color: var(--color-white);
   border: 1px solid transparent;
   text-transform: uppercase;
   transform: translateY(0);
-  padding: 1.7rem 2.4rem;
+  padding: 1.6rem 3.866rem;
   transition: var(--transition) background-color, var(--transition) border-color, var(--transition) transform;
 }
 
@@ -309,7 +313,7 @@
   &__social {
     &__icon {
       path {
-        fill: var(--color-dark-blue);
+        fill: var(--color-grayish-dark-blue);
         transition: var(--transition) fill, var(--transition) box-shadow;
       }
     }
