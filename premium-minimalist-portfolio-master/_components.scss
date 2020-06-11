@@ -69,6 +69,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 4rem 0;
+        z-index: 1;
       }
       @media (min-width: 576px) {
         display: none;
@@ -98,6 +99,7 @@
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  outline: none;
 }
 
 .btn--primary {

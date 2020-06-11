@@ -10,7 +10,7 @@
   --color-white: #FFFFFF;
   --color-border-gray: #DCDCDE;
   --color-form-input-bg: #E5E5E6;
-  --color-form-input-place-holder: rgba(51, 50, 61, .4);
+  --color-form-input-place-holder: #9D9DA3;
   --font-family-sans: 'Public Sans', sans-serif;
   --font-family-serif: 'Ibarra Real Nova', serif;
   --weight-light: 300;
@@ -320,6 +320,7 @@ html.is-leaving .transition-fade {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 4rem 0;
+    z-index: 1;
   }
 }
 
@@ -355,6 +356,7 @@ html.is-leaving .transition-fade {
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  outline: none;
 }
 
 .btn--primary {
@@ -1740,11 +1742,15 @@ html.is-leaving .transition-fade {
   height: 4.8rem;
   width: 100%;
   padding: .9rem 1.6rem;
-  color: var(--color-form-input-place-holder);
+  color: var(--color-grayish-dark-blue);
   font-size: 1.3rem;
   line-height: 3rem;
   font-family: var(--font-family-sans);
   font-weight: var(--weight-regular);
+  outline: none;
+  border: 1px solid transparent;
+  -webkit-transition: var(--transition) border-color;
+  transition: var(--transition) border-color;
 }
 
 .contact .contact-form__input-field::-webkit-input-placeholder {
@@ -1765,5 +1771,38 @@ html.is-leaving .transition-fade {
 
 .contact .contact-form__input-field--textarea {
   height: 9.6rem;
+}
+
+.contact .contact-form__input-field.error {
+  border-color: var(--color-red);
+}
+
+.contact .contact-form__input-field:focus {
+  border-color: var(--color-cyan);
+}
+
+p.error {
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: var(--color-red);
+  font-family: var(--font-family-sans);
+  font-weight: var(--weight-bold);
+  font-style: italic;
+  margin-top: .4rem;
+  position: relative;
+  z-index: -1;
+  height: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: var(--transition) transform, var(--transition) opacity;
+  transition: var(--transition) transform, var(--transition) opacity;
+}
+
+p.error.hide {
+  height: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
 }
 /*# sourceMappingURL=style.css.map */

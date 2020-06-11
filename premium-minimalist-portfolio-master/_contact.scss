@@ -51,11 +51,14 @@
       height: 4.8rem;
       width: 100%;
       padding: .9rem 1.6rem;
-      color: var(--color-form-input-place-holder);
+      color: var(--color-grayish-dark-blue);
       font-size: 1.3rem;
       line-height: 3rem;
       font-family: var(--font-family-sans);
       font-weight: var(--weight-regular);
+      outline: none;
+      border: 1px solid transparent;
+      transition: var(--transition) border-color;
       &::placeholder {
         color: var(--color-form-input-place-holder);
       }
@@ -64,5 +67,35 @@
         height: 9.6rem;
       }
     }
+
+    &__input-field.error {
+      border-color: var(--color-red);
+    }
+
+    &__input-field:focus {
+      border-color: var(--color-cyan);
+    }
   }
+}
+
+p.error {
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: var(--color-red);
+  font-family: var(--font-family-sans);
+  font-weight: var(--weight-bold);
+  font-style: italic;
+  margin-top: .4rem;
+  position: relative;
+  z-index: -1;
+  height: 0;
+  transform: translateY(0);
+  opacity: 1;
+  transition: var(--transition) transform, var(--transition) opacity;
+}
+
+p.error.hide {
+  height: 0;
+  opacity: 0;
+  transform: translateY(-2rem);
 }
