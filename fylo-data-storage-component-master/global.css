@@ -1,0 +1,94 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+	/* colors */
+	--color-pale-blue: hsl(243, 100%, 93%);
+	--color-grayish-blue: hsl(229, 7%, 55%);
+	--color-dark-blue: hsl(228, 56%, 26%);
+	--color-very-dark-blue: hsl(229, 57%, 11%);
+	--color-white: #fff;
+
+	/* font weights */
+	--weight-regular: 400;
+	--weight-bold: 700;
+
+	/* Design elements */
+  --transition: 300ms ease-in-out;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+	font-size: 1.6rem;
+	font-weight: var(--weight-regular);
+  background-color: var(--color-very-dark-blue);
+}
+
+p {
+	margin: 0;
+}
+
+/* background pattern */
+body {
+	background-image: url(./images/bg-mobile.svg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+}
+@media (min-width: 960px) {
+	body {
+		background-image: url(./images/bg-desktop.svg);
+		background-size: contain;
+	}
+}
+
+/* Type specs */
+.t-unit {
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+	letter-spacing: 1px;
+	font-weight: var(--weight-bold);
+	color: var(--color-grayish-blue);
+}
+
+.t-number {
+	font-size: 4rem;
+	line-height: 4rem;
+	letter-spacing: 0;
+	font-weight: var(--weight-bold);
+	color: var(--color-very-dark-blue);
+}
+
+.t-body1 {
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+}
+
+.t-body2 {
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+}
+
+.t-bold {
+	font-weight: var(--weight-bold);
+}
+
+.t-pale-blue {
+	color: var(--color-pale-blue);
+}
