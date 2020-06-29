@@ -49,3 +49,15 @@ p {
     line-height: 1.6rem;
   }
 }
+
+.t-position {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-weight: var(--weight-bold);
+  color: #2B3939;
+}
+@media (min-width: 640px) {
+  .t-position {
+    font-size: 1.8rem;
+  }
+}

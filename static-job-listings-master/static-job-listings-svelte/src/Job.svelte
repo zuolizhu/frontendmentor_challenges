@@ -4,9 +4,9 @@
   export let company;
   export let isNew;
   export let isFeatured;
-  export let JobTitle;
-  export let postTime;
-  export let jobType;
+  export let position;
+  export let postedAt;
+  export let contract;
   export let location;
   export let keywords;
   // highlight first 2 cards
@@ -20,10 +20,15 @@
     <p class="t-company-name">{company}</p>
     {#if isNew}<p class="job-tag job-tag--new">new!</p>{/if}
     {#if isFeatured}<p class="job-tag job-tag--featured">featured</p>{/if}
+    <p class="t-position">{position}</p>
+    <p>{postedAt} {contract} {location}</p>
   </div>
 </div>
 
 <style type="text/scss">
+  .company-logo {
+    display: flex;
+  }
   .company-logo_img {
     width: 4.8rem;
     height: 4.8rem;
@@ -59,6 +64,9 @@
 
   .job-card:not(:last-of-type) {
     margin-bottom: 4rem;
+    @media (min-width: 640px) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   .job-tag {
@@ -78,5 +86,9 @@
     &--featured {
       background-color: #2B3939;
     }
+  }
+
+  .job-info {
+    margin-top: -1.1rem;
   }
 </style>
