@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "frontend-mentor-job-listings",
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
@@ -9,18 +9,17 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^12.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
-    "postcss": "^7.0.32",
-    "postcss-load-config": "^2.1.0",
+    "node-sass": "^4.14.1",
     "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^2.1.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
     "svelte": "^3.0.0",
-    "svelte-preprocess": "^3.9.9",
-    "tailwindcss": "^1.4.6"
+    "svelte-preprocess": "^3.9.10"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "normalize.css": "^8.0.1",
     "sirv-cli": "^0.4.4"
   }
 }

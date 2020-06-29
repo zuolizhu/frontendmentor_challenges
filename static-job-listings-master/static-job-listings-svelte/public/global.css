@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --color-dark-cyan: hsl(180, 29%, 50%);
+  --color-background: hsl(180, 52%, 96%);
+  --color-white: #fff;
+  --color-card-shadow: rgba(13, 113, 130, .15);
+  --weight-medium: 500;
+  --weight-bold: 700;
+  /* Design elements */
+  --transition: 300ms ease-in-out;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.t-medium {
+  font-weight: var(--weight-medium);
+}
+
+.t-bold {
+  font-weight: var(--weight-bold);
+}
+
+.t-company-name {
+  font-weight: var(--weight-bold);
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  color: var(--color-dark-cyan);
+  display: inline-block;
+  margin-right: 1.6rem;
+}
+@media (min-width: 640px) {
+  .t-company-name {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}

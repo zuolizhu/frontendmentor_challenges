@@ -5,8 +5,8 @@
     "id": 1,
     "company": "Photosnap",
     "logo": "../assets/images/photosnap.svg",
-    "new": true,
-    "featured": true,
+    "isNew": true,
+    "isFeatured": true,
     "position": "Senior Frontend Developer",
     "role": "Frontend",
     "level": "Senior",
@@ -20,8 +20,8 @@
     "id": 2,
     "company": "Manage",
     "logo": "../assets/images/manage.svg",
-    "new": true,
-    "featured": true,
+    "isNew": true,
+    "isFeatured": true,
     "position": "Fullstack Developer",
     "role": "Fullstack",
     "level": "Midweight",
@@ -35,8 +35,8 @@
     "id": 3,
     "company": "Account",
     "logo": "../assets/images/account.svg",
-    "new": true,
-    "featured": false,
+    "isNew": true,
+    "isFeatured": false,
     "position": "Junior Frontend Developer",
     "role": "Frontend",
     "level": "Junior",
@@ -50,8 +50,8 @@
     "id": 4,
     "company": "MyHome",
     "logo": "../assets/images/myhome.svg",
-    "new": false,
-    "featured": false,
+    "isNew": false,
+    "isFeatured": false,
     "position": "Junior Frontend Developer",
     "role": "Frontend",
     "level": "Junior",
@@ -65,8 +65,8 @@
     "id": 5,
     "company": "Loop Studios",
     "logo": "../assets/images/loop-studios.svg",
-    "new": false,
-    "featured": false,
+    "isNew": false,
+    "isFeatured": false,
     "position": "Software Engineer",
     "role": "FullStack",
     "level": "Midweight",
@@ -80,8 +80,8 @@
     "id": 6,
     "company": "FaceIt",
     "logo": "../assets/images/faceit.svg",
-    "new": false,
-    "featured": false,
+    "isNew": false,
+    "isFeatured": false,
     "position": "Junior Backend Developer",
     "role": "Backend",
     "level": "Junior",
@@ -95,8 +95,8 @@
     "id": 7,
     "company": "Shortly",
     "logo": "../assets/images/shortly.svg",
-    "new": false,
-    "featured": false,
+    "isNew": false,
+    "isFeatured": false,
     "position": "Junior Developer",
     "role": "Frontend",
     "level": "Junior",
@@ -110,8 +110,8 @@
     "id": 8,
     "company": "Insure",
     "logo": "../assets/images/insure.svg",
-    "new": false,
-    "featured": false,
+    "isNew": false,
+    "isFeatured": false,
     "position": "Junior Frontend Developer",
     "role": "Frontend",
     "level": "Junior",
@@ -125,8 +125,8 @@
     "id": 9,
     "company": "Eyecam Co.",
     "logo": "../assets/images/eyecam-co.svg",
-    "new": false,
-    "featured": false,
+    "isNew": false,
+    "isFeatured": false,
     "position": "Full Stack Engineer",
     "role": "Fullstack",
     "level": "Midweight",
@@ -140,8 +140,8 @@
     "id": 10,
     "company": "The Air Filter Company",
     "logo": "../assets/images/the-air-filter-company.svg",
-    "new": false,
-    "featured": false,
+    "isNew": false,
+    "isFeatured": false,
     "position": "Front-end Dev",
     "role": "Frontend",
     "level": "Junior",
@@ -153,8 +153,18 @@
   }
 ];
 </script>
-<section>
+<section class="job-list">
   {#each jobs as job (job.id)}
 	<Job {...job} />
   {/each}
 </section>
+
+<style type="text/scss">
+
+  .job-list {
+    padding: 3.2rem 2.4rem 0;
+    @media(min-width: 640px) {
+  
+    }
+  }
+</style>
