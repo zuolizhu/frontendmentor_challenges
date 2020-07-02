@@ -72,7 +72,6 @@
     }
   }
   .job-card {
-    cursor: pointer;
     background-color: var(--color-white);
     border-radius: .5rem;
     padding: 0 2.4rem 2.4rem 1.9rem;
@@ -88,8 +87,17 @@
       border-color: var(--color-dark-cyan);
     }
 
+    // tablet size
     @media (min-width: 640px) {
+      width: 100%;
       padding: 3.2rem 4rem 3.2rem 3.5rem;
+    }
+
+    // desktop size
+    @media (min-width: 960px) {
+      display: inline-flex;
+      align-items: center;
+      max-width: 111rem;
     }
   }
 
@@ -97,6 +105,8 @@
     margin-bottom: 4rem;
     @media (min-width: 640px) {
       margin-bottom: 2.4rem;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -128,6 +138,11 @@
     }
     .position {
       margin: .8rem 0;
+      cursor: pointer;
+      transition: var(--transition) color;
+      &:hover {
+        color: var(--color-dark-cyan);
+      }
     }
   }
 
@@ -140,7 +155,7 @@
   }
 
   .line-divider {
-    @media (max-width: 960px) {
+    @media (max-width: 959px) {
       height: .1rem;
       background-color: #B7C4C4;
       width: 100%;
@@ -165,6 +180,10 @@
   .role-level-languages {
     display: flex;
     flex-wrap: wrap;
+    // desktop size
+    @media (min-width: 960px) {
+      margin-left: auto;
+    }
   }
 
   .keyword {
@@ -179,5 +198,14 @@
     border-radius: .4rem;
     margin-right: 1.4rem;
     margin-top: 1.6rem;
+    cursor: pointer;
+    transition: var(--transition) color, var(--transition) background-color;
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-dark-cyan);;
+    }
+    @media (min-width: 960px) {
+      margin: 0;
+    }
   }
 </style>

@@ -164,7 +164,8 @@
   .job-list {
     padding: 3.2rem 2.4rem 0;
     @media(min-width: 640px) {
-  
+      display: flex;
+      flex-direction: column;
     }
   }
 </style>
