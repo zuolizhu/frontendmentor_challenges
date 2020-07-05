@@ -101,12 +101,15 @@
     }
   }
 
+  .job-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .job-card:not(:last-of-type) {
     margin-bottom: 4rem;
     @media (min-width: 640px) {
       margin-bottom: 2.4rem;
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 
@@ -135,6 +138,7 @@
       margin-top: 0;
       display: inline-block;
       margin-left: 2.4rem;
+      min-width: 27rem;
     }
     .position {
       margin: .8rem 0;
@@ -160,6 +164,7 @@
       background-color: #B7C4C4;
       width: 100%;
       margin-top: 1.6rem;
+      margin-bottom: 1.6rem;
     }
   }
 
@@ -178,11 +183,15 @@
   }
 
   .role-level-languages {
-    display: flex;
+    --gap: 1.6rem;
+    display: inline-flex;
     flex-wrap: wrap;
-    // desktop size
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+    width: calc(100% + var(--gap));
     @media (min-width: 960px) {
+      max-width: 48rem;
       margin-left: auto;
+      justify-content: flex-end;
     }
   }
 
@@ -196,16 +205,12 @@
     letter-spacing: -.1px;
     font-weight: var(--weight-bold);
     border-radius: .4rem;
-    margin-right: 1.4rem;
-    margin-top: 1.6rem;
+    margin: var(--gap) 0 0 var(--gap);
     cursor: pointer;
     transition: var(--transition) color, var(--transition) background-color;
     &:hover {
       color: var(--color-white);
       background-color: var(--color-dark-cyan);;
-    }
-    @media (min-width: 960px) {
-      margin: 0;
     }
   }
 </style>
