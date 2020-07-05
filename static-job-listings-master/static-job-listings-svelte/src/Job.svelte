@@ -1,4 +1,7 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
+
   export let id; 
   export let logo; 
   export let company;
@@ -15,6 +18,13 @@
 
   // highlight first 2 cards
   let isHighlighted = id < 3 ? ' border-highlighted' : '';
+
+  function updateRoleFilter() {
+    dispatch('updateRoleFilter', {
+      role: role
+    })
+  }
+
 </script>
 <div class="job-card{isHighlighted}">
   <div class="company-logo">
@@ -35,7 +45,7 @@
   </div>
   <div class="line-divider"></div>
   <div class="role-level-languages">
-    <div class="keyword">
+    <div class="keyword" on:click={updateRoleFilter}>
       {role}
     </div>
     <div class="keyword">

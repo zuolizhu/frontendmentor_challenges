@@ -152,10 +152,28 @@
     "tools": ["React", "Sass"]
   }
 ];
+
+let currentFilter = [];
+
+$: filteredJobs = currentFilter.length == 0 ? jobs : jobs.filter(job => currentFilter.includes(job.role));
+
+function updateFilter() {
+  let temp = [{"role": "Frontend"}];
+  currentFilter = temp.map(item => { return item.role })
+
+}
+
+function handleUpdateRoleFilter(event) {
+  updateFilter();
+  // console.log(event.detail);
+  // console.log(event.detail.role);
+
+}
+
 </script>
 <section class="job-list">
-  {#each jobs as job (job.id)}
-	<Job {...job} />
+  {#each filteredJobs as job (job.id)}
+	<Job {...job} on:updateRoleFilter={handleUpdateRoleFilter} />
   {/each}
 </section>
 
