@@ -12,5 +12,8 @@
 <style type="text/scss">
 	.main {
 		background-color: var(--color-background);
+		@media (min-width: 960px) {
+			padding-bottom: 12rem;
+		}
 	}
 </style>

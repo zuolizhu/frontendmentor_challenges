@@ -211,10 +211,10 @@ function handleRemoveKeyword(event) {
   currentFilter = temp.map(item => { return item.id })
 }
 
-  function handleClear() {
-    selectedKeywords = [];
-    currentFilter = [];
-  }
+function handleClear() {
+  selectedKeywords = [];
+  currentFilter = [];
+}
 
 
 </script>
@@ -256,6 +256,7 @@ function handleRemoveKeyword(event) {
 
   .jobs-filter {
     background-color: var(--color-white);
+    box-shadow: 0 1.5rem 2rem -.5rem var(--color-card-shadow);
     padding: 2rem 2.4rem 2rem 1.9rem;
     display: inline-flex;
     align-items: center;
@@ -269,6 +270,7 @@ function handleRemoveKeyword(event) {
     @media (min-width: 960px) {
       transform: translateY(-11.2rem);
       margin-bottom: -7.2rem;
+      padding: 2rem 4rem;
     }
   }
 

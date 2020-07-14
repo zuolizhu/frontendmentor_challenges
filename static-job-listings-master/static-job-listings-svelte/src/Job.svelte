@@ -130,7 +130,8 @@
     border-radius: 1.2rem;
     display: inline-block;
     color: var(--color-white);
-    margin-right: .8rem;
+    margin-right: .5rem;
+    margin-bottom: -.4rem;
     &--new {
       background-color: #5CA5A5;
     }
@@ -140,7 +141,7 @@
   }
 
   .job-info {
-    margin-top: -1.1rem;
+    margin-top: -1.6rem;
     @media (min-width: 640px) {
       margin-top: 0;
       display: inline-block;
@@ -148,7 +149,7 @@
       min-width: 27rem;
     }
     .position {
-      margin: .8rem 0;
+      margin: 1.2rem 0 .8rem;
       cursor: pointer;
       transition: var(--transition) color;
       &:hover {
@@ -163,6 +164,9 @@
     background-color: #B7C4C4;
     border-radius: 50%;
     margin: 0 .8rem;
+    @media (min-width: 960px) {
+      margin: 0 1.6rem;
+    }
   }
 
   .line-divider {
