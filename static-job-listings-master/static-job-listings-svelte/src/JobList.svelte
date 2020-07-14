@@ -198,6 +198,18 @@ function handleKeywordsFilterUpdate(event) {
   keywordsFilterUpdate(event.detail);
 }
 
+function handleRemoveKeyword(event) {
+  // remove keywords from list
+  selectedKeywords = selectedKeywords.filter(keyword => keyword !== event.detail);
+  // re-render the list
+  const temp = [];
+  jobIdswKeywords.forEach((jobIdwKeywords) => {
+    if (isMetConditions(jobIdwKeywords.keywords, selectedKeywords)) {
+      temp.push({"id": jobIdwKeywords.id});
+    }
+  });
+  currentFilter = temp.map(item => { return item.id })
+}
 
 
 </script>
@@ -208,7 +220,9 @@ function handleKeywordsFilterUpdate(event) {
     <div class="jobs-filter">
       <div class="clicked-keywords-container">
         {#each selectedKeywords as keyword (keyword)}
-          <ClickedKeyword keyword={keyword} />
+          <ClickedKeyword 
+            keyword={keyword}
+            on:removeKeyword={handleRemoveKeyword} />
         {/each}
       </div>
       <button class="jobs-filter__clear">Clear</button>
