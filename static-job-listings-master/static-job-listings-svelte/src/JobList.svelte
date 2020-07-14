@@ -177,7 +177,7 @@ function isMetConditions(keywords, selectedKeywords) {
 }
 
 // update existing filter list
-function updateFilter(keyword) {
+function keywordsFilterUpdate(keyword) {
   // add keyword to list
   if (!selectedKeywords.includes(keyword)) {
     selectedKeywords.push(keyword);
@@ -192,8 +192,8 @@ function updateFilter(keyword) {
 }
 
 
-function handleUpdateRoleFilter(event) {
-  updateFilter(event.detail);
+function handleKeywordsFilterUpdate(event) {
+  keywordsFilterUpdate(event.detail);
 }
 
 
@@ -201,7 +201,7 @@ function handleUpdateRoleFilter(event) {
 </script>
 <section class="job-list">
   {#each filteredJobs as job (job.id)}
-	<Job {...job} on:updateRoleFilter={handleUpdateRoleFilter} />
+	<Job {...job} on:keywordsFilterUpdate={handleKeywordsFilterUpdate} />
   {/each}
 </section>
 

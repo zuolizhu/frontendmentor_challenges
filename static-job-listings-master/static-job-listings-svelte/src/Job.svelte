@@ -19,11 +19,8 @@
   // highlight first 2 cards
   let isHighlighted = id < 3 ? ' border-highlighted' : '';
 
-  function updateRoleFilter(event) {
-    // dispatch('updateRoleFilter', {
-    //   role: role
-    // })
-    dispatch('updateRoleFilter', event.target.innerText)
+  function keywordsFilterUpdate(event) {
+    dispatch('keywordsFilterUpdate', event.target.innerText);
   }
 
 </script>
@@ -46,19 +43,19 @@
   </div>
   <div class="line-divider"></div>
   <div class="role-level-languages">
-    <div class="keyword" on:click={updateRoleFilter}>
+    <div class="keyword" on:click={keywordsFilterUpdate}>
       {role}
     </div>
-    <div class="keyword" on:click={updateRoleFilter}>
+    <div class="keyword" on:click={keywordsFilterUpdate}>
       {level}
     </div>
     {#each languages as language}
-    <div class="keyword" on:click={updateRoleFilter}>
+    <div class="keyword" on:click={keywordsFilterUpdate}>
       {language}
     </div>
     {/each}
     {#each tools as tool}
-    <div class="keyword" on:click={updateRoleFilter}>
+    <div class="keyword" on:click={keywordsFilterUpdate}>
       {tool}
     </div>
     {/each}
