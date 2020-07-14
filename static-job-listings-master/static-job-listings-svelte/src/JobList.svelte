@@ -241,8 +241,8 @@ function handleKeywordsFilterUpdate(event) {
     display: inline-flex;
     align-items: center;
     border-radius: .5rem;
-    margin-bottom: -1.2rem;
-    transform: translateY(-6.8rem);
+    margin-bottom: -3.6rem;
+    transform: translateY(-9.2rem);
     width: 100%;
     max-width: 111rem;
     margin-left: auto;
