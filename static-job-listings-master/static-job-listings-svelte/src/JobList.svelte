@@ -5,7 +5,7 @@
   {
     "id": 1,
     "company": "Photosnap",
-    "logo": "../assets/images/photosnap.svg",
+    "logo": "./assets/images/photosnap.svg",
     "isNew": true,
     "isFeatured": true,
     "position": "Senior Frontend Developer",
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "company": "Manage",
-    "logo": "../assets/images/manage.svg",
+    "logo": "./assets/images/manage.svg",
     "isNew": true,
     "isFeatured": true,
     "position": "Fullstack Developer",
@@ -35,7 +35,7 @@
   {
     "id": 3,
     "company": "Account",
-    "logo": "../assets/images/account.svg",
+    "logo": "./assets/images/account.svg",
     "isNew": true,
     "isFeatured": false,
     "position": "Junior Frontend Developer",
@@ -50,7 +50,7 @@
   {
     "id": 4,
     "company": "MyHome",
-    "logo": "../assets/images/myhome.svg",
+    "logo": "./assets/images/myhome.svg",
     "isNew": false,
     "isFeatured": false,
     "position": "Junior Frontend Developer",
@@ -65,7 +65,7 @@
   {
     "id": 5,
     "company": "Loop Studios",
-    "logo": "../assets/images/loop-studios.svg",
+    "logo": "./assets/images/loop-studios.svg",
     "isNew": false,
     "isFeatured": false,
     "position": "Software Engineer",
@@ -80,7 +80,7 @@
   {
     "id": 6,
     "company": "FaceIt",
-    "logo": "../assets/images/faceit.svg",
+    "logo": "./assets/images/faceit.svg",
     "isNew": false,
     "isFeatured": false,
     "position": "Junior Backend Developer",
@@ -95,7 +95,7 @@
   {
     "id": 7,
     "company": "Shortly",
-    "logo": "../assets/images/shortly.svg",
+    "logo": "./assets/images/shortly.svg",
     "isNew": false,
     "isFeatured": false,
     "position": "Junior Developer",
@@ -110,7 +110,7 @@
   {
     "id": 8,
     "company": "Insure",
-    "logo": "../assets/images/insure.svg",
+    "logo": "./assets/images/insure.svg",
     "isNew": false,
     "isFeatured": false,
     "position": "Junior Frontend Developer",
@@ -125,7 +125,7 @@
   {
     "id": 9,
     "company": "Eyecam Co.",
-    "logo": "../assets/images/eyecam-co.svg",
+    "logo": "./assets/images/eyecam-co.svg",
     "isNew": false,
     "isFeatured": false,
     "position": "Full Stack Engineer",
@@ -140,7 +140,7 @@
   {
     "id": 10,
     "company": "The Air Filter Company",
-    "logo": "../assets/images/the-air-filter-company.svg",
+    "logo": "./assets/images/the-air-filter-company.svg",
     "isNew": false,
     "isFeatured": false,
     "position": "Front-end Dev",
@@ -220,6 +220,7 @@ function handleClear() {
 </script>
 
 <section class="job-list">
+  <h2 class="sr-only">Jobs list down below</h2>
   <!-- filter -->
   {#if selectedKeywords.length > 0}
     <div class="jobs-filter">
