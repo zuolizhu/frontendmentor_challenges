@@ -211,6 +211,11 @@ function handleRemoveKeyword(event) {
   currentFilter = temp.map(item => { return item.id })
 }
 
+  function handleClear() {
+    selectedKeywords = [];
+    currentFilter = [];
+  }
+
 
 </script>
 
@@ -225,7 +230,7 @@ function handleRemoveKeyword(event) {
             on:removeKeyword={handleRemoveKeyword} />
         {/each}
       </div>
-      <button class="jobs-filter__clear">Clear</button>
+      <button class="jobs-filter__clear" on:click={handleClear}>Clear</button>
     </div>
   {/if}
   <!-- jobs -->
