@@ -11,6 +11,7 @@ html {
 :root {
   --color-dark-cyan: hsl(180, 29%, 50%);
   --color-background: hsl(180, 52%, 96%);
+  --color-light-cyan: #EEF6F6;
   --color-white: #fff;
   --color-card-shadow: rgba(13, 113, 130, .15);
   --weight-medium: 500;

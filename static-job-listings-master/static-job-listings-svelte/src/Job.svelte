@@ -205,7 +205,7 @@
   .keyword {
     display: inline-block;
     color: var(--color-dark-cyan);
-    background-color: #EEF6F6;
+    background-color: var(--color-light-cyan);
     padding: .4rem .8rem;
     font-size: 1.3rem;
     line-height: 2.4rem;

@@ -204,11 +204,16 @@ function handleKeywordsFilterUpdate(event) {
 
 <section class="job-list">
   <!-- filter -->
-  <div class="jobs-filter">
-    {#each selectedKeywords as keyword (keyword)}
-      <ClickedKeyword keyword={keyword} />
-    {/each}
-  </div>
+  {#if selectedKeywords.length > 0}
+    <div class="jobs-filter">
+      <div class="clicked-keywords-container">
+        {#each selectedKeywords as keyword (keyword)}
+          <ClickedKeyword keyword={keyword} />
+        {/each}
+      </div>
+      <button class="jobs-filter__clear">Clear</button>
+    </div>
+  {/if}
   <!-- jobs -->
   {#each filteredJobs as job (job.id)}
 	<Job {...job} on:keywordsFilterUpdate={handleKeywordsFilterUpdate} />
@@ -218,10 +223,57 @@ function handleKeywordsFilterUpdate(event) {
 <style type="text/scss">
 
   .job-list {
-    padding: 3.2rem 2.4rem 0;
+    height: 100%;
+    min-height: 100vh;
+    padding: 5.6rem 2.4rem 3.2rem;
     @media(min-width: 640px) {
       display: flex;
       flex-direction: column;
     }
+    @media(min-width: 960px) {
+      padding: 7.6rem 2.4rem 0;
+    }
   }
+
+  .jobs-filter {
+    background-color: var(--color-white);
+    padding: 2rem 2.4rem 2rem 1.9rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: .5rem;
+    margin-bottom: -1.2rem;
+    transform: translateY(-6.8rem);
+    width: 100%;
+    max-width: 111rem;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 960px) {
+      transform: translateY(-11.2rem);
+      margin-bottom: -7.2rem;
+    }
+  }
+
+  .clicked-keywords-container {
+    --gap: 1.6rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+    width: calc(100% + var(--gap));
+  }
+
+  .jobs-filter__clear {
+    color: #7C8F8F;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: var(--weight-bold);
+    line-height: 2.4rem;
+    font-size: 1.3rem;
+    transition: var(--transition) color;
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-dark-cyan);
+    }
+  }
+
 </style>
