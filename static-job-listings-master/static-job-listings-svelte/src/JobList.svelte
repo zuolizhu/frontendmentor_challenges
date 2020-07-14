@@ -1,5 +1,6 @@
 <script>
   import Job from './Job.svelte';
+  import ClickedKeyword from './ClickedKeyword.svelte';
   const jobs = [
   {
     "id": 1,
@@ -167,7 +168,7 @@ const jobIdswKeywords = jobs.map(job => {
 
 let currentFilter = [];
 
-const selectedKeywords = [];
+let selectedKeywords = [];
 
 $: filteredJobs = currentFilter.length == 0 ? jobs : jobs.filter(job => currentFilter.includes(job.id));
 
@@ -180,7 +181,8 @@ function isMetConditions(keywords, selectedKeywords) {
 function keywordsFilterUpdate(keyword) {
   // add keyword to list
   if (!selectedKeywords.includes(keyword)) {
-    selectedKeywords.push(keyword);
+    // updating array by assignment in order to trigger the reactivity
+    selectedKeywords = [...selectedKeywords, keyword];
   }
   const temp = [];
   jobIdswKeywords.forEach((jobIdwKeywords) => {
@@ -199,7 +201,15 @@ function handleKeywordsFilterUpdate(event) {
 
 
 </script>
+
 <section class="job-list">
+  <!-- filter -->
+  <div class="jobs-filter">
+    {#each selectedKeywords as keyword (keyword)}
+      <ClickedKeyword keyword={keyword} />
+    {/each}
+  </div>
+  <!-- jobs -->
   {#each filteredJobs as job (job.id)}
 	<Job {...job} on:keywordsFilterUpdate={handleKeywordsFilterUpdate} />
   {/each}

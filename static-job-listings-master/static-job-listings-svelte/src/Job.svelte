@@ -16,8 +16,7 @@
   export let languages;
   export let tools;
 
-  // highlight first 2 cards
-  let isHighlighted = id < 3 ? ' border-highlighted' : '';
+  let isHighlighted = isFeatured ? ' border-highlighted' : '';
 
   function keywordsFilterUpdate(event) {
     dispatch('keywordsFilterUpdate', event.target.innerText);
