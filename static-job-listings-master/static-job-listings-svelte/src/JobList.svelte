@@ -153,22 +153,50 @@
   }
 ];
 
+// extracting keywords
+const jobIdswKeywords = jobs.map(job => {
+  let keywords = [];
+  keywords.push(job.role);
+  keywords.push(job.level);
+  keywords = keywords.concat(job.languages);
+  keywords = keywords.concat(job.tools);
+  // return object with id and keywords
+  const jobIdwKeywords = { id: job.id, keywords };
+  return jobIdwKeywords;
+});
+
 let currentFilter = [];
 
-$: filteredJobs = currentFilter.length == 0 ? jobs : jobs.filter(job => currentFilter.includes(job.role));
+const selectedKeywords = [];
 
-function updateFilter() {
-  let temp = [{"role": "Frontend"}];
-  currentFilter = temp.map(item => { return item.role })
+$: filteredJobs = currentFilter.length == 0 ? jobs : jobs.filter(job => currentFilter.includes(job.id));
 
+// check if all selected keywords match this job keywords
+function isMetConditions(keywords, selectedKeywords) {
+  return selectedKeywords.every(keyword => keywords.includes(keyword));
 }
+
+// update existing filter list
+function updateFilter(keyword) {
+  // add keyword to list
+  if (!selectedKeywords.includes(keyword)) {
+    selectedKeywords.push(keyword);
+  }
+  const temp = [];
+  jobIdswKeywords.forEach((jobIdwKeywords) => {
+    if (isMetConditions(jobIdwKeywords.keywords, selectedKeywords)) {
+      temp.push({"id": jobIdwKeywords.id});
+    }
+  });
+  currentFilter = temp.map(item => { return item.id })
+}
+
 
 function handleUpdateRoleFilter(event) {
-  updateFilter();
-  // console.log(event.detail);
-  // console.log(event.detail.role);
-
+  updateFilter(event.detail);
 }
+
+
 
 </script>
 <section class="job-list">
