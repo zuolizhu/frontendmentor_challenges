@@ -50,6 +50,8 @@ body {
   outline: none;
 }
 
+
+
 a {
   text-decoration: none;
 }
@@ -58,6 +60,13 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
 // Screen Reader Only
@@ -92,4 +101,53 @@ ul {
   line-height: 1.6rem;
   letter-spacing: -.11px;
   color: var(--color-grayish-blue);
+  transition: var(--transition) color;
+}
+
+.t-h1 {
+  font-weight: var(--weight-light);
+  font-size: 4rem;
+  line-height: 4.7rem;
+  letter-spacing: -.71px;
+  color: var(--color-dark-blue);
+  @media (min-width: 768px) {
+    font-size: 5.6rem;
+    line-height: 6.4rem;
+    letter-spacing: -1px;
+  }
+}
+
+.t-body1 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -.23px;
+  font-weight: var(--weight-regular);
+  color: var(--color-grayish-blue);
+  @media (min-width:768px) {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: -.28px;
+  }
+}
+
+// Buttons
+@mixin request-button {
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  border-radius: 2.2rem;
+  padding: .8rem 3.3rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  background: linear-gradient(135deg, #33D35E, #2AB6D9);
+  transition: var(--transition) opacity;
+}
+
+.button {
+  &--request {
+    @include request-button;
+    &:hover {
+      opacity: .6;
+    }
+  }
 }

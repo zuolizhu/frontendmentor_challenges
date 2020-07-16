@@ -1,0 +1,84 @@
+.main {
+  overflow: hidden;
+}
+
+.intro {
+  overflow-y: hidden;
+  background-color: var(--color-light-gray);
+  padding-bottom: 8.8rem;
+
+  @media (min-width: 1200px) {
+    height: 65.6rem;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    position: relative;
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: relative;
+    overflow-y: visible;
+  }
+
+  &__image-container {
+    background-image: url(./images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: bottom;
+    height: 75.2vw;
+    position: relative;
+
+    @media (min-width: 1200px) {
+      background: none;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      padding: 0 2.4rem;
+      position: absolute;
+      bottom: -1.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 82rem;
+      @media (min-width: 1200px) {
+        padding: 0;
+        transform: translateX(0);
+        width: auto;
+        max-width: none;
+        transform: translate(10.3rem, 14.4rem);
+      }
+    }
+  }
+
+  &__content {
+    padding: 0 2.4rem;
+    text-align: center;
+    @media (min-width: 1200px) {
+      text-align: left;
+      padding: 0;
+      max-width: 111rem;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    &__heading {
+      margin-top: 4rem;
+      @media (min-width: 1200px) {
+        margin-top: 0;
+      }
+    }
+    &__body {
+      margin: 1.6rem auto 3.2rem;
+      @media (min-width: 1200px) {
+        max-width: 44.7rem;
+        margin: 2.4rem 0 3.6rem;
+      }
+    }
+  }
+}

@@ -2,14 +2,28 @@
 .header {
   height: 6.4rem;
   width: 100%;
+  text-align: center;
   background-color: var(--color-white);
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2.4rem;
 
   @media (min-width: 640px) {
     height: 8rem;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    max-width: 111rem;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    @media (min-width: 1080px) {
+      justify-content: flex-start;
+    }
+    @media (min-width: 1158px) {
+      padding: 0;
+    }
   }
 
   .branding {
@@ -28,12 +42,44 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        &__item {
+          height: 100%;
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+          position: relative;
+          &__underline {
+            opacity: 0;
+            background: linear-gradient(45deg, #33D35E, #2AB6D9);
+            width: 100%;
+            height: .4rem;
+            position: absolute;
+            bottom: 0;
+            transition: var(--transition) opacity;
+          }
+          &:hover .desk-nav__menu__item__underline {
+            opacity: 1;
+          }
+          &:hover .t-desk-nav {
+            color: var(--color-dark-blue);
+          }
+        }
       }
+    }
+    @media (min-width: 1080px) {
+      margin-left: auto;
+      margin-right: 22.8rem;
     }
   }
 
   .nav-request {
     display: none;
+    @media (min-width: 768px) {
+      @include request-button;
+      &:hover {
+        opacity: .6;
+      }
+    }
   }
 
   .mobile-nav {
@@ -71,6 +117,7 @@
 .header.sticky {
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 .header-spacer {
