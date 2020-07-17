@@ -1,0 +1,134 @@
+// Typography import
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
+
+:root {
+  // Colors
+  --color-bright-red: hsl(12, 88%, 59%);
+  --color-dark-blue: hsl(228, 39%, 23%);
+  --color-dark-grayish-blue: hsl(227, 12%, 61%);
+  --color-very-dark-blue: hsl(233, 12%, 13%);
+  --color-very-pale-red: hsl(13, 100%, 96%);
+  --color-very-light-gray: hsl(0, 0%, 98%);
+  --color-light-red: #FCF6F5;
+  --color-white: #fff;
+
+  // Font Weights
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  // Design elements
+  --transition: 300ms ease-in-out;
+}
+
+// Reset
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Be Vietnam', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--color-white);
+  color: var(--color-dark-blue);
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+// Screen Reader Only
+.sr-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
+// Type Specs
+.t-mobile-nav {
+  font-weight: var(--weight-bold);
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  letter-spacing: -.29px;
+  color: var(--color-dark-blue);
+}
+
+.t-desk-nav {
+  font-weight: var(--weight-medium);
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  color: var(--color-dark-blue);
+  letter-spacing: 0px;
+}
+
+// Buttons
+.button {
+  &--getstart {
+    font-size: 1.3rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.9rem;
+    letter-spacing: 0px;
+    color: var(--color-light-red);
+    background-color: var(--color-bright-red);
+    padding: 1.2rem 3.2rem 1.3rem;
+    box-shadow: 0 1.5rem 1.5rem -1rem #FF9F8E;
+    border-radius: 2.2rem;
+    transition: var(--transition) background-color, 
+    var(--transition) transform, var(--transition) box-shadow;
+    &:hover {
+      background-color: #F98F75;
+      transform: translateY(-2px);
+      box-shadow: 0 2rem 2rem -1.5rem #FF9F8E;
+    }
+  }
+}
+
+// body bg image
+body {
+  background-repeat: no-repeat;
+  background-image: url(./images/bg-simplify-section-mobile.svg);
+  background-size: contain;
+  background-position-x: right;
+  background-position-y: top;
+  @media (min-width: 768px) {
+    background-size: cover;
+    background-image: url(./images/bg-simplify-section-desktop.svg);
+  }
+}

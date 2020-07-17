@@ -1,0 +1,116 @@
+// Header
+.header {
+  text-align: center;
+  .container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 4rem;
+    height: 2.2rem;
+    padding: 0 2.4rem;
+    @media (min-width: 900px) {
+      height: 4.4rem;
+      margin-top: 5.6rem;
+    }
+    @media (min-width: 1148px) {
+      max-width: 111rem;
+      padding: 0;
+      margin: 5.6rem auto 0;
+      justify-content: flex-start;
+    }
+  }
+
+  .branding {
+    display: inline-flex;
+  }
+
+  .desk-nav {
+    display: none;
+    @media (min-width: 768px) {
+      display: inline-flex;
+      align-items: center;
+      &__menu {
+        align-items: center;
+        display: inline-flex;
+        width: 39.8rem;
+        justify-content: space-between;
+        &__item {
+          align-items: center;
+          display: inline-flex;
+          transition: var(--transition) opacity;
+          &:hover {
+            opacity: .5;
+          }
+        }
+      }
+    }
+    @media (min-width: 1148px) {
+      margin-left: auto;
+      margin-right: 21.9rem;
+    }
+  }
+
+  .nav-button {
+    display: none;
+    @media (min-width: 900px) {
+      display: inline-flex;
+    }
+  }
+
+  .burger-button {
+    @media (max-width: 767px) {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      width: 2.5rem;
+      height: 2.2rem;
+      z-index: 10;
+    }
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .mobile-nav-icon {
+    position: absolute;
+    transition: var(--transition) transform, var(--transition) opacity;
+  }
+  .burger-button.active .mobile-nav-icon--burger {
+    transform: rotate( 90deg ) scale( 0 );
+    opacity: 0;
+  }
+  .burger-button:not(.active) .mobile-nav-icon--close {
+    transform: rotate( 90deg ) scale( 0 );
+    opacity: 0;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .mobile-nav.show {
+    @media (max-width: 767px) {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .6));
+    }
+
+    .mobile-nav__menu {
+      margin: 10.3rem auto 0;
+      width: 87.2%;
+      background-color: var(--color-white);
+      text-align: center;
+      border-radius: .4rem;
+      padding: 4rem 0;
+
+      &__item:not(:last-of-type) {
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+}
