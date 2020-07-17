@@ -65,6 +65,7 @@ ul {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }
@@ -117,6 +118,31 @@ p {
   }
 }
 
+.t-h2 {
+  font-weight: var(--weight-light);
+  font-size: 3.2rem;
+  line-height: 3.7rem;
+  letter-spacing: -.57px;
+  color: var(--color-dark-blue);
+  @media (min-width: 768px) {
+    font-size: 4rem;
+    line-height: 6.4rem;
+    letter-spacing: -.71px;
+  }
+}
+
+.t-h3 {
+  font-weight: var(--weight-light);
+  font-size: 2rem;
+  line-height: 2.8rem;
+  letter-spacing: -.36px;
+  color: var(--color-dark-blue);
+  @media (min-width: 768px) {
+    font-size: 2.4rem;
+    letter-spacing: -.43px;
+  }
+}
+
 .t-body1 {
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -128,6 +154,64 @@ p {
     line-height: 2.8rem;
     letter-spacing: -.28px;
   }
+}
+
+.t-body2 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -.23px;
+  font-weight: var(--weight-regular);
+  color: var(--color-grayish-blue);
+  @media (min-width:768px) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: -.25px;
+  }
+}
+
+.t-author-name {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  letter-spacing: -.16px;
+  color: var(--color-grayish-blue);
+  font-weight: var(--weight-regular);
+}
+
+.t-card-heading {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: -.29px;
+  font-weight: var(--weight-light);
+  color: var(--color-dark-blue);
+}
+
+.t-card-body {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  letter-spacing: -.2px;
+  font-weight: var(--weight-regular);
+  color: var(--color-grayish-blue);
+}
+
+.t-footer-nav {
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  letter-spacing: -.23px;
+  font-weight: var(--weight-regular);
+  color: var(--color-white);
+  transition: var(--transition) color;
+  &:hover {
+    color: var(--color-lime-green);
+  }
+}
+
+.t-footer-copy {
+  color: var(--color-white);
+  opacity: .5;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  letter-spacing: -.23px;
+  font-weight: var(--weight-regular);
 }
 
 // Buttons

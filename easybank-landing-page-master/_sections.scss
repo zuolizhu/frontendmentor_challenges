@@ -82,3 +82,129 @@
     }
   }
 }
+
+// Features section
+// Media query point: 1200px maybe
+.features {
+  background-color: var(--color-light-grayish-blue);
+  padding: 6.4rem 0;
+  text-align: center;
+  @media (min-width: 1200px) {
+    text-align: left;
+    padding: 9.6rem 0 10.2rem;
+  }
+
+  .container {
+    padding: 0 2.4rem;
+    @media (min-width: 1200px) {
+      padding: 0;
+      max-width: 111rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__copy-body {
+    max-width: 63.5rem;
+    margin: 1.6rem auto 0;
+    @media (min-width: 1200px) {
+      margin: 1.6rem 0 0;
+    }
+  }
+
+  .cards-container {
+    margin-top: 5.6rem;
+    display: grid;
+    gap: 3.2rem;
+    justify-items: center;
+    @media (min-width: 680px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      margin-top: 7.2rem;
+    }
+
+    .card {
+      max-width: 37rem;
+      &__icon {
+        height: 7.2rem;
+      }
+      &__heading {
+        margin-top: 2.4rem;
+        margin-bottom: 1.6rem;
+        @media (min-width: 1200px) {
+          margin-top: 4rem;
+          margin-bottom: 2.6rem;
+        }
+      }
+    }
+  }
+}
+
+.articles {
+  background-color: var(--color-light-gray);
+  padding: 8.8rem 0 8.4rem;
+  @media (min-width: 1200px) {
+    padding: 8rem 0;
+  }
+
+  .container {
+    padding: 0 2.4rem;
+    @media (min-width: 1200px) {
+      padding: 0;
+      max-width: 111rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    @media (min-width: 1200px) {
+      text-align: left;
+    }
+  }
+
+  .cards-container {
+    margin-top: 3.2rem;
+    display: grid;
+    gap: 2.4rem;
+    justify-items: center;
+    @media (min-width: 680px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+  }
+
+  .card {
+    &__image {
+      height: 20rem;
+      width: 100%;
+      overflow-y: hidden;
+      img {
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__content {
+      background-color: var(--color-white);
+      border-bottom-left-radius: .5rem;
+      border-bottom-right-radius: .5rem;
+      padding: 2.6rem 3.1rem 4.2rem;
+      @media (min-width: 1200px) {
+        padding: 2.6rem 2.4rem 2.4rem;
+      }
+      
+      &__heading {
+        margin: .8rem 0;
+      }
+    }
+  }
+}

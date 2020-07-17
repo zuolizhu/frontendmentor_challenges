@@ -28,6 +28,9 @@
 
   .branding {
     display: inline-flex;
+    @media (min-width: 768px) {
+      margin-top: .5rem;
+    }
   }
 
   .desk-nav {
@@ -138,6 +141,128 @@
     }
     @media (min-width: 640px) {
       display: none;
+    }
+  }
+}
+
+
+// Footer
+.footer {
+  background-color: var(--color-dark-blue);
+  padding: 4rem 0;
+  text-align: center;
+
+  @media (min-width: 1200px) {
+    padding: 4.8rem 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 111rem;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media (min-width: 1200px) {
+      justify-content: flex-start;
+    }
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+      width: 15.4rem;
+    }
+
+    .footer-logo {
+      display: inline-flex;
+      justify-content: center;
+      width: 100%;
+      @media (min-width: 960px) {
+        justify-content: flex-start;
+      }
+    }
+
+    .socials {
+      display: inline-flex;
+      justify-content: space-between;
+      margin-top: 3.6rem;
+      width: 18.4rem;
+      max-width: 18.4rem;
+      @media (min-width: 768px) {
+        width: 15.4rem;
+        max-width: 15.4rem;
+        margin-top: 5.5rem;
+      }
+  
+      .social {
+        display: inline-flex;
+        transform: scale(1.2);
+        
+        @media (min-width: 768px) {
+          transform: scale(1);
+        }
+
+        a {
+          display: inline-flex;
+        }
+        a svg path {
+          transition: var(--transition) fill;
+        }
+  
+        &:hover {
+          a svg path {
+            fill: var(--color-lime-green);
+          }
+        }
+      }
+    }
+  }
+
+
+  .footer-menu {
+    display: grid;
+    width: 100%;
+    gap: .8rem;
+    margin: 3.2rem 0;
+    @media (min-width: 768px) {
+      margin: 0;
+      width: 35rem;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: column;
+      gap: .8rem 3rem;
+      justify-items: start;
+    }
+    @media (min-width: 1200px) {
+      margin-left: 13.1rem;
+    }
+  }
+
+  .footer-copy {
+    width: 100%;
+    @media (min-width: 768px) {
+      margin-top: 3.2rem;
+    }
+    @media (min-width: 960px) {
+      width: 22rem;
+      text-align: right;
+      margin-top: 0;
+    }
+
+    @media (min-width: 1200px) {
+      margin-left: auto;
+    }
+    
+    .footer-copyright {
+      margin-top: 2.4rem;
     }
   }
 }
