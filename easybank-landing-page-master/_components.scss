@@ -79,6 +79,7 @@
     display: none;
     @media (min-width: 768px) {
       @include request-button;
+      transition: var(--transition) opacity;
       &:hover {
         opacity: .6;
       }
