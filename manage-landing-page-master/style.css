@@ -91,6 +91,30 @@ p {
   letter-spacing: 0px;
 }
 
+.t-h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: -1px;
+  font-weight: var(--weight-bold);
+  color: var(--color-dark-blue);
+}
+
+@media (min-width: 1000px) {
+  .t-h1 {
+    font-size: 5.6rem;
+    line-height: 6.4rem;
+  }
+}
+
+.t-body1 {
+  font-size: 1.6rem;
+  font-weight: var(--weight-regular);
+  line-height: 2.8rem;
+  letter-spacing: 0px;
+  color: var(--color-dark-blue);
+  opacity: .5;
+}
+
 .button--getstart {
   font-size: 1.3rem;
   font-weight: var(--weight-bold);
@@ -112,6 +136,10 @@ p {
           transform: translateY(-2px);
   -webkit-box-shadow: 0 2rem 2rem -1.5rem #FF9F8E;
           box-shadow: 0 2rem 2rem -1.5rem #FF9F8E;
+}
+
+.section-button {
+  display: inline-block;
 }
 
 body {
@@ -299,5 +327,89 @@ body {
 
 .header .mobile-nav.show .mobile-nav__menu__item:not(:last-of-type) {
   margin-bottom: 2.4rem;
+}
+
+.intro {
+  padding-top: 4.8rem;
+  padding-bottom: 9.3rem;
+  text-align: center;
+}
+
+.intro .container {
+  padding: 0 2.4rem;
+  margin: 0 auto;
+  max-width: 111rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .intro .container {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1148px) {
+  .intro .container {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro__image {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .intro__image {
+    width: 54rem;
+  }
+}
+
+.intro__image img {
+  width: 100%;
+}
+
+.intro__content {
+  text-align: center;
+  margin-top: 1.9rem;
+}
+
+@media (min-width: 768px) {
+  .intro__content {
+    width: 45%;
+    text-align: left;
+    margin-top: 0;
+    max-width: 44.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .intro__content {
+    width: 44.5rem;
+  }
+}
+
+.intro__content__body {
+  margin-top: .9rem;
+  margin-bottom: 2.9rem;
+}
+
+@media (min-width: 768px) {
+  .intro__content__body {
+    max-width: 35rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

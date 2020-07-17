@@ -98,6 +98,27 @@ p {
   letter-spacing: 0px;
 }
 
+.t-h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: -1px;
+  font-weight: var(--weight-bold);
+  color: var(--color-dark-blue);
+  @media (min-width: 1000px) {
+    font-size: 5.6rem;
+    line-height: 6.4rem;
+  }
+}
+
+.t-body1 {
+  font-size: 1.6rem;
+  font-weight: var(--weight-regular);
+  line-height: 2.8rem;
+  letter-spacing: 0px;
+  color: var(--color-dark-blue);
+  opacity: .5;
+}
+
 // Buttons
 .button {
   &--getstart {
@@ -118,6 +139,9 @@ p {
       box-shadow: 0 2rem 2rem -1.5rem #FF9F8E;
     }
   }
+}
+.section-button {
+  display: inline-block;
 }
 
 // body bg image

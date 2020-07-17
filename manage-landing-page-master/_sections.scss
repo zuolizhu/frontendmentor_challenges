@@ -1,0 +1,55 @@
+.intro {
+  padding-top: 4.8rem;
+  padding-bottom: 9.3rem;
+  
+  // center align the container
+  text-align: center;
+  .container {
+    padding: 0 2.4rem;
+    margin: 0 auto;
+    max-width: 111rem;
+    width: 100%;
+    @media (min-width: 768px) {
+      display: inline-flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    @media (min-width: 1148px) {
+      padding: 0;
+    }
+  }
+
+  &__image {
+    @media (min-width: 768px) {
+      width: 40%;
+    }
+    @media (min-width: 1080px) {
+      width: 54rem;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+    text-align: center;
+    margin-top: 1.9rem;
+    @media (min-width: 768px) {
+      width: 45%;
+      text-align: left;
+      margin-top: 0;
+      max-width: 44.5rem;
+    }
+    @media (min-width: 1000px) {
+      width: 44.5rem;
+    }
+
+    &__body {
+      margin-top: .9rem;
+      margin-bottom: 2.9rem;
+      @media (min-width: 768px) {
+        max-width: 35rem;
+      }
+    }
+  }
+}
