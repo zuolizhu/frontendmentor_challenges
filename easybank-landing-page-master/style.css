@@ -310,7 +310,7 @@ p {
   display: inline-flex;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .header .branding {
     margin-top: .5rem;
   }
@@ -379,7 +379,7 @@ p {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .header .nav-request {
     display: inline-block;
     font-size: 1.4rem;
@@ -489,7 +489,7 @@ p {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .footer .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -905,6 +905,11 @@ p {
   }
 }
 
+.articles .card {
+  -webkit-transition: var(--transition) box-shadow, var(--transition) transform;
+  transition: var(--transition) box-shadow, var(--transition) transform;
+}
+
 .articles .card__image {
   height: 20rem;
   width: 100%;
@@ -935,5 +940,19 @@ p {
 
 .articles .card__content__heading {
   margin: .8rem 0;
+  cursor: pointer;
+  -webkit-transition: var(--transition) color;
+  transition: var(--transition) color;
+}
+
+.articles .card__content__heading:hover {
+  color: var(--color-lime-green);
+}
+
+.articles .card:hover {
+  -webkit-box-shadow: 0 1rem 2rem rgba(50, 50, 50, 0.1);
+          box-shadow: 0 1rem 2rem rgba(50, 50, 50, 0.1);
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 /*# sourceMappingURL=style.css.map */
