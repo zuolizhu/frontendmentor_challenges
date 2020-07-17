@@ -110,6 +110,14 @@ p {
   }
 }
 
+.t-h2 {
+  font-size: 3rem;
+  line-height: 4.5rem;
+  letter-spacing: -.62px;
+  font-weight: var(--weight-bold);
+  color: var(--color-dark-blue);
+}
+
 .t-body1 {
   font-size: 1.6rem;
   font-weight: var(--weight-regular);
@@ -117,6 +125,9 @@ p {
   letter-spacing: 0px;
   color: var(--color-dark-blue);
   opacity: .5;
+  @media (min-width: 768px) {
+    line-height: 2.6rem;
+  }
 }
 
 // Buttons

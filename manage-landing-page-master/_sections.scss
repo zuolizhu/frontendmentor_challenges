@@ -1,9 +1,14 @@
+// Intro section
 .intro {
   padding-top: 4.8rem;
   padding-bottom: 9.3rem;
-  
   // center align the container
   text-align: center;
+  @media (min-width: 1000px) {
+    padding-top: 12rem;
+    padding-bottom: 13.2rem;
+  }
+
   .container {
     padding: 0 2.4rem;
     margin: 0 auto;
@@ -52,4 +57,9 @@
       }
     }
   }
+}
+
+// Different section
+.different {
+  
 }
