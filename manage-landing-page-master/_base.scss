@@ -116,6 +116,18 @@ p {
   letter-spacing: -.62px;
   font-weight: var(--weight-bold);
   color: var(--color-dark-blue);
+  @media (min-width: 960px) {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    letter-spacing: -.71px;
+  }
+}
+
+.t-h3 {
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  letter-spacing: -.29px;
+  font-weight: var(--weight-bold);
 }
 
 .t-body1 {
@@ -126,6 +138,19 @@ p {
   color: var(--color-dark-blue);
   opacity: .5;
   @media (min-width: 768px) {
+    line-height: 2.6rem;
+  }
+}
+
+.t-body2 {
+  font-size: 1.4rem;
+  font-weight: var(--weight-regular);
+  line-height: 2.8rem;
+  letter-spacing: 0px;
+  color: var(--color-dark-blue);
+  opacity: .5;
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
     line-height: 2.6rem;
   }
 }
