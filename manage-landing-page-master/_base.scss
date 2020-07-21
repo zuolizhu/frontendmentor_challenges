@@ -163,6 +163,18 @@ p {
   color: var(--color-dark-blue);
 }
 
+.t-cta {
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: -1px;
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  @media (min-width: 768px) {
+    line-height: 4.4rem;
+    letter-spacing: -.71px;
+  }
+}
+
 // Buttons
 .button {
   &--getstart {
@@ -181,6 +193,24 @@ p {
       background-color: #F98F75;
       transform: translateY(-2px);
       box-shadow: 0 2rem 2rem -1.5rem #FF9F8E;
+    }
+  }
+  &--cta {
+    font-size: 1.3rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.9rem;
+    letter-spacing: 0px;
+    color: var(--color-bright-red);
+    background-color: var(--color-white);
+    padding: 1.2rem 3.2rem 1.3rem;
+    box-shadow: 0 1.5rem 1.5rem -1rem #DB5943;
+    border-radius: 2.2rem;
+    transition: var(--transition) color, 
+    var(--transition) transform, var(--transition) box-shadow;
+    &:hover {
+      color: #F9AF9D;
+      transform: translateY(-2px);
+      box-shadow: 0 2rem 2rem -1.5rem #DB5943;
     }
   }
 }

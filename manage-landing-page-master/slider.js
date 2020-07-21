@@ -1,5 +1,23 @@
 $(document).ready(function(){
   $('.testimonials-slider').slick({
-    dots: true
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true,
+    // autoplay: true,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          // autoplay: true,
+          centerMode: false,
+          variableWidth: false
+        }
+      }
+    ]
   });
 });
