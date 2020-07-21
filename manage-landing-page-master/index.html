@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- slick slider -->
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+  <link rel="stylesheet" href="./slick/slick-theme.css">
+  <!-- main css -->
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Manage landing page</title>
 </head>
@@ -123,34 +127,58 @@
         </div>
       </div>
     </section>
-
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="t-h2 testimonials__heading">What they’ve said</h2>
+        <!-- slider -->
+        <div class="testimonials-slider">
+          <div class="testimonial-card-holder">
+            <div class="testimonial-card">
+              <div class="testimonial-card__avatar">
+                <img src="./images/avatar-anisha.png" alt="avatar Anisha">
+              </div>
+              <p class="t-name testimonial-card__name">Anisha Li</p>
+              <p class="t-body2">“Manage has supercharged our team’s workflow. The ability to maintain 
+                visibility on larger milestones at all times keeps everyone motivated.”</p>
+            </div>
+          </div>
+          <div class="testimonial-card-holder">
+            <div class="testimonial-card">
+              <div class="testimonial-card__avatar">
+                <img src="./images/avatar-ali.png" alt="avatar Ali">
+              </div>
+              <p class="t-name testimonial-card__name">Ali Bravo</p>
+              <p class="t-body2">“We have been able to cancel so many other subscriptions since using 
+                Manage. There is no more cross-channel confusion and everyone is much 
+                more focused.”</p>
+            </div>
+          </div>
+          <div class="testimonial-card-holder">
+            <div class="testimonial-card">
+              <div class="testimonial-card__avatar">
+                <img src="./images/avatar-richard.png" alt="avatar Richard">
+              </div>
+              <p class="t-name testimonial-card__name">Richard Watts</p>
+              <p class="t-body2">“Manage allows us to provide structure and process. It keeps us organized 
+                and focused. I can’t stop recommending them to everyone I talk to!”</p>
+            </div>
+          </div>
+          <div class="testimonial-card-holder">
+            <div class="testimonial-card">
+              <div class="testimonial-card__avatar">
+                <img src="./images/avatar-richard.png" alt="avatar Richard">
+              </div>
+              <p class="t-name testimonial-card__name">Shanai Gough</p>
+              <p class="t-body2">“Their software allows us to track, manage and collaborate on our projects 
+                from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+            </div>
+          </div>
+        </div>
+        <!-- end of slider -->
+        <a class="button button--getstart section-button" href="">Get Started</a>
+      </div>
+    </section>
     
-    
-    
-  
-    
-    
-    
-  
-    What they’ve said
-  
-    Anisha Li
-    “Manage has supercharged our team’s workflow. The ability to maintain 
-    visibility on larger milestones at all times keeps everyone motivated.”
-  
-    Ali Bravo
-    “We have been able to cancel so many other subscriptions since using 
-    Manage. There is no more cross-channel confusion and everyone is much 
-    more focused.”
-  
-    Richard Watts
-    “Manage allows us to provide structure and process. It keeps us organized 
-    and focused. I can’t stop recommending them to everyone I talk to!”
-  
-    Shanai Gough
-    “Their software allows us to track, manage and collaborate on our projects 
-    from anywhere. It keeps the whole team in-sync without being intrusive.”
-  
     Get Started
   
     Simplify how your team works today.
@@ -176,6 +204,11 @@
       Coded by <a href="https://www.frontendmentor.io/profile/zuolizhu" target="_blank">Connor Zhu</a>.
     </div>
   </footer>
+  <!-- jQuery for slick plugin -->
+  <script defer src="./jquery-3.5.1.min.js"></script>
+  <!-- slick plugin -->
+  <script defer src="./slick/slick.min.js"></script>
+  <script defer src="./slider.js"></script>
   <script defer src="./burger-control.js"></script>
 </body>
 </html>

@@ -155,6 +155,14 @@ p {
   }
 }
 
+.t-name {
+  font-size: 1.6rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: -.29px;
+  line-height: 2.3rem;
+  color: var(--color-dark-blue);
+}
+
 // Buttons
 .button {
   &--getstart {
