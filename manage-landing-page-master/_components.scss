@@ -154,6 +154,7 @@
     @media (min-width: 1158px) {
       grid-row: 1/2;
       grid-column: 3/4;
+      max-width: 27.2rem;
     }
   }
 
@@ -196,6 +197,13 @@
         width: 2rem;
         height: 2rem;
       }
+      &:hover {
+        .social__icon {
+          svg path {
+            fill: var(--color-bright-red);
+          }
+        }
+      }
 
       &__icon {
         width: 100%;
@@ -205,6 +213,9 @@
           transform: scale(1.52) translate(20%, 20%);
           @media (min-width: 768px) {
             transform: scale(1);
+          }
+          path {
+            transition: var(--transition) fill;
           }
         }
       }
