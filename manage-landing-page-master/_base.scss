@@ -1,5 +1,5 @@
 // Typography import
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 :root {
   // Colors
@@ -11,6 +11,7 @@
   --color-very-light-gray: hsl(0, 0%, 98%);
   --color-light-red: #FCF6F5;
   --color-white: #fff;
+  --color-alert-red: #F33C3C;
 
   // Font Weights
   --weight-regular: 400;
@@ -175,8 +176,26 @@ p {
   }
 }
 
+.t-footer-menu__item {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  letter-spacing: -.23px;
+  font-weight: var(--weight-regular);
+  color: var(--color-white);
+}
+
+.t-copyright {
+  opacity: .5;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  letter-spacing: -.2px;
+  font-weight: var(--weight-regular);
+  color: var(--color-white);
+}
+
 // Buttons
 .button {
+
   &--getstart {
     font-size: 1.3rem;
     font-weight: var(--weight-bold);
@@ -195,6 +214,7 @@ p {
       box-shadow: 0 2rem 2rem -1.5rem #FF9F8E;
     }
   }
+
   &--cta {
     font-size: 1.3rem;
     font-weight: var(--weight-bold);
@@ -213,9 +233,33 @@ p {
       box-shadow: 0 2rem 2rem -1.5rem #DB5943;
     }
   }
+
+  &--submit {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    font-weight: var(--weight-bold);
+    background-color: var(--color-bright-red);
+    padding: 1.55rem 0;
+    border-radius: 2.2rem;
+    color: #FCF6F5;
+    letter-spacing: 0px;
+    width: 8rem;
+    min-width: 8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .section-button {
   display: inline-block;
+}
+
+.t-error {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -.08px;
+  color: var(--color-alert-red);
+  font-style: italic;
 }
 
 // body bg image
@@ -229,4 +273,37 @@ body {
     background-size: cover;
     background-image: url(./images/bg-simplify-section-desktop.svg);
   }
+}
+
+// Forms
+.subscribe-form {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__input-group {
+    position: relative;
+    display: flex;
+    margin-right: .8rem;
+    width: 100%;
+    .error {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  &__input-field {
+    border: none;
+    border-radius: 2.2rem;
+    padding-top: 1.1rem;
+    padding-bottom: 1.4rem;
+    padding-left: 2.4rem;
+    width: 100%;
+    // input field font setting
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    letter-spacing: -.1px;
+    font-weight: var(--weight-regular);
+    color: #8D8D8D;
+  }
+  
 }
