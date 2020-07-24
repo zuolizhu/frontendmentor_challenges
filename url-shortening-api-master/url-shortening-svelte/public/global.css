@@ -4,13 +4,15 @@
 :root {
 	/* Colors */
 	--color-cyan: hsl(180, 66%, 49%);
+	--color-light-cyan: #9AE3E3;
 	--color-dark-violet: hsl(257, 27%, 26%);
 	--color-red: hsl(0, 87%, 67%);
 	--color-gray: hsl(0, 0%, 75%);
 	--color-grayish-violet: hsl(257, 7%, 63%);
 	--color-very-dark-blue: hsl(255, 11%, 22%);
 	--color-very-dark-violet: hsl(260, 8%, 14%);
-  --color-white: #fff;
+	--color-gray-blue: #EFF1F7;
+	--color-white: #fff;
 
   /* Font Weights */
   --weight-medium: 500;
@@ -93,6 +95,13 @@ p {
 	line-height: 2.1rem;
 	font-weight: var(--weight-bold);
 	color: var(--color-grayish-violet);
+	
+}
+.t-desk-nav--transition {
+	transition: var(--transition) color;
+}
+.t-desk-nav--transition:hover {
+	color: var(--color-very-dark-blue);
 }
 
 .t-h1 {
@@ -102,12 +111,75 @@ p {
 	font-weight: var(--weight-bold);
 	color: var(--color-very-dark-blue);
 }
-@media (min-width: 800px) {
+@media (min-width: 960px) {
 	.t-h1 {
 		font-size: 8rem;
 		line-height: 9rem;
 		letter-spacing: -2px;
 	}
+}
+
+.t-h2 {
+	font-weight: var(--weight-bold);
+	color: var(--color-very-dark-blue);
+	font-size: 2.8rem;
+	line-height: 4.8rem;
+	letter-spacing: -.7px;
+}
+.t-h2.t-h2--white {
+	color: var(--color-white);
+}
+@media (min-width: 768px) {
+	.t-h2 {
+		font-size: 4rem;
+		letter-spacing: -1px;
+	}
+}
+
+.t-h3 {
+	font-weight: var(--weight-bold);
+	color: var(--color-very-dark-blue);
+	font-size: 2.2rem;
+	line-height: 3.1rem;
+	letter-spacing: 0px;
+}
+
+.t-intro-body {
+	line-height: 3rem;
+	font-size: 1.8rem;
+	letter-spacing: .12px;
+	font-weight: var(--weight-medium);
+	color: var(--color-grayish-violet);
+}
+@media (min-width: 960px) {
+	.t-intro-body {
+		font-size: 2.2rem;
+		line-height: 3.6rem;
+		letter-spacing: .05px;
+	}
+}
+
+.t-features-body {
+	font-size: 1.6rem;
+	line-height: 2.8rem;
+	letter-spacing: .11px;
+	font-weight: var(--weight-medium);
+	color: var(--color-grayish-violet);
+}
+@media (min-width: 768px) {
+	.t-features-body {
+		font-size: 1.8rem;
+		line-height: 3.2rem;
+		letter-spacing: .12px;
+	}
+}
+
+.t-feature-card-body {
+	font-size: 1.5rem;
+	line-height: 2.6rem;
+	letter-spacing: 0px;
+	font-weight: var(--weight-medium);
+	color: var(--color-grayish-violet);
 }
 
 /* Buttons */
@@ -126,6 +198,50 @@ p {
 	color: var(--color-white);
 	text-align: center;
 	border-radius: 2.8rem;
+	transition: var(--transition) background-color, var(--transition) transform;
+}
+.button--desk-nav:hover,
+.button--getstarted:hover {
+	background-color: var(--color-light-cyan);
+	transform: translateY(-2px);
+}
+
+.button--getstarted {
+	background-color: var(--color-cyan);
+	width: 19.7rem;
+	text-align: center;
+	padding: 1.4rem 0;
+	font-size: 2rem;
+	line-height: 2.8rem;
+	font-weight: var(--weight-bold);
+	color: var(--color-white);
+	border-radius: 2.8rem;
+	transition: var(--transition) background-color, var(--transition) transform;
+}
+
+.button--shorten {
+	background-color: var(--color-cyan);
+	color: var(--color-white);
+	font-weight: var(--weight-bold);
+	font-size: 1.8rem;
+	line-height: 2.5rem;
+	padding-top: 1.1rem;
+	padding-bottom: 1.2rem;
+	width: 100%;
+	text-align: center;
+	border-radius: .5rem;
+	transition: var(--transition) background-color;
+}
+@media (min-width: 768px) {
+	.button--shorten {
+		padding-top: 1.8rem;
+		padding-bottom: 1.8rem;
+		width: 18.8rem;
+		min-width: 18.8rem;
+	}
+}
+.button--shorten:hover {
+	background-color: var(--color-light-cyan);
 }
 
 /* Utilities */

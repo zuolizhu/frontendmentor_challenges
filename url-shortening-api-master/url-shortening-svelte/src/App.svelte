@@ -1,17 +1,24 @@
 <script>
 	import Header from './components/Header.svelte';
 	import SectionIntro from './sections/SectionIntro.svelte';
+	import SectionShorten from './sections/SectionShorten.svelte';
+	import SectionShortenResult from './sections/SectionShortenResult.svelte';
+	import SectionFeatures from './sections/SectionFeatures.svelte';
+	import SectionCta from './sections/SectionCta.svelte';
 </script>
 
 <Header />
-<main>
-	<div class="container">
-		<SectionIntro />
-		<section class="shorten">
-		</section>
-		<section class="features">
-		</section>
-		<section class="cta">
-		</section>
-	</div>
+<main class="main">
+	<SectionIntro />
+	<SectionShorten />
+	<SectionShortenResult />
+	<SectionFeatures />
+	<SectionCta />
 </main>
+
+<style type="text/scss">
+	.main {
+		overflow-x: hidden; 
+	}
+	
+</style>

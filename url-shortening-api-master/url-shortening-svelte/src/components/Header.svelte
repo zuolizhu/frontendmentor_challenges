@@ -15,18 +15,18 @@ function handleBurgerMenu() {
     <nav class="desk-nav">
       <ul class="desk-nav__menu">
         <li class="desk-nav__menu__item">
-          <a class="t-desk-nav" href="./">Features</a>
+          <a class="t-desk-nav t-desk-nav--transition" href="./">Features</a>
         </li>
         <li class="desk-nav__menu__item">
-          <a class="t-desk-nav" href="./">Pricing</a>
+          <a class="t-desk-nav t-desk-nav--transition" href="./">Pricing</a>
         </li>
         <li class="desk-nav__menu__item">
-          <a class="t-desk-nav" href="./">Resources</a>
+          <a class="t-desk-nav t-desk-nav--transition" href="./">Resources</a>
         </li>
       </ul>
     </nav>
     <div class="desk-signup-login">
-      <a class="t-desk-nav" href="./">Login</a>
+      <a class="t-desk-nav t-desk-nav--transition" href="./">Login</a>
       <a class="t-desk-nav button--desk-nav" href="./">Sign Up</a>
     </div>
 
