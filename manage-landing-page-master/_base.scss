@@ -256,6 +256,10 @@ p {
     &:hover {
       background-color: #F9AF9D;
     }
+    @media (min-width: 1158px) {
+      width: 6.4rem;
+      min-width: 6.4rem;
+    }
   }
 }
 .section-button {
@@ -314,14 +318,13 @@ body {
     border: 1px solid transparent;
     outline: none;
     border-radius: 2.2rem;
-    padding-top: 1rem;
-    padding-bottom: 1.3rem;
+    padding: 1.2rem;
     padding-left: 2.4rem;
     width: 100%;
     // input field font setting
     font-size: 1.3rem;
     line-height: 1.9rem;
-    letter-spacing: -.1px;
+    letter-spacing: .2px;
     font-weight: var(--weight-regular);
     color: #8D8D8D;
     transition: var(--transition) border-color, var(--transition) color;
@@ -339,7 +342,7 @@ body {
     // input field placeholder font setting
     font-size: 1.3rem;
     line-height: 1.9rem;
-    letter-spacing: -.1px;
+    letter-spacing: .2px;
     font-weight: var(--weight-regular);
     color: #8D8D8D;
   }

@@ -1,12 +1,12 @@
 // Intro section
 .intro {
-  padding-top: 4.8rem;
+  padding-top: 4.3rem;
   padding-bottom: 9.3rem;
   // center align the container
   text-align: center;
   @media (min-width: 1000px) {
     padding-top: 12rem;
-    padding-bottom: 13.2rem;
+    padding-bottom: 12.7rem;
   }
 
   .container {
@@ -26,11 +26,15 @@
   }
 
   &__image {
+    padding-left: .5rem;
+    padding-right: .4rem;
     @media (min-width: 768px) {
       width: 40%;
+      padding: 0;
     }
     @media (min-width: 1080px) {
       width: 54rem;
+      max-height: 48.5rem;
     }
     img {
       width: 100%;
@@ -38,7 +42,7 @@
   }
   &__content {
     text-align: center;
-    margin-top: 1.9rem;
+    margin-top: 1.75rem;
     @media (min-width: 768px) {
       width: 45%;
       text-align: left;
@@ -54,6 +58,10 @@
       margin-bottom: 2.9rem;
       @media (min-width: 768px) {
         max-width: 35rem;
+      }
+      @media (min-width: 1000px) {
+        margin-top: 3.4rem;
+        margin-bottom: 4rem;
       }
     }
   }
@@ -83,7 +91,7 @@
   &__intro {
     text-align: center;
     @media (max-width: 419px) {
-      padding: 0 2.6rem;
+      padding: 0 2.7rem;
     }
     @media (min-width: 420px) {
       padding: 0;
@@ -103,7 +111,7 @@
         padding: 0;
       }
       @media (min-width: 1080px) {
-        margin-bottom: 2.4rem;
+        margin-bottom: 3.2rem;
       }
     }
 
@@ -179,11 +187,12 @@
         margin-left: 1.5rem;
         @media (min-width: 1080px) {
           margin-left: 2.8rem;
+          margin-bottom: .3rem;
         }
       }
     }
     &__body {
-      margin-top: .8rem;
+      margin-top: .9rem;
 
       @media (max-width: 419px) {
         padding-left: 1.6rem;
@@ -209,7 +218,7 @@
 // Testimonials section
 .testimonials {
   overflow-x: hidden;
-  padding-bottom: 4.2rem;
+  padding-bottom: 3.6rem;
   padding-top: 6.2rem;
   text-align: center;
 
@@ -232,7 +241,7 @@
     
     margin-bottom: 6.2rem;
     @media (min-width: 800px) {
-      margin-bottom: 6.4rem;
+      margin-bottom: 7.8rem;
     }
   }
   .testimonial-card-holder {
@@ -249,6 +258,10 @@
       background-color: var(--color-very-light-gray);
       text-align: center;
       padding: 0 2.1rem 4.2rem;
+      @media (min-width: 800px) {
+        padding: 0 4.1rem 4rem;
+      }
+
       &__avatar {
         display: inline-flex;
         width: 7.2rem;
@@ -259,8 +272,11 @@
       }
   
       &__name {
-        margin-top: -1.2rem;
-        margin-bottom: 1.9rem;
+        margin-top: -1.6rem;
+        margin-bottom: 1.2rem;
+        @media (min-width: 800px) {
+          margin-bottom: 1.9rem;
+        }
       }
     }
 
@@ -317,7 +333,12 @@
   background-image: url(./images/bg-tablet-pattern.svg);
   background-size: auto;
   background-repeat: no-repeat;
-  background-position-x: right 25rem;
+  background-position-x: 25rem;
+  @media (min-width: 768px) {
+    padding: 6.4rem 0 6.8rem;
+    background-image: url(./images/bg-tablet-desktop.svg);
+    background-position-x: 25.4rem;
+  }
 
   .container {
     padding: 0 3.1rem 0 3.2rem;
@@ -341,6 +362,11 @@
     @media (min-width: 768px) {
       margin: 0;
       text-align: left;
+    }
+  }
+  .cta__button {
+    @media (min-width: 768px) {
+      margin-top: .2rem;
     }
   }
 }

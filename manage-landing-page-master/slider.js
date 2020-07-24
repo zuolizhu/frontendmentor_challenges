@@ -5,7 +5,7 @@ $(document).ready(function(){
     slidesToScroll: 1,
     centerMode: true,
     variableWidth: true,
-    // autoplay: true,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 800,
@@ -13,7 +13,7 @@ $(document).ready(function(){
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-          // autoplay: true,
+          autoplay: true,
           centerMode: false,
           variableWidth: false
         }

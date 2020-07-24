@@ -23,6 +23,15 @@
 
   .branding {
     display: inline-flex;
+    @media (min-width: 768px) {
+      padding-top: 1.3rem;
+    }
+    svg {
+      transform: scale(.75) translateX(-2.4rem) translateY(.4rem);
+      @media (min-width: 768px) {
+        transform: scale(1);
+      }
+    }
   }
 
   .desk-nav {
@@ -133,11 +142,12 @@
     }
     @media (min-width: 1158px) {
       padding: 0;
+      padding-left: .4rem;
       max-width: 111rem;
       margin: 0 auto;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 28rem 38rem 1fr;
       grid-template-rows: 4.4rem 2rem;
-      row-gap: 6rem;
+      row-gap: 6.3rem;
     }
   }
   
@@ -155,6 +165,7 @@
       grid-row: 1/2;
       grid-column: 3/4;
       max-width: 27.2rem;
+      margin-top: .3rem;
     }
   }
 
@@ -171,7 +182,7 @@
 
     .footer-menu {
       &__item:not(:last-of-type) {
-        margin-bottom: 1.3rem;
+        margin-bottom: 1.2rem;
       }
     }
   }
@@ -229,6 +240,12 @@
       grid-row: 1/2;
       grid-column: 1/2;
       justify-content: flex-start;
+      max-height: 2.4rem;
+      max-width: 14.7rem;
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
     @media (min-width: 1158px) {
       align-self: start;
