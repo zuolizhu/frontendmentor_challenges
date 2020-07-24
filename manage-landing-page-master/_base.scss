@@ -282,10 +282,31 @@ body {
   background-position-x: right;
   background-position-y: top;
   @media (min-width: 768px) {
-    background-size: cover;
-    background-image: url(./images/bg-simplify-section-desktop.svg);
+    background: none;
+    position: relative;
   }
 }
+
+.bg-pattern-right {
+  opacity: 0;
+  @media (min-width: 768px) {
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+} 
+.bg-pattern-left {
+  opacity: 0;
+  @media (min-width: 768px) {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 112.3rem;
+    z-index: -1;
+  }
+} 
 
 // Forms
 .subscribe-form {
