@@ -312,6 +312,7 @@ body {
   body {
     background: none;
     position: relative;
+    background-color: var(--color-white);
   }
 }
 
