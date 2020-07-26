@@ -5,6 +5,7 @@
 	import SectionShortenResult from './sections/SectionShortenResult.svelte';
 	import SectionFeatures from './sections/SectionFeatures.svelte';
 	import SectionCta from './sections/SectionCta.svelte';
+	import Footer from './components/Footer.svelte';
 </script>
 
 <Header />
@@ -15,6 +16,7 @@
 	<SectionFeatures />
 	<SectionCta />
 </main>
+<Footer />
 
 <style type="text/scss">
 	.main {

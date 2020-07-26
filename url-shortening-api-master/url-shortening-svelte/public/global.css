@@ -182,6 +182,22 @@ p {
 	color: var(--color-grayish-violet);
 }
 
+.t-footer-menu-heading {
+	font-size: 1.6rem;
+	line-height: 2.3rem;
+	letter-spacing: -.25px;
+	font-weight: var(--weight-bold);
+	color: var(--color-white);
+}
+
+.t-footer-menu-item {
+	font-size: 1.5rem;
+	line-height: 2.1rem;
+	letter-spacing: -.23px;
+	font-weight: var(--weight-medium);
+	color: var(--color-gray);
+}
+
 /* Buttons */
 .button--mobile-nav {
 	background-color: var(--color-cyan);
