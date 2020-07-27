@@ -72,9 +72,13 @@
 
   .feature-card {
     position: relative;
-    width: 35rem;
     display: inline-flex;
     z-index: 1;
+    max-width: 38rem;
+    @media (min-width: 660px) { 
+      max-width: none;
+      width: 35rem;
+    }
 
     &__icon {
       position: absolute;

@@ -29,7 +29,7 @@
     <div class="links">
       {#each Links as link (link)}
         <div class="link-container">
-          <p class="link t-link t-link--original" current={link.originalLink}>{link.originalLink}</p>
+          <p class="link t-link link--original t-link--original" current={link.originalLink}>{link.originalLink}</p>
           <p class="link link--shorten t-link t-link--shorten" current={link.shortenLink}>{link.shortenLink}</p>
           <button
           on:click={handleCopy}
@@ -45,7 +45,10 @@
 <style type="text/scss">
   .shorten-result {
     background-color: var(--color-gray-blue);
-    padding-bottom: 12.6rem;
+      padding-bottom: 8rem;
+    @media (min-width: 768px) {
+      padding-bottom: 12.6rem;
+    }
   }
 
   .container {
@@ -64,18 +67,49 @@
     width: 100%;
     background-color: var(--color-white);
     border-radius: .5rem;
-    padding: 1.6rem 2.4rem 1.6rem 3.2rem;
+    position: relative;
+    padding: .6rem 1.6rem 1.6rem;
     @media (min-width: 768px) {
+      padding: 1.6rem 2.4rem 1.6rem 3.2rem;
       display: inline-flex;
       align-items: center;
     }
     &:not(:last-of-type) {
-      margin-bottom: 1.6rem;
+      margin-bottom: 2.4rem;
+      @media (min-width: 768px) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+  .link-container::after {
+    @media (max-width: 767px) {
+      content: '';
+      width: 100%;
+      position: absolute;
+      height: .1rem;
+      background-color: var(--color-grayish-violet);
+      opacity: .25;
+      top: 4.8rem;
+      left: 0;
+    }
+    @media (min-width: 768px) {
+      content: none;
     }
   }
   
 
   .link {
+    &--original {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      @media (max-width: 767px) {
+        margin-bottom: 1.3rem;
+      }
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
     &--shorten {
       @media (min-width: 768px) {
         margin-left: auto;

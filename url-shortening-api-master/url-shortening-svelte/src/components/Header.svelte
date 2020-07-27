@@ -139,6 +139,7 @@ function handleBurgerMenu() {
       top: 5.6rem;
       right: 0;
       padding: 0 2.4rem;
+      z-index: 1;
   
       &__menu {
         width: 100%;

@@ -3,12 +3,21 @@
   const dispatch = createEventDispatcher();
 
   let link = '';
+  let errorMsg = '';
 
-  function shorten() {
+  function shorten(event) {
     // prevent empty link submit
-    if (link === '') return;
+    if (link === '') {
+      event.target.parentNode.children[0].children[1].classList.add('error');
+      errorMsg = 'Please add a link';
+      return;
+    }
     // validate url
-    if (!validURL(link)) return;
+    if (!validURL(link)) {
+      event.target.parentNode.children[0].children[1].classList.add('error');
+      errorMsg = 'Please add an valid link';
+      return;
+    }
     // POST url to API
     const data = { url: link };
     const options = {
@@ -44,14 +53,24 @@
       '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
     return !!pattern.test(str);
   }
+
+  function removeError(event) {
+    if (!event.target.classList.contains('error')) return;
+    errorMsg = '';
+    event.target.classList.remove('error');
+  }
 </script>
 <section class="shorten">
   <h2 class="sr-only">Shorten function section</h2>
   <div class="container">
     <div class="shorten-container">
       <div class="input-group">
-        <label class="sr-only" for="link">input link downbelow</label>
-        <input class="link-input" bind:value={link} placeholder="Shorten a link here...">
+        <label class="sr-only" for="link-input-field">input link downbelow</label>
+        <input on:focus={removeError}
+        id="link-input-field" class="link-input" bind:value={link} placeholder="Shorten a link here...">
+        {#if errorMsg.length > 0}
+          <p class="error-msg">{errorMsg}</p>
+        {/if}
       </div>
       <button on:click={shorten}
       class="button button--shorten">Shorten It!</button>
@@ -93,6 +112,7 @@
     @media (min-width: 768px) {
       display: inline-flex;
       justify-content: space-between;
+      align-items: flex-start;
       width: 100%;
       background-image: url(../images/bg-shorten-desktop.svg);
     }
@@ -101,6 +121,7 @@
     }
   }
   .input-group {
+    position: relative;
     margin-bottom: 1.6rem;
     @media (min-width: 768px) {
       margin-bottom: 0;
@@ -108,23 +129,26 @@
       width: 100%;
     }
   }
+
   .link-input {
     width: 100%;
-    border: none;
+    border: 3px solid var(--color-white);
     border-radius: .5rem;
-    padding: .6rem 1.6rem;
+    padding: .3rem 1.3rem;
     font-size: 1.6rem;
     line-height: 3.6rem;
     letter-spacing: .12px;
     font-weight: var(--weight-medium);
     outline: none;
+    transition: var(--transition) border-color, var(--transition) color;
     @media (min-width: 768px) {
-      padding: 1.6rem 3.2rem 1.2rem;
+      padding: 1.3rem 3.05rem .9rem;
       font-size: 2rem;
       letter-spacing: .15px;
       border-radius: 1rem;
     }
   }
+
   .link-input::placeholder {
     font-size: 1.6rem;
     line-height: 3.6rem;
@@ -133,9 +157,36 @@
     font-family: 'Poppins', sans-serif;
     color: var(--color-very-dark-blue);
     opacity: .5;
+    transition: var(--transition) color;
     @media (min-width: 768px) {
       font-size: 2rem;
       letter-spacing: .15px;
     }
+  }
+
+  .error-msg {
+    color: var(--color-red);
+    font-weight: var(--weight-medium);
+    font-style: italic;
+    animation-name: showError;
+    animation-duration: 1s;
+    margin-top: .4rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    letter-spacing: .08px;
+    @media (min-width: 960px) {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      letter-spacing: .11px;
+      position: absolute;
+      bottom: -2.6rem;
+      margin-top: 0;
+    }
+  }
+  
+
+  @keyframes showError {
+    from {opacity: 0;}
+    to {opacity: 1;}
   }
 </style>

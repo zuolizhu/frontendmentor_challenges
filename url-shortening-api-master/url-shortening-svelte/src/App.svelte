@@ -15,7 +15,13 @@
 			originalLink: event.detail.originalLink,
 			shortenLink: event.detail.shortenLink
 		}
-		Links.unshift(Link);
+		// Limit links to show: 3
+		if (Links.length < 3) {
+			Links.unshift(Link);
+		} else {
+			Links.pop();
+			Links.unshift(Link);
+		}
 		Links = Links;
 	}
 

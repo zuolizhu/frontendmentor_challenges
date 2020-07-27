@@ -196,6 +196,11 @@ p {
 	letter-spacing: -.23px;
 	font-weight: var(--weight-medium);
 	color: var(--color-gray);
+	transition: var(--transition) color;
+	cursor: pointer;
+}
+.t-footer-menu-item:hover {
+	color: var(--color-cyan);
 }
 
 .t-link {
@@ -316,4 +321,14 @@ p {
 	width: 100%;
 	background-color: var(--color-grayish-violet);
 	opacity: .25;
+}
+
+/* Form Error */
+.input-group .link-input.error {
+	border-color: var(--color-red);
+	color: var(--color-red);
+}
+
+.input-group .link-input.error::placeholder {
+	color: var(--color-red);
 }
