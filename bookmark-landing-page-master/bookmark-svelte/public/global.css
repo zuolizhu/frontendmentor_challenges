@@ -1,66 +1,137 @@
+/* Typography import */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,500&display=swap');
+
+:root {
+  /* Colors */
+  --color-soft-blue: hsl(231, 69%, 60%);
+  --color-soft-red: hsl(0, 94%, 66%);
+  --color-grayish-blue: hsl(229, 8%, 60%);
+  --color-very-dark-blue: hsl(229, 31%, 21%);
+  --color-white: #fff;
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+
+  /* Design elements */
+  --transition: 300ms ease-in-out;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	color: #333;
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  background-color: var(--color-white);
 }
 
 a {
-	color: rgb(0,100,200);
-	text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
-a:hover {
-	text-decoration: underline;
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-a:visited {
-	color: rgb(0,80,160);
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
-label {
-	display: block;
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
 }
 
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+/* Screen Reader Only */
+.sr-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
 }
 
-input:disabled {
-	color: #ccc;
+/* Type Specs */
+.t-mobile-menu__item {
+  font-size: 2rem;
+  line-height: 1.7rem;
+  letter-spacing: 2.31px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: var(--weight-regular);
 }
 
-input[type="range"] {
-	height: 0;
+.t-desktop-menu__item {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  letter-spacing: 1.5px;
+  font-weight: var(--weight-regular);
+  color: var(--color-very-dark-blue);
+  transition: var(--transition) color;
+}
+.t-desktop-menu__item:hover {
+  color: var(--color-soft-red);
 }
 
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
+
+/* Button Styles */
+.button--login-mobile {
+  width: 100%;
+  border: 2px solid var(--color-white);
+  border-radius: .5rem;
+  font-size: 2rem;
+  line-height: 1.7rem;
+  letter-spacing: 2.31px;
+  font-weight: var(--weight-medium);
+  padding: 1.4rem 0 1.3rem;
+  color: var(--color-white);
+  text-align: center;
 }
 
-button:disabled {
-	color: #999;
+.button--login-desktop {
+  width: 11.1rem;
+  text-align: center;
+  background-color: var(--color-soft-red);
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  letter-spacing: 1.5px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  padding: 1rem 0 .9rem;
+  font-weight: var(--weight-medium);
+  border-radius: .5rem;
+  box-shadow: 0 .8rem .8rem -.4rem rgba(73, 93, 207, .2);
+  border: 2px solid var(--color-soft-red);
+  transition: var(--transition) background-color, var(--transition) color;
 }
-
-button:not(:disabled):active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
+.button--login-desktop:hover {
+  color: var(--color-soft-red);
+  background-color: var(--color-white);
 }
