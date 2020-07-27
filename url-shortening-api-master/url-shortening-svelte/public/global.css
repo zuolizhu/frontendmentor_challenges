@@ -198,6 +198,25 @@ p {
 	color: var(--color-gray);
 }
 
+.t-link {
+	font-size: 1.6rem;
+	line-height: 3.6rem;
+	letter-spacing: .12px;
+	font-weight: var(--weight-medium);
+}
+@media (min-width: 768px) {
+	.t-link {
+		font-size: 2rem;
+		letter-spacing: .15px;
+	}
+}
+.t-link--original {
+	color: var(--color-very-dark-blue);
+}
+.t-link--shorten {
+	color: var(--color-cyan);
+}
+
 /* Buttons */
 .button--mobile-nav {
 	background-color: var(--color-cyan);
@@ -261,6 +280,30 @@ p {
 	}
 }
 .button--shorten:hover {
+	background-color: var(--color-light-cyan);
+}
+
+.button--copy {
+	width: 100%;
+	padding: .9rem 0 .8rem;
+	text-align: center;
+	font-size: 1.6rem;
+	line-height: 2.3rem;
+	font-weight: var(--weight-bold);
+	color: var(--color-white);
+	background-color: var(--color-cyan);
+	border-radius: .5rem;
+	transition: var(--transition) background-color;
+}
+@media (min-width: 768px) {
+	.button--copy {
+		width: 10.3rem;
+		padding: 1rem 0 .9rem;
+		font-size: 1.5rem;
+		line-height: 2.1rem;
+	}
+}
+.button--copy:hover {
 	background-color: var(--color-light-cyan);
 }
 

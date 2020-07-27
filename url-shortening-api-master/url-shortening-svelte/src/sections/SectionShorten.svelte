@@ -1,5 +1,49 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
+
   let link = '';
+
+  function shorten() {
+    // prevent empty link submit
+    if (link === '') return;
+    // validate url
+    if (!validURL(link)) return;
+    // POST url to API
+    const data = { url: link };
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    };
+
+    fetch('https://rel.ink/api/links/', options)
+      .then(res => res.json())
+      .then(data => {
+        // Sending result to upper component
+        dispatch('shortenlink', {
+          originalLink: link,
+          shortenLink: `https://rel.ink/${data.hashid}`
+        });
+      })
+      .then(() => {
+        // Clear input area
+        link = '';
+      })
+      .catch(error => console.log('Error:', error)); 
+  }
+
+  function validURL(str) {
+    const pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+    return !!pattern.test(str);
+  }
 </script>
 <section class="shorten">
   <h2 class="sr-only">Shorten function section</h2>
@@ -9,7 +53,8 @@
         <label class="sr-only" for="link">input link downbelow</label>
         <input class="link-input" bind:value={link} placeholder="Shorten a link here...">
       </div>
-      <button class="button button--shorten">Shorten It!</button>
+      <button on:click={shorten}
+      class="button button--shorten">Shorten It!</button>
     </div>
   </div>
 </section>

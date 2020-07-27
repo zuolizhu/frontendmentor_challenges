@@ -6,13 +6,26 @@
 	import SectionFeatures from './sections/SectionFeatures.svelte';
 	import SectionCta from './sections/SectionCta.svelte';
 	import Footer from './components/Footer.svelte';
+
+
+	let Links = [];
+
+	function handleShortenLink(event) {
+		const Link = {
+			originalLink: event.detail.originalLink,
+			shortenLink: event.detail.shortenLink
+		}
+		Links.push(Link);
+		Links = Links;
+	}
+
 </script>
 
 <Header />
 <main class="main">
 	<SectionIntro />
-	<SectionShorten />
-	<SectionShortenResult />
+	<SectionShorten on:shortenlink={handleShortenLink} />
+	<SectionShortenResult Links={Links} />
 	<SectionFeatures />
 	<SectionCta />
 </main>
