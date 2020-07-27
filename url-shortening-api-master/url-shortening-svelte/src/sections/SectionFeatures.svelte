@@ -55,9 +55,10 @@
       max-width: 54rem;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 1.6rem;
-      margin-bottom: 4.8rem;
+      margin-top: 1.2rem;
+      margin-bottom: 4.7rem;
       @media (min-width: 768px) {
+        margin-top: 1.6rem;
         margin-bottom: 5.4rem;
       }
     }

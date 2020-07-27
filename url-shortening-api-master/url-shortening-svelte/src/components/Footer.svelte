@@ -153,6 +153,14 @@
       &__icon {
         display: inline-block;
         height: 2.4rem;
+        svg > path {
+          transition: var(--transition) fill;
+        }
+      }
+      &:hover {
+        .social__icon > svg > path {
+          fill: var(--color-cyan);
+        }
       }
     }
   }

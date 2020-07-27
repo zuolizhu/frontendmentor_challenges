@@ -35,7 +35,7 @@ function handleBurgerMenu() {
     aria-label="trigger button to open the side menu"
     title="trigger button to open the side menu"
     class="button burger-button">
-      <img src="../images/icon-burger.svg" alt="burger icon">
+      <img src="./images/icon-burger.svg" alt="burger icon">
     </button>
     <!-- only display on mobile device size -->
     {#if active}

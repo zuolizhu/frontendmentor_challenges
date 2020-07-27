@@ -45,7 +45,7 @@
 <style type="text/scss">
   .shorten-result {
     background-color: var(--color-gray-blue);
-      padding-bottom: 8rem;
+      padding-bottom: 8.6rem;
     @media (min-width: 768px) {
       padding-bottom: 12.6rem;
     }
