@@ -71,7 +71,7 @@
       }
       @media (min-width: 960px) {
         width: 100%;
-        max-width: 56.4rem;
+        max-width: 61.5rem;
       }
       &__body {
         margin: 1.5rem 0 3rem;
