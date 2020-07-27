@@ -306,6 +306,9 @@ p {
 .button--copy:hover {
 	background-color: var(--color-light-cyan);
 }
+.button--copy.copied {
+	background-color: var(--color-dark-violet);
+}
 
 /* Utilities */
 .divider {

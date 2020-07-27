@@ -1,5 +1,24 @@
 <script>
   export let Links;
+
+  function handleCopy(event) {
+    const copyLink = event.target.value;
+    navigator.clipboard.writeText(copyLink)
+    .then(function() {
+      console.log('copied: ', copyLink);
+    }, function() {
+      console.log('error during copying');
+    })
+    .then(function() {
+      event.target.classList.add('copied');
+      event.target.textContent = 'Copied!';
+      setTimeout(() => {
+        event.target.classList.remove('copied');
+        event.target.textContent = 'Copy';
+      }, 3000);
+    })
+  }
+
 </script>
 
 <section class="shorten-result">
@@ -12,7 +31,10 @@
         <div class="link-container">
           <p class="link t-link t-link--original" current={link.originalLink}>{link.originalLink}</p>
           <p class="link link--shorten t-link t-link--shorten" current={link.shortenLink}>{link.shortenLink}</p>
-          <button class="button button--copy copy-button">Copy</button>
+          <button
+          on:click={handleCopy}
+          value={link.shortenLink}
+          class="button button--copy copy-button">Copy</button>
         </div>
       {/each}
     </div>

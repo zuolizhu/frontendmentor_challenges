@@ -15,7 +15,7 @@
 			originalLink: event.detail.originalLink,
 			shortenLink: event.detail.shortenLink
 		}
-		Links.push(Link);
+		Links.unshift(Link);
 		Links = Links;
 	}
 
