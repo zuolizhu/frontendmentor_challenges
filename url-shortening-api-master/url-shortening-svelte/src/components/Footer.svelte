@@ -78,24 +78,60 @@
   }
 
   .container {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    @media (min-width: 850px) {
+      padding: 0 2.4rem;
+      max-width: 111rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+      margin: 0 auto;
+    }
+    @media (min-width: 1160px) {
+      padding: 0;
+      justify-content: flex-start;
+    }
   }
 
   .footer-logo {
     margin-bottom: 5rem;
+    @media (min-width: 850px) {
+      margin-bottom: 0;
+    }
   }
 
   .footer-menu {
     &:not(:last-of-type) {
       margin-bottom: 4rem;
+      @media (min-width: 850px) {
+        margin-bottom: 0;
+      }
     }
     &__heading {
       margin-bottom: 2.3rem;
     }
     &__item:not(:last-of-type) {
       margin-bottom: 1.2rem;
+    }
+
+    &--features {
+      @media (min-width: 1160px) {
+        margin-left: 26.1rem;
+      }
+    }
+    &--resources {
+      @media (min-width: 1160px) {
+        margin-left: 7.8rem;
+      }
+    }
+    &--company {
+      @media (min-width: 1160px) {
+        margin-left: 10.7rem;
+      }
     }
   }
 
@@ -105,6 +141,12 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 4.8rem;
+    @media (min-width: 850px) {
+      margin-top: 0;
+    }
+    @media (min-width: 1160px) {
+      margin-left: auto;
+    }
     .social {
       display: inline-block;
       height: 2.4rem;

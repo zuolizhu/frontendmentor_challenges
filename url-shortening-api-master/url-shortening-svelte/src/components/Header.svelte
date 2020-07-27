@@ -96,6 +96,9 @@ function handleBurgerMenu() {
 
   .branding {
     display: inline-flex;
+    @media (min-width: 768px) {
+      margin-top: 0.3em;
+    }
   }
 
   .desk-nav {

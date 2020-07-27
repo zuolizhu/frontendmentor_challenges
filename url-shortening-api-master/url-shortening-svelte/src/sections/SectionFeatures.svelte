@@ -1,7 +1,7 @@
 <section class="features">
   <div class="container">
-    <h2 class="t-h2">Advanced Statistics</h2>
-    <p class="t-features-body">Track how your links are performing across the web with our 
+    <h2 class="t-h2 features__heading">Advanced Statistics</h2>
+    <p class="t-features-body features__body">Track how your links are performing across the web with our 
     advanced statistics dashboard.</p>
 
     <div class="feature-cards">
@@ -11,7 +11,7 @@
         </div>
         <div class="feature-card__content">
           <h3 class="t-h3">Brand Recognition</h3>
-          <p class="t-feature-card-body">Boost your brand recognition with each click. Generic links don’t 
+          <p class="t-feature-card-body feature-card__content__body">Boost your brand recognition with each click. Generic links don’t 
           mean a thing. Branded links help instil confidence in your content.</p>
         </div>
       </div>
@@ -21,7 +21,7 @@
         </div>
         <div class="feature-card__content">
           <h3 class="t-h3">Detailed Records</h3>
-          <p class="t-feature-card-body">Gain insights into who is clicking your links. Knowing when and where 
+          <p class="t-feature-card-body feature-card__content__body">Gain insights into who is clicking your links. Knowing when and where 
           people engage with your content helps inform better decisions.</p>
         </div>
       </div>
@@ -31,7 +31,7 @@
         </div>
         <div class="feature-card__content">
           <h3 class="t-h3">Fully Customizable</h3>
-          <p class="t-feature-card-body">Improve brand awareness and content discoverability through customizable 
+          <p class="t-feature-card-body feature-card__content__body">Improve brand awareness and content discoverability through customizable 
           links, supercharging audience engagement.</p>
         </div>
       </div>
@@ -42,11 +42,40 @@
 <style type="text/scss">
   .features {
     background-color: var(--color-gray-blue);
+    padding-bottom: 8rem;
+    @media (min-width: 768px) {
+      padding-bottom: 12rem;
+    }
+
+    &__heading,
+    &__body {
+      text-align: center;
+    }
+    &__body {
+      max-width: 54rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1.6rem;
+      margin-bottom: 4.8rem;
+      @media (min-width: 768px) {
+        margin-bottom: 5.4rem;
+      }
+    }
   }
+
+  .container {
+    padding: 0 2.4rem;
+    @media (min-width: 1160px) {
+      padding: 0;
+    }
+  }
+
   .feature-card {
     position: relative;
     width: 35rem;
     display: inline-flex;
+    z-index: 1;
+
     &__icon {
       position: absolute;
       background-color: var(--color-dark-violet);
@@ -57,13 +86,91 @@
       justify-content: center;
       border-radius: 50%;
       top: 0;
-      left: 3.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      @media (min-width: 1160px) {
+        left: 3.2rem;
+        transform: translateX(0);
+      }
     }
     &__content {
       background-color: var(--color-white);
       border-radius: .5rem;
       margin-top: 4.4rem;
       padding: 7.7rem 3.2rem 4.1rem;
+      text-align: center;
+      @media (min-width: 1160px) {
+        text-align: left;
+      }
+      &__body {
+        margin-top: 1.4rem;
+      }
     }
   }
+  
+  .feature-cards {
+    display: grid;
+    justify-items: center;
+    row-gap: 4.8rem;
+    position: relative;
+    @media (min-width: 660px) {
+      justify-items: legacy;
+      row-gap: 0;
+      max-width: 66rem;
+      margin: 0 auto;
+    }
+    @media (min-width: 1160px) {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 111rem;
+      column-gap: 3rem;
+    }
+  }
+  .feature-card {
+    align-self: start;
+    &:nth-child(odd) {
+      @media (min-width: 660px) {
+        justify-self: start;
+      }
+      @media (min-width: 1160px) {
+        justify-self: auto;
+      }
+    }
+    &:nth-child(even) {
+      @media (min-width: 660px) {
+        justify-self: end;
+      }
+      @media (min-width: 1160px) {
+        justify-self: auto;
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: 1160px) {
+        margin-top: 4.4rem;
+      }
+    }
+    &:nth-child(3) {
+      @media (min-width: 1160px) {
+        margin-top: 8.8rem;
+      }
+    }
+  }
+
+  .feature-cards::after {
+    position: absolute;
+    content: '';
+    width: .8rem;
+    height: 100%;
+    background-color: var(--color-cyan);
+    z-index: 0;
+    @media (min-width: 660px) {
+      content: none;
+    }
+    @media (min-width: 1160px) {
+      content: '';
+      width: 100%;
+      height: .8rem;
+      top: 19.6rem;
+    }
+  }
+
 </style>

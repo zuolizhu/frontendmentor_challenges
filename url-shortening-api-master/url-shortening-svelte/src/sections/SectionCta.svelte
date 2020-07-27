@@ -12,14 +12,14 @@
     background-repeat: no-repeat;
     background-position: top right;
     @media (min-width: 768px) {
-      padding: 5.7rem 0;
-    background-image: url(../images/bg-boost-desktop.svg);
+      padding: 5.85rem 0;
+      background-image: url(../images/bg-boost-desktop.svg);
     }
 
     &__heading {
       margin-bottom: 1.6rem;
       @media (min-width: 768px) {
-        margin-bottom: 3.2rem;
+        margin-bottom: 3rem;
       }
     }
   }

@@ -74,9 +74,10 @@
     font-weight: var(--weight-medium);
     outline: none;
     @media (min-width: 768px) {
-      padding: 1.4rem 3.2rem;
+      padding: 1.6rem 3.2rem 1.2rem;
       font-size: 2rem;
       letter-spacing: .15px;
+      border-radius: 1rem;
     }
   }
   .link-input::placeholder {

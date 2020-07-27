@@ -4,6 +4,6 @@
 <style type="text/scss">
   .shorten-result {
     background-color: var(--color-gray-blue);
-    padding-bottom: 12rem;
+    padding-bottom: 12.6rem;
   }
 </style>

@@ -254,6 +254,10 @@ p {
 		padding-bottom: 1.8rem;
 		width: 18.8rem;
 		min-width: 18.8rem;
+		border-radius: 1rem;
+		font-size: 2rem;
+		line-height: 2.8rem;
+		letter-spacing: .8px;
 	}
 }
 .button--shorten:hover {
