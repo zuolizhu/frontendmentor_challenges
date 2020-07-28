@@ -6,7 +6,9 @@
   --color-soft-blue: hsl(231, 69%, 60%);
   --color-soft-red: hsl(0, 94%, 66%);
   --color-grayish-blue: hsl(229, 8%, 60%);
+  --color-light-gray: #F7F7F7;
   --color-very-dark-blue: hsl(229, 31%, 21%);
+  --color-dark-gray: hsl(228, 22%, 45%);
   --color-white: #fff;
 
   /* Font Weights */
@@ -63,6 +65,7 @@ p {
   cursor: pointer;
   padding: 0;
   outline: none;
+  font-family: 'Rubik', sans-serif;
 }
 
 /* Screen Reader Only */
@@ -100,6 +103,50 @@ p {
   color: var(--color-soft-red);
 }
 
+.t-h1 {
+  font-weight: var(--weight-medium);
+  font-size: 3rem;
+  line-height: 4rem;
+  letter-spacing: -.09px;
+  color: var(--color-very-dark-blue);
+}
+@media (min-width: 950px) {
+  .t-h1 {
+    font-size: 4.8rem;
+    line-height: 5.2rem;
+    letter-spacing: -.15px;
+  }
+}
+
+.t-h2 {
+  font-size: 2.4rem;
+  line-height: 5.2rem;
+  letter-spacing: -.08px;
+  font-weight: var(--weight-medium);
+  color: var(--color-very-dark-blue);
+}
+@media (min-width: 768px) {
+  .t-h2 {
+    font-size: 3.2rem;
+    line-height: 5.2rem;
+    letter-spacing: -.1px;
+  }
+}
+
+.t-body1 {
+  font-weight: var(--weight-regular);
+  color: var(--color-very-dark-blue);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0px;
+  opacity: .5;
+}
+@media (min-width: 768px) {
+  .t-body1 {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
 
 /* Button Styles */
 .button--login-mobile {
@@ -134,4 +181,35 @@ p {
 .button--login-desktop:hover {
   color: var(--color-soft-red);
   background-color: var(--color-white);
+}
+
+.button--chrome,
+.button--firefox {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  letter-spacing: .25px;
+  font-weight: var(--weight-medium);
+  padding: .8rem 0;
+  border-radius: .5rem;
+  box-shadow: 0 .8rem .8rem -.4rem rgba(73, 93, 207, .2);
+}
+.button--chrome {
+  background-color: var(--color-soft-blue);
+  color: var(--color-white);
+  border: 2px solid var(--color-soft-blue);
+  transition: var(--transition) background-color, var(--transition) color;
+}
+.button--chrome:hover {
+  background-color: var(--color-white);
+  color: var(--color-soft-blue);
+}
+.button--firefox {
+  background-color: var(--color-light-gray);
+  color: rgba(36, 42, 69, .75);
+  border: 2px solid var(--color-light-gray);
+  transition: var(--transition) background-color, var(--transition) border-color;
+}
+.button--firefox:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-dark-gray);
 }

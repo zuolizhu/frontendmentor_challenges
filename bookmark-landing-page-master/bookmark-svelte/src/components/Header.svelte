@@ -80,11 +80,11 @@
 <style type="text/scss">
   .header {
     height: 2.5rem;
-    padding-top: 4rem;
+    margin-top: 4rem;
     text-align: center;
     @media (min-width: 768px) {
       height: 4rem;
-      padding-top: 4.8rem;
+      margin-top: 4.8rem;
     }
 
     .container {
@@ -133,6 +133,7 @@
       align-items: center;
       animation-name: mobileMenu;
       animation-duration: .3s;
+      z-index: 10;
     }
     @media (min-width: 768px) {
       display: none;
