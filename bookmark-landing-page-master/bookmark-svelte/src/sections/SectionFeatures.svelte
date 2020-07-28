@@ -1,5 +1,4 @@
 <script>
-  import { slide } from 'svelte/transition';
   let currentFeature = 0;
   let features = [
     {id: 0, name: 'Simple Bookmarking', hightlight: true},
@@ -61,17 +60,13 @@
         {/each}
       </ul>
     </div>
-    {#each featureDetails as featureDetail, index}
-      {#if currentFeature === index}
-      <div transition:slide|local class="feature__content">
-        <div class="feature__content__image">
-          <img src="{featureDetails[currentFeature].image}" alt="feature">
-        </div>
-        <h2 class="feature__content__heading t-h2">{featureDetails[currentFeature].heading}</h2>
-        <p class="t-body1">{featureDetails[currentFeature].body}</p>
+    <div class="feature__content">
+      <div class="feature__content__image">
+        <img src="{featureDetails[currentFeature].image}" alt="feature">
       </div>
-      {/if}
-    {/each}
+      <h2 class="feature__content__heading t-h2">{featureDetails[currentFeature].heading}</h2>
+      <p class="t-body1">{featureDetails[currentFeature].body}</p>
+    </div>
   </div>
 </section>
 

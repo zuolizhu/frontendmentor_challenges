@@ -133,6 +133,14 @@ p {
   }
 }
 
+.t-h3 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: .25px;
+  font-weight: var(--weight-medium);
+  color: var(--color-very-dark-blue);
+}
+
 .t-body1 {
   font-weight: var(--weight-regular);
   color: var(--color-very-dark-blue);
@@ -212,4 +220,17 @@ p {
 .button--firefox:hover {
   background-color: var(--color-white);
   border-color: var(--color-dark-gray);
+}
+
+.button--add {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  border-radius: .5rem;
+  letter-spacing: .25px;
+  color: var(--color-white);
+  font-weight: var(--weight-medium);
+  background-color: var(--color-soft-blue);
+  box-shadow: 0 .8rem .8rem -.4rem rgba(73, 93, 207, .2);
 }
