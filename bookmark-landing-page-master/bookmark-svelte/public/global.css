@@ -205,6 +205,25 @@ p {
   }
 }
 
+.t-footer-menu__item {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  letter-spacing: 1.73px;
+  color: var(--color-white);
+  font-weight: var(--weight-regular);
+  transition: var(--transition) color;
+  text-transform: uppercase;
+}
+@media (min-width: 720px) {
+  .t-footer-menu__item {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+  }
+}
+.t-footer-menu__item:hover {
+  color: var(--color-soft-red);
+}
+
 /* Button Styles */
 .button--login-mobile {
   width: 100%;

@@ -70,7 +70,7 @@
       font-size: 1.4rem;
       line-height: 2.8rem;
       letter-spacing: .25px;
-      color: #242A45;
+      color: var(--color-very-dark-blue);
       outline: none;
       transition: var(--transition) border-color, 
         var(--transition) background-image;
@@ -80,7 +80,7 @@
       line-height: 2.8rem;
       letter-spacing: .25px;
       font-weight: var(--weight-regular);
-      color: #242A45;
+      color: var(--color-very-dark-blue);
       opacity: .25;
     }
 
