@@ -133,6 +133,10 @@ p {
   }
 }
 
+.t-h2--white {
+  color: var(--color-white);
+}
+
 .t-h3 {
   font-size: 2rem;
   line-height: 2.4rem;
@@ -153,6 +157,51 @@ p {
   .t-body1 {
     font-size: 1.8rem;
     line-height: 2.8rem;
+  }
+}
+
+.t-question {
+  font-size: 1.5rem;
+  line-height: 3.2rem;
+  letter-spacing: 0px;
+  font-weight: var(--weight-regular);
+  color: var(--color-very-dark-blue);
+  transition: var(--transition) color;
+}
+@media (min-width: 768px) {
+  .t-question {
+    font-size: 1.8rem;
+  }
+}
+
+.t-answer {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  letter-spacing: .14px;
+  font-weight: var(--weight-regular);
+  color: var(--color-very-dark-blue);
+  opacity: .75;
+}
+@media (min-width: 768px) {
+  .t-answer {
+    font-size: 1.6rem;
+    line-height: 3.6rem;
+    letter-spacing: .15px;
+  }
+}
+
+.t-cta-promo {
+  font-size: 1.2rem;
+  line-height: 4rem;
+  letter-spacing: 4.62px;
+  font-weight: var(--weight-medium);
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .t-cta-promo {
+    font-size: 1.3rem;
+    letter-spacing: 5px;
   }
 }
 
@@ -233,4 +282,44 @@ p {
   font-weight: var(--weight-medium);
   background-color: var(--color-soft-blue);
   box-shadow: 0 .8rem .8rem -.4rem rgba(73, 93, 207, .2);
+}
+
+.button--info {
+  width: 11.4rem;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  border-radius: .5rem;
+  letter-spacing: .25px;
+  color: var(--color-white);
+  font-weight: var(--weight-medium);
+  background-color: var(--color-soft-blue);
+  box-shadow: 0 .8rem .8rem -.4rem rgba(73, 93, 207, .2);
+}
+
+.button--contact {
+  width: 100%;
+  text-align: center;
+  padding: .8rem 0;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  border-radius: .5rem;
+  letter-spacing: .25px;
+  color: var(--color-white);
+  font-weight: var(--weight-medium);
+  border: 2px solid var(--color-soft-red);
+  background-color: var(--color-soft-red);
+  box-shadow: 0 .8rem .8rem -.4rem rgba(73, 93, 207, .2);
+  transition: var(--transition) color, var(--transition) border-color, var(--transition) background-color;
+}
+.button--contact:hover {
+  color: var(--color-soft-red);
+  border-color: var(--color-soft-red);
+  background-color: var(--color-white);
+}
+@media (min-width: 768px) {
+  .button--contact {
+    max-width: 12.6rem;
+  }
 }

@@ -4,6 +4,8 @@
 	import SectionIntro from './sections/SectionIntro.svelte';
 	import SectionFeatures from './sections/SectionFeatures.svelte';
 	import SectionDownload from './sections/SectionDownload.svelte';
+	import SectionFAQ from './sections/SectionFAQ.svelte';
+	import SectionCta from './sections/SectionCta.svelte';
 </script>
 
 <Header />
@@ -11,6 +13,8 @@
 	<SectionIntro />
 	<SectionFeatures />
 	<SectionDownload />
+	<SectionFAQ />
+	<SectionCta />
 </main>
 <Footer />
 
