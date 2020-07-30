@@ -6,7 +6,7 @@
   <div class="container">
     <a href="./index.html" class="branding">
       <span class="sr-only">footer logo</span>
-      <img src="../images/logo-bookmark-footer.svg" alt="footer logo">
+      <img src="./images/logo-bookmark-footer.svg" alt="footer logo">
     </a>
     <ul class="footer-menu">
       <li class="footer-menu__item">
