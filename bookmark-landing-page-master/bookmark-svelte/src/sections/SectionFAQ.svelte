@@ -64,6 +64,9 @@
 
     &__intro__heading {
       line-height: 3rem;
+      @media (min-width: 768px) {
+        line-height: 5.2rem;
+      }
     }
     &__intro__body {
       padding: 0 .1rem;
