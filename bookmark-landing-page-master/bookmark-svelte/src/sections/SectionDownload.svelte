@@ -61,9 +61,7 @@
   }
 
   .container {
-    @media (min-width: 520px) {
-      padding: 0 3.2rem;
-    }
+    padding: 0 3.2rem;
     @media (min-width: 960px) {
       padding: 0;
     }
