@@ -173,7 +173,10 @@
     }
 
     &__item:nth-child(2) {
-      margin-left: -3rem;
+      margin-left: 0;
+      @media (min-width: 920px) {
+        margin-left: -3rem;
+      }
     }
 
     &__item.highlighted {

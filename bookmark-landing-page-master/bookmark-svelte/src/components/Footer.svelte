@@ -48,7 +48,7 @@
   }
 
   .footer-menu {
-    margin: 3.9rem auto 4.8rem;
+    margin: 3rem auto 4.7rem;
 
     @media (min-width: 720px) {
       display: inline-flex;
@@ -58,7 +58,7 @@
     }
 
     &__item:not(:last-of-type) {
-      margin-bottom: 3.2rem;
+      margin-bottom: 2.7rem;
       @media (min-width: 720px) {
         margin-bottom: 0;
       }

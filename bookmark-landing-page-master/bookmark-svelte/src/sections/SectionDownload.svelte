@@ -37,7 +37,7 @@
 
 <style type="text/scss">
   .download {
-    padding-bottom: 14rem;
+    padding-bottom: 13.6rem;
     @media (min-width: 520px) {
       padding-bottom: 14.9rem;
     }
@@ -46,10 +46,9 @@
   .download__intro {
     text-align: center;
     max-width: 54rem;
-    margin: 0 auto 4rem;
+    margin: 0 auto 2.9rem;
     @media (min-width: 520px) {
       margin: 0 auto 4.2rem;
-
     }
 
     &__body {

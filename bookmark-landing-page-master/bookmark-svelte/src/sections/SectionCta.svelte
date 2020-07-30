@@ -45,6 +45,7 @@
     }
 
     &__heading {
+      line-height: 2.8rem;
       @media (min-width: 768px) {
         line-height: 4rem;
         margin-top: 2.4rem;

@@ -50,9 +50,12 @@
   }
 
   .container {
-    padding: 0 3.2rem;
+    padding: 0 3.3rem;
     max-width: 111rem;
-    margin: 0 auto;
+    margin: 3rem auto 0;
+    @media (min-width: 768px) {
+      margin: 0 auto;
+    }
     @media (min-width: 1160px) {
       padding: 0;
     }

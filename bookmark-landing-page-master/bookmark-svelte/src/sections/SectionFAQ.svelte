@@ -33,7 +33,7 @@
 
 <section class="FAQ">
   <div class="container">
-    <h2 class="t-h2">Frequently Asked Questions</h2>
+    <h2 class="t-h2 FAQ__intro__heading">Frequently Asked Questions</h2>
     <p class="t-body1 FAQ__intro__body">Here are some of our FAQs. If you have any other questions you’d like 
     answered please feel free to email us.</p>
     <div class="accordions">
@@ -62,6 +62,9 @@
       padding-bottom: 14.9rem;
     }
 
+    &__intro__heading {
+      line-height: 3rem;
+    }
     &__intro__body {
       padding: 0 .1rem;
       margin-top: 1.6rem; 
