@@ -2,7 +2,7 @@
   <div class="container">
     <div class="download__intro">
       <h2 class="t-h2">Download the extension</h2>
-      <p class="t-body1">We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+      <p class="t-body1 download__intro__body">We’ve got more browsers in the pipeline. Please do let us know if you’ve 
       got a favourite you’d like us to prioritize.</p>
     </div>
     <div class="download__cards">
@@ -36,16 +36,57 @@
 
 
 <style type="text/scss">
+  .download {
+    padding-bottom: 14rem;
+    @media (min-width: 520px) {
+      padding-bottom: 14.9rem;
+    }
+  }
+
+  .download__intro {
+    text-align: center;
+    max-width: 54rem;
+    margin: 0 auto 4rem;
+    @media (min-width: 520px) {
+      margin: 0 auto 4.8rem;
+
+    }
+
+    &__body {
+      margin-top: 0;
+      @media (min-width: 520px) {
+        margin-top: 1.6rem;
+      }
+    }
+  }
+
+  .container {
+    @media (min-width: 520px) {
+      padding: 0 3.2rem;
+    }
+    @media (min-width: 960px) {
+      padding: 0;
+    }
+  }
+
   .download__card {
     width: 28rem;
     height: 37.1rem;
-    box-shadow: 0 1rem 2rem -.5rem rgba(73, 93, 207, .2);
     border-radius: 1.5rem;
     text-align: center;
     padding: 4.9rem 2.4rem 2.4rem;
     background-image: url(../images/bg-dots.svg);
     background-repeat: no-repeat;
     background-position-y: 27.1rem;
+    box-shadow: 0 1rem 2rem -.5rem rgba(73, 93, 207, .2);
+    transition: var(--transition) transform, var(--transition) box-shadow;
+
+    &:hover {
+      @media (min-width: 520px) {
+        transform: translateY(-1rem);
+        box-shadow: 0 2rem 4rem -1rem rgba(73, 93, 207, .1);
+      }
+    }
 
     &__icon {
       margin-bottom: 3.2rem;
@@ -54,10 +95,52 @@
     &__version {
       margin: .6rem auto 6rem;
     }
+
+    &:nth-child(even) {
+      @media (min-width: 520px) {
+        justify-self: end;
+      }
+      @media (min-width: 960px) {
+        justify-self: auto;
+      }
+    }
+    &:nth-child(odd) {
+      @media (min-width: 520px) {
+        justify-self: start;
+      }
+      @media (min-width: 960px) {
+        justify-self: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      @media (min-width: 960px) {
+        margin-top: 4rem;
+      }
+    }
+
+    &:nth-child(3) {
+      @media (min-width: 960px) {
+        margin-top: 8rem;
+      }
+    }
   }
 
   .download__cards {
     display: grid;
     row-gap: 4rem;
+    justify-items: center;
+    @media (min-width: 520px) {
+      justify-items: start;
+      max-width: 52rem;
+      margin: 0 auto;
+      row-gap: 2rem;
+    }
+    @media (min-width: 960px) {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 91.2rem;
+      row-gap: 0;
+      column-gap: 3.4rem;
+    }
   }
 </style>
