@@ -96,11 +96,12 @@
       width: 100%;
       @media (min-width: 768px) {
         height: 4rem;
-        max-width: 110.4rem;
+        max-width: 111rem;
         margin: 0 auto;
       }
       @media (min-width: 1160px) {
         padding: 0;
+        padding-left: .6rem;
       }
     }
 
@@ -181,7 +182,7 @@
     @media (min-width: 768px) {
       display: inline-flex;
       align-items: center;
-      width: 45.5rem;
+      width: 45.6rem;
       justify-content: space-between;
     }
   }

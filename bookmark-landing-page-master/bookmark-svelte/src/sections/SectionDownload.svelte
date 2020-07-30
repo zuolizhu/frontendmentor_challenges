@@ -48,7 +48,7 @@
     max-width: 54rem;
     margin: 0 auto 4rem;
     @media (min-width: 520px) {
-      margin: 0 auto 4.8rem;
+      margin: 0 auto 4.2rem;
 
     }
 
@@ -69,10 +69,10 @@
 
   .download__card {
     width: 28rem;
-    height: 37.1rem;
+    height: 37.5rem;
     border-radius: 1.5rem;
     text-align: center;
-    padding: 4.9rem 2.4rem 2.4rem;
+    padding: 5.2rem 2.4rem 2.4rem;
     background-image: url(../images/bg-dots.svg);
     background-repeat: no-repeat;
     background-position-y: 27.1rem;
@@ -87,7 +87,7 @@
     }
 
     &__icon {
-      margin-bottom: 3.2rem;
+      margin-bottom: 3rem;
     }
 
     &__version {

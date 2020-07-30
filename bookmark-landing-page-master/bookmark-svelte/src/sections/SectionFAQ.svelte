@@ -34,7 +34,7 @@
 <section class="FAQ">
   <div class="container">
     <h2 class="t-h2">Frequently Asked Questions</h2>
-    <p class="t-body1">Here are some of our FAQs. If you have any other questions you’d like 
+    <p class="t-body1 FAQ__intro__body">Here are some of our FAQs. If you have any other questions you’d like 
     answered please feel free to email us.</p>
     <div class="accordions">
       {#each qnas as qna (qna.id)}
@@ -61,6 +61,11 @@
     @media (min-width: 768px) {
       padding-bottom: 14.9rem;
     }
+
+    &__intro__body {
+      padding: 0 .1rem;
+      margin-top: 1.6rem; 
+    }
   }
 
   .container {
@@ -80,7 +85,7 @@
     cursor: pointer;
     padding: 2rem 0 1.2rem;
     @media (min-width: 768px) {
-      padding: 1.9rem 0 1.3rem;
+      padding: 1.9rem 0 1.5rem;
     }
 
     &:hover {
@@ -133,6 +138,7 @@
     @media (min-width: 768px) {
       margin-top: 5.6rem;
       margin-bottom: 5.4rem;
+      padding-right: 2.1rem;
     }
   }
 

@@ -51,7 +51,7 @@
 
   .container {
     padding: 0 3.2rem;
-    max-width: 110.4rem;
+    max-width: 111rem;
     margin: 0 auto;
     @media (min-width: 1160px) {
       padding: 0;

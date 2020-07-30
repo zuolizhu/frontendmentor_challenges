@@ -160,6 +160,15 @@ p {
   }
 }
 
+.t-body2 {
+  font-weight: var(--weight-regular);
+  color: var(--color-very-dark-blue);
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  letter-spacing: 0px;
+  opacity: .5;
+}
+
 .t-question {
   font-size: 1.5rem;
   line-height: 3.2rem;

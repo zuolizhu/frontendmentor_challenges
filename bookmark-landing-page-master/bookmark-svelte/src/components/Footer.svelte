@@ -16,7 +16,7 @@
         <a class="t-footer-menu__item" href="./">Pricing</a>
       </li>
       <li class="footer-menu__item">
-        <a class="t-footer-menu__item" href="./">Pricing</a>
+        <a class="t-footer-menu__item" href="./">Contact</a>
       </li>
     </ul>
     <Socials />
@@ -62,6 +62,10 @@
       @media (min-width: 720px) {
         margin-bottom: 0;
       }
+    }
+
+    &__item:nth-child(2) {
+      margin-left: -.5rem;
     }
   }
 

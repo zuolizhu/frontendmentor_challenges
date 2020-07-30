@@ -70,7 +70,8 @@
       </div>
       <div class="feature__content__text">
         <h2 class="feature__content__heading t-h2">{featureDetails[currentFeature].heading}</h2>
-        <p class="t-body1">{featureDetails[currentFeature].body}</p>
+        <p class="t-body1 feature__content__body">{featureDetails[currentFeature].body}</p>
+        <a href="./" class="button button--info feature__content__button">More Info</a>
       </div>
     </div>
   </div>
@@ -108,7 +109,7 @@
       padding: 0 3.2rem 23.8rem;
     }
     @media (min-width: 1160px) {
-      padding: 0 0 23.8rem;
+      padding: 0 0 23.4rem;
     }
   }
 
@@ -128,7 +129,7 @@
     margin: 4rem 0 7.2rem;
     text-align: center;
     @media (min-width: 920px) {
-      margin: 7.2rem auto;
+      margin: 6.9rem auto 7.2rem;
     }
   }
 
@@ -156,7 +157,7 @@
       border-top: 1px solid rgba(73, 93, 207, .2);
       @media (min-width: 920px) {
         border-top: none;
-        padding: 0 0 3.2rem;
+        padding: 0 0 3.1rem;
       }
 
       &:last-of-type {
@@ -170,6 +171,11 @@
         color: var(--color-soft-red);
       }
     }
+
+    &__item:nth-child(2) {
+      margin-left: -3rem;
+    }
+
     &__item.highlighted {
       color: rgba(36, 42, 69, 1);
       position: relative;
@@ -222,7 +228,7 @@
       max-width: 55rem;
       margin: 0 auto 6.9rem;
       @media (min-width: 920px) {
-        margin: 0;
+        margin: 0 0 0 -.6rem;
         width: 50%;
         max-width: none;
       }
@@ -241,7 +247,21 @@
       @media (min-width: 920px) {
         width: 45%;
         text-align: left;
-        margin: 0;
+        margin: -.5rem 0 0;
+      }
+    }
+
+    &__button {
+      display: none;
+      @media (min-width: 920px) {
+        display: inline-block;
+      }
+    }
+    &__body {
+      @media (min-width: 920px) {
+        margin-top: 1.6rem;
+        margin-bottom: 3.2rem;
+        letter-spacing: .15px
       }
     }
   }

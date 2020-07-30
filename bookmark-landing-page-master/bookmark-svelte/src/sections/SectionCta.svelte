@@ -22,7 +22,7 @@
 <section class="cta">
   <div class="container">
     <p class="t-cta-promo">35,000+ already joined</p>
-    <h2 class="t-h2 t-h2--white">Stay up-to-date with what we’re doing</h2>
+    <h2 class="t-h2 t-h2--white cta__heading">Stay up-to-date with what we’re doing</h2>
     <form on:submit|preventDefault={contactSubmit}
     class="contact-form">
       <div class="contact-form__input-group{validEmail}">
@@ -42,6 +42,13 @@
     padding: 6rem 0;
     @media (min-width: 768px) {
       padding: 5.8rem 0 7.4rem;
+    }
+
+    &__heading {
+      @media (min-width: 768px) {
+        line-height: 4rem;
+        margin-top: 2.4rem;
+      }
     }
   }
 
