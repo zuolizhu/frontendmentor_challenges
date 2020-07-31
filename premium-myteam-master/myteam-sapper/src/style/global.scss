@@ -1,3 +1,28 @@
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,600;0,700;1,500;1,700&display=swap');
+
+// CSS Variables
+:root {
+  // Colors
+  --color-midnight-green: #014E56;
+  --color-light-coral: #F67E7E;
+  --color-rapture-blue: #79C8C7;
+  --color-plice-blue: #2C6269;
+  --color-deep-jungle-green: #004047;
+  --color-sacramento-state-green: #012F34;
+  --color-dark-green: #002529;
+  --color-white: #FFFFFF;
+  
+  // Font Weights
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+
+  // Design elements
+  --transition: 300ms ease-in-out;
+}
+
+// Reset
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -13,5 +38,93 @@ html, body {
 
 body {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-family: 'Livvic', sans-serif;
+  background-color: var(--color-midnight-green);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+// Type Specs
+// size, line height, font weight, letter spacing
+.t-intro {
+  font-weight: var(--weight-bold);
+  font-size: 4rem;
+  line-height: 4rem;
+  @media (min-width: 520px) {
+    font-size: 6.4rem;
+    line-height: 5.6rem;
+  }
+}
+
+.t-intro--home {
+  @media (min-width: 960px) {
+    font-size: 10rem;
+    line-height: 10rem;
+  }
+}
+
+.t-intro--page {
+  @media (min-width: 960px) {
+    font-size: 6.4rem;
+    line-height: 10rem;
+  }
+}
+
+.t-body1 {
+  font-weight: var(--weight-semi-bold);
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  @media (min-width: 960px) {
+    font-size: 1.8rem;
+  }
+}
+
+.t-main-nav {
+  font-weight: var(--weight-semi-bold);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+// Utilities
+.t-white {
+  color: var(--color-white);
+}
+
+.sr-only {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
+.button--contact {
+  width: 15.9rem;
+  text-align: center;
+  border: 2px solid var(--color-white);
+  padding-top: .7rem;
+  padding-bottom: .9rem;
+  border-radius: 2.4rem;
+  @media (min-width: 520px) {
+    width: 15.3rem;
+  }
 }
