@@ -60,13 +60,21 @@ button {
   border: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
 // Type Specs
 // size, line height, font weight, letter spacing
 .t-intro {
   font-weight: var(--weight-bold);
   font-size: 4rem;
   line-height: 4rem;
-  @media (min-width: 520px) {
+  @media (min-width: 420px) {
     font-size: 6.4rem;
     line-height: 5.6rem;
   }
@@ -74,6 +82,10 @@ button {
 
 .t-intro--home {
   @media (min-width: 960px) {
+    font-size: 8rem;
+    line-height: 6.4rem;
+  }
+  @media (min-width: 1160px) {
     font-size: 10rem;
     line-height: 10rem;
   }
@@ -83,6 +95,16 @@ button {
   @media (min-width: 960px) {
     font-size: 6.4rem;
     line-height: 10rem;
+  }
+}
+
+.t-h2 {
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  font-weight: var(--weight-bold);
+  @media (min-width: 960px) {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
   }
 }
 
@@ -99,11 +121,53 @@ button {
   font-weight: var(--weight-semi-bold);
   font-size: 1.8rem;
   line-height: 2.8rem;
+  transition: var(--transition) color;
 }
+
+.t-feature__heading {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: var(--weight-bold);
+}
+
+.t-feature__body {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: var(--weight-semi-bold);
+  opacity: .8;
+}
+
+.t-testimonial__quote {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: var(--weight-semi-bold);
+}
+
+.t-testimonial__name {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: var(--weight-bold);
+}
+
+.t-testimonial__title {
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.8rem;
+  font-weight: var(--weight-medium);
+}
+
 
 // Utilities
 .t-white {
   color: var(--color-white);
+}
+
+.t-light-coral {
+  color: var(--color-light-coral);
+}
+
+.t-rapture-blue {
+  color: var(--color-rapture-blue);
 }
 
 .sr-only {
@@ -117,6 +181,7 @@ button {
   border: 0;
 }
 
+// Buttons
 .button--contact {
   width: 15.9rem;
   text-align: center;
@@ -124,7 +189,12 @@ button {
   padding-top: .7rem;
   padding-bottom: .9rem;
   border-radius: 2.4rem;
+  transition: var(--transition) background-color, var(--transition) color;
   @media (min-width: 520px) {
     width: 15.3rem;
+  }
+  &:hover {
+    color: var(--color-dark-green);
+    background-color: var(--color-white);
   }
 }

@@ -13,11 +13,18 @@
 <style lang="scss">
 	.site-logo {
 		height: 3.2rem;
+		@media (min-width: 960px) {
+			height: 4rem;
+		}
 		&__container {
 			width: 12.8rem;
 			height: 3.2rem;
 			display: inline-flex;
 			align-items: center;
+			@media (min-width: 960px) {
+				width: 16rem;
+				height: 4rem;
+			}
 			img { width: 100%; }
 		}
 	}
@@ -31,6 +38,10 @@
 		position: relative;
 		@media (min-width: 768px) {
 			padding: 6.4rem 4rem 0 3.9rem;
+			max-width: 111rem;
+		}
+		@media (min-width: 1160px) {
+			padding: 6.4rem 0 0;
 		}
 	}
 	.desktop-nav {
@@ -78,6 +89,7 @@
 			left: 0;
 			height: 100vh;
 			background-color: rgba(0, 0, 0, .5);
+			z-index: 1;
 		}
 		@media (min-width: 520px) {
 			display: none;
@@ -105,6 +117,10 @@
 			margin-bottom: 3.6rem;
 		}
 	}
+
+	.desktop-nav__item:hover > .t-hover-color {
+		color: var(--color-light-coral);
+	}
 </style>
 
 <nav class="main-nav">
@@ -117,8 +133,8 @@
 	</a>
 	<!-- tablet/desktop menu -->
 	<ul class="desktop-nav">
-		<li class="desktop-nav__item"><a class="t-main-nav t-white" aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li class="desktop-nav__item"><a class="t-main-nav t-white" aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
+		<li class="desktop-nav__item"><a class="t-main-nav t-white t-hover-color" aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
+		<li class="desktop-nav__item"><a class="t-main-nav t-white t-hover-color" aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
 		<li class="desktop-nav__item"><a class="t-main-nav t-white button button--contact" aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact</a></li>
 	</ul>
 	<!-- mobile burger -->

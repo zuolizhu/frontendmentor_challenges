@@ -4,15 +4,18 @@
 	export let segment;
 </script>
 
-<header>
+<header class="header">
 	<Nav {segment}/>
 </header>
 
-<main>
+<main class="main">
 	<slot></slot>
 </main>
 
 
 <style lang='scss' global>
 	@import './style/global.scss';
+	.header {
+		text-align: center;
+	}
 </style>
