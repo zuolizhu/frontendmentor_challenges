@@ -57,7 +57,7 @@
 				<p class="t-testimonial__quote t-white">“The team perfectly fit the specialized skill set required. They focused 
 				on the most essential features helping us launch the platform eight months 
 				faster than planned.”</p>
-				<p class="t-testimonial__name t-rapture-blue">Kady Baker</p>
+				<p class="t-testimonial__name testimonial__name t-rapture-blue">Kady Baker</p>
 				<p class="t-testimonial__title t-white">Product Manager at Bookmark</p>
 				<div class="testimonial__avatar">
 					<img src="./images/avatar-kady.jpg" alt="avatar">
@@ -67,7 +67,7 @@
 				<p class="t-testimonial__quote t-white">“We needed to automate our entire onboarding process. The team came in and 
 				built out the whole journey. Since going live, user retention has gone 
 				through the roof!”</p>
-				<p class="t-testimonial__name t-rapture-blue">Aiysha Reese</p>
+				<p class="t-testimonial__name testimonial__name t-rapture-blue">Aiysha Reese</p>
 				<p class="t-testimonial__title t-white">Founder of Manage</p>
 				<div class="testimonial__avatar">
 					<img src="./images/avatar-aiysha.jpg" alt="avatar">
@@ -270,15 +270,41 @@
 			padding: 14rem 2.4rem 16.4rem;
 			background-position: top left, bottom right;
 			background-image: url(../images/bg-pattern-home-4-about-3.svg), url(../images/bg-pattern-home-5.svg);
+			@media (min-width: 580px) {
+				padding: 10rem 9.8rem 10rem 9.7rem;
+			}
+			@media (min-width: 1200px) {
+				padding: 14rem 16.5rem;
+				max-width: 144rem;
+			}
 		}
+
+		&__intro {
+			max-width: 49rem;
+			margin: 0 auto;
+			@media (min-width: 1200px) {
+				max-width: 93.2rem;
+			}
+		}
+
 		&__container {
 			margin-top: 4.8rem;
+			@media (min-width: 1200px) {
+				margin-top: 5.6rem;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+			}
 		}
 		.testimonial {
 			background-repeat: no-repeat;
 			background-position: top center;
 			background-image: url(../images/icon-quotes.svg);
 			padding-top: 3.6rem;
+			@media (min-width: 1200px) {
+				max-width: 35rem;
+				width: 32%;
+			}
 
 			&__name {
 				margin-top: 1.6rem;
@@ -300,6 +326,9 @@
 
 			&:not(:last-of-type) {
 				margin-bottom: 4.8rem;
+				@media (min-width: 1200px) {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
