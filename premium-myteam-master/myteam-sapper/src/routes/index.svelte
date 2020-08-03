@@ -1,3 +1,7 @@
+<script>
+	import CtaBanner from '../components/CtaBanner.svelte';
+</script>
+
 <svelte:head>
 	<title>Frontend Mentor | myteam website challenge - Homepage</title>
 </svelte:head>
@@ -86,6 +90,7 @@
 		</div>
 	</div>
 </section>
+<CtaBanner />
 
 <style lang="scss">
 	// Intro section

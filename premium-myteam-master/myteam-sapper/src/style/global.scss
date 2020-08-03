@@ -156,6 +156,26 @@ p {
   font-weight: var(--weight-medium);
 }
 
+.t-footer-nav {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  transition: var(--transition) color;
+  font-weight: var(--weight-semi-bold);
+  @media (min-width: 960px) {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  &:hover {
+    color: var(--color-light-coral);
+  }
+}
+
+.t-footer-info {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: var(--weight-semi-bold);
+  opacity: .6;
+}
 
 // Utilities
 .t-white {
@@ -168,6 +188,10 @@ p {
 
 .t-rapture-blue {
   color: var(--color-rapture-blue);
+}
+
+.t-sacramento-state-green {
+  color: var(--color-sacramento-state-green);
 }
 
 .sr-only {
@@ -184,11 +208,13 @@ p {
 // Buttons
 .button--contact {
   width: 15.9rem;
-  text-align: center;
-  border: 2px solid var(--color-white);
   padding-top: .7rem;
+  text-align: center;
+  display: inline-block;
   padding-bottom: .9rem;
   border-radius: 2.4rem;
+  font-weight: var(--weight-semi-bold);
+  border: 2px solid var(--color-white);
   transition: var(--transition) background-color, var(--transition) color;
   @media (min-width: 520px) {
     width: 15.3rem;
@@ -196,5 +222,13 @@ p {
   &:hover {
     color: var(--color-dark-green);
     background-color: var(--color-white);
+  }
+  &--cta {
+    width: 15.3rem;
+    border-color: var(--color-sacramento-state-green);
+  }
+  &--cta:hover {
+    background-color: var(--color-sacramento-state-green);
+    color: var(--color-white);
   }
 }

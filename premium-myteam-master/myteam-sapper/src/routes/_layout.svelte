@@ -1,5 +1,6 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	export let segment;
 </script>
@@ -12,6 +13,7 @@
 	<slot></slot>
 </main>
 
+<Footer />
 
 <style lang='scss' global>
 	@import './style/global.scss';
