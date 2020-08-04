@@ -139,9 +139,9 @@
 	</a>
 	<!-- tablet/desktop menu -->
 	<ul class="desktop-nav">
-		<li class="desktop-nav__item"><a class="t-main-nav t-white t-hover-color" aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li class="desktop-nav__item"><a class="t-main-nav t-white t-hover-color" aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-		<li class="desktop-nav__item"><a class="t-main-nav t-white button button--contact" aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact us</a></li>
+		<li class="desktop-nav__item"><a class="t-main-nav t-white t-hover-color" aria-current="{segment === undefined ? 'page' : undefined}" href="./">home</a></li>
+		<li class="desktop-nav__item"><a class="t-main-nav t-white t-hover-color" aria-current="{segment === 'about' ? 'page' : undefined}" href="./about">about</a></li>
+		<li class="desktop-nav__item"><a class="t-main-nav t-white button button--contact" aria-current="{segment === 'contact' ? 'page' : undefined}" href="./contact">contact us</a></li>
 	</ul>
 	<!-- mobile burger -->
 	<button
@@ -157,9 +157,9 @@
 	{#if burgerActive}
 		<div transition:fade class="mobile-nav-block">
 			<ul transition:fly="{{x: 200}}" class="mobile-nav">
-				<li class="mobile-nav__item"><a class="t-main-nav t-white" aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-				<li class="mobile-nav__item"><a class="t-main-nav t-white" aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-				<li class="mobile-nav__item"><a class="t-main-nav t-white button button--contact" aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact us</a></li>
+				<li class="mobile-nav__item"><a class="t-main-nav t-white" aria-current="{segment === undefined ? 'page' : undefined}" href="./">home</a></li>
+				<li class="mobile-nav__item"><a class="t-main-nav t-white" aria-current="{segment === 'about' ? 'page' : undefined}" href="./about">about</a></li>
+				<li class="mobile-nav__item"><a class="t-main-nav t-white button button--contact" aria-current="{segment === 'contact' ? 'page' : undefined}" href="./contact">contact us</a></li>
 			</ul>
 		</div>
 	{/if}

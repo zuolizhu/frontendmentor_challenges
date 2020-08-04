@@ -92,8 +92,11 @@ p {
 }
 
 .t-intro--page {
-  @media (min-width: 960px) {
+  @media (min-width: 520px) {
     font-size: 6.4rem;
+    line-height: 5.6rem;
+  }
+  @media (min-width: 960px) {
     line-height: 10rem;
   }
 }

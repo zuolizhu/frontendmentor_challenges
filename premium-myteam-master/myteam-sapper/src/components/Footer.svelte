@@ -140,10 +140,10 @@
     </div>
     <ul class="footer__nav">
       <li class="footer__nav__item">
-        <a href="home" class="t-footer-nav t-white">home</a>
+        <a href="./" class="t-footer-nav t-white">home</a>
       </li>
       <li class="footer__nav__item">
-        <a href="about" class="t-footer-nav t-white">about</a>
+        <a href="./about" class="t-footer-nav t-white">about</a>
       </li>
     </ul>
       <p class="footer__site-info t-footer-info t-white">987 Hillcrest Lane<br>
