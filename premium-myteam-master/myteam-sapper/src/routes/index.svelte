@@ -107,19 +107,18 @@
 			}
 
 			@media (min-width: 960px) {
-				padding: 12.9rem 0 25rem;
 				display: flex;
 				text-align: left;
-				align-items: center;
+				align-items: flex-start;
 				flex-flow: row nowrap;
 				justify-content: space-between;
 				background-position: bottom right;
-				padding: 11.2rem 4rem 25.6rem;
+				padding: 12.9rem 4rem 25.6rem;
 				max-width: 111rem;
 				margin: 0 auto;
 			}
 			@media (min-width: 1160px) {
-				padding: 11.2rem 0 25.6rem;
+				padding: 12.9rem 0 25rem;
 			}
 		}
 		&__body {
@@ -133,17 +132,20 @@
 				width: 45%;
 				max-width: 44.5rem;
 				position: relative;
-				padding-top: 7.9rem;
+				padding-top: 8.3rem;
 			}
 		}
 		&__body::after {
-			content: '';
-			position: absolute;
-			height: .4rem;
-			width: 5rem;
-			top: 0;
-			left: 0;
-			background-color: var(--color-rapture-blue);
+			content: none;
+			@media (min-width: 960px) {
+				content: '';
+				position: absolute;
+				height: .4rem;
+				width: 5rem;
+				top: 0;
+				left: 0;
+				background-color: var(--color-rapture-blue);
+			}
 		}
 
 		&__heading {
@@ -200,6 +202,7 @@
 				@media (min-width: 1440px) {
 					top: auto;
 					bottom: 0;
+					right: -16.4rem;
 				}
 			}
 		}
@@ -213,7 +216,7 @@
 				width: 75%;
 			}
 			@media (min-width: 960px) {
-				padding-top: 5.4rem;
+				padding-top: 5.8rem;
 				width: 41%;
 			}
 		}
@@ -279,7 +282,7 @@
 				padding: 10rem 9.8rem 10rem 9.7rem;
 			}
 			@media (min-width: 1200px) {
-				padding: 14rem 16.5rem;
+				padding: 14rem 16.5rem 14.6rem;
 				max-width: 144rem;
 			}
 		}
@@ -314,6 +317,9 @@
 			&__name {
 				margin-top: 1.6rem;
 				margin-bottom: .2rem;
+				@media (min-width: 1200px) {
+					margin-top: 2.4rem;
+				}
 			}
 
 			&__avatar {
@@ -323,6 +329,9 @@
 				margin-top: 1.6rem;
 				display: inline-block;
 				border: 2px solid #C4FFFE;
+				@media (min-width: 1200px) {
+					margin-top: 3rem;
+				}
 				img {
 					border-radius: 50%;
 					width: 100%;

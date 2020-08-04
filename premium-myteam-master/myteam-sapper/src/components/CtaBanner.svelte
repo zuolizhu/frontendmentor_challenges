@@ -21,6 +21,7 @@
         max-width: 144rem;
         padding: 7.6rem 26rem 7.6rem 26.3rem;
         margin: 0 auto;
+        background-position: bottom left;
       }
     }
     .content-wrap {

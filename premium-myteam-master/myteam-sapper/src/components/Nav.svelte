@@ -40,8 +40,11 @@
 			padding: 6.4rem 4rem 0 3.9rem;
 			max-width: 111rem;
 		}
+		@media (min-width: 1024px) {
+			padding: 7.3rem 4rem 0 3.9rem;
+		}
 		@media (min-width: 1160px) {
-			padding: 6.4rem 0 0;
+			padding: 7.3rem 0 0;
 		}
 	}
 	.desktop-nav {
@@ -55,6 +58,9 @@
 		}
 		@media (min-width: 560px) {
 			justify-content: flex-start;
+		}
+		@media (min-width: 1024px) {
+			margin-left: 8rem;
 		}
 
 		&__item {
@@ -135,7 +141,7 @@
 	<ul class="desktop-nav">
 		<li class="desktop-nav__item"><a class="t-main-nav t-white t-hover-color" aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
 		<li class="desktop-nav__item"><a class="t-main-nav t-white t-hover-color" aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-		<li class="desktop-nav__item"><a class="t-main-nav t-white button button--contact" aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact</a></li>
+		<li class="desktop-nav__item"><a class="t-main-nav t-white button button--contact" aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact us</a></li>
 	</ul>
 	<!-- mobile burger -->
 	<button
@@ -153,7 +159,7 @@
 			<ul transition:fly="{{x: 200}}" class="mobile-nav">
 				<li class="mobile-nav__item"><a class="t-main-nav t-white" aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
 				<li class="mobile-nav__item"><a class="t-main-nav t-white" aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-				<li class="mobile-nav__item"><a class="t-main-nav t-white button button--contact" aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact</a></li>
+				<li class="mobile-nav__item"><a class="t-main-nav t-white button button--contact" aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact us</a></li>
 			</ul>
 		</div>
 	{/if}

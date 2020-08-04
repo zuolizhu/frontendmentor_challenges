@@ -58,6 +58,7 @@
       }
       @media (min-width: 960px) {
         margin: 0;
+        width: 14rem;
       }
       
     }
@@ -123,6 +124,7 @@
       @media (min-width: 960px) {
         grid-row: 2/3;
         grid-column: 3/4;
+        align-self: end;
       }
     }
   }
@@ -144,7 +146,7 @@
         <a href="about" class="t-footer-nav t-white">about</a>
       </li>
     </ul>
-      <p class="footer__site-info t-footer-info t-white">987  Hillcrest Lane<br>
+      <p class="footer__site-info t-footer-info t-white">987 Hillcrest Lane<br>
       Irvine, CA<br>
       California 92714<br>
       Call Us : 949-833-7432</p>
