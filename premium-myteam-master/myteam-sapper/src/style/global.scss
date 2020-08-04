@@ -180,6 +180,19 @@ p {
   opacity: .6;
 }
 
+.t-card-name {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: var(--weight-bold); 
+}
+
+.t-card-title {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: var(--weight-medium);
+  font-style: italic;
+}
+
 // Utilities
 .t-white {
   color: var(--color-white);
