@@ -1,5 +1,6 @@
 <script>
 	import { slide } from 'svelte/transition';
+	import CtaBanner from '../components/CtaBanner.svelte';
 	let directors = [
 		{
 			id: 1,
@@ -118,6 +119,31 @@
 		</div>
 	</div>
 </section>
+
+<section class="clients">
+	<div class="container">
+		<h2 class="t-h2 t-white clients__intro">Some of our clients</h2>
+		<div class="clients__list">
+			<div class="client-logo">
+				<img src="./images/logo-the-verge.png" alt="client logo">
+			</div>
+			<div class="client-logo">
+				<img src="./images/logo-jakarta-post.png" alt="client logo">
+			</div>
+			<div class="client-logo">
+				<img src="./images/logo-the-guardian.png" alt="client logo">
+			</div>
+			<div class="client-logo">
+				<img src="./images/logo-tech-radar.png" alt="client logo">
+			</div>
+			<div class="client-logo">
+				<img src="./images/logo-gadgets-now.png" alt="client logo">
+			</div>
+		</div>
+	</div>
+</section>
+
+<CtaBanner/>
 
 <style lang="scss">
 	// Intro section
@@ -329,5 +355,118 @@
 	@keyframes fadeIn {
 		from { opacity: 0; }
 		to { opacity: 1; }
+	}
+
+	// Clients section
+	.clients {
+		text-align: center;
+		background-color: var(--color-sacramento-state-green);
+
+		.container {
+			position: relative;
+			padding: 8.8rem 0;
+			@media (min-width: 700px) {
+				padding: 10rem 0;
+				max-width: 144rem;
+				margin: 0 auto;
+			}
+			@media (min-width: 1080px) {
+				padding: 14rem 0;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 10rem;
+				height: 10rem;
+				background-image: url(../images/bg-pattern-about-4.svg);
+				background-position: bottom right;
+				@media (min-width: 700px) {
+					width: 20rem;
+				}
+				@media (min-width: 1080px) {
+					height: 20rem;
+				}
+			}
+		}
+
+		&__intro {
+			margin-bottom: 6.4rem;
+			@media (min-width: 700px) {
+				margin-bottom: 4.8rem;
+			}
+		}
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			height: 36rem;
+			@media (min-width: 700px) {
+				height: auto;
+				padding: 0 3.9rem 0 4rem;
+				flex-direction: row;
+				max-width: 111rem;
+				margin: 0 auto;
+			}
+			@media (min-width: 1160px) {
+				padding: 0;
+			}
+
+			.client-logo {
+				display: flex;
+
+				&:nth-child(1) {
+					width: 14.656rem;
+					@media (min-width: 700px) {
+						width: 10.3rem;
+					}
+					@media (min-width: 1080px) {
+						width: 16.5rem;
+					}
+				}				
+				&:nth-child(2) {
+					width: 16.221rem;
+					@media (min-width: 700px) {
+						width: 11.4rem;
+					}
+					@media (min-width: 1080px) {
+						width: 18.4rem;
+					}
+				}
+				&:nth-child(3) {
+					width: 15.937rem;
+					@media (min-width: 700px) {
+						width: 11.2rem;
+					}
+					@media (min-width: 1080px) {
+						width: 18rem;
+					}
+				}
+				&:nth-child(4) {
+					width: 14.656rem;
+					@media (min-width: 700px) {
+						width: 10.3rem;
+					}
+					@media (min-width: 1080px) {
+						width: 16.5rem;
+					}
+				}
+				&:nth-child(5) {
+					width: 8.68rem;
+					@media (min-width: 700px) {
+						width: 6.1rem;
+					}
+					@media (min-width: 1080px) {
+						width: 9.8rem;
+					}
+				}
+
+				img { width: 100%; }
+			}
+		}
 	}
 </style>
