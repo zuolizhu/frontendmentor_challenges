@@ -20,4 +20,7 @@
 	.header {
 		text-align: center;
 	}
+	.main {
+		overflow: hidden;
+	}
 </style>

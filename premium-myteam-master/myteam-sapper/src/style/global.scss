@@ -193,6 +193,12 @@ p {
   font-style: italic;
 }
 
+.t-card-quote {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: var(--weight-semi-bold);
+}
+
 // Utilities
 .t-white {
   color: var(--color-white);
