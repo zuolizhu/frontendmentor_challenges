@@ -294,6 +294,7 @@
 
 	// Testimonials section
 	.testimonials {
+		background-color: var(--color-deep-jungle-green);
 		.container {
 			margin: 0 auto;
 			max-width: 111rem;
