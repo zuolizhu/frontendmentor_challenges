@@ -79,6 +79,7 @@
 			display: inline-flex;
 			position: relative;
 			z-index: 10;
+			padding: 0;
 		}
 		@media (min-width: 520px) {
 			display: none;
@@ -146,6 +147,8 @@
 	<!-- mobile burger -->
 	<button
 		on:click={handleBurger}
+		aria-label="trigger button to open the side menu"
+		title="trigger button to open the side menu"
 		class="button button--burger">
 		{#if burgerActive}
 			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="17"><path fill="#FFF" fill-rule="evenodd" d="M15.01.368l2.122 2.122-6.01 6.01 6.01 6.01-2.122 2.122L9 10.622l-6.01 6.01L.868 14.51 6.88 8.5.87 2.49 2.988.368 9 6.38 15.01.37z"/></svg>

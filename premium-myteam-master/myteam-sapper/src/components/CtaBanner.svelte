@@ -17,6 +17,9 @@
       background-repeat: no-repeat;
       background-position: bottom -2rem left;
       background-image: url(../images/bg-pattern-home-6-about-5.svg);
+      @media (min-width: 520px) {
+        padding: 7.5rem 0;
+      }
       @media (min-width: 1300px) {
         max-width: 144rem;
         padding: 7.6rem 26rem 7.6rem 26.3rem;

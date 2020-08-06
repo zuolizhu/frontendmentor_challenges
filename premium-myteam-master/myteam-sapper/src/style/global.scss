@@ -250,16 +250,18 @@ textarea {
 .button--contact {
   outline: none;
   width: 15.9rem;
-  padding-top: .7rem;
+  padding-top: 1rem;
   text-align: center;
   display: inline-block;
-  padding-bottom: .9rem;
+  padding-bottom: 1rem;
   border-radius: 2.4rem;
   font-weight: var(--weight-semi-bold);
   border: 2px solid var(--color-white);
   transition: var(--transition) background-color, var(--transition) color;
   @media (min-width: 520px) {
     width: 15.3rem;
+    padding-top: .8rem;
+    padding-bottom: .9rem;
   }
   &:hover {
     color: var(--color-dark-green);
@@ -268,6 +270,7 @@ textarea {
   &--cta {
     width: 15.3rem;
     border-color: var(--color-sacramento-state-green);
+    padding: 1rem 0;
   }
   &--cta:hover {
     background-color: var(--color-sacramento-state-green);

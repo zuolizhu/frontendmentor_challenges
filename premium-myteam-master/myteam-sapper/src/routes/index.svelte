@@ -101,13 +101,13 @@
 	.intro {
 		.container {
 			text-align: center;
-			padding: 8rem 2.4rem 19.7rem;
+			padding:7.5rem 2.4rem 19.7rem;
 			background-repeat: no-repeat;
 			background-position: bottom center;
 			background-image: url(../images/bg-pattern-home-2.svg);
 
 			@media (min-width: 520px) {
-				padding: 11.2rem 0 25.6rem;
+				padding: 11rem 0 25.6rem;
 			}
 
 			@media (min-width: 960px) {
@@ -203,6 +203,12 @@
 				background-image: url(../images/bg-pattern-home-3.svg);
 				right: 0;
 				top: 0;
+				@media (min-width: 768px) {
+					transform: translateX(20rem);
+				}
+				@media (min-width: 960px) {
+					transform: translateX(10rem);
+				}
 				@media (min-width: 1440px) {
 					top: auto;
 					bottom: 0;
@@ -214,7 +220,7 @@
 		&__intro {
 			text-align: left;
 			position: relative;
-			padding-top: 3.2rem;
+			padding-top: 3.6rem;
 			width: 67%;
 			@media (min-width: 520px) {
 				width: 75%;
@@ -237,6 +243,9 @@
 		&__container {
 			text-align: center;
 			margin-top: 5.6rem;
+			@media (min-width: 520px) {
+				margin-top: 6.4rem;
+			}
 			@media (min-width: 960px) {
 				margin-top: 5.8rem;
 				width: 55%;
@@ -254,6 +263,10 @@
 				min-width: 7.2rem;
 				flex-flow: row nowrap;
 				justify-content: flex-end;
+				margin: 0 auto;
+				@media (min-width: 520px) {
+					margin: 0;
+				}
 			}
 			&__content {
 				@media (min-width: 520px) {
@@ -286,7 +299,7 @@
 			max-width: 111rem;
 			text-align: center;
 			background-repeat: no-repeat;
-			padding: 14rem 2.4rem 16.4rem;
+			padding: 14rem 2.4rem 16rem;
 			background-position: top left, bottom right;
 			background-image: url(../images/bg-pattern-home-4-about-3.svg), url(../images/bg-pattern-home-5.svg);
 			@media (min-width: 580px) {
@@ -350,7 +363,7 @@
 			}
 
 			&:not(:last-of-type) {
-				margin-bottom: 4.8rem;
+				margin-bottom: 4.25rem;
 				@media (min-width: 1200px) {
 					margin-bottom: 0;
 				}
