@@ -68,6 +68,17 @@ p {
   margin: 0;
 }
 
+input,
+textarea {
+  border: none;
+  background: none;
+}
+
+textarea {
+  resize: none;
+}
+
+
 // Type Specs
 // size, line height, font weight, letter spacing
 .t-intro {
@@ -111,6 +122,12 @@ p {
   }
 }
 
+.t-h3 {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  font-weight: var(--weight-bold);
+}
+
 .t-body1 {
   font-weight: var(--weight-semi-bold);
   font-size: 1.5rem;
@@ -127,12 +144,6 @@ p {
   transition: var(--transition) color;
 }
 
-.t-feature__heading {
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-  font-weight: var(--weight-bold);
-}
-
 .t-feature__body {
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -144,12 +155,6 @@ p {
   font-size: 1.5rem;
   line-height: 2.5rem;
   font-weight: var(--weight-semi-bold);
-}
-
-.t-testimonial__name {
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-  font-weight: var(--weight-bold);
 }
 
 .t-testimonial__title {
@@ -180,7 +185,10 @@ p {
   opacity: .6;
 }
 
-.t-card-name {
+.t-feature__heading,
+.t-testimonial__name,
+.t-card-name,
+.t-ask-body {
   font-size: 1.8rem;
   line-height: 2.8rem;
   font-weight: var(--weight-bold); 
@@ -198,6 +206,7 @@ p {
   line-height: 2.5rem;
   font-weight: var(--weight-semi-bold);
 }
+
 
 // Utilities
 .t-white {
@@ -228,6 +237,10 @@ p {
 }
 
 // Buttons
+.button {
+  cursor: pointer;
+}
+
 .button--contact {
   width: 15.9rem;
   padding-top: .7rem;
@@ -252,5 +265,25 @@ p {
   &--cta:hover {
     background-color: var(--color-sacramento-state-green);
     color: var(--color-white);
+  }
+}
+
+.button--submit {
+  border: none;
+  width: 12.3rem;
+  font-size: 1.8rem;
+  padding-top: .9rem;
+  text-align: center;
+  line-height: 2.8rem;
+  padding-bottom: 1.1rem;
+  border-radius: 2.4rem;
+  display: inline-block;
+  font-weight: var(--weight-semi-bold);
+  background-color: var(--color-white);
+  color: var(--color-deep-jungle-green);
+  transition: var(--transition) color;
+  outline: none;
+  &:hover {
+    color: var(--color-rapture-blue);
   }
 }
