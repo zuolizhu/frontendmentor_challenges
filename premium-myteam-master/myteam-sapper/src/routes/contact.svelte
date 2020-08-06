@@ -1,17 +1,27 @@
 <script>
-	let validForm = '';
-	let email = '';
+	import { regSchema } from '../schema';
+
+	let values = {};
+	let errors = {};
 	
-	const removeErrorStatus = () => validForm = '';
+	const extractErrors = err => {
+    return err.inner.reduce((acc, err) => {
+      return { ...acc, [err.path]: err.message };
+    }, {});
+  };
 
-	function contactSubmit() {
+	const contactSubmit = async () => {
+    try {
+      await regSchema.validate(values, { abortEarly: false });
+      alert(JSON.stringify(values, null, 2));
+      errors = {};
+    } catch (err) {
+			errors = extractErrors(err);
+    }
+	};
+	
+	const removeErrors = () => errors = {};
 
-	}
-
-	function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  }
 </script>
 
 <svelte:head>
@@ -45,43 +55,64 @@
 			</div>
 		</div>
 		<form on:submit|preventDefault={contactSubmit} class="contact__form">
-			<div class="contact__form__input-group">
+			
+			<div class="contact__form__input-group{errors.name ? ' error' : ''}">
         <label for="name" class="sr-only">Name</label>
         <input
 					id="name" 
         	class="contact__form__input-field"
 					type="text" 
-					name="name" 
+					name="name"
+					bind:value={values.name}
+					on:focus={removeErrors}
 					placeholder="Name">
+				{#if errors.name}
+					<p class="error t-error t-light-coral">{errors.name}</p>
+				{/if}
       </div>
-			<div class="contact__form__input-group">
+			<div class="contact__form__input-group{errors.email ? ' error' : ''}">
         <label for="email" class="sr-only">Email</label>
         <input
 					id="email" 
         	class="contact__form__input-field"
 					type="text" 
-					name="email" 
+					name="email"
+					bind:value={values.email}
+					on:focus={removeErrors}
 					placeholder="Email Address">
+				{#if errors.email}
+					<p class="error t-error t-light-coral">{errors.email}</p>
+				{/if}
       </div>
-			<div class="contact__form__input-group">
+			<div class="contact__form__input-group{errors.companyname ? ' error' : ''}">
         <label for="companyname" class="sr-only">Company Name</label>
         <input
 					id="companyname" 
         	class="contact__form__input-field"
 					type="text" 
-					name="companyname" 
+					name="companyname"
+					bind:value={values.companyname}
+					on:focus={removeErrors}
 					placeholder="Company Name">
+				{#if errors.companyname}
+					<p class="error t-error t-light-coral">{errors.companyname}</p>
+				{/if}
       </div>
-			<div class="contact__form__input-group">
+			<div class="contact__form__input-group{errors.title ? ' error' : ''}">
         <label for="title" class="sr-only">Title</label>
         <input
 					id="title" 
         	class="contact__form__input-field"
 					type="text" 
-					name="title" 
+					name="title"
+					bind:value={values.title}
+					on:focus={removeErrors}
 					placeholder="Title">
+				{#if errors.title}
+					<p class="error t-error t-light-coral">{errors.title}</p>
+				{/if}
       </div>
-			<div class="contact__form__input-group">
+			<div class="contact__form__input-group{errors.message ? ' error' : ''}">
         <label for="message" class="sr-only">Message</label>
         <textarea
 					id="message" 
@@ -89,7 +120,12 @@
 					type="text" 
 					name="message"
 					rows="3"
+					bind:value={values.message}
+					on:focus={removeErrors}
 					placeholder="Message"></textarea>
+					{#if errors.message}
+						<p class="error t-error t-light-coral">{errors.message}</p>
+					{/if}
       </div>
 
 			<input class="button button--submit" type="submit" value="submit">
@@ -212,7 +248,24 @@
 
 			&__input-group {
 				display: flex;
+				flex-flow: column nowrap;
 				margin-bottom: 2.4rem;
+
+				.error {
+					padding-left: 1.4rem;
+					margin-top: .8rem;
+				}
+			}
+			&__input-group.error {
+				margin-bottom: 1.7rem;
+				
+				.contact__form__input-field {
+					color: var(--color-light-coral);
+					border-color: var(--color-light-coral);
+					&::placeholder {
+						color: var(--color-light-coral);
+					}
+				}
 			}
 
 			&__input-field,
@@ -230,7 +283,11 @@
 				outline: none;
 				padding: 0 1.4rem 1.6rem;
 				border-bottom: 1px solid var(--color-white);
+				transition: var(--transition) border-color, var(--transition) color;
 
+				&:focus {
+					border-color: var(--color-rapture-blue);
+				}
 				&::placeholder { opacity: .6; }
 
 				&--textarea {
