@@ -78,7 +78,7 @@
 
 <section class="about-intro">
 	<div class="container">
-		<h1 class="t-intro--page t-white">About</h1>
+		<h1 class="t-intro--page t-white about-intro__heading">About</h1>
 		<p class="t-body1 t-white about-intro__body">We help companies build dynamic teams made up of top global talent. 
 		Using our network of passionate professionals we drive innovation 
 		and deliver incredible outcomes. Talented, diverse teams shape the 
@@ -154,8 +154,16 @@
 			text-align: center;
 			padding: 8rem 2.4rem 10.8rem;
 			position: relative;
+			max-width: 144rem;
+			margin: 0 auto;
 			@media (min-width: 520px) {
 				padding: 11.2rem 0;
+			}
+			@media (min-width: 1080px) {
+				display: flex;
+				flex-flow: row nowrap;
+				padding: 12rem 16.5rem;
+				text-align: left;
 			}
 		}
 		.container::before {
@@ -172,12 +180,37 @@
 				transform: translate(10rem, 0);
 			}
 		}
-
+		&__heading {
+			@media (min-width: 1080px) {
+				width: 31.532%;
+				max-width: 35rem;
+				margin-right: 3rem;
+			}
+		}
 		&__body {
 			margin-top: 1.6rem;
 			@media (min-width: 520px) {
 				margin: 2.4rem auto 0;
 				max-width: 45.7rem;
+			}
+			@media (min-width: 1080px) {
+				width: 65.766%;
+				max-width: 73rem;
+				margin: 0;
+				padding-top: 4rem;
+				position: relative;
+			}
+
+			&::before {
+				@media (min-width: 1080px) {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 5rem;
+					height: .4rem;
+					background-color: var(--color-light-coral);
+				}
 			}
 		}
 	}
