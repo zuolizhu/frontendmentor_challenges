@@ -20,7 +20,10 @@
     }
 	};
 	
-	const removeErrors = () => errors = {};
+	const removeErrors = (event) => {
+		errors[event.currentTarget.id] = '';
+		errors = errors;
+	};
 
 </script>
 
@@ -258,7 +261,7 @@
 			}
 			&__input-group.error {
 				margin-bottom: 1.7rem;
-				
+
 				.contact__form__input-field {
 					color: var(--color-light-coral);
 					border-color: var(--color-light-coral);
