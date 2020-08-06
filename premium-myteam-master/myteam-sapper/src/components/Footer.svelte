@@ -1,3 +1,8 @@
+<script>
+  export let segment;
+  console.log('footer segment', segment);
+</script>
+
 <style lang='scss'>
   .footer {
     background-color: var(--color-dark-green);
@@ -128,9 +133,15 @@
       }
     }
   }
+
+  [aria-current] {
+    @media (min-width: 1080px) {
+      margin-top: 45rem;
+    }
+  }
 </style>
 
-<footer class="footer">
+<footer class="footer" aria-current="{segment === 'contact' ? 'contact-margin' : undefined}">
   <div class="container">
     <div class="footer__logo">
       <span class="sr-only">site footer logo</span>

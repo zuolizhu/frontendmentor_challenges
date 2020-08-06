@@ -88,7 +88,7 @@
 	.mobile-nav-block {
 		@media (max-width: 519px) {
 			display: block;
-			position: absolute;
+			position: fixed;
 			top: 0;
 			right: 0;
 			bottom: 0;
@@ -155,7 +155,10 @@
 	</button>
 	<!-- mobile menu -->
 	{#if burgerActive}
-		<div transition:fade class="mobile-nav-block">
+		<div
+			on:click={handleBurger}
+			transition:fade 
+			class="mobile-nav-block">
 			<ul transition:fly="{{x: 200}}" class="mobile-nav">
 				<li class="mobile-nav__item"><a class="t-main-nav t-white" aria-current="{segment === undefined ? 'page' : undefined}" href="./">home</a></li>
 				<li class="mobile-nav__item"><a class="t-main-nav t-white" aria-current="{segment === 'about' ? 'page' : undefined}" href="./about">about</a></li>

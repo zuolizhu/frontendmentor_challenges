@@ -1,5 +1,6 @@
 <script>
 	import { regSchema } from '../schema';
+	import PageTransition from '../components/PageTransition.svelte';
 
 	let values = {};
 	let errors = {};
@@ -31,6 +32,7 @@
 	<title>Frontend Mentor | myteam website challenge - Contact</title>
 </svelte:head>
 
+<PageTransition>
 <section class="contact">
 	<div class="container">
 		<div class="contact__intro">
@@ -135,9 +137,14 @@
 		</form>
 	</div>
 </section>
+</PageTransition>
 
 <style lang="scss">
 	.contact {
+		@media (min-width: 1080px) {
+			height: 100%;
+		}
+		
 		.container {
 			position: relative;
 			padding: 8rem 2.4rem 8.8rem;

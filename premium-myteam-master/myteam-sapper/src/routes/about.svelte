@@ -1,6 +1,7 @@
 <script>
 	import { slide } from 'svelte/transition';
 	import CtaBanner from '../components/CtaBanner.svelte';
+	import PageTransition from '../components/PageTransition.svelte';
 	let directors = [
 		{
 			id: 1,
@@ -75,7 +76,7 @@
 <svelte:head>
 	<title>Frontend Mentor | myteam website challenge - About</title>
 </svelte:head>
-
+<PageTransition>
 <section class="about-intro">
 	<div class="container">
 		<h1 class="t-intro--page t-white about-intro__heading">About</h1>
@@ -144,7 +145,7 @@
 </section>
 
 <CtaBanner/>
-
+</PageTransition>
 <style lang="scss">
 	// Intro section
 	.about-intro {

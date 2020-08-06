@@ -1,11 +1,13 @@
 <script>
 	import CtaBanner from '../components/CtaBanner.svelte';
+	import PageTransition from '../components/PageTransition.svelte';
 </script>
 
 <svelte:head>
 	<title>Frontend Mentor | myteam website challenge - Homepage</title>
 </svelte:head>
 
+<PageTransition>
 <section class="intro">
 	<div class="container">
 		<h1 class="t-intro t-intro--home t-white intro__heading">Find the<br>best <span class="t-light-coral">talent</span></h1>
@@ -91,6 +93,8 @@
 	</div>
 </section>
 <CtaBanner />
+
+</PageTransition>
 
 <style lang="scss">
 	// Intro section
