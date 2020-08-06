@@ -124,6 +124,19 @@
 			@media (min-width: 1160px) {
 				padding: 12.9rem 0 25rem;
 			}
+
+			&::before {
+				content: none;
+				@media (min-width: 1200px) {
+					content: '';
+					position: absolute;
+					background-image: url(../images/bg-pattern-home-1.svg);
+					background-repeat: no-repeat;
+					height: 20rem;
+					width: 20rem;
+					transform: translateX(-26.5rem);
+				}
+			}
 		}
 		&__body {
 			max-width: 45.7rem;
@@ -155,17 +168,6 @@
 		&__heading {
 			@media (min-width: 1400px) {
 				position: relative;
-			}
-		}
-		&__heading::before {
-			@media (min-width: 1200px) {
-				content: '';
-				position: absolute;
-				background-image: url(../images/bg-pattern-home-1.svg);
-				background-repeat: no-repeat;
-				height: 20rem;
-				width: 20rem;
-				transform: translateX(-26.5rem);
 			}
 		}
 	}
