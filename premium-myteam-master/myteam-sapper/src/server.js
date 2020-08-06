@@ -6,8 +6,9 @@ import * as sapper from '@sapper/server';
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
-polka() // You can also use Express
+export default polka() // You can also use Express
 	.use(
+		'/premium-myteam-master',
 		compression({ threshold: 0 }),
 		sirv('static', { dev }),
 		sapper.middleware()

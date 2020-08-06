@@ -248,6 +248,13 @@
 			@media (min-width: 520px) {
 				display: inline-flex;
 			}
+			&__icon {
+				display: flex;
+				width: 7.2rem;
+				min-width: 7.2rem;
+				flex-flow: row nowrap;
+				justify-content: flex-end;
+			}
 			&__content {
 				@media (min-width: 520px) {
 					text-align: left;

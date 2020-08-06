@@ -1,6 +1,5 @@
 <script>
   export let segment;
-  console.log('footer segment', segment);
 </script>
 
 <style lang='scss'>
