@@ -1,29 +1,135 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
 :root {
-  font-family: 'Open Sans', sans-serif;
+  --color-black: #2d3440;
+  --color-white: #fff;
+
+  --weight-light: 200;
+  --weight-regular: 400;
+  --weight-bold: 700;
 }
 
-h1 {
-  color: #1A697F;
-  font-size: 2rem;
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-li {
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-black);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
   list-style-type: none;
-  transition: all 0.3s ease;
-  margin: 1rem 0;
 }
 
-li a {
+.t-project-name {
+  font-weight: var(--weight-bold);
+}
+
+.main .container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.link {
   text-decoration: none;
-  color: #62c890;
-  transition: all 0.3s ease;
+  font-weight: var(--weight-regular);
+  display: inline-flex;
+  color: var(--color-black);
+}
+.link:hover {
+  color: #ff6e6c;
+}
+.link--fm {
 }
 
-li:hover a {
-  color: #D7F08C;
+/* Solutions */
+.solutions {
+  display: grid;
+  gap: 5rem;
+}
+@media (min-width: 520px) {
+  .solutions {
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1080px) {
+  .solutions {
+    gap: 5rem 3rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-li:hover {
-  transform: translate(2px, 0);
+/* Solution card */
+.solution {
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);;
+}
+
+.solution__image {
+  overflow: hidden;
+  height: 24rem;
+}
+
+.solution__image img {
+  width: 100%;
+  object-fit: cover;
+  height: 24rem;
+  transition: 300ms ease-in-out transform;
+  border-radius: 1rem 1rem 0 0;
+  transform: scale(1.03);
+  object-position: 50% 50%;
+}
+
+.solution__image:hover img {
+  transform: scale(1);
+}
+
+.solution__info {
+  padding: 2.4rem;
+}
+
+.solution__info__techstack {
+  display: inline-flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.solution__info__project-name {
+  margin-top: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+
+.tag {
+  font-weight: var(--weight-light);
+}
+
+.solution__info__links {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
 }

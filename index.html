@@ -3,38 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frontend Mentor Challenges Solutions</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor Challenges Solutions by Connor(Zuoli) Zhu</title>
+  <link class="solution"nk rel="stylesheet" href="normalize801.css">
+  <link class="solution"nk rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
 </head>
 <body>
-  <h1>Frontend Mentor Challenges</h1>
-  <ul>
-    <li><a href="./single-price-grid-component-master/index.html">Single price grid component</a></li>
-    <li><a href="./four-card-feature-section-master/index.html">Four cards feature section</a></li>
-    <li><a href="./base-apparel-coming-soon-master/index.html">Base apparel coming soon</a></li>
-    <li><a href="./fylo-data-storage-component-master/index.html">fylo data storage component</a></li>
-    <li><a href="./intro-component-with-signup-form-master/index.html">Intro component with signup form</a></li>
-    <li><a href="./ping-coming-soon-page-master/index.html">Ping coming soon page</a></li>
-    <li><a href="./coding-bootcamp-testimonials-slider-master/index.html">Coding Bootcamp testimonials slider</a></li>
-    <li><a href="./huddle-landing-page-with-alternating-feature-blocks-master/index.html">Huddle landing page</a></li>
-    <li><a href="./huddle-landing-page-with-single-introductory-section-master/index.html">Huddle landing hero section</a></li>
-    <li><a href="./fylo-landing-page-with-two-column-layout-master/index.html">fylo landing page</a></li>
-    <li><a href="./social-media-dashboard-with-theme-switcher-master/index.html">Social media dashboard with theme switcher</a></li>
-    <li><a href="./insure-landing-page-master/index.html">Insure Landing page</a></li>
-    <li><a href="./pricing-component-with-toggle-master/index.html">Pricing component with toggle</a></li>
-    <li><a href="./project-tracking-intro-component-master/index.html">Project tracking intro component</a></li>
-    <li><a href="./clipboard-landing-page-master/index.html">Clipboard landing page</a></li>
-    <li><a href="./fylo-dark-theme-landing-page-master/index.html">Fylo dark theme landing page</a></li>
-    <li><a href="./huddle-landing-page-with-curved-sections-master/index.html">Huddle landing page with curved sections</a></li>
-    <li><a href="./premium-dine-master/index.html">Premium Dine</a></li>
-    <li><a href="./scoot-multi-page-website-master/index.html">Premium Scoot</a></li>
-    <li><a href="./premium-minimalist-portfolio-master/index.html">Premium minimalist portfolio</a></li>
-    <li><a href="./static-job-listings-master/index.html">Reactive job listings</a></li>
-    <li><a href="./easybank-landing-page-master/index.html">Easybank landing page</a></li>
-    <li><a href="./manage-landing-page-master/index.html">Manage landing page</a></li>
-    <li><a href="./url-shortening-api-master/index.html">URL Shortening API</a></li>
-    <li><a href="./bookmark-landing-page-master/index.html">Bookmark landing page</a></li>
-    <li><a href="./premium-myteam-master/">Premium My Team</a></li>
-  </ul>
+  <header></header>
+  <main class="main">
+    <div class="container">
+      <h1>Frontend Mentor Challenges</h1>
+      <!-- data is saved in app.js -->
+      <div id="app">
+        <ul class="solutions">
+          <li class="solution" v-for="solution in solutions">
+            <div class="solution__image">
+              <img v-bind:src="solution.previewImageLink" alt="solution preview">
+            </div>
+            <div class="solution__info">
+              <div class="solution__info__techstack">
+                <div class="tag tag--html">HTML</div>
+                <div class="tag tag--css">CSS</div>
+                <div class="tag tag--js">JS</div>
+                <div class="tag tag--svelte">Svelte</div>
+              </div>
+              <p class="t-project-name solution__info__project-name">{{ solution.projectName }}</p>
+              <div class="solution__info__links">
+                <a v-bind:href="solution.solutionLink" class="link link--fm" target="_blank">View Solution</a>
+                <a v-bind:href="solution.liveViewLink" class="link link--live" target="_blank">Live View</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="app.js" defer></script>
 </body>
 </html>
