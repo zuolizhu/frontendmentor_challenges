@@ -120,9 +120,9 @@ const app = new Vue({
       {
         id: 17,
         projectName: 'Scoot multi-page',
-        previewImageLink: './Scoot-multi-page-website-master/design/desktop-preview.jpg',
+        previewImageLink: './scoot-multi-page-website-master/design/desktop-preview.jpg',
         solutionLink: 'https://www.frontendmentor.io/solutions/scoot-multipage-html-scss-and-js-aINhEDoaN',
-        liveViewLink: './Scoot-multi-page-website-master/index.html'
+        liveViewLink: './scoot-multi-page-website-master/index.html'
       },
       {
         id: 18,
