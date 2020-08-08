@@ -459,6 +459,11 @@ p {
   border-radius: 50%;
 }
 
+.chatapp__fake-input-box__send-button img {
+  width: .607rem;
+  height: .969rem;
+}
+
 .page-intro {
   text-align: center;
   margin-top: 6.4rem;
