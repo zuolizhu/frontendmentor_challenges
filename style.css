@@ -105,18 +105,6 @@ ul {
   padding: 5rem 0;
 }
 
-.header .container {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 800px) {
-  .header .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
-
 .header-link {
   display: inline-block;
   transition: 300ms ease transform;

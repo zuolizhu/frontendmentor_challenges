@@ -1,6 +1,50 @@
 const app = new Vue({
   el: '#app',
   data:{
+    highlightedSolutions: [
+      {
+        id: 21,
+        projectName: 'Reactie job listings with filtering',
+        previewImageLink: './static-job-listings-master/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/job-listings-with-filtering-built-with-svelte-M8ZIMVeU7',
+        liveViewLink: './static-job-listings-master/index.html'
+      },
+      {
+        id: 22,
+        projectName: 'Easybank landing page',
+        previewImageLink: './easybank-landing-page-master/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/almost-pixel-perfect-easybank-landing-page-pure-html-scss-and-js-w1ygcfOhW',
+        liveViewLink: './easybank-landing-page-master/index.html'
+      },
+      {
+        id: 23,
+        projectName: 'Manage landing page',
+        previewImageLink: './manage-landing-page-master/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/manage-landing-page-html-scss-and-js-with-slick-slider-plugin-HxYOgGU3y',
+        liveViewLink: './manage-landing-page-master/index.html'
+      },
+      {
+        id: 24,
+        projectName: 'URL shortening API landing page',
+        previewImageLink: './url-shortening-api-master/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/url-shortening-api-landing-page-built-with-svelte-9O6Dl8G3a',
+        liveViewLink: './url-shortening-api-master/index.html'
+      },
+      {
+        id: 25,
+        projectName: 'Bookmark landing page',
+        previewImageLink: './bookmark-landing-page-master/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/bookmark-landing-page-built-with-svelte-and-scss-G8XNicxj3',
+        liveViewLink: './bookmark-landing-page-master/index.html'
+      },
+      {
+        id: 26,
+        projectName: 'MyTeam multi-page website',
+        previewImageLink: './premium-myteam-master/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/myteam-multipage-website-built-with-sapper-IE4XmEmFX',
+        liveViewLink: './premium-myteam-master/'
+      }
+    ],
     solutions: [
       {
         id: 1,
