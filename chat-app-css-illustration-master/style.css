@@ -28,8 +28,6 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 1.6rem;
   background-color: var(--color-bg-white);
-  position: relative;
-  overflow: hidden;
 }
 
 h1,
@@ -135,10 +133,9 @@ p {
 }
 
 .main {
-  position: relative;
-  max-width: 144rem;
-  margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
+  height: 100%;
 }
 
 .main .container {
@@ -153,19 +150,36 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-@media (min-width: 820px) {
+@media (min-width: 920px) {
   .main .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
     padding: 14.8rem 0 0;
+    max-width: 81.7rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
-.main::before, .main::after {
+@media (min-width: 1200px) {
+  .main .container {
+    margin: 0 26rem 0 36.3rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .main .container {
+    margin: 0 auto;
+  }
+}
+
+.main .container::before, .main .container::after {
   content: '';
   position: absolute;
   width: 51rem;
@@ -175,19 +189,35 @@ p {
   z-index: -1;
 }
 
-.main::before {
+.main .container::before {
   top: 0;
   left: 0;
   -webkit-transform: translate(-32.2rem, -50%);
           transform: translate(-32.2rem, -50%);
 }
 
-.main::after {
+@media (min-width: 920px) {
+  .main .container::before {
+    -webkit-transform: translate(-45.3rem, -31.8rem);
+            transform: translate(-45.3rem, -31.8rem);
+  }
+}
+
+.main .container::after {
   opacity: 0.03;
   bottom: 0;
   right: 0;
   -webkit-transform: translate(32.2rem, 50%);
           transform: translate(32.2rem, 50%);
+}
+
+@media (min-width: 920px) {
+  .main .container::after {
+    bottom: auto;
+    top: 0;
+    -webkit-transform: translate(44.5rem, 11.9rem);
+            transform: translate(44.5rem, 11.9rem);
+  }
 }
 
 .chatapp {
@@ -397,6 +427,14 @@ p {
 .page-intro {
   text-align: center;
   margin-top: 6.4rem;
+  max-width: 44.5rem;
+}
+
+@media (min-width: 920px) {
+  .page-intro {
+    margin-top: 0;
+    text-align: left;
+  }
 }
 
 .page-intro__heading {

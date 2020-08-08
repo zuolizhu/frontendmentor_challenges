@@ -30,8 +30,6 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 1.6rem;
   background-color: var(--color-bg-white);
-  position: relative;
-  overflow: hidden;
 }
 h1,
 h2,
@@ -136,43 +134,60 @@ p {
 }
 
 .main {
-  position: relative;
-  max-width: 144rem;
-  margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
+  height: 100%;
 
   .container {
     padding: 6.4rem 3.2rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    @media (min-width: 820px) {
+    position: relative;
+    @media (min-width: 920px) {
       flex-flow: row nowrap;
       padding: 14.8rem 0 0;
+      max-width: 81.7rem;
+      justify-content: space-between;
+    }
+    @media (min-width: 1200px) {
+      margin: 0 26rem 0 36.3rem;
+    }
+    @media (min-width: 1500px) {
+      margin: 0 auto;
+    }
+    
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 51rem;
+      height: 101.8rem;
+      border-radius: 25.5rem;
+      background-image: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+      z-index: -1;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      transform: translate(-32.2rem, -50%);
+      @media (min-width: 920px) {
+        transform: translate(-45.3rem, -31.8rem);
+      }
+    }
+    &::after {
+      opacity: 0.03;
+      bottom: 0;
+      right: 0;
+      transform: translate(32.2rem, 50%);
+      @media (min-width: 920px) {
+        bottom: auto;
+        top: 0;
+        transform: translate(44.5rem, 11.9rem);
+      }
     }
   }
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: 51rem;
-    height: 101.8rem;
-    border-radius: 25.5rem;
-    background-image: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
-    z-index: -1;
-  }
-  &::before {
-    top: 0;
-    left: 0;
-    transform: translate(-32.2rem, -50%);
-  }
-  &::after {
-    opacity: 0.03;
-    bottom: 0;
-    right: 0;
-    transform: translate(32.2rem, 50%);
-  }
 
 }
 
@@ -327,6 +342,11 @@ p {
 .page-intro {
   text-align: center;
   margin-top: 6.4rem;
+  max-width: 44.5rem;
+  @media (min-width: 920px) {
+    margin-top: 0;
+    text-align: left;
+  }
 
   &__heading {
     margin-bottom: 2.4rem;
