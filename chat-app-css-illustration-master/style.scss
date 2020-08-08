@@ -230,6 +230,15 @@ p {
     flex-flow: row nowrap;
     align-items: center;
 
+    &__nav-arrow {
+      width: .4rem;
+      height: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img { width: 100%; height: 100%; }
+    }
+
     &__avatar {
       width: 2.4rem;
       height: 2.4rem;
@@ -246,7 +255,13 @@ p {
     }
 
     &__dropdown {
+      width: .2rem;
+      height: .8rem;
       margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img { width: 100%; height: 100%; }
     }
   }
 
