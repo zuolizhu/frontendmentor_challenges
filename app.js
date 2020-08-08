@@ -186,6 +186,13 @@ const app = new Vue({
         previewImageLink: './premium-myteam-master/design/desktop-preview.jpg',
         solutionLink: 'https://www.frontendmentor.io/solutions/myteam-multipage-website-built-with-sapper-IE4XmEmFX',
         liveViewLink: './premium-myteam-master/'
+      },
+      {
+        id: 27,
+        projectName: 'Chat app css illustration',
+        previewImageLink: './chat-app-css-illustration-master/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/chat-app-css-illustration-html-and-scss-Vlg1zmfTO',
+        liveViewLink: './chat-app-css-illustration-master/'
       }
     ]
   }
