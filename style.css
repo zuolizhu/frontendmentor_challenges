@@ -102,7 +102,7 @@ ul {
 
 /* Header */
 .header {
-  padding: 5rem 0;
+  padding: 5rem 0 2rem;
 }
 
 .header-link {
@@ -152,7 +152,7 @@ ul {
 
 /* Highlighted solutions section  */
 .highlighted-solutions {
-  margin-bottom: 3.6rem;
+  margin-bottom: 7rem;
 }
 
 /* Solutions */
