@@ -8,7 +8,7 @@
 </script>
 <article class="article">
   <div class="article__image">
-    <img src="../images/drawers.jpg" alt="drawers">
+    <img src="./images/drawers.jpg" alt="drawers">
   </div>
   <div class="article__container">
     <div class="article__content">
@@ -20,7 +20,7 @@
     </div>
     <div class="article__footer">
       <div class="author-avatar">
-        <img src="../images/avatar-michelle.jpg" alt="avatar">
+        <img src="./images/avatar-michelle.jpg" alt="avatar">
       </div>
       <div class="article__footer__info">
         <h2 class="author-name t-author-name">Michelle Appleton</h2>

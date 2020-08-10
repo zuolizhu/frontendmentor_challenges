@@ -237,6 +237,13 @@ const app = new Vue({
         previewImageLink: './chat-app-css-illustration-master/design/desktop-preview.jpg',
         solutionLink: 'https://www.frontendmentor.io/solutions/chat-app-css-illustration-html-and-scss-Vlg1zmfTO',
         liveViewLink: './chat-app-css-illustration-master/'
+      },
+      {
+        id: 28,
+        projectName: 'Article preview component',
+        previewImageLink: './article-preview-component-master/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/chat-app-css-illustration-html-and-scss-Vlg1zmfTO',
+        liveViewLink: './article-preview-component-master/index.html'
       }
     ]
   }
