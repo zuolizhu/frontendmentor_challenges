@@ -52,7 +52,7 @@ body {
 	font-weight: var(--weight-bold);
 	color: var(--color-dark-gray-blue);
 }
-@media (min-width: 800px) {
+@media (min-width: 900px) {
 	.t-article-title {
 		font-size: 2rem;
 		line-height: 2.8rem;

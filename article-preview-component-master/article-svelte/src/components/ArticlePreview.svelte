@@ -62,6 +62,17 @@
     background-color: var(--color-white);
     box-shadow: 0 4rem 4rem -1rem rgba(201,213,225,0.50);
     position: relative;
+    max-width: 32.7rem;
+    margin: 0 auto;
+  }
+  @media (min-width: 900px) {
+    .article {
+      max-width: 73rem; 
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      position: static;
+    }
   }
 
   .article__image {
@@ -69,20 +80,45 @@
     display: flex;
     height: 20rem;
   }
+  @media (min-width: 900px) {
+    .article__image {
+      height: 28rem;
+      width: 28.5rem;
+      min-width: 28.5rem;
+      align-self: auto;
+    }
+  }
 
   .article__image img {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
+  }
+  @media (min-width: 900px) {
+    .article__image img {
+      border-radius: 1rem 0 0 1rem;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .article__container {
     padding: 3.6rem 3.2rem 2rem;
     position: relative;
   }
+  @media (min-width: 900px) {
+    .article__container {
+      padding: 3.2rem 4rem;
+    }
+  }
 
   .article__content__body {
     margin-top: 1.2rem;
     margin-bottom: 3.2rem;
+  }
+  @media (min-width: 900px) {
+    .article__content__body {
+      margin-bottom: 2rem;
+    }
   }
 
   .article__footer {
@@ -114,6 +150,7 @@
     display: flex;
     width: 3.2rem;
     height: 3.2rem;
+    cursor: pointer;
     border-radius: 50%;
     position: relative;
     align-items: center;
@@ -129,6 +166,12 @@
   .share-button.active {
     transform: translateY(.8rem);
     background-color: var(--color-dark-blue);
+  }
+  @media (min-width: 900px) {
+    .share-button.active {
+      transform: translateY(0);
+      background-color: var(--color-dark-blue);
+    }
   }
 
   .share-button.active > svg > path {
@@ -148,6 +191,30 @@
     padding: 1.6rem 3.2rem;
     border-radius: 0 0 1rem 1rem;
   }
+  @media (min-width: 900px) {
+    .share-tooltip {
+      height: 5.5rem;
+      width: 24.8rem;
+      border-radius: 1rem;
+      left: -10.8rem;
+      top: -8.3rem;
+      right: auto;
+      bottom: auto;
+      box-shadow: 0 1rem 1rem 0 rgba(201,213,225,0.50);
+    }
+    .share-tooltip::after {
+      width: 0;
+      height: 0; 
+      content: '';
+      position: absolute;
+      border-left: 1.2rem solid transparent;
+      border-right: 1.2rem solid transparent;
+      border-top: 1.2rem solid var(--color-dark-gray-blue);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -1.2rem;
+    }
+  }
 
   .socials {
     width: 9.2rem;
@@ -161,4 +228,13 @@
     align-items: center;
   }
 
+
+  .article__footer__share {
+    position: static;
+  }
+  @media (min-width: 900px) {
+    .article__footer__share {
+      position: relative;
+    }
+  }
 </style>
