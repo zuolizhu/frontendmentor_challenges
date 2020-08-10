@@ -1,0 +1,105 @@
+:root {
+	/* Colors */
+	--color-dark-gray-blue: hsl(217, 19%, 35%);
+	--color-light-gray-blue: hsl(210, 46%, 95%);
+	--color-dark-blue: hsl(214, 17%, 51%);
+	--color-gray-blue: hsl(212, 23%, 69%);
+	--color-white: #ffffff;
+	
+	/* Font Weights */
+	--weight-medium: 500;
+	--weight-bold: 700;
+
+	/* Design elements */
+	--transition: 300ms ease-in-out;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	font-size: 1.3rem;
+	color: var(--color-dark-blue);
+	font-weight: var(--weight-medium);
+	font-family: 'Manrope', sans-serif;
+  background-color: var(--color-light-gray-blue);
+}
+
+/* Type Specs */
+.t-article-title {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	letter-spacing: .2px;
+	font-weight: var(--weight-bold);
+	color: var(--color-dark-gray-blue);
+}
+@media (min-width: 900px) {
+	.t-article-title {
+		font-size: 2rem;
+		line-height: 2.8rem;
+		letter-spacing: .25px;
+	}
+}
+
+.t-article-body {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	letter-spacing: .12px;
+	color: var(--color-dark-blue);
+	font-weight: var(--weight-medium);
+}
+
+.t-author-name {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	letter-spacing: .12px;
+	font-weight: var(--weight-bold);
+	color: var(--color-dark-gray-blue);
+}
+
+.t-publish-date {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	letter-spacing: .12px;
+	color: var(--color-gray-blue);
+	font-weight: var(--weight-medium);
+}
+
+.t-share {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	letter-spacing: 5px;
+	color: var(--color-gray-blue);
+	font-weight: var(--weight-medium);
+}
+
+/* Screen Reader Only */
+.sr-only {
+	padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}

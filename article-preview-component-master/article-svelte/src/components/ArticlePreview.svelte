@@ -92,12 +92,14 @@
   .article__image img {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
+    object-position: 50% 26%;
+    object-fit: cover;
   }
   @media (min-width: 900px) {
     .article__image img {
       border-radius: 1rem 0 0 1rem;
       height: 100%;
-      object-fit: cover;
+      object-position: left;
     }
   }
 
@@ -178,6 +180,13 @@
     fill: var(--color-white);
   }
 
+  .share-button:hover {
+    background-color: var(--color-dark-blue);
+  }
+  .share-button:hover > svg > path {
+    fill: var(--color-white);
+  }
+
   .share-tooltip {
     position: absolute;
     background-color: var(--color-dark-gray-blue);
@@ -200,6 +209,7 @@
       top: -8.3rem;
       right: auto;
       bottom: auto;
+      padding: 1.8rem 3.6rem 1.7rem 3.7rem;
       box-shadow: 0 1rem 1rem 0 rgba(201,213,225,0.50);
     }
     .share-tooltip::after {
