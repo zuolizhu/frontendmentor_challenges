@@ -6,6 +6,8 @@ $(document).ready(function(){
     centerMode: true,
     variableWidth: true,
     autoplay: true,
+    infinite: true,
+    slide: 'div.testimonial-card-holder',
     responsive: [
       {
         breakpoint: 800,

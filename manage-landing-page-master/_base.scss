@@ -289,6 +289,7 @@ body {
 }
 
 .bg-pattern-right {
+  display: none;
   opacity: 0;
   @media (min-width: 768px) {
     opacity: 1;
@@ -296,16 +297,19 @@ body {
     right: 0;
     top: 0;
     z-index: -1;
+    display: block;
   }
 } 
 .bg-pattern-left {
   opacity: 0;
+  display: none;
   @media (min-width: 768px) {
     opacity: 1;
     position: absolute;
     left: 0;
     top: 112.3rem;
     z-index: -1;
+    display: block;
   }
 } 
 
