@@ -18,6 +18,7 @@
   "dependencies": {
     "node-sass": "^4.14.1",
     "sirv-cli": "^0.4.4",
-    "svelte-preprocess": "^4.0.8"
+    "svelte-preprocess": "^4.0.8",
+    "serialize-javascript": ">=3.1.0"
   }
 }
