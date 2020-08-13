@@ -19,7 +19,10 @@
 body, p, a, ul, li, h1, h2, h3 {
   margin: 0;
   padding: 0;
-  text-decoration: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 li {
@@ -51,16 +54,6 @@ footer {
   margin-top: 100px;
 }
 
-.welcome h1 {
-  line-height: 1.6;
-}
-
-/* welcome section */
-.welcome h2 {
-  opacity: 50%;
-  margin-top: 16px;
-}
-
 /* cards section */
 .card {
   background-color: #fff;
@@ -70,7 +63,18 @@ footer {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0px 15px 20px var(--BlueShadow);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3.55px;
 }
 
 .card:hover {
@@ -80,13 +84,15 @@ footer {
 
 .card h1 {
   font-size: 20px;
-  margin-bottom: 6px;
+  line-height: 28px;
+  margin-bottom: 4px;
 }
 
 .card h2 {
-  font-size: 13px;
   opacity: 50%;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.09px;
 }
 
 .card-img {
@@ -98,18 +104,37 @@ footer {
   width: 57px;
 }
 
+.cards {
+  margin-top: 76px;
+}
+
+.card {
+  padding: 27px 28px 28px;
+  margin: 0 auto;
+  max-width: 312px;
+}
+
+.card:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+
+.card-img {
+  margin-top: 33px;
+}
+
 /* colored borders */
-.card:nth-child(1) {
-  border-top: 5px solid var( --Cyan);
+.card:nth-child(1)::before {
+  background-color: var( --Cyan);
 }
-.card:nth-child(2) {
-  border-top: 5px solid var( --Red);
+.card:nth-child(2)::before {
+  background-color: var( --Red);
 }
-.card:nth-child(3) {
-  border-top: 5px solid var( --Orange);
+.card:nth-child(3)::before {
+  background-color: var( --Orange);
 }
-.card:nth-child(4) {
-  border-top: 5px solid var( --Blue);
+.card:nth-child(4)::before {
+  background-color: var( --Blue);
 }
 
 /* mobile styles */
@@ -127,57 +152,49 @@ main {
 
 .welcome h1 {
   font-size: 24px;
+  letter-spacing: .17px;
+  line-height: 33px;
 }
+.welcome h1:nth-child(2) {
+  margin-top: 4px;
+}
+
 
 .welcome h2 {
+  opacity: 50%;
   font-size: 15px;
-  padding: 0 30px;
+  margin-top: 16px;
+  line-height: 25px;
+  letter-spacing: 0.1px;
+  margin: 16px auto 0;
 }
 
-/* cards section */
-.cards {
-  margin-top: 76px;
-}
-
-.card {
-  padding: 28px;
-  margin: 25px auto;
-  max-width: 312px;
-}
-
-.card h2 {
-  letter-spacing: 1px;
-}
-
-.card-img {
-  margin-top: 33px;
-}
 
 /* desktop styles */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   main {
     max-width: 1110px;
-    margin-top: 0;
+    margin-top: 80px;
+    padding: 0;
   }
 
   body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
   }
 
   /* welcome section */
   .welcome h1 {
     font-size: 36px;
+    line-height: 51px;
+    letter-spacing: .25px;
+  }
+
+  .welcome h1:nth-child(2) {
+    margin-top: 0;
   }
   
   .welcome h2 {
-    padding: 0;
-    width: 50%;
-    letter-spacing: 0.5px;
-    margin: 16px auto;
+    max-width: 540px;
   }
 
   /* cards section */
@@ -187,7 +204,7 @@ main {
   /* grid layout */
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1f);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
   .card.cyan {
@@ -207,12 +224,29 @@ main {
     grid-row: 2/4;
   }
   /* card detail */
+  .card:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
   .card {
     max-width: 350px;
     margin: 0 auto;
     padding: 32px;
   }
-  .card h2 {
-    letter-spacing: 0.6;
+
+  .card h1 {
+    margin-bottom: 8.5px;
+  }
+
+  .card-img {
+    margin-top: 40px;
+  }
+
+  .card-img img {
+    width: 64px;
+  }
+
+  .card::before {
+    height: 4px;
   }
 }
