@@ -15,7 +15,9 @@
 <body>
   <main class="grid">
     <section class="logo">
-      <img src="./images/logo.svg" alt="logo">
+      <div class="logo-container">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
     </section>
     <section class="hero">
     </section>
@@ -23,7 +25,7 @@
       <h1 class="text-light">
         We're
       </h1>
-      <h1 class="text-bold">
+      <h1 class="text-bold lh-fix">
         coming<br/> soon
       </h1>
       <h2 class="text-regular">
@@ -31,6 +33,7 @@
         Add your email below to stay up-to-date with announcements and our launch deals.
       </h2>
       <form class="promotion" action="" id="errorBorder" onsubmit="event.preventDefault(); validateEmail();">
+        <label class="sr-only" for="email">Email</label>
         <input type="text" id="email" name="email" value="" placeholder="Email Address">
         <div class="error" id="errorIcon">
           <img src="./images/icon-error.svg" alt="">
@@ -44,9 +47,9 @@
   </main>
   
   <footer>
-    <p class="attribution">
+    <p class="sr-only attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/zuolizhu">Connor Zhu</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/zuolizhu">Connor Zhu</a>.
     </p>
   </footer>
   <!-- js code for form validation -->
