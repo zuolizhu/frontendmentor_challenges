@@ -15,11 +15,13 @@
 <body>
   <main class="grid">
     <section class="logo">
+      <h2 class="sr-only">logo section</h2>
       <div class="logo-container">
         <img src="./images/logo.svg" alt="logo">
       </div>
     </section>
     <section class="hero">
+      <h2 class="sr-only">hero section</h2>
     </section>
     <section class="comingsoon">
       <h1 class="text-light">
@@ -32,7 +34,7 @@
         Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.
       </h2>
-      <form class="promotion" action="" id="errorBorder" onsubmit="event.preventDefault(); validateEmail();">
+      <form class="promotion" id="errorBorder" onsubmit="event.preventDefault(); validateEmail();">
         <label class="sr-only" for="email">Email</label>
         <input type="text" id="email" name="email" value="" placeholder="Email Address">
         <div class="error" id="errorIcon">
