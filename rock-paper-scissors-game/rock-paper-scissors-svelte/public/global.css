@@ -68,6 +68,27 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 
+.t-picked {
+  font-size: 1.5rem;
+  line-height: 3.2rem;
+  letter-spacing: 1.88px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: var(--weight-bold);
+}
+
+.t-round-result {
+  font-size: 5.6rem;
+  line-height: 7.6rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: var(--weight-bold);
+}
+
+.t-white {
+  color: var(--color-white);
+}
+
 /* Buttons */
 .btn {
   border: none;
@@ -81,4 +102,19 @@ p {
   border-radius: .8rem;
   padding: 1rem 0 .9rem;
   border: 1px solid var(--color-white);
+}
+
+.btn.btn--playagain {
+  width: 22rem;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding-top: 1.5rem;
+  border-radius: .8rem;
+  padding-bottom: 1.4rem;
+  letter-spacing: .25rem;
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
+  font-weight: var(--weight-semi-bold);
+  box-shadow: 0 .3rem .3rem 0 rgba(0,0,0,0.20);
+  background-image: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
 }

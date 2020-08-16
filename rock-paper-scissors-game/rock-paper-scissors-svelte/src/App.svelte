@@ -1,13 +1,13 @@
 <script>
   import Score from './components/Score.svelte';
-  import Selections from './components/Selections.svelte';
+  import Pickings from './components/Pickings.svelte';
   import Rules from './components/Rules.svelte';
 
 </script>
 
 <main class="main">
 	<Score/>
-  <Selections/>
+  <Pickings/>
   <Rules/>
 </main>
 
