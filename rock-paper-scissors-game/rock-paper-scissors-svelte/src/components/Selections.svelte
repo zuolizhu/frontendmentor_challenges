@@ -1,4 +1,6 @@
 <script>
+  let picked = false;
+
   const SELECTIONS = [
     {
       name: 'paper',
@@ -16,20 +18,62 @@
       beats: 'scissors'
     }
   ];
+
+  function handleSelect() {
+    picked = true;
+
+    const selectionName = this.dataset.selectionName;
+    const userSelection = SELECTIONS.find(selection => selection.name === selectionName);
+    makeSelection(userSelection);
+  }
+
+  function makeSelection(userSelection) {
+    const houseSelection = randomSelection();
+    console.log('house selection --->', houseSelection);
+
+    const userWinner = isWinner(userSelection, houseSelection);
+    const houseWinner = isWinner(houseSelection, userSelection);
+    
+    console.log('user winner: ', userWinner);
+    console.log('house winner:', houseWinner);
+  }
+
+  function incrementScore() {
+  }
+
+  function decrementScore() {
+  }
+
+  function isWinner(selection, opponentSelection) {
+    return selection.beats === opponentSelection.name;
+  }
+
+  function randomSelection() {
+    const randomIndex = Math.floor(Math.random() * SELECTIONS.length);
+    return SELECTIONS[randomIndex];
+  }
 </script>
 
 
 <div class="selections">
-
-  <div class="selections-container">
-  {#each SELECTIONS as selection}
-    <div class="selection selection--{selection.name}">
-      <div class="selection__inner">
-        <img class="selection-icon" src="{selection.svgUrl}" alt="selection icon">
-      </div>
-    </div>
-  {/each}
+  {#if picked}
+  <div class="comparison-container">
+  
   </div>
+  {:else}
+    <div class="selections-container">
+    {#each SELECTIONS as selection}
+      <div
+        on:click={handleSelect}
+        data-selection-name="{selection.name}"
+        class="selection selection--{selection.name}">
+        <div class="selection__inner">
+          <img class="selection-icon" src="{selection.svgUrl}" alt="selection icon">
+        </div>
+      </div>
+    {/each}
+    </div>
+  {/if}
   You Picked
   The House Picked
 
