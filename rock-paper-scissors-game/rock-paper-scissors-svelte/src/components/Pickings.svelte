@@ -7,7 +7,7 @@
   let currentPicking = {};
   let theHousePicking = {};
   let showRoundResult = false;
-  let result = 'you win';
+  let result = '';
 
   const dispatch = createEventDispatcher();
 
@@ -39,8 +39,6 @@
   }
 
   async function roundStart(yourPicking) {
-    console.log('The house is picking, please wait');
-
     const housePicking = await randomPick();
     
     theHousePicking = housePicking;
@@ -62,13 +60,11 @@
 
   function incrementScore() {
     result = 'you win';
-    console.log('+1');
     updateScore(1);
   }
 
   function decrementScore() {
     result = 'you lose';
-    console.log('-1');
     updateScore(-1);
   }
 
@@ -89,6 +85,7 @@
     picked = false;
     housePicked = false;
     showRoundResult = false;
+    result = '';
   }
 
   function updateScore(score) {
@@ -102,7 +99,7 @@
 <div class="pickings">
   {#if picked}
   <div class="comparison-container">
-    <div class="youpicked">
+    <div class="youpicked{result === 'you win' ? ' win':''}">
       <div class="picking picking--{currentPicking.name}">
         <div class="picking__inner">
           <img class="picking-icon" src="{currentPicking.svgUrl}" alt="picking icon">
@@ -110,7 +107,7 @@
       </div>
       <p class="t-picked picked">You Picked</p>
     </div>
-    <div class="housepicked">
+    <div class="housepicked{result === 'you lose' ? ' win':''}">
       {#if housePicked}
       <div class="picking picking--{theHousePicking.name}">
         <div class="picking__inner">
@@ -118,7 +115,15 @@
         </div>
       </div>
       {:else}
-        <div class="picking-waiting"></div>
+        <div class="picking-waiting">
+          <div class="loadingio-spinner-ripple-0ww0d4btxgq">
+            <div class="ldio-to0kafuso">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
       {/if}
       <p class="t-picked picked">The House Picked</p>
     </div>
@@ -354,12 +359,19 @@
 .comparison-container {
   margin-top: 9.8rem;
   width: 100%;
-  padding-left: 2.9rem;
-  padding-right: 2.1rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-end;
   justify-content: space-between;
+  max-width: 32.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .comparison-container {
+    max-width: 62.7rem;
+    align-items: flex-start;
+  }
 }
 
 .youpicked {
@@ -367,9 +379,10 @@
   flex-flow: column nowrap;
   align-items: center;
 }
-
-.youpicked .picked {
-  margin-top: 1.7rem;
+@media (min-width: 768px) {
+  .youpicked {
+    flex-flow: column-reverse nowrap;
+  }
 }
 
 .housepicked {
@@ -378,9 +391,22 @@
   flex-flow: column nowrap;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .housepicked {
+    flex-flow: column-reverse nowrap;
+  }
+}
 
+.youpicked .picked,
 .housepicked .picked {
   margin-top: 1.7rem;
+}
+@media (min-width: 768px) {
+  .youpicked .picked,
+  .housepicked .picked {
+    margin-top: 0;
+    margin-bottom: 6.3rem;
+  }
 }
 
 .picking-waiting {
@@ -389,6 +415,9 @@
   border-radius: 50%;
   background-color: rgba(0, 0, 0, .10);
   margin-bottom: 1.168rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .round-result {
@@ -398,6 +427,107 @@
 
 .round-result__result {
   margin-bottom: 1.6rem;
+}
+
+
+/* loading animation */
+@keyframes ldio-to0kafuso {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    
+  }
+  100% {
+    width: 10rem;
+    height: 10rem;
+    opacity: 0;
+  }
+}
+
+.ldio-to0kafuso div {
+  position: absolute;
+  border-width: 1rem;
+  border-style: solid;
+  opacity: 1;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ldio-to0kafuso 2s cubic-bezier(0,0.2,0.8,1) infinite;
+}
+
+.ldio-to0kafuso div:nth-child(1) {
+  border-color: hsl(349, 70%, 56%);
+}
+
+.ldio-to0kafuso div:nth-child(2) {
+  border-color: hsl(230, 89%, 65%);
+  animation-delay: -0.5s;
+}
+
+.ldio-to0kafuso div:nth-child(3) {
+  border-color: hsl(40, 84%, 53%);
+  animation-delay: -1s;
+}
+
+.loadingio-spinner-ripple-0ww0d4btxgq {
+  width: 11rem;
+  height: 11rem;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+}
+.ldio-to0kafuso {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+.ldio-to0kafuso div { box-sizing: content-box; }
+
+.youpicked.win,
+.housepicked.win {
+  position: relative;
+}
+.youpicked.win::before,
+.housepicked.win::before {
+  content: '';
+  position: absolute;
+  width: 28.8rem;
+  height: 28.4rem;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-image: url(../images/bg-win-mobile.svg);
+  animation: fadeIn 500ms cubic-bezier(0,0.2,0.8,1);
+}
+@media (min-width: 768px) {
+  .youpicked.win::before,
+  .housepicked.win::before {
+    width: 73rem;
+    height: 71.8rem;
+    background-image: url(../images/bg-win-desktop.svg);
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.67);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 </style>

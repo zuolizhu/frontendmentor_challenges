@@ -35,6 +35,7 @@
     align-items: center;
     max-width: 130.2rem;
     margin: 0 auto;
+    overflow: hidden;
   }
   @media (min-width: 768px) {
     .main {
