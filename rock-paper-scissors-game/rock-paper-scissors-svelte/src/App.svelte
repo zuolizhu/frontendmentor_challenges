@@ -17,7 +17,6 @@
     if (savedScore != null) score = parseInt(savedScore);
     // set to 12 by default to match the design
     else score = 12;
-
 	});
 </script>
 
@@ -34,5 +33,12 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    max-width: 130.2rem;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    .main {
+      padding: 4.8rem 0 3.2rem;
+    }
   }
 </style>

@@ -11,6 +11,7 @@
 
   /* Design elements */
   --transition: 300ms ease-in-out;
+  --transition-2: 270ms ease;
 }
 
 /* Reset */
@@ -50,6 +51,13 @@ p {
   text-transform: uppercase;
   font-weight: var(--weight-semi-bold);
 }
+@media (min-width: 768px) {
+  .t-score {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: .25rem;
+  }
+}
 
 .t-score-number {
   font-size: 4rem;
@@ -57,6 +65,12 @@ p {
   line-height: 4rem;
   color: var(--color-dark-gray);
   font-weight: var(--weight-bold);
+}
+@media (min-width: 768px) {
+  .t-score-number {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+  }
 }
 
 .t-rules {

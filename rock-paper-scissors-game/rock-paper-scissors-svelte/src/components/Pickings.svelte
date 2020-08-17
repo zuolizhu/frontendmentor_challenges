@@ -159,8 +159,20 @@
   width: 31.2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 10.5rem auto 0;
+  margin-top: 10.5rem;
+  margin-left: auto;
+  margin-right: auto;
   row-gap: 1.534rem;
+  background-repeat: no-repeat;
+  background-image: url(../images/bg-triangle.svg);
+  background-position: left 52% top 9.2rem;
+}
+@media (min-width: 768px) {
+  .pickings-container  {
+    width: 47.6rem;
+    margin-top: 6.3rem;
+    row-gap: 2.4rem;
+  }
 }
 
 .picking {
@@ -172,6 +184,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: var(--transition-2) height;
+}
+@media (min-width: 768px) {
+  .picking {
+    width: 19.8rem;
+    height: 20.3rem;
+  }
 }
 
 .picking::before {
@@ -182,6 +201,11 @@
   right: 0;
   height: 12.678rem;
   border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .picking::before {
+    height: 19.4rem;
+  }
 }
 
 .picking::after {
@@ -195,6 +219,21 @@
   opacity: 0;
   transform: scale(.7);
   transition: var(--transition) opacity, var(--transition) transform;
+}
+@media (min-width: 768px) {
+  .picking::after {
+    width: 25.2rem;
+    height: 24.8rem;
+  }
+}
+
+.picking:hover {
+  height: 12.678rem;
+}
+@media (min-width: 768px) {
+  .picking:hover {
+    height: 19.4rem;
+  }
 }
 
 .picking:hover::after {
@@ -237,7 +276,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -.3rem; 
+  margin-top: -.3rem;
+  transition: var(--transition-2) height, var(--transition-2) margin-top;
+}
+@media (min-width: 768px) {
+  .picking__inner {
+    width: 15.2rem;
+    height: 15.2rem;
+    margin-top: -.7rem;
+  }
+}
+
+.picking:hover .picking__inner {
+  height: 9.41rem;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .picking:hover .picking__inner {
+    height: 14.4rem;
+  }
 }
 
 .picking__inner::before {
@@ -249,10 +306,35 @@
   background-image: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98%);
   bottom: 0;
 }
+@media (min-width: 768px) {
+  .picking__inner::before {
+    width: 15.2rem;
+    height: 14.4rem;
+  }
+}
 
 .picking-icon {
   position: relative;
   z-index: 2;
+}
+@media (min-width: 768px) {
+  .picking--scissors .picking-icon {
+    transform: scale(1.37) translateY(.3rem) translateX(-.3rem);
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .picking--paper .picking-icon {
+    transform: scale(1.37) translateY(.3rem) translateX(-.2rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .picking--rock .picking-icon {
+    transform: scale(1.37) translate(0, .4rem);
+  }
 }
 
 
