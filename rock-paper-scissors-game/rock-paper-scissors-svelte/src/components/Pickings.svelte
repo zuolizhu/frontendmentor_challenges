@@ -1,11 +1,15 @@
 <script>
   import { fly, fade } from 'svelte/transition';
+  import { createEventDispatcher } from 'svelte';
+  
   let picked = false;
   let housePicked = false;
   let currentPicking = {};
   let theHousePicking = {};
   let showRoundResult = false;
   let result = 'you win';
+
+  const dispatch = createEventDispatcher();
 
   const PICKINGS = [
     {
@@ -59,11 +63,13 @@
   function incrementScore() {
     result = 'you win';
     console.log('+1');
+    updateScore(1);
   }
 
   function decrementScore() {
     result = 'you lose';
     console.log('-1');
+    updateScore(-1);
   }
 
   function isWinner(yourPicking, housePicking) {
@@ -83,6 +89,12 @@
     picked = false;
     housePicked = false;
     showRoundResult = false;
+  }
+
+  function updateScore(score) {
+    dispatch('updateScore', {
+			score: score
+		});
   }
 </script>
 

@@ -1,5 +1,5 @@
 <script>
-  let score = 12;
+  export let score = 12;
 </script>
 
 <div class="score-board-padding">
