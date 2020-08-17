@@ -159,19 +159,21 @@
   width: 31.2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 10.5rem;
+  margin-top: 10.3rem;
   margin-left: auto;
   margin-right: auto;
   row-gap: 1.534rem;
   background-repeat: no-repeat;
-  background-image: url(../images/bg-triangle.svg);
-  background-position: left 52% top 9.2rem;
+  background-image: url(../images/bg-triangle-mobile.svg);
+  background-position: top 5.75rem left 54%;
 }
 @media (min-width: 768px) {
   .pickings-container  {
     width: 47.6rem;
     margin-top: 6.3rem;
     row-gap: 2.4rem;
+    background-image: url(../images/bg-triangle.svg);
+    background-position: left 52% top 9.2rem;
   }
 }
 
@@ -317,6 +319,11 @@
   position: relative;
   z-index: 2;
 }
+
+/* inner icons micro adjustment */
+.picking--scissors .picking-icon {
+  transform: scale(.89) translateX(-.3rem) translateY(.2rem);
+}
 @media (min-width: 768px) {
   .picking--scissors .picking-icon {
     transform: scale(1.37) translateY(.3rem) translateX(-.3rem);
@@ -325,15 +332,21 @@
 
 
 
+.picking--paper .picking-icon {
+  transform: scale(.89) translateY(.25rem);
+}
 @media (min-width: 768px) {
   .picking--paper .picking-icon {
     transform: scale(1.37) translateY(.3rem) translateX(-.2rem);
   }
 }
 
+.picking--rock .picking-icon {
+  transform: scale(.89) translateY(.4rem);
+}
 @media (min-width: 768px) {
   .picking--rock .picking-icon {
-    transform: scale(1.37) translate(0, .4rem);
+    transform: scale(1.37) translateY(.4rem);
   }
 }
 

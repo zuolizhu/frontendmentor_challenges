@@ -28,7 +28,7 @@
 
 <style>
   .main {
-    padding: 3.2rem 0 5.6rem;
+    padding: 3.1rem 0 5.6rem;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;

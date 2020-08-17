@@ -32,7 +32,7 @@ body {
   margin: 0;
   font-size: 1.6rem;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  background-image: radial-gradient(50% 134%, #1F3757 0%, #131537 100%);
+  background-image: radial-gradient(circle at top center, #1F3757 0%, #131537 100%);
 }
 
 h1,

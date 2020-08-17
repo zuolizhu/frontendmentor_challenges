@@ -17,7 +17,7 @@
 
 <style>
   .score-board-padding {
-    padding: 0 3.2rem;
+    padding: 0 3.1rem;
     width: 100%;
     max-width: 70.2rem;
   }
@@ -33,7 +33,7 @@
     align-items: center;
     border-radius: .5rem;
     justify-content: space-between;
-    padding: 1.1rem 1.1rem 1.1rem 2.2rem;
+    padding: 1.1rem 1rem 1rem 2rem;
     border: .3rem solid rgba(255, 255, 255, .29);
   }
   @media (min-width: 768px) {
@@ -44,7 +44,7 @@
   }
 
   .score-board__logo-container {
-    width: 8.3rem;
+    width: 8.4rem;
     height: 4.8rem;
     overflow: hidden;
   }
