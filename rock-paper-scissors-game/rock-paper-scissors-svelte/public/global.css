@@ -91,6 +91,13 @@ p {
   text-transform: uppercase;
   font-weight: var(--weight-bold);
 }
+@media (min-width: 768px) {
+  .t-picked {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: 3px;
+  }
+}
 
 .t-round-result {
   font-size: 5.6rem;
@@ -121,6 +128,7 @@ p {
 
 .btn.btn--playagain {
   width: 22rem;
+  cursor: pointer;
   font-size: 1.6rem;
   line-height: 1.9rem;
   padding-top: 1.5rem;
@@ -131,5 +139,10 @@ p {
   color: var(--color-dark-gray);
   font-weight: var(--weight-semi-bold);
   box-shadow: 0 .3rem .3rem 0 rgba(0,0,0,0.20);
+  transition: var(--transition) color, var(--transition) transform;
   background-image: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+}
+.btn.btn--playagain:hover {
+  color: #DB2E4D;
+  transform: translateY(-.2rem);
 }

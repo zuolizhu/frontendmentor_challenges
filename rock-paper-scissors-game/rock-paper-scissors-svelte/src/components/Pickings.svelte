@@ -98,7 +98,7 @@
 
 <div class="pickings">
   {#if picked}
-  <div class="comparison-container">
+  <div class="comparison-container{showRoundResult === true ? ' expand': ''}">
     <div class="youpicked{result === 'you win' ? ' win':''}">
       <div class="picking picking--{currentPicking.name}">
         <div class="picking__inner">
@@ -371,6 +371,10 @@
   .comparison-container {
     max-width: 62.7rem;
     align-items: flex-start;
+    transition: var(--transition) max-width;
+  }
+  .comparison-container.expand {
+    max-width: 77rem;
   }
 }
 
@@ -394,6 +398,7 @@
 @media (min-width: 768px) {
   .housepicked {
     flex-flow: column-reverse nowrap;
+    width: 23.1rem;
   }
 }
 
@@ -419,10 +424,24 @@
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .picking-waiting {
+    width: 19.8rem;
+    height: 19.8rem;
+    margin-bottom: 0;
+  }
+}
 
 .round-result {
   text-align: center;
   margin-top: 6.2rem;
+}
+@media (min-width: 768px) {
+  .round-result {
+    margin-top: -17.5rem;
+    position: relative;
+    z-index: 10;
+  }
 }
 
 .round-result__result {
@@ -444,6 +463,22 @@
     opacity: 0;
   }
 }
+@media (min-width: 768px) {
+  @keyframes ldio-to0kafuso {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+      
+    }
+    100% {
+      width: 19.8rem;
+      height: 19.8rem;
+      opacity: 0;
+    }
+  }
+
+}
 
 .ldio-to0kafuso div {
   position: absolute;
@@ -455,6 +490,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   animation: ldio-to0kafuso 2s cubic-bezier(0,0.2,0.8,1) infinite;
+}
+@media (min-width: 768px) {
+  .ldio-to0kafuso div {
+    border-width: 2rem;
+  }
 }
 
 .ldio-to0kafuso div:nth-child(1) {
@@ -481,6 +521,12 @@
   background: transparent;
   border-radius: 50%;
 }
+@media (min-width: 768px) {
+  .loadingio-spinner-ripple-0ww0d4btxgq {
+    width: 19.8rem;
+    height: 19.8rem;
+  }
+}
 .ldio-to0kafuso {
   width: 100%;
   height: 100%;
@@ -490,6 +536,7 @@
   transform-origin: 0 0;
 }
 .ldio-to0kafuso div { box-sizing: content-box; }
+
 
 .youpicked.win,
 .housepicked.win {
@@ -528,6 +575,19 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
+}
+@media (min-width: 768px) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.67);
+    }
+  }
+
 }
 
 </style>
