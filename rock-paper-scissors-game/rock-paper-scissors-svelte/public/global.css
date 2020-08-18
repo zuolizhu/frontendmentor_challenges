@@ -78,9 +78,16 @@ p {
   font-size: 1.6rem;
   line-height: 1.9rem;
   letter-spacing: .25rem;
-  color: var(--color-white);
   text-transform: uppercase;
   font-weight: var(--weight-semi-bold);
+}
+
+.t-rules-modal {
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
+  font-weight: var(--weight-bold);
 }
 
 .t-picked {
@@ -120,10 +127,17 @@ p {
 
 .btn.btn--rules {
   width: 12.8rem;
+  cursor: pointer;
   text-align: center;
   border-radius: .8rem;
   padding: 1rem 0 .9rem;
+  color: var(--color-white);
   border: 1px solid var(--color-white);
+  transition: var(--transition) color, var(--transition) background-color;
+}
+.btn.btn--rules:hover {
+  color: var(--color-dark-gray);
+  background-color: var(--color-white);
 }
 
 .btn.btn--playagain {
