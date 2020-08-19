@@ -76,6 +76,12 @@ p {
   transition: var(--transition) color;
   font-weight: var(--weight-extra-bold);
 }
+@media (min-width: 467px) {
+  .t-brand {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
 
 .t-switch {
   font-size: 1.2rem;
@@ -84,6 +90,12 @@ p {
   color: var(--text1);
   transition: var(--transition) color;
   font-weight: var(--weight-semi-bold);
+}
+@media (min-width: 467px) {
+  .t-switch {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
 }
 
 .t-name {

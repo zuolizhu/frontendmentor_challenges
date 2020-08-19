@@ -16,24 +16,43 @@
 		}
 	}
 </script>
-
-<nav class="navbar">
-	<span class="sr-only" aria-current="{segment === undefined ? 'page' : undefined}">Page navigation bar</span>
-	<h1 class="t-brand">Where is the world?</h1>
-	<button class="btn btn--mode {currentTheme} t-switch navbar__button" on:click={switchTheme}>Dark Mode</button>
-</nav>
+<header class="header">
+	<nav class="navbar">
+		<span class="sr-only" aria-current="{segment === undefined ? 'page' : undefined}">Page navigation bar</span>
+		<h1 class="t-brand">Where is the world?</h1>
+		<button class="btn btn--mode {currentTheme} t-switch navbar__button" on:click={switchTheme}>Dark Mode</button>
+	</nav>
+</header>
 
 <style>
-	.navbar {
+	.header {
+		background-color: var(--bg1);
+		transition: var(--transition) background-color;
+		box-shadow: 0 .2rem .4rem 0 rgba(0,0,0,0.06);
 		height: 8rem;
 		padding: 3rem 1.6rem;
+		width: 100%;
+		text-align: center;
+	}
+	@media (min-width: 714px) {
+		.header {
+			padding-left: 5.6rem;
+    	padding-right: 5.5rem;
+		}
+	}
+	@media (min-width: 1380px) {
+		.header {
+			padding-left: 0;
+    	padding-right: 0;
+		}
+	}
+
+	.navbar {
 		display: inline-flex;
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		background-color: var(--bg1);
-		transition: var(--transition) background-color;
-		box-shadow: 0 .2rem .4rem 0 rgba(0,0,0,0.06);
+		max-width: 127.9rem;
 	}
 
 	.navbar__button {
@@ -47,6 +66,12 @@
 		background-position: center;
 		margin-right: .8rem;
 		transition: var(--transition) background;
+	}
+	@media (min-width: 467px) {
+		.navbar__button::before {
+			width: 2rem;
+			height: 2rem;
+		}
 	}
 	.light-mode.navbar__button::before {
 		background-image: url(../images/moon-light.svg);
