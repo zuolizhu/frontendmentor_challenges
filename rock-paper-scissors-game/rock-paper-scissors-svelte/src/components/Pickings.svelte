@@ -158,8 +158,6 @@
 
 .pickings {
   width: 100%;
-  margin-bottom: auto;
-  min-height: 43rem;
 }
 
 .pickings-container {
@@ -168,6 +166,7 @@
   grid-template-columns: repeat(2, 1fr);
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10.5rem;
   row-gap: 1.534rem;
   background-repeat: no-repeat;
   background-image: url(../images/bg-triangle-mobile.svg);
@@ -177,9 +176,9 @@
   .pickings-container  {
     width: 47.6rem;
     row-gap: 2.4rem;
+    margin-top: 6.4rem;
     background-image: url(../images/bg-triangle.svg);
     background-position: left 52% top 9.2rem;
-    min-height: 43rem;
   }
 }
 
@@ -358,7 +357,7 @@
 
 
 .comparison-container {
-  margin-top: 9.8rem;
+  margin-top: 10.5rem;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -372,6 +371,7 @@
   .comparison-container {
     max-width: 62.7rem;
     align-items: flex-start;
+    margin-top: 7.2rem;
     transition: var(--transition) max-width;
   }
   .comparison-container.expand {
@@ -436,10 +436,12 @@
 .round-result {
   text-align: center;
   margin-top: 6.2rem;
+  margin-bottom: 5.2rem;
 }
 @media (min-width: 768px) {
   .round-result {
     margin-top: -17.5rem;
+    margin-bottom: 0;
     position: relative;
     z-index: 10;
   }

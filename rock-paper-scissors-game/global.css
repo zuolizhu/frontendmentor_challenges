@@ -33,7 +33,14 @@ body {
   margin: 0;
   font-size: 1.6rem;
   font-family: 'Barlow Semi Condensed', sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
   background-image: radial-gradient(circle at top center, #1F3757 0%, #131537 100%);
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1,

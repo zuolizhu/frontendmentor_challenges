@@ -30,6 +30,9 @@
 {/if}
 
 <style>
+  .rules {
+    margin-top: auto;
+  }
   @media (min-width: 768px) {
     .rules {
       align-self: flex-end;

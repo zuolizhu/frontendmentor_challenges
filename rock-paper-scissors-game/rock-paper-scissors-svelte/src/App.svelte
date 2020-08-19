@@ -35,7 +35,12 @@
     align-items: center;
     max-width: 130.2rem;
     margin: 0 auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  .main::-webkit-scrollbar {
+    display: none;
   }
   @media (min-width: 768px) {
     .main {
