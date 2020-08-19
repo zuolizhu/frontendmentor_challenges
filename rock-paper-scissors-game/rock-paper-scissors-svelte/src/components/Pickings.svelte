@@ -158,8 +158,8 @@
 
 .pickings {
   width: 100%;
-  height: 100%;
   margin-bottom: auto;
+  min-height: 43rem;
 }
 
 .pickings-container {
