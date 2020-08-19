@@ -14,17 +14,17 @@
   const PICKINGS = [
     {
       name: 'paper',
-      svgUrl: '../images/icon-paper.svg',
+      svgUrl: './images/icon-paper.svg',
       beats: 'rock'
     },
     {
       name: 'scissors',
-      svgUrl: '../images/icon-scissors.svg',
+      svgUrl: './images/icon-scissors.svg',
       beats: 'paper'
     },
     {
       name: 'rock',
-      svgUrl: '../images/icon-rock.svg',
+      svgUrl: './images/icon-rock.svg',
       beats: 'scissors'
     }
   ];
@@ -158,13 +158,14 @@
 
 .pickings {
   width: 100%;
+  height: 100%;
+  margin-bottom: auto;
 }
 
 .pickings-container {
   width: 31.2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 10.3rem;
   margin-left: auto;
   margin-right: auto;
   row-gap: 1.534rem;
@@ -175,10 +176,10 @@
 @media (min-width: 768px) {
   .pickings-container  {
     width: 47.6rem;
-    margin-top: 6.3rem;
     row-gap: 2.4rem;
     background-image: url(../images/bg-triangle.svg);
     background-position: left 52% top 9.2rem;
+    min-height: 43rem;
   }
 }
 

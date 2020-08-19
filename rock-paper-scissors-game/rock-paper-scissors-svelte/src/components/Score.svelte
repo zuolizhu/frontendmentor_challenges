@@ -5,7 +5,7 @@
 <div class="score-board-padding">
   <div class="score-board">
     <div class="score-board__logo-container">
-      <img class="score-board__logo" src="../images/logo.svg" alt="site logo">
+      <img class="score-board__logo" src="./images/logo.svg" alt="site logo">
     </div>
     <div class="score-board__number">
       <p class="t-score">Score</p>
@@ -20,10 +20,12 @@
     padding: 0 3.1rem;
     width: 100%;
     max-width: 70.2rem;
+    margin-bottom: 10.3rem;
   }
   @media (min-width: 768px) {
     .score-board-padding {
       padding: 0;
+      margin-bottom: 6.3rem;
     }
   }
 
