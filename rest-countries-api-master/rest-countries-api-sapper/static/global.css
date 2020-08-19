@@ -1,3 +1,21 @@
+:root {
+  /* Colors */
+  --color-dark-blue: hsl(209, 23%, 22%);
+  --color-dark-blue2: hsl(207, 26%, 17%);
+  --color-dark-blue3: hsl(200, 15%, 8%);
+  --color-dark-gray: hsl(0, 0%, 52%);
+  --color-light-gray: hsl(0, 0%, 98%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-semi-bold: 600;
+  --weight-extra-bold: 800;
+
+  /* Design elements */
+  --transition: 300ms ease-in-out;
+}
+
 /* Reset */
 html {
   box-sizing: border-box;
@@ -15,7 +33,10 @@ html, body {
 body {
   margin: 0;
   font-size: 1.6rem;
+  background-color: var(--bg2);
+  font-weight: var(--weight-light);
   font-family: 'Nunito Sans', sans-serif;
+  transition: var(--transition) background-color;
 }
 
 a {
@@ -44,4 +65,68 @@ p {
   clip-path: inset(0px 0px 99.9% 99.9%);
   overflow: hidden;
   border: 0;
+}
+
+/* Type Specs */
+.t-brand {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0;
+  color: var(--text1);
+  transition: var(--transition) color;
+  font-weight: var(--weight-extra-bold);
+}
+
+.t-switch {
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  line-height: 1.6rem;
+  color: var(--text1);
+  transition: var(--transition) color;
+  font-weight: var(--weight-semi-bold);
+}
+
+.t-name {
+  font-size: 1.8rem;
+  letter-spacing: 0;
+  line-height: 2.6rem;
+  color: var(--text1);
+  transition: var(--transition) color;
+  font-weight: var(--weight-extra-bold);
+}
+
+.t-country-info {
+  letter-spacing: 0;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: var(--text1);
+  transition: var(--transition) color;
+}
+
+.t-light {
+  font-weight: var(--weight-light);
+}
+
+.t-semi-bold {
+  font-weight: var(--weight-semi-bold);
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Themes */
+.light {
+  --text1: var(--color-dark-blue3);
+  --bg1: var(--color-white);
+  --bg2: var(--color-light-gray);
+}
+
+.dark {
+  --text1: var(--color-white);
+  --bg1: var(--color-dark-blue);
+  --bg2: var(--color-dark-blue2);
 }

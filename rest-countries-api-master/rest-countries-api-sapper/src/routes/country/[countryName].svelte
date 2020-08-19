@@ -4,7 +4,7 @@
 		// this file is called [countryName].svelte
 		const res = await this.fetch(`https://restcountries.eu/rest/v2/name/${params.countryName}`);
 		const data = await res.json();
-
+		
 		if (res.status === 200) {
 			return { country: data[0] };
 		} else {
