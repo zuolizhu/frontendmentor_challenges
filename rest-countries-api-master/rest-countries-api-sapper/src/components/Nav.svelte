@@ -38,6 +38,8 @@
 		.header {
 			padding-left: 5.6rem;
     	padding-right: 5.5rem;
+			padding-top: 2.3rem;
+			padding-bottom: 2.5rem;
 		}
 	}
 	@media (min-width: 1380px) {
@@ -57,6 +59,8 @@
 
 	.navbar__button {
 		display: inline-flex;
+		padding: 0;
+		cursor: pointer;
 	}
 	.navbar__button::before {
 		content: '';

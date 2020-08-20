@@ -1,5 +1,6 @@
 <script>
   export let country;
+  const population = country.population.toLocaleString();
 </script>
 
 <li class="country-card">
@@ -7,7 +8,7 @@
     <img class="country-card__image" loading="lazy" src="{country.flag}" alt="country flag">
     <div class="country-card__info">
       <h2 class="country-card__info__name t-name">{country.name}</h2>
-      <p class="t-country-info country-card__info__other"><span class="t-semi-bold">Population: </span><span class="t-light"> {country.population}</span></p>
+      <p class="t-country-info country-card__info__other"><span class="t-semi-bold">Population: </span><span class="t-light"> {population}</span></p>
       <p class="t-country-info country-card__info__other"><span class="t-semi-bold">Region: </span><span class="t-light">{country.region}</span></p>
       <p class="t-country-info country-card__info__other"><span class="t-semi-bold">Capital: </span><span class="t-light">{country.capital}</span></p>
     </div>
@@ -31,9 +32,10 @@
   }
 
   .country-card__image {
-    object-fit: cover;
     width: 100%;
     height: 16rem;
+    object-fit: cover;
+    object-position: center;
   }
 
   .country-card__info {
