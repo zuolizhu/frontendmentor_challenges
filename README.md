@@ -27,6 +27,14 @@ All the projects are hosted on Vercel, check out this [link](https://zzl-fronten
 20. [Premium minimalist portfolio](https://zzl-frontendmentor-challenges.now.sh/premium-minimalist-portfolio-master/index.html)
 21. [Reactive job listings](https://zzl-frontendmentor-challenges.now.sh/static-job-listings-master/index.html)
 22. [Easybank landing page](https://zzl-frontendmentor-challenges.now.sh/easybank-landing-page-master/index.html)
+23. [Manage landing page](https://zzl-frontendmentor-challenges.now.sh/manage-landing-page-master/index.html)
+24. [URL shortening API landing page](https://zzl-frontendmentor-challenges.now.sh/url-shortening-api-master/index.html)
+25. [Bookmark landing page](https://zzl-frontendmentor-challenges.now.sh/bookmark-landing-page-master/index.html)
+26. [MyTeam multi-page website](https://zzl-frontendmentor-challenges.now.sh/premium-myteam-master/)
+27. [Chat app css illustration](https://zzl-frontendmentor-challenges.now.sh/chat-app-css-illustration-master/)
+28. [Article preview component](https://zzl-frontendmentor-challenges.now.sh/article-preview-component-master/index.html)
+29. [Rock paper scissors game](https://zzl-frontendmentor-challenges.now.sh/rock-paper-scissors-game/index.html)
+30. [REST Countries API with color theme switcher](https://zzl-frontendmentor-challenges.now.sh/rest-countries-api-master)
 
 More coming soon 💪
 
