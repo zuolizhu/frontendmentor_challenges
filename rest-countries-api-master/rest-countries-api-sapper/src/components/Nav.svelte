@@ -20,7 +20,7 @@
 	<nav class="navbar">
 		<span class="sr-only" aria-current="{segment === undefined ? 'page' : undefined}">Page navigation bar</span>
 		<h1 class="t-brand">Where in the world?</h1>
-		<button class="btn btn--mode {currentTheme} t-switch navbar__button" on:click={switchTheme}>Dark Mode</button>
+		<button name="themeSwitch" class="btn btn--mode {currentTheme} t-switch navbar__button" on:click={switchTheme}>Dark Mode</button>
 	</nav>
 </header>
 

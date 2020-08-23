@@ -217,7 +217,7 @@ p {
   --text1: var(--color-dark-blue3);
   --bg1: var(--color-white);
   --bg2: var(--color-light-gray);
-  --arrow: url(../images/back-arrow-light.svg);
+  --arrow: url(./images/back-arrow-light.svg);
   --search: url(../images/icon-search-light.svg);
   --dropdown: url(../images/icon-dropdown-light.svg);
 }
@@ -226,7 +226,7 @@ p {
   --text1: var(--color-white);
   --bg1: var(--color-dark-blue);
   --bg2: var(--color-dark-blue2);
-  --arrow: url(../images/back-arrow-dark.svg);
+  --arrow: url(./images/back-arrow-dark.svg);
   --search: url(../images/icon-search-dark.svg);
   --dropdown: url(../images/icon-dropdown-dark.svg);
 }

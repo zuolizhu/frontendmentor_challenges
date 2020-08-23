@@ -14,7 +14,7 @@
 
 	let currentFilteredCountries = countries;
 	let searchTerm = '';
-	let active = true;
+	let active = false;
 	let currentSelectedRegion = '';
 
 	$: filteredCountries = searchTerm.length === 0 ? currentFilteredCountries : 
@@ -46,7 +46,8 @@
 
 <div class="filters-group">
 	<div class="searchbar-container">
-		<input class="searchbar" placeholder="Search for a country…" bind:value={searchTerm}>
+		<label class="sr-only" for="searchCountry">Country Name</label>
+		<input class="searchbar" id="searchCountry" name="searchCountry" placeholder="Search for a country…" bind:value={searchTerm}>
 	</div>
 	<div class="dropdown-container">
 		<div class="dropdown" on:click={handleDropdown}>{currentSelectedRegion === '' ? 'Filter by Region' : currentSelectedRegion}</div>

@@ -244,6 +244,20 @@ const app = new Vue({
         previewImageLink: './article-preview-component-master/design/desktop-preview.jpg',
         solutionLink: 'https://www.frontendmentor.io/solutions/article-preview-component-built-with-svelte-Gf26ZLYdj',
         liveViewLink: './article-preview-component-master/index.html'
+      },
+      {
+        id: 29,
+        projectName: 'Rock paper scissors game',
+        previewImageLink: './rock-paper-scissors-game/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/article-preview-component-built-with-svelte-Gf26ZLYdj',
+        liveViewLink: './rock-paper-scissors-game/index.html'
+      },
+      {
+        id: 30,
+        projectName: 'Rock paper scissors game',
+        previewImageLink: './rest-countries-api-master/design/desktop-preview.jpg',
+        solutionLink: 'https://www.frontendmentor.io/solutions/article-preview-component-built-with-svelte-Gf26ZLYdj',
+        liveViewLink: './rest-countries-api-master'
       }
     ]
   }

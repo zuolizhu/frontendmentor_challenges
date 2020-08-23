@@ -1,8 +1,8 @@
 <script context="module">
 	export async function preload({ params, query }) {
-		// the `countryName` parameter is available because
-		// this file is called [countryName].svelte
-		const res = await this.fetch(`https://restcountries.eu/rest/v2/name/${params.countryName}`);
+		// the `countryCode` parameter is available because
+		// this file is called [countryCode].svelte
+		const res = await this.fetch(`https://restcountries.eu/rest/v2/alpha/${params.countryCode}`);
 		const data = await res.json();
 		
 		if (res.status === 200) {
