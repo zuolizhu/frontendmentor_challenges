@@ -8,7 +8,7 @@ const dev = NODE_ENV === 'development';
 
 polka() // You can also use Express
 	.use(
-		// '/rest-countries-api-master',
+		'/rest-countries-api-master',
 		compression({ threshold: 0 }),
 		sirv('static', { dev }),
 		sapper.middleware()
