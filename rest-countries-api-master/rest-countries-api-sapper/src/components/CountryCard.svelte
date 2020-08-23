@@ -41,6 +41,7 @@
   .country-card__info {
     padding-top: 2.4rem;
     padding-left: 2.4rem;
+    padding-right: 2.4rem;
     padding-bottom: 4.6rem;
     background-color: var(--bg1);
     transition: var(--transition) background-color;

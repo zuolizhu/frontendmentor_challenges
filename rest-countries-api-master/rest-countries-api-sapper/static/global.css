@@ -9,6 +9,7 @@
 
   /* Font Weights */
   --weight-light: 300;
+  --weight-regular: 400;
   --weight-semi-bold: 600;
   --weight-extra-bold: 800;
 
@@ -37,6 +38,10 @@ body {
   font-weight: var(--weight-light);
   font-family: 'Nunito Sans', sans-serif;
   transition: var(--transition) background-color;
+}
+
+button {
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 a {
@@ -213,6 +218,8 @@ p {
   --bg1: var(--color-white);
   --bg2: var(--color-light-gray);
   --arrow: url(../images/back-arrow-light.svg);
+  --search: url(../images/icon-search-light.svg);
+  --dropdown: url(../images/icon-dropdown-light.svg);
 }
 
 .dark {
@@ -220,4 +227,6 @@ p {
   --bg1: var(--color-dark-blue);
   --bg2: var(--color-dark-blue2);
   --arrow: url(../images/back-arrow-dark.svg);
+  --search: url(../images/icon-search-dark.svg);
+  --dropdown: url(../images/icon-dropdown-dark.svg);
 }

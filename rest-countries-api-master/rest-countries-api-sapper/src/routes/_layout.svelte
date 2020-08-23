@@ -5,11 +5,18 @@
 </script>
 
 <style>
-
+	.main {
+		padding-bottom: 6.5rem;
+	}
+	@media (min-width: 714px) {
+		.main {
+			padding-bottom: 4.5rem;
+		}
+	}
 </style>
 
 <Nav {segment}/>
 
-<main>
+<main class="main">
 	<slot></slot>
 </main>
