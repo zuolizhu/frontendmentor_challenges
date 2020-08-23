@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="12px" viewBox="0 0 19 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>call-made</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DETAIL-PAGE-LIGHT" transform="translate(-112.000000, -174.000000)" fill="#111517">
+            <g id="BACK" transform="translate(80.000000, 160.000000)">
+                <g id="call-made" transform="translate(42.000000, 20.000000) scale(-1, 1) translate(-42.000000, -20.000000) translate(32.000000, 10.000000)">
+                    <polygon id="Shape" transform="translate(10.000000, 10.000000) rotate(45.000000) translate(-10.000000, -10.000000) " points="8.33333333 3.33333333 8.33333333 5 13.8333333 5 3.33333333 15.5 4.5 16.6666667 15 6.16666667 15 11.6666667 16.6666667 11.6666667 16.6666667 3.33333333"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

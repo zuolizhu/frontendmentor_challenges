@@ -1,0 +1,232 @@
+:root {
+  /* Colors */
+  --color-dark-blue: hsl(209, 23%, 22%);
+  --color-dark-blue2: hsl(207, 26%, 17%);
+  --color-dark-blue3: hsl(200, 15%, 8%);
+  --color-dark-gray: hsl(0, 0%, 52%);
+  --color-light-gray: hsl(0, 0%, 98%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-semi-bold: 600;
+  --weight-extra-bold: 800;
+
+  /* Design elements */
+  --transition: 300ms ease-in-out;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  background-color: var(--bg2);
+  font-weight: var(--weight-light);
+  font-family: 'Nunito Sans', sans-serif;
+  transition: var(--transition) background-color;
+}
+
+button {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.sr-only {
+	padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
+/* Type Specs */
+.t-brand {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0;
+  color: var(--text1);
+  transition: var(--transition) color;
+  font-weight: var(--weight-extra-bold);
+}
+@media (min-width: 467px) {
+  .t-brand {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+
+.t-switch {
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  line-height: 1.6rem;
+  color: var(--text1);
+  transition: var(--transition) color;
+  font-weight: var(--weight-semi-bold);
+}
+@media (min-width: 467px) {
+  .t-switch {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+
+.t-name {
+  font-size: 1.8rem;
+  letter-spacing: 0;
+  line-height: 2.6rem;
+  color: var(--text1);
+  transition: var(--transition) color;
+  font-weight: var(--weight-extra-bold);
+}
+
+.t-country-info {
+  letter-spacing: 0;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: var(--text1);
+  transition: var(--transition) color;
+}
+
+.t-country-detail-name {
+  line-height: 3rem;
+  font-size: 2.2rem;
+  letter-spacing: 0;
+  color: var(--text1);
+  transition: var(--transition) color;
+  font-weight: var(--weight-extra-bold);
+}
+@media (min-width: 714px) {
+  .t-country-detail-name {
+    font-size: 3.2rem;
+    line-height: 4.3rem;
+  }
+}
+
+.t-country-detail {
+  letter-spacing: 0;
+  font-size: 1.4rem;
+  line-height: 3.2rem;
+  color: var(--text1);
+  transition: var(--transition) color;
+}
+@media (min-width: 714px) {
+  .t-country-detail {
+    font-size: 1.6rem;
+  }
+}
+
+.t-borders {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  line-height: 2.4rem;
+  color: var(--text1);
+  font-weight: var(--weight-semi-bold);
+}
+
+.t-light {
+  font-weight: var(--weight-light);
+}
+
+.t-semi-bold {
+  font-weight: var(--weight-semi-bold);
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+.btn--backarrow {
+  width: 10.4rem;
+  padding: .6rem 0;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--text1);
+  align-items: center;
+  display: inline-flex;
+  border-radius: .2rem;
+  justify-content: center;
+  background-color: var(--bg1);
+  font-weight: var(--weight-light);
+  box-shadow: 0 0 .7rem 0 rgba(0,0,0,0.29);
+  transition: var(--transition) color, var(--transition) background-color;
+}
+.btn--backarrow::before {
+  content: '';
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: .8rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--arrow);
+  transition: var(--transition) background;
+}
+@media (min-width: 714px) {
+  .btn--backarrow {
+    width: 13.6rem;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    border-radius: .6rem;
+  }
+  .btn--backarrow::before {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+/* Themes */
+.light {
+  --text1: var(--color-dark-blue3);
+  --bg1: var(--color-white);
+  --bg2: var(--color-light-gray);
+  --arrow: url(../images/back-arrow-light.svg);
+  --search: url(../images/icon-search-light.svg);
+  --dropdown: url(../images/icon-dropdown-light.svg);
+}
+
+.dark {
+  --text1: var(--color-white);
+  --bg1: var(--color-dark-blue);
+  --bg2: var(--color-dark-blue2);
+  --arrow: url(../images/back-arrow-dark.svg);
+  --search: url(../images/icon-search-dark.svg);
+  --dropdown: url(../images/icon-dropdown-dark.svg);
+}
