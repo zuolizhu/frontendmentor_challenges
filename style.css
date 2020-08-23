@@ -210,9 +210,13 @@ ul {
 }
 
 .solution__info__techstack {
-  display: inline-flex;
-  width: 60%;
-  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.solution__info__techstack .tag:not(:last-of-type) {
+  margin-right: 1rem;
 }
 
 .solution__info__project-name {
@@ -222,11 +226,31 @@ ul {
 
 
 .tag {
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-bold);
+  line-height: 2.4rem;
+}
+
+.tag.HTML {
+  color: rgb(106, 190, 205);
+}
+.tag.CSS {
+  color: rgb(62, 84, 163);
+}
+.tag.JS {
+  color: rgb(225, 55, 132);
+}
+.tag.API {
+  color: rgb(237, 44, 73);
+}
+.tag.Svelte {
+  color: #ff3e00;
+}
+.tag.Sapper {
+  color: rgb(21, 151, 148);
 }
 
 .solution__info__links {
   width: 100%;
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
