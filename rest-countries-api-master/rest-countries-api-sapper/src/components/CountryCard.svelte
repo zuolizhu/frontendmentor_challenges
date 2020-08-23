@@ -21,7 +21,12 @@
     height: 33.6rem;
     overflow: hidden;
     border-radius: .5rem;
-    box-shadow: 0 0 .7rem .2rem rgba(0,0,0,0.03); 
+    box-shadow: 0 0 .7rem .2rem rgba(0,0,0,0.03);
+    transition: var(--transition) transform, var(--transition) box-shadow;
+  }
+  .country-card:hover {
+    box-shadow: 0 0 1.5rem .6rem rgba(0,0,0,0.02);
+    transform: translateY(-2px);
   }
   
   .country-card-container {
