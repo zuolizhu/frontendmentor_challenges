@@ -6,7 +6,7 @@
 		const data = await res.json();
 		
 		if (res.status === 200) {
-			return { country: data[0] };
+			return { country: data };
 		} else {
 			this.error(res.status, data.message);
 		}
@@ -16,6 +16,7 @@
 <script>
 	import axios from 'axios';
 	export let country;
+	
 	const languages = country.languages.map(language => language.name).join(', ');
 	const currencies = country.currencies.map(currency => currency.name).join(', ');
 	const population = country.population.toLocaleString();
@@ -69,7 +70,7 @@
 				{#if countries.length > 0}
 				<div class="country-details__borders">
 				{#each countries as country}
-					<a class="country-details__border" href="./country/{country.data.name}">{country.data.name}</a>
+					<a class="country-details__border" href="./country/{country.data.alpha3Code}">{country.data.name}</a>
 				{/each}
 				</div>
 				{:else}
