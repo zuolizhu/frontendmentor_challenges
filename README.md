@@ -36,5 +36,5 @@ All the projects are hosted on Vercel, check out this [link](https://zzl-fronten
 29. [Rock paper scissors game](https://zzl-frontendmentor-challenges.now.sh/rock-paper-scissors-game/index.html)
 30. [REST Countries API with color theme switcher](https://zzl-frontendmentor-challenges.now.sh/rest-countries-api-master)
 
-More coming soon 💪
+New repo coming soon 💪
 
