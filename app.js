@@ -28,14 +28,14 @@ const app = new Vue({
         techStacks: ['HTML', 'CSS', 'JS', 'API', 'Svelte', 'Sapper'],
         projectName: 'REST Countries API with color theme switcher',
         previewImageLink: './rest-countries-api-master/design/desktop-preview.jpg',
-        liveViewLink: './rest-countries-api-master'
+        liveViewLink: 'https://rest-countries-api-sapper.vercel.app/'
       },
       {
         id: 26,
         techStacks: ['HTML', 'CSS', 'JS', 'Svelte', 'Sapper'],
         projectName: 'MyTeam multi-page website',
         previewImageLink: './premium-myteam-master/design/desktop-preview.jpg',
-        liveViewLink: './premium-myteam-master/'
+        liveViewLink: 'https://myteam-sapper.vercel.app/'
       },
       {
         id: 19,
@@ -247,7 +247,7 @@ const app = new Vue({
         techStacks: ['HTML', 'CSS', 'JS', 'Svelte', 'Sapper'],
         projectName: 'MyTeam multi-page website',
         previewImageLink: './premium-myteam-master/design/desktop-preview.jpg',
-        liveViewLink: './premium-myteam-master/'
+        liveViewLink: 'https://myteam-sapper.vercel.app/'
       },
       {
         id: 27,
@@ -275,7 +275,7 @@ const app = new Vue({
         techStacks: ['HTML', 'CSS', 'JS', 'API', 'Svelte', 'Sapper'],
         projectName: 'REST Countries API with color theme switcher',
         previewImageLink: './rest-countries-api-master/design/desktop-preview.jpg',
-        liveViewLink: './rest-countries-api-master'
+        liveViewLink: 'https://rest-countries-api-sapper.vercel.app/'
       }
     ]
   }
