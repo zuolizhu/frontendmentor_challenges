@@ -276,7 +276,35 @@ const app = new Vue({
         projectName: 'REST Countries API with color theme switcher',
         previewImageLink: './rest-countries-api-master/design/desktop-preview.jpg',
         liveViewLink: 'https://rest-countries-api-sapper.vercel.app/'
-      }
+      },
+      {
+        id: 31,
+        techStacks: ['HTML', 'CSS', 'JS', 'Svelte', 'Sapper'],
+        projectName: 'Arch Studio multi-page website',
+        previewImageLink: './arch-studio/preview.jpg',
+        liveViewLink: 'https://arch-studio-frontendmentor.vercel.app/'
+      },
+      {
+        id: 32,
+        techStacks: ['HTML', 'CSS', 'JS', 'API', 'Svelte'],
+        projectName: 'IP Address Tracker',
+        previewImageLink: './ip-address-tracker/preview.jpg',
+        liveViewLink: 'https://ip-address-tracker-frontendmentor.vercel.app/'
+      },
+      {
+        id: 33,
+        techStacks: ['HTML', 'CSS', 'JS', 'Svelte', 'Sapper'],
+        projectName: 'Photosnap multi-page website',
+        previewImageLink: './photosnap-multi-page/preview.jpg',
+        liveViewLink: 'https://photosnap-frontendmentor.vercel.app/'
+      },
+      {
+        id: 34,
+        techStacks: ['HTML', 'CSS'],
+        projectName: 'Photosnap multi-page website',
+        previewImageLink: './social-proof-section-master/design/desktop-preview.jpg',
+        liveViewLink: './social-proof-section-master/index.html'
+      },
     ]
   }
 });
