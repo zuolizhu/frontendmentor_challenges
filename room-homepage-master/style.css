@@ -1,0 +1,70 @@
+:root {
+  /* Colors */
+  --color-Gray: hsl(0, 0%, 63%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-dark-gray: hsl(0, 0%, 27%);
+
+  /* Font Weights */
+  --weight-mid: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+}
+
+.intro,
+.intro-slider {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-black);
+}
+
+.intro-slider {
+  transform: translateY(100%);
+  background-color: var(--color-dark-gray);
+}
+
+.intro-text {
+  font-size: 2.6rem;
+  text-align: center;
+  line-height: 5.6rem;
+  letter-spacing: -1.17px;
+  color: var(--color-white);
+}
+
+.hide {
+  overflow: hidden;
+  background-color: var(--color-black);
+}
+
+.hide .text {
+  display: inline-block;
+  transform: translateY(100%);
+}
