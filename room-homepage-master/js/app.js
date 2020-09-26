@@ -33,6 +33,6 @@ burgerTrigger.addEventListener('click', () => {
   })
 });
 // autoplay
-// setTimeout(() => {
-//   setInterval(() => mySiema.next(), 5000);
-// }, 3000);
+setTimeout(() => {
+  setInterval(() => mySiema.next(), 5000);
+}, 3000);
