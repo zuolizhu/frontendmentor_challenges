@@ -305,6 +305,20 @@ const app = new Vue({
         previewImageLink: './social-proof-section-master/design/desktop-preview.jpg',
         liveViewLink: './social-proof-section-master/index.html'
       },
+      {
+        id: 35,
+        techStacks: ['HTML', 'CSS', 'JS'],
+        projectName: 'Room homepage',
+        previewImageLink: './room-homepage-master/design/desktop-preview.jpg',
+        liveViewLink: './room-homepage-master/index.html'
+      },
+      {
+        id: 36,
+        techStacks: ['HTML', 'CSS'],
+        projectName: 'FAQ Accordion card without JS',
+        previewImageLink: './faq-accordion-card-main/design/desktop-preview.jpg',
+        liveViewLink: './faq-accordion-card-main/index.html'
+      },
     ]
   }
 });

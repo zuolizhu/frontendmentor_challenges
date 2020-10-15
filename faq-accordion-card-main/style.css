@@ -246,6 +246,7 @@ body {
 
 .faq[open] > .faq__question::after {
   transform: rotate(180deg);
+  margin-top: -0.5rem;
 }
 
 .faq[open] .faq__question ~ * {
@@ -274,6 +275,6 @@ body {
 }
 @media (min-width: 1024px) {
   .divider {
-    margin: 1.6rem 0;
+    margin: 1.36rem 0 1.85rem;
   }
 }
