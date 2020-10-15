@@ -41,5 +41,6 @@ All the projects are hosted on Vercel, check out this [link](https://zzl-fronten
 34. [Social proof section](https://zzl-frontendmentor-challenges.now.sh/social-proof-section-master/index.html)
 35. [Room homepage](https://zzl-frontendmentor-challenges.now.sh/room-homepage-master/index.html)
 36. [FAQ Accordion card without JS](https://zzl-frontendmentor-challenges.now.sh/faq-accordion-card-main/index.html)
+
 New repo coming soon 💪
 
