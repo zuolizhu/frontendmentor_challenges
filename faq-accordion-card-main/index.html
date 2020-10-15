@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Main style -->
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+<body>
+  <main class="main">
+    <section class="faqs">
+      <h1 class="sr-only">FAQ section</h1>
+      <div class="faqs__image"></div>
+      <div class="faqs-container">
+        <h2 class="t-h2 faqs__heading">FAQ</h2>
+        <details class="faq">
+          <summary class="faq__question t-question">How many team members can I invite?</summary>
+          <p class="faq__answer t-answer">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+        </details>
+        <div class="divider"></div>
+        <details class="faq" open>
+          <summary class="faq__question t-question">What is the maximum file upload size?</summary>
+          <p class="faq__answer t-answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </details>
+        <div class="divider"></div>
+        <details class="faq">
+          <summary class="faq__question t-question">How do I reset my password?</summary>
+          <p class="faq__answer t-answer">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+        </details>
+        <div class="divider"></div>
+        <details class="faq">
+          <summary class="faq__question t-question">Can I cancel my subscription?</summary>
+          <p class="faq__answer t-answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+        </details>
+        <div class="divider"></div>
+        <details class="faq">
+          <summary class="faq__question t-question">Do you provide additional support?</summary>
+          <p class="faq__answer t-answer">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+        </details>
+        <div class="divider"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
