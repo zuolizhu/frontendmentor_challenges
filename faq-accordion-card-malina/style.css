@@ -1,0 +1,217 @@
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-soft-red: hsl(14, 88%, 65%);
+  --color-dark-blue: hsl(238, 29%, 16%);
+  --color-light-gray: hsl(240, 5%, 91%);
+  --color-mid-gray-blue: hsl(237, 12%, 33%);
+  --color-light-gray-blue: hsl(240, 6%, 50%);
+  --bg-gradient: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  /* Design elements */
+  --transition: 300ms ease-in-out;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: var(--bg-gradient);
+}
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+}
+
+/* Type Specs */
+.t-h2 {
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  color: var(--color-dark-blue);
+  font-weight: var(--weight-bold);
+}
+
+.t-question {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: var(--weight-regular);
+  color: var(--color-mid-gray-blue);
+}
+.faq.opened > .t-question {
+  color: var(--color-dark-blue);
+  font-weight: var(--weight-bold);
+}
+
+@media (min-width: 768px) {
+  .t-question {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+
+.t-answer {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: var(--weight-regular);
+  color: var(--color-light-gray-blue);
+}
+
+/* Main */
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2.4rem 8.5rem;
+}
+@media (min-width: 1024px) {
+  .main {
+    padding: 12.9rem 0 13rem;
+  }
+}
+
+/* FAQs Section */
+.faqs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  max-width: 56rem;
+  position: relative;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+@media (min-width: 1024px) {
+  .faqs {
+    width: 100%;
+    max-width: 92rem;
+    max-height: 50.9rem;
+    padding-top: 6.5rem;
+    margin-left: 4.2rem;
+    padding-right: 9.5rem;
+    flex-flow: row nowrap;
+    border-radius: 2.3rem;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    background-position: left top;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    box-shadow: 0 5rem 5rem -2rem rgba(53,18,122,0.50);
+    background-image: url(./images/bg-pattern-desktop-2.svg);
+  }
+}
+
+.faqs__image {
+  height: 18rem;
+  width: 23.7rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./images/illustration-woman-online-mobile.svg);
+}
+@media (min-width: 1024px) {
+  .faqs__image {
+    width: 38.8rem;
+    height: 35.9rem;
+    margin-top: .5rem;
+    background-size: contain;
+    background-image: url(./images/illustration-woman-online-desktop-2.svg);
+  }
+}
+
+.faqs::before {
+  content: '';
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  top: 10.8rem;
+  position: absolute;
+  border-radius: 2.3rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: var(--color-white);
+  background-image: url(./images/bg-pattern-mobile.svg);
+  box-shadow: 0 5rem 5rem -2rem rgba(53,18,122,0.50);
+}
+/* bg pattern turned to a box */
+@media (min-width: 1024px) {
+  .faqs::before {
+    z-index: 2;
+    bottom: 0;
+    height: auto;
+    top: 8.6rem;
+    width: 19.2rem;
+    border-radius: 0;
+    box-shadow: none;
+    background-size: contain;
+    transform: translateX(-49%);
+    background-position: center;
+    background-color: transparent;
+    background-image: url(./images/illustration-box-desktop.svg);
+  }
+}
+
+.faqs-container {
+  width: 100%;
+  margin-top: 6rem;
+  padding: 0 2.4rem;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .faqs-container {
+    padding: 0;
+    margin-top: 0;
+    max-width: 35rem;
+  }
+}
+
+.faqs__heading {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+@media (min-width: 1024px) {
+  .faqs__heading {
+    text-align: left;
+    margin-top: 0.3rem;
+    margin-bottom: 3.7rem;
+  }
+}
+
+.faq.opened .faq__question ~ * {
+  animation: fadein .5s ease-in-out;
+}
+
+@keyframes fadein {
+  0%    {opacity: 0; transform: translateY(1rem);}
+  100%  {opacity: 1; transform: translateY(0);}
+}
