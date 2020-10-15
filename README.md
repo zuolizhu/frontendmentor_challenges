@@ -35,6 +35,11 @@ All the projects are hosted on Vercel, check out this [link](https://zzl-fronten
 28. [Article preview component](https://zzl-frontendmentor-challenges.now.sh/article-preview-component-master/index.html)
 29. [Rock paper scissors game](https://zzl-frontendmentor-challenges.now.sh/rock-paper-scissors-game/index.html)
 30. [REST Countries API with color theme switcher](https://zzl-frontendmentor-challenges.now.sh/rest-countries-api-master)
-
+31. [Arch Studio multi-page website](https://arch-studio-frontendmentor.vercel.app/)
+32. [IP Address Tracker](https://ip-address-tracker-frontendmentor.vercel.app/)
+33. [Photosnap multi-page website](https://photosnap-frontendmentor.vercel.app/)
+34. [Social proof section](https://zzl-frontendmentor-challenges.now.sh/social-proof-section-master/index.html)
+35. [Room homepage](https://zzl-frontendmentor-challenges.now.sh/room-homepage-master/index.html)
+36. [FAQ Accordion card without JS](https://zzl-frontendmentor-challenges.now.sh/faq-accordion-card-main/index.html)
 New repo coming soon 💪
 

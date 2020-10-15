@@ -301,7 +301,7 @@ const app = new Vue({
       {
         id: 34,
         techStacks: ['HTML', 'CSS'],
-        projectName: 'Photosnap multi-page website',
+        projectName: 'Social proof section',
         previewImageLink: './social-proof-section-master/design/desktop-preview.jpg',
         liveViewLink: './social-proof-section-master/index.html'
       },
