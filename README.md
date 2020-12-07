@@ -41,6 +41,12 @@ All the projects are hosted on Vercel, check out this [link](https://zzl-fronten
 34. [Social proof section](https://zzl-frontendmentor-challenges.now.sh/social-proof-section-master/index.html)
 35. [Room homepage](https://zzl-frontendmentor-challenges.now.sh/room-homepage-master/index.html)
 36. [FAQ Accordion card without JS](https://zzl-frontendmentor-challenges.now.sh/faq-accordion-card-main/index.html)
+37. [Profile card component | React](https://profile-card-component-fm.vercel.app/)
+38. [Clock app | React](https://clock-app-frontendmentor.vercel.app/)
+39. [Pod request access landing page | React](https://pod-request-landing-frontendmentor.vercel.app/)
+40. [Officelite coming soon site | NextJS](https://officelite-coming-soon-frontendmentor.vercel.app/)
+41. [Draggable todo app | React](https://todo-app-frontendmentor.vercel.app/)
+42. [GitHub Jobs API | React](https://github-jobs-frontendmentor.vercel.app/)
 
 New repo coming soon 💪
 
