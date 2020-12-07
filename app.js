@@ -1,71 +1,6 @@
 const app = new Vue({
   el: '#app',
   data:{
-    highlightedSolutions: [
-      {
-        id: 21,
-        techStacks: ['HTML', 'CSS', 'JS', 'Svelte'],
-        projectName: 'Reactie job listings with filtering',
-        previewImageLink: './static-job-listings-master/design/desktop-preview.jpg',
-        liveViewLink: './static-job-listings-master/index.html'
-      },
-{
-        id: 24,
-        techStacks: ['HTML', 'CSS', 'JS', 'API', 'Svelte'],
-        projectName: 'URL shortening API landing page',
-        previewImageLink: './url-shortening-api-master/design/desktop-preview.jpg',
-        liveViewLink: './url-shortening-api-master/index.html'
-      },
-      {
-        id: 29,
-        techStacks: ['HTML', 'CSS', 'JS', 'Svelte'],
-        projectName: 'Rock paper scissors game',
-        previewImageLink: './rock-paper-scissors-game/design/desktop-preview.jpg',
-        liveViewLink: './rock-paper-scissors-game/index.html'
-      },
-      {
-        id: 30,
-        techStacks: ['HTML', 'CSS', 'JS', 'API', 'Svelte', 'Sapper'],
-        projectName: 'REST Countries API with color theme switcher',
-        previewImageLink: './rest-countries-api-master/design/desktop-preview.jpg',
-        liveViewLink: 'https://rest-countries-api-sapper.vercel.app/'
-      },
-      {
-        id: 26,
-        techStacks: ['HTML', 'CSS', 'JS', 'Svelte', 'Sapper'],
-        projectName: 'MyTeam multi-page website',
-        previewImageLink: './premium-myteam-master/design/desktop-preview.jpg',
-        liveViewLink: 'https://myteam-sapper.vercel.app/'
-      },
-      {
-        id: 19,
-        techStacks: ['HTML', 'CSS', 'JS'],
-        projectName: 'Minimalist portfolio',
-        previewImageLink: './premium-minimalist-portfolio-master/design/desktop-preview.jpg',
-        liveViewLink: './premium-minimalist-portfolio-master/index.html'
-      },
-      {
-        id: 22,
-        techStacks: ['HTML', 'CSS', 'JS'],
-        projectName: 'Easybank landing page',
-        previewImageLink: './easybank-landing-page-master/design/desktop-preview.jpg',
-        liveViewLink: './easybank-landing-page-master/index.html'
-      },
-      {
-        id: 23,
-        techStacks: ['HTML', 'CSS', 'JS'],
-        projectName: 'Manage landing page',
-        previewImageLink: './manage-landing-page-master/design/desktop-preview.jpg',
-        liveViewLink: './manage-landing-page-master/index.html'
-      },
-{
-        id: 25,
-        techStacks: ['HTML', 'CSS', 'JS', 'Svelte'],
-        projectName: 'Bookmark landing page',
-        previewImageLink: './bookmark-landing-page-master/design/desktop-preview.jpg',
-        liveViewLink: './bookmark-landing-page-master/index.html'
-      }
-    ],
     solutions: [
       {
         id: 1,
@@ -318,6 +253,48 @@ const app = new Vue({
         projectName: 'FAQ Accordion card without JS',
         previewImageLink: './faq-accordion-card-main/design/desktop-preview.jpg',
         liveViewLink: './faq-accordion-card-main/index.html'
+      },
+      {
+        id: 37,
+        techStacks: ['HTML', 'CSS', 'JS'],
+        projectName: 'Profile card component | React',
+        previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/fm88t3bfif7d99rw15q0.jpg',
+        liveViewLink: 'https://profile-card-component-fm.vercel.app/'
+      },
+      {
+        id: 38,
+        techStacks: ['HTML', 'CSS', 'JS', 'API'],
+        projectName: 'GitHub Jobs | React',
+        previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/o8qpm8nx2jqqj7sbesor.jpg',
+        liveViewLink: 'https://github-jobs-frontendmentor.vercel.app/'
+      },
+      {
+        id: 39,
+        techStacks: ['HTML', 'CSS', 'JS', 'API'],
+        projectName: 'Clock app | React',
+        previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/jhlhgowotywnti641g3z.jpg',
+        liveViewLink: 'https://clock-app-frontendmentor.vercel.app/'
+      },
+      {
+        id: 40,
+        techStacks: ['HTML', 'CSS', 'JS'],
+        projectName: 'Pod request access landing page | React',
+        previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/a1hfmx2uakjiotdaml0n.jpg',
+        liveViewLink: 'https://pod-request-landing-frontendmentor.vercel.app/'
+      },
+      {
+        id: 41,
+        techStacks: ['HTML', 'CSS', 'JS'],
+        projectName: 'Officelite coming soon site | NextJS',
+        previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/wnwsjwx4vadbgmkk2kxe.jpg',
+        liveViewLink: 'https://officelite-coming-soon-frontendmentor.vercel.app/'
+      },
+      {
+        id: 42,
+        techStacks: ['HTML', 'CSS', 'JS', 'API'],
+        projectName: 'Draggable todo app | React',
+        previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/ua2oshmal3onfmp8zfqp.jpg',
+        liveViewLink: 'https://todo-app-frontendmentor.vercel.app/'
       },
     ]
   }

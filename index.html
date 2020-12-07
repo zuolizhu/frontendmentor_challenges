@@ -22,29 +22,10 @@
     <div class="container">
       <!-- data is saved in app.js -->
       <div id="app">
-        <section class="highlighted-solutions">
-          <h2 class="t-h2">Highlighted solutions</h2>
-          <ul class="solutions">
-            <li class="solution" v-for="solution in highlightedSolutions">
-              <div class="solution__image">
-                <img v-bind:src="solution.previewImageLink" alt="solution preview">
-              </div>
-              <div class="solution__info">
-                <div class="solution__info__techstack">
-                  <div v-for="techStack in solution.techStacks" class="tag" v-bind:class="techStack">{{ techStack }}</div>
-                </div>
-                <p class="t-project-name solution__info__project-name">{{ solution.projectName }}</p>
-                <div class="solution__info__links">
-                  <a v-bind:href="solution.liveViewLink" class="link link--live" target="_blank">Live View</a>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
         <section class="all-solutions">
           <h2 class="t-h2">All solutions</h2>
           <ul class="solutions">
-            <li class="solution" v-for="solution in solutions">
+            <li class="solution" v-for="solution in solutions.slice().reverse()">
               <div class="solution__image">
                 <img v-bind:src="solution.previewImageLink" alt="solution preview">
               </div>
