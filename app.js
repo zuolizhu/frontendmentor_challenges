@@ -296,6 +296,13 @@ const app = new Vue({
         previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/ua2oshmal3onfmp8zfqp.jpg',
         liveViewLink: 'https://todo-app-frontendmentor.vercel.app/'
       },
+      {
+        id: 43,
+        techStacks: ['HTML', 'CSS', 'JS'],
+        projectName: 'Testimonials grid section | React',
+        previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/ebea9yc8ie72a212yddr.jpg',
+        liveViewLink: 'https://testimonials-grid-frontendmentor.vercel.app/'
+      },
     ]
   }
 });

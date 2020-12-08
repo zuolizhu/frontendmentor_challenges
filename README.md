@@ -49,6 +49,7 @@ All the projects are hosted on Vercel, check out this [link](https://zzl-fronten
 | 40. [GitHub Jobs API \| React](https://github-jobs-frontendmentor.vercel.app/) | [repo link](https://github.com/zuolizhu/github-jobs-frontendmentor) |
 | 41. [Profile card component \| React](https://profile-card-component-fm.vercel.app/) | [repo link](https://github.com/zuolizhu/profile-card-component-fm) |
 | 42. [Pod request access landing page \| React](https://pod-request-landing-frontendmentor.vercel.app/) | [repo link](https://github.com/zuolizhu/pod-request-landing-frontendmentor) |
+| 43. [Testimonials grid section \| React](https://testimonials-grid-frontendmentor.vercel.app/) | [repo link](https://github.com/zuolizhu/testimonials-grid-frontendmentor) |
 
 
 
