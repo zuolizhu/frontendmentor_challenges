@@ -303,6 +303,13 @@ const app = new Vue({
         previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/ebea9yc8ie72a212yddr.jpg',
         liveViewLink: 'https://testimonials-grid-frontendmentor.vercel.app/'
       },
+      {
+        id: 44,
+        techStacks: ['HTML', 'CSS', 'JS'],
+        projectName: 'Launch countdown timer | React',
+        previewImageLink: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,g_north,w_800,h_600,c_fill/Screenshots/eydnbu5aptchgzvyfj7z.jpg',
+        liveViewLink: 'https://countdown-timer-frontendmentor.vercel.app/'
+      },
     ]
   }
 });
