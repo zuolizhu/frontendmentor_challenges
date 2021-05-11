@@ -22,6 +22,6 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "sirv-cli": "^0.4.4",
-    "lodash": ">=4.17.19"
+    "lodash": ">=4.17.21"
   }
 }
